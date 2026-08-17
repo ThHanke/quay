@@ -31,3 +31,12 @@ No explicit remote configuration. BitTorrent support built into git-annex.
 - [git-annex BitTorrent support](https://git-annex.branchable.com/tips/using_the_web_as_a_special_remote/)
 - [BitTorrent protocol specification (BEP 3)](https://www.bittorrent.org/beps/bep_0003.html)
 - [aria2 documentation](https://aria2.github.io/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/bittorrent/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

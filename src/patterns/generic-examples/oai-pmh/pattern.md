@@ -29,3 +29,12 @@ Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) endpoint for
 
 - [OAI-PMH specification v2.0](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 - [OAI-PMH guidelines for repository implementers](https://www.openarchives.org/OAI/2.0/guidelines.htm)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/oai-pmh/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

@@ -32,3 +32,12 @@ No special configuration needed. Any git remote with git-annex initialized:
 - [git-annex walkthrough](https://git-annex.branchable.com/walkthrough/)
 - [git-annex sync](https://git-annex.branchable.com/git-annex-sync/)
 - [git-annex trust](https://git-annex.branchable.com/trust/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/git/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

@@ -30,3 +30,12 @@ Paginated JSON REST API serving structured data, typical of government open data
 - [JSON:API specification](https://jsonapi.org/)
 - [OpenAPI specification](https://spec.openapis.org/oas/latest.html)
 - [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/rest-api/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

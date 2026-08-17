@@ -30,3 +30,12 @@ Git-annex rsync special remote stores file contents on any host accessible via r
 
 - [git-annex rsync special remote](https://git-annex.branchable.com/special_remotes/rsync/)
 - [rsync documentation](https://rsync.samba.org/documentation.html)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/rsync/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

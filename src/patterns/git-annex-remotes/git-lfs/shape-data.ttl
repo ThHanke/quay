@@ -3,6 +3,12 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/quay/examples/git-lfs> a owl:Ontology ;
+    dcterms:title "QUAY Pattern: Git LFS Special Remote" ;
+    dcterms:description "ABox example modeling git-annex Git LFS special remote as DCAT distribution with QUAY access and yield descriptions." ;
+    owl:imports <https://w3id.org/quay/> .
 
 ex:git-lfs-dataset a dcat:Dataset ;
     dcterms:title "Large Research Files on GitHub LFS" .

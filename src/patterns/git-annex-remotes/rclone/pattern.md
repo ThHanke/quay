@@ -33,3 +33,12 @@ Git-annex rclone special remote delegates storage operations to the rclone tool,
 - [git-annex rclone special remote](https://github.com/DanielDent/git-annex-remote-rclone)
 - [rclone documentation](https://rclone.org/docs/)
 - [rclone supported backends](https://rclone.org/overview/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/rclone/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

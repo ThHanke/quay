@@ -30,3 +30,12 @@ Git-annex gcrypt remote uses git-remote-gcrypt to store an entire git repository
 - [git-annex gcrypt remote](https://git-annex.branchable.com/special_remotes/gcrypt/)
 - [git-remote-gcrypt](https://spwhitton.name/tech/code/git-remote-gcrypt/)
 - [GnuPG documentation](https://gnupg.org/documentation/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/gcrypt/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

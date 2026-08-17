@@ -30,3 +30,12 @@ Zenodo is a general-purpose open research data repository operated by CERN. Rese
 - [Zenodo REST API](https://developers.zenodo.org/)
 - [Zenodo about page](https://about.zenodo.org/)
 - [DOI system](https://www.doi.org/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/zenodo/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

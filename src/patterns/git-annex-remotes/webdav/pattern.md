@@ -30,3 +30,12 @@ Git-annex WebDAV special remote stores file contents on any WebDAV-compatible se
 
 - [git-annex WebDAV special remote](https://git-annex.branchable.com/special_remotes/webdav/)
 - [RFC 4918 — HTTP Extensions for Web Distributed Authoring and Versioning](https://www.rfc-editor.org/rfc/rfc4918)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/webdav/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

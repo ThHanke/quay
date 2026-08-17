@@ -30,3 +30,12 @@ Direct database connection to a PostgreSQL server for structured data access. Cl
 - [PostgreSQL documentation](https://www.postgresql.org/docs/)
 - [PostgreSQL wire protocol](https://www.postgresql.org/docs/current/protocol.html)
 - [JDBC PostgreSQL driver](https://jdbc.postgresql.org/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/postgresql/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

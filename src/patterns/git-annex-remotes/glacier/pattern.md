@@ -35,3 +35,12 @@ Modern approach uses S3 remote with storage class:
 - [git-annex glacier special remote](https://git-annex.branchable.com/special_remotes/glacier/)
 - [Amazon S3 Glacier documentation](https://docs.aws.amazon.com/amazonglacier/latest/dev/)
 - [S3 storage classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/glacier/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

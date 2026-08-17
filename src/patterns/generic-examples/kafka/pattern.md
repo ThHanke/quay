@@ -32,3 +32,12 @@ Apache Kafka topic providing event-driven data streaming. Producers publish even
 - [Apache Kafka documentation](https://kafka.apache.org/documentation/)
 - [Kafka protocol specification](https://kafka.apache.org/protocol)
 - [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/kafka/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

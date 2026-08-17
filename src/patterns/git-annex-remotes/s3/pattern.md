@@ -34,3 +34,12 @@ Git-annex S3 special remote stores file contents in any S3-compatible object sto
 - [git-annex S3 special remote](https://git-annex.branchable.com/special_remotes/S3/)
 - [Amazon S3 API Reference](https://docs.aws.amazon.com/AmazonS3/latest/API/)
 - [git-annex encryption](https://git-annex.branchable.com/encryption/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/s3/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

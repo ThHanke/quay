@@ -31,3 +31,12 @@ Microsoft Azure Blob Storage for cloud object storage. Stores unstructured data 
 - [Azure Blob Storage documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/)
 - [Azure Blob REST API](https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api)
 - [Azure storage redundancy](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/azure-blob/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

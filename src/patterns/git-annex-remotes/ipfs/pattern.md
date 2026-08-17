@@ -31,3 +31,12 @@ Git-annex IPFS special remote stores and retrieves file contents on the InterPla
 - [git-annex IPFS integration](https://git-annex.branchable.com/tips/using_the_IPFS_special_remote/)
 - [IPFS documentation](https://docs.ipfs.tech/)
 - [Content Identifiers (CID) specification](https://github.com/multiformats/cid)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/ipfs/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

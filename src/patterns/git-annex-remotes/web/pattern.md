@@ -30,3 +30,12 @@ No explicit configuration needed. Built-in remote type.
 
 - [git-annex web special remote](https://git-annex.branchable.com/special_remotes/web/)
 - [git-annex addurl](https://git-annex.branchable.com/git-annex-addurl/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/web/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

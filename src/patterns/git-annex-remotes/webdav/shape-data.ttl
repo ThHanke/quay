@@ -3,6 +3,12 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/quay/examples/webdav> a owl:Ontology ;
+    dcterms:title "QUAY Pattern: WebDAV Special Remote" ;
+    dcterms:description "ABox example modeling git-annex WebDAV special remote as DCAT distribution with QUAY access and yield descriptions." ;
+    owl:imports <https://w3id.org/quay/> .
 
 ex:webdav-dataset a dcat:Dataset ;
     dcterms:title "Shared Files on WebDAV Server" .

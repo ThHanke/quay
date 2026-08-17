@@ -32,3 +32,12 @@ Git-annex borg special remote stores file contents in a BorgBackup repository. B
 - [git-annex borg special remote](https://git-annex.branchable.com/special_remotes/borg/)
 - [BorgBackup documentation](https://borgbackup.readthedocs.io/)
 - [Borg security model](https://borgbackup.readthedocs.io/en/stable/internals/security.html)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/git-annex-remotes/borg/shape-data.ttl"})
+loadOntology({query: "quay"})
+```

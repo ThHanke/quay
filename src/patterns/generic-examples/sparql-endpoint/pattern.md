@@ -29,3 +29,12 @@ SPARQL Protocol endpoint serving RDF data from a triplestore. Clients submit SPA
 
 - [SPARQL 1.1 Protocol](https://www.w3.org/TR/sparql11-protocol/)
 - [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
+
+## Ontosphere
+
+Load this pattern in [Ontosphere](http://localhost:5173/) via MCP tools:
+
+```js
+loadRdf({url: "https://raw.githubusercontent.com/ThHanke/quay/main/src/patterns/generic-examples/sparql-endpoint/shape-data.ttl"})
+loadOntology({query: "quay"})
+```
