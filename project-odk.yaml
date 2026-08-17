@@ -1,0 +1,64 @@
+id: quay
+title: "QUAY: Qualified Usage, Access and Yield"
+github_org: ThHanke
+repo: quay
+git_main_branch: main
+license: "CC-BY-4.0"
+description: >
+  A DCAT Profile for Data Access, Storage and Authorization Metadata.
+
+edit_format: owl
+edit_ontology_file: "src/ontology/quay-edit.owl"
+
+uribase: "https://w3id.org"
+uribase_suffix: "quay/"
+preferredPrefix: "QUAY"
+
+namespaces:
+  - "https://w3id.org/quay/"
+
+use_templates: false
+use_context: true
+
+import_group:
+  products:
+    - id: dcat
+      title: "DCAT - Data Catalog Vocabulary"
+      mirror_from: "https://www.w3.org/ns/dcat3.ttl"
+      module_type: slme
+      base_iris:
+        - https://www.w3.org/ns/dcat#
+    - id: dcterms
+      title: "Dublin Core Terms"
+      mirror_from: "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
+      module_type: slme
+      base_iris:
+        - http://purl.org/dc/terms/
+    - id: odrl
+      title: "ODRL Information Model"
+      mirror_from: "https://www.w3.org/ns/odrl/2/ODRL22.ttl"
+      module_type: slme
+      base_iris:
+        - http://www.w3.org/ns/odrl/2/
+
+components:
+  products: []
+
+primary_release: full
+release_artefacts:
+  - base
+  - full
+export_formats:
+  - owl
+  - ttl
+  - json
+
+ci: []
+
+idranges:
+  - allocatedto: "Thomas Hanke"
+    idsfor: quay
+    idprefix: "https://w3id.org/quay/QUAY_"
+    iddigits: 7
+    range_start: 0
+    range_end: 9999

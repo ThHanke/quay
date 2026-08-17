@@ -1,0 +1,34 @@
+id: quay
+title: "QUAY: Qualified Usage, Access and Yield"
+github_org: ThHanke
+git_main_branch: main
+repo: quay
+uribase: https://w3id.org
+uribase_suffix: quay/
+
+release_artefacts:
+  - base
+  - full
+primary_release: full
+export_formats:
+  - owl
+  - ttl
+remove_owl_nothing: true
+
+import_group:
+  products:
+    - id: dcat
+      module_type: slme
+      mirror_from: https://www.w3.org/ns/dcat3.ttl
+      base_iris:
+        - https://www.w3.org/ns/dcat#
+    - id: dcterms
+      module_type: slme
+      mirror_from: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.rdf
+      base_iris:
+        - http://purl.org/dc/terms/
+    - id: odrl
+      module_type: slme
+      mirror_from: https://www.w3.org/ns/odrl/2/ODRL22.ttl
+      base_iris:
+        - http://www.w3.org/ns/odrl/2/

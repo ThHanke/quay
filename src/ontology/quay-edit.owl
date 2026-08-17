@@ -10,9 +10,9 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://w3id.org/quay.owl>
 
-Import(<https://w3id.org/quay//imports/dcat_import.owl>)
-Import(<https://w3id.org/quay//imports/dcterms_import.owl>)
-Import(<https://w3id.org/quay//imports/odrl_import.owl>)
+Import(<https://w3id.org/quay/imports/dcat_import.owl>)
+Import(<https://w3id.org/quay/imports/dcterms_import.owl>)
+Import(<https://w3id.org/quay/imports/odrl_import.owl>)
 
 
 Annotation(dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata.

@@ -1,0 +1,3 @@
+dcat|https://www.w3.org/ns/dcat3.ttl
+dcterms|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.rdf
+odrl|https://www.w3.org/ns/odrl/2/ODRL22.ttl
