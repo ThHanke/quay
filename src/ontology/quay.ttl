@@ -1,0 +1,2667 @@
+@prefix : <https://w3id.org/quay.ttl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@base <https://w3id.org/quay.ttl> .
+
+<https://w3id.org/quay.ttl> rdf:type owl:Ontology ;
+                             owl:versionIRI <https://w3id.org/quay/releases/2026-08-17/quay.ttl> ;
+                             dcterms:description """A DCAT Profile for Data Access, Storage and Authorization Metadata.
+""" ;
+                             dcterms:license <https://w3id.org/quay.owl#CC-BY-4.0> ;
+                             dcterms:title "QUAY: Qualified Usage, Access and Yield" ;
+                             owl:versionInfo "2026-08-17" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/source
+dce:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/pav/hasVersion
+<http://purl.org/pav/hasVersion> rdf:type owl:ObjectProperty ;
+                                 owl:equivalentProperty dcat:hasVersion .
+
+
+###  http://www.w3.org/ns/dcat#accessService
+dcat:accessService rdf:type owl:ObjectProperty ;
+                   rdfs:range dcat:DataService ;
+                   rdfs:label "data access service"@en ,
+                              "dataadgangstjeneste"@da ,
+                              "servicio de acceso de datos"@es ,
+                              "servizio di accesso ai dati"@it ,
+                              "služba pro přístup k datům"@cs .
+
+
+###  http://www.w3.org/ns/dcat#accessURL
+dcat:accessURL rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Distribution ;
+               rdfs:range rdfs:Resource ;
+               owl:propertyChainAxiom ( dcat:accessService
+                                        dcat:endpointURL
+                                      ) ;
+               rdfs:label "URL d'accès"@fr ,
+                          "URL de acceso"@es ,
+                          "URL πρόσβασης"@el ,
+                          "access address"@en ,
+                          "adgangsadresse"@da ,
+                          "indirizzo di accesso"@it ,
+                          "přístupová adresa"@cs ,
+                          "رابط وصول"@ar ,
+                          "アクセスURL"@ja .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dcat:resource ;
+             rdfs:domain dcat:Catalog ;
+             rdfs:range dcat:Catalog ;
+             rdfs:label "catalog"@en ,
+                        "catalogo"@it ,
+                        "catálogo"@es ,
+                        "katalog"@cs ,
+                        "katalog"@da .
+
+
+###  http://www.w3.org/ns/dcat#compressFormat
+dcat:compressFormat rdf:type owl:ObjectProperty ;
+                    rdfs:domain dcat:Distribution ;
+                    rdfs:range dcterms:MediaType ;
+                    rdfs:label "compression format"@en ,
+                               "formato de compresión"@es ,
+                               "formato di compressione"@it ,
+                               "formát komprese"@cs ,
+                               "kompressionsformat"@da .
+
+
+###  http://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint rdf:type owl:ObjectProperty ;
+                  rdfs:range <http://www.w3.org/2006/vcard/ns#Kind> ;
+                  rdfs:label "Punto de contacto"@es ,
+                             "contact point"@en ,
+                             "kontaktní bod"@cs ,
+                             "kontaktpunkt"@da ,
+                             "point de contact"@fr ,
+                             "punto di contatto"@it ,
+                             "σημείο επικοινωνίας"@el ,
+                             "عنوان اتصال"@ar ,
+                             "窓口"@ja .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dcat:resource ;
+             rdfs:domain dcat:Catalog ;
+             rdfs:range dcat:Dataset ;
+             rdfs:label "conjunto de datos"@es ,
+                        "dataset"@en ,
+                        "dataset"@it ,
+                        "datasæt"@da ,
+                        "datová sada"@cs ,
+                        "jeu de données"@fr ,
+                        "σύνολο δεδομένων"@el ,
+                        "قائمة بيانات"@ar ,
+                        "データセット"@ja .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+dcat:distribution rdf:type owl:ObjectProperty ;
+                  owl:inverseOf dcat:isDistributionOf ;
+                  rdfs:domain dcat:Dataset ;
+                  rdfs:range dcat:Distribution ;
+                  rdfs:label "distribuce"@cs ,
+                             "distribución"@es ,
+                             "distribution"@da ,
+                             "distribution"@en ,
+                             "distribution"@fr ,
+                             "distribuzione"@it ,
+                             "διανομή"@el ,
+                             "توزيع"@ar ,
+                             "データセット配信"@ja .
+
+
+###  http://www.w3.org/ns/dcat#downloadURL
+dcat:downloadURL rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:Distribution ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:label "URL de descarga"@es ,
+                            "URL de téléchargement"@fr ,
+                            "URL di scarico"@it ,
+                            "URL souboru ke stažení"@cs ,
+                            "URL μεταφόρτωσης"@el ,
+                            "download URL"@en ,
+                            "downloadURL"@da ,
+                            "رابط تحميل"@ar ,
+                            "ダウンロードURL"@ja .
+
+
+###  http://www.w3.org/ns/dcat#endpointDescription
+dcat:endpointDescription rdf:type owl:ObjectProperty ;
+                         rdfs:domain dcat:DataService ;
+                         rdfs:label "descripción del end-point del servicio"@es ,
+                                    "description of service end-point"@en ,
+                                    "descrizione dell'endpoint del servizio"@it ,
+                                    "endpointbeskrivelse"@da ,
+                                    "popis přístupového bodu služby"@cs .
+
+
+###  http://www.w3.org/ns/dcat#endpointURL
+dcat:endpointURL rdf:type owl:ObjectProperty ;
+                 rdfs:domain dcat:DataService ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:label "end-point del servicio"@es ,
+                            "end-point del servizio"@it ,
+                            "přístupový bod služby"@cs ,
+                            "service end-point"@en ,
+                            "tjenesteendpoint"@da .
+
+
+###  http://www.w3.org/ns/dcat#hasCurrentVersion
+dcat:hasCurrentVersion rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://purl.org/pav/hasVersion> ;
+                       rdfs:label "ha versione attuale"@it ,
+                                  "has current version"@en ,
+                                  "tiene versión actual"@es .
+
+
+###  http://www.w3.org/ns/dcat#hasVersion
+dcat:hasVersion rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf prov:generalizationOf ;
+                owl:inverseOf dcat:isVersionOf ;
+                rdfs:label "ha versione"@it ,
+                           "has version"@en ,
+                           "tiene versión"@es .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty ;
+               owl:inverseOf dcat:resource .
+
+
+###  http://www.w3.org/ns/dcat#inSeries
+dcat:inSeries rdf:type owl:ObjectProperty ;
+              owl:inverseOf dcat:seriesMember ;
+              rdfs:label "en serie"@es ,
+                         "in serie"@it ,
+                         "in series"@en .
+
+
+###  http://www.w3.org/ns/dcat#isDistributionOf
+dcat:isDistributionOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#isVersionOf
+dcat:isVersionOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#mediaType
+dcat:mediaType rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Distribution ;
+               rdfs:range dcterms:MediaType ;
+               rdfs:label "media type"@en ,
+                          "medietype"@da ,
+                          "tipo de media"@es ,
+                          "tipo di media"@it ,
+                          "typ média"@cs ,
+                          "type de média"@fr ,
+                          "τύπος μέσου"@el ,
+                          "نوع الميديا"@ar ,
+                          "メディア・タイプ"@ja .
+
+
+###  http://www.w3.org/ns/dcat#nextVersion
+dcat:nextVersion rdf:type owl:ObjectProperty ;
+                 owl:inverseOf dcat:previousVersion .
+
+
+###  http://www.w3.org/ns/dcat#packageFormat
+dcat:packageFormat rdf:type owl:ObjectProperty ;
+                   rdfs:domain dcat:Distribution ;
+                   rdfs:range dcterms:MediaType ;
+                   rdfs:label "formato de empaquetado"@es ,
+                              "formato di impacchettamento"@it ,
+                              "formát balíčku"@cs ,
+                              "packaging format"@en ,
+                              "pakkeformat"@da .
+
+
+###  http://www.w3.org/ns/dcat#previousVersion
+dcat:previousVersion rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf prov:wasRevisionOf ;
+                     rdfs:label "previous version"@en ,
+                                "versione precedente"@it ,
+                                "versión anterior"@es .
+
+
+###  http://www.w3.org/ns/dcat#resource
+dcat:resource rdf:type owl:ObjectProperty ;
+              rdfs:domain dcat:Catalog ;
+              rdfs:range dcat:Resource ;
+              rdfs:label "resource"@en ,
+                         "risorsa"@it .
+
+
+###  http://www.w3.org/ns/dcat#seriesMember
+dcat:seriesMember rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#servesDataset
+dcat:servesDataset rdf:type owl:ObjectProperty ;
+                   rdfs:domain dcat:DataService ;
+                   rdfs:range dcat:Dataset ;
+                   rdfs:label "datatjeneste for datasæt"@da ,
+                              "poskytuje datovou sadu"@cs ,
+                              "provee conjunto de datos"@es ,
+                              "serve set di dati"@it ,
+                              "serves dataset"@en .
+
+
+###  http://www.w3.org/ns/dcat#service
+dcat:service rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dcat:resource ;
+             rdfs:domain dcat:Catalog ;
+             rdfs:range dcat:DataService ;
+             rdfs:label "datatjeneste"@da ,
+                        "service"@en ,
+                        "servicio"@es ,
+                        "servizio"@it ,
+                        "služba"@cs .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:label "emne"@da ,
+                      "tema"@es ,
+                      "tema"@it ,
+                      "theme"@en ,
+                      "thème"@fr ,
+                      "téma"@cs ,
+                      "Θέμα"@el ,
+                      "التصنيف"@ar ,
+                      "テーマ/カテゴリー"@ja .
+
+
+###  http://www.w3.org/ns/odrl/2/action
+odrl:action rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( odrl:Policy
+                                        odrl:Rule
+                                      )
+                        ] ;
+            rdfs:range odrl:Action .
+
+
+###  http://www.w3.org/ns/odrl/2/constraint
+odrl:constraint rdf:type owl:ObjectProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( odrl:Policy
+                                            odrl:Rule
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( odrl:Constraint
+                                           odrl:LogicalConstraint
+                                         )
+                           ] .
+
+
+###  http://www.w3.org/ns/odrl/2/duty
+odrl:duty rdf:type owl:ObjectProperty ;
+          rdfs:domain odrl:Permission ;
+          rdfs:range odrl:Duty .
+
+
+###  http://www.w3.org/ns/odrl/2/hasPolicy
+odrl:hasPolicy rdf:type owl:ObjectProperty ;
+               rdfs:domain odrl:Asset ;
+               rdfs:range odrl:Policy .
+
+
+###  http://www.w3.org/ns/odrl/2/includedIn
+odrl:includedIn rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:domain odrl:Action ;
+                rdfs:range odrl:Action .
+
+
+###  http://www.w3.org/ns/odrl/2/obligation
+odrl:obligation rdf:type owl:ObjectProperty ;
+                rdfs:domain odrl:Policy ;
+                rdfs:range odrl:Duty .
+
+
+###  http://www.w3.org/ns/odrl/2/permission
+odrl:permission rdf:type owl:ObjectProperty ;
+                rdfs:domain odrl:Policy ;
+                rdfs:range odrl:Permission .
+
+
+###  http://www.w3.org/ns/odrl/2/prohibition
+odrl:prohibition rdf:type owl:ObjectProperty ;
+                 rdfs:domain odrl:Policy ;
+                 rdfs:range odrl:Prohibition .
+
+
+###  http://www.w3.org/ns/odrl/2/relation
+odrl:relation rdf:type owl:ObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( odrl:Policy
+                                          odrl:Rule
+                                        )
+                          ] ;
+              rdfs:range odrl:Asset .
+
+
+###  http://www.w3.org/ns/odrl/2/target
+odrl:target rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf odrl:relation ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( odrl:Policy
+                                        odrl:Rule
+                                      )
+                        ] ;
+            rdfs:range odrl:Asset .
+
+
+###  http://www.w3.org/ns/prov#alternateOf
+prov:alternateOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain prov:Entity ;
+                 rdfs:range prov:Entity ;
+                 rdfs:label "alternateOf" .
+
+
+###  http://www.w3.org/ns/prov#generalizationOf
+prov:generalizationOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/prov#influenced
+prov:influenced rdf:type owl:ObjectProperty ;
+                owl:inverseOf prov:wasInfluencedBy ;
+                rdfs:label "influenced" .
+
+
+###  http://www.w3.org/ns/prov#specializationOf
+prov:specializationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf prov:alternateOf ;
+                      rdfs:domain prov:Entity ;
+                      rdfs:label "specializationOf" .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf prov:wasInfluencedBy ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Entity ;
+                    rdfs:label "wasDerivedFrom" .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+prov:wasInfluencedBy rdf:type owl:ObjectProperty ;
+                     rdfs:label "wasInfluencedBy" .
+
+
+###  http://www.w3.org/ns/prov#wasRevisionOf
+prov:wasRevisionOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf prov:wasDerivedFrom ;
+                   rdfs:domain prov:Entity ;
+                   rdfs:label "wasRevisionOf" .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/dcat#byteSize
+dcat:byteSize rdf:type owl:DatatypeProperty ;
+              rdfs:domain dcat:Distribution ;
+              rdfs:label "byte size"@en ,
+                         "bytestørrelse"@da ,
+                         "dimensione in byte"@it ,
+                         "taille en octects"@fr ,
+                         "tamaño en bytes"@es ,
+                         "velikost v bajtech"@cs ,
+                         "μέγεθος σε bytes"@el ,
+                         "الحجم بالبايت"@ar ,
+                         "バイト・サイズ"@ja .
+
+
+###  http://www.w3.org/ns/dcat#keyword
+dcat:keyword rdf:type owl:DatatypeProperty ;
+             rdfs:label "keyword"@en ,
+                        "klíčové slovo"@cs ,
+                        "mot-clés "@fr ,
+                        "nøgleord"@da ,
+                        "palabra clave"@es ,
+                        "parola chiave"@it ,
+                        "λέξη-κλειδί"@el ,
+                        "كلمة  مفتاحية "@ar ,
+                        "キーワード/タグ"@ja .
+
+
+###  http://www.w3.org/ns/dcat#spatialResolutionInMeters
+dcat:spatialResolutionInMeters rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:decimal ;
+                               rdfs:label "geografisk opløsning (meter)"@da ,
+                                          "prostorové rozlišení (metry)"@cs ,
+                                          "resolución espacial (metros)"@es ,
+                                          "risoluzione spaziale (metri)"@it ,
+                                          "spatial resolution (meters)"@en-us ,
+                                          "spatial resolution (metres)"@en-gb .
+
+
+###  http://www.w3.org/ns/dcat#temporalResolution
+dcat:temporalResolution rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:duration ;
+                        rdfs:label "resolución temporal"@es ,
+                                   "risoluzione temporale"@it ,
+                                   "temporal resolution"@en ,
+                                   "tidslig opløsning"@da ,
+                                   "časové rozlišení"@cs .
+
+
+###  http://www.w3.org/ns/dcat#version
+dcat:version rdf:type owl:DatatypeProperty ;
+             rdfs:label "version"@en ,
+                        "versione"@it ,
+                        "versión"@es .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/dcam/VocabularyEncodingScheme
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> rdf:type owl:Class .
+
+
+###  http://purl.org/dc/dcmitype/Service
+<http://purl.org/dc/dcmitype/Service> rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/AgentClass
+dcterms:AgentClass rdf:type owl:Class ;
+                   rdfs:subClassOf rdfs:Class ;
+                   rdfs:label "Agent Class"@en .
+
+
+###  http://purl.org/dc/terms/MediaType
+dcterms:MediaType rdf:type owl:Class ;
+                  rdfs:subClassOf dcterms:MediaTypeOrExtent ;
+                  rdfs:label "Media Type"@en .
+
+
+###  http://purl.org/dc/terms/MediaTypeOrExtent
+dcterms:MediaTypeOrExtent rdf:type owl:Class ;
+                          rdfs:label "Media Type or Extent"@en .
+
+
+###  http://schema.org/Action
+<http://schema.org/Action> rdf:type owl:Class .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/vcard/ns#Agent
+<http://www.w3.org/2006/vcard/ns#Agent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/vcard/ns#Individual
+<http://www.w3.org/2006/vcard/ns#Individual> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/vcard/ns#Kind
+<http://www.w3.org/2006/vcard/ns#Kind> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/vcard/ns#Organization
+<http://www.w3.org/2006/vcard/ns#Organization> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Dataset ;
+             rdfs:label "Catalog"@en ,
+                        "Catalogo"@it ,
+                        "Catalogue"@fr ,
+                        "Catálogo"@es ,
+                        "Katalog"@cs ,
+                        "Katalog"@da ,
+                        "Κατάλογος"@el ,
+                        "فهرس قوائم البيانات"@ar ,
+                        "カタログ"@ja .
+
+
+###  http://www.w3.org/ns/dcat#DataService
+dcat:DataService rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/dc/dcmitype/Service> ,
+                                 dcat:Resource ;
+                 rdfs:label "Data service"@en ,
+                            "Datatjeneste"@da ,
+                            "Servicio de datos"@es ,
+                            "Servizio di dati"@it .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Resource ;
+             rdfs:label "Conjunto de datos"@es ,
+                        "Dataset"@en ,
+                        "Dataset"@it ,
+                        "Datasæt"@da ,
+                        "Datová sada"@cs ,
+                        "Jeu de données"@fr ,
+                        "Σύνολο Δεδομένων"@el ,
+                        "قائمة بيانات"@ar ,
+                        "データセット"@ja .
+
+
+###  http://www.w3.org/ns/dcat#DatasetSeries
+dcat:DatasetSeries rdf:type owl:Class ;
+                   rdfs:subClassOf dcat:Dataset ;
+                   rdfs:label "Dataset series"@en ,
+                              "Serie de conjuntos de datos"@es ,
+                              "Serie di dataset"@it .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class ;
+                  rdfs:label "Distribuce"@cs ,
+                             "Distribución"@es ,
+                             "Distribution"@da ,
+                             "Distribution"@en ,
+                             "Distribution"@fr ,
+                             "Distribuzione"@it ,
+                             "Διανομή"@el ,
+                             "التوزيع"@ar ,
+                             "配信"@ja .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class ;
+              rdfs:label "Catalogued resource"@en ,
+                         "Katalogiseret ressource"@da ,
+                         "Katalogizovaný zdroj"@cs ,
+                         "Recurso catalogado"@es ,
+                         "Risorsa catalogata"@it .
+
+
+###  http://www.w3.org/ns/odrl/2/Action
+odrl:Action rdf:type owl:Class ;
+            rdfs:subClassOf <http://schema.org/Action> .
+
+
+###  http://www.w3.org/ns/odrl/2/Agreement
+odrl:Agreement rdf:type owl:Class ;
+               rdfs:subClassOf odrl:Policy ;
+               owl:disjointWith odrl:Offer ,
+                                odrl:Set .
+
+
+###  http://www.w3.org/ns/odrl/2/Asset
+odrl:Asset rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/ConflictTerm
+odrl:ConflictTerm rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Constraint
+odrl:Constraint rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Duty
+odrl:Duty rdf:type owl:Class ;
+          rdfs:subClassOf odrl:Rule ;
+          owl:disjointWith odrl:Permission ,
+                           odrl:Prohibition .
+
+
+###  http://www.w3.org/ns/odrl/2/LeftOperand
+odrl:LeftOperand rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/LogicalConstraint
+odrl:LogicalConstraint rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Offer
+odrl:Offer rdf:type owl:Class ;
+           rdfs:subClassOf odrl:Policy ;
+           owl:disjointWith odrl:Set .
+
+
+###  http://www.w3.org/ns/odrl/2/Operator
+odrl:Operator rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Party
+odrl:Party rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Class ;
+                             owl:unionOf ( <http://schema.org/Organization>
+                                           <http://schema.org/Person>
+                                           <http://www.w3.org/2006/vcard/ns#Agent>
+                                           <http://www.w3.org/2006/vcard/ns#Individual>
+                                           <http://www.w3.org/2006/vcard/ns#Organization>
+                                           foaf:Agent
+                                           foaf:Organization
+                                           foaf:Person
+                                         )
+                           ] .
+
+
+###  http://www.w3.org/ns/odrl/2/PartyScope
+odrl:PartyScope rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Permission
+odrl:Permission rdf:type owl:Class ;
+                rdfs:subClassOf odrl:Rule ;
+                owl:disjointWith odrl:Prohibition .
+
+
+###  http://www.w3.org/ns/odrl/2/Policy
+odrl:Policy rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Prohibition
+odrl:Prohibition rdf:type owl:Class ;
+                 rdfs:subClassOf odrl:Rule .
+
+
+###  http://www.w3.org/ns/odrl/2/RightOperand
+odrl:RightOperand rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Rule
+odrl:Rule rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/odrl/2/Set
+odrl:Set rdf:type owl:Class ;
+         rdfs:subClassOf odrl:Policy .
+
+
+###  http://www.w3.org/ns/odrl/2/UndefinedTerm
+odrl:UndefinedTerm rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              owl:disjointWith prov:Entity ;
+              rdfs:label "Activity" .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:label "Agent" .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:label "Entity" .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+###  https://w3id.org/QUAY_0000000
+<https://w3id.org/QUAY_0000000> rdf:type owl:Class ;
+                                rdfs:label "root node"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stfc.ac.uk
+<http://stfc.ac.uk> rdf:type owl:NamedIndividual .
+
+
+###  http://creativecommons.org/ns#Attribution
+<http://creativecommons.org/ns#Attribution> rdf:type owl:NamedIndividual ,
+                                                     skos:Concept ,
+                                                     odrl:Action ;
+                                            odrl:includedIn odrl:use ;
+                                            rdfs:label "Attribution"@en .
+
+
+###  http://creativecommons.org/ns#CommercialUse
+<http://creativecommons.org/ns#CommercialUse> rdf:type owl:NamedIndividual ,
+                                                       skos:Concept ,
+                                                       odrl:Action ;
+                                              odrl:includedIn odrl:use ;
+                                              rdfs:label "Commercial Use"@en .
+
+
+###  http://creativecommons.org/ns#DerivativeWorks
+<http://creativecommons.org/ns#DerivativeWorks> rdf:type owl:NamedIndividual ,
+                                                         skos:Concept ,
+                                                         odrl:Action ;
+                                                odrl:includedIn odrl:use ;
+                                                rdfs:label "Derivative Works"@en .
+
+
+###  http://creativecommons.org/ns#Distribution
+<http://creativecommons.org/ns#Distribution> rdf:type owl:NamedIndividual ,
+                                                      skos:Concept ,
+                                                      odrl:Action ;
+                                             odrl:includedIn odrl:use ;
+                                             rdfs:label "Distribution"@en .
+
+
+###  http://creativecommons.org/ns#Notice
+<http://creativecommons.org/ns#Notice> rdf:type owl:NamedIndividual ,
+                                                skos:Concept ,
+                                                odrl:Action ;
+                                       odrl:includedIn odrl:use ;
+                                       rdfs:label "Notice"@en .
+
+
+###  http://creativecommons.org/ns#Reproduction
+<http://creativecommons.org/ns#Reproduction> rdf:type owl:NamedIndividual ,
+                                                      skos:Concept ,
+                                                      odrl:Action ;
+                                             odrl:includedIn odrl:use ;
+                                             rdfs:label "Reproduction"@en .
+
+
+###  http://creativecommons.org/ns#ShareAlike
+<http://creativecommons.org/ns#ShareAlike> rdf:type owl:NamedIndividual ,
+                                                    skos:Concept ,
+                                                    odrl:Action ;
+                                           odrl:includedIn odrl:use ;
+                                           rdfs:label "Share Alike"@en .
+
+
+###  http://creativecommons.org/ns#Sharing
+<http://creativecommons.org/ns#Sharing> rdf:type owl:NamedIndividual ,
+                                                 skos:Concept ,
+                                                 odrl:Action ;
+                                        odrl:includedIn odrl:use ;
+                                        rdfs:label "Sharing"@en .
+
+
+###  http://creativecommons.org/ns#SourceCode
+<http://creativecommons.org/ns#SourceCode> rdf:type owl:NamedIndividual ,
+                                                    skos:Concept ,
+                                                    odrl:Action ;
+                                           odrl:includedIn odrl:use ;
+                                           rdfs:label "Source Code"@en .
+
+
+###  http://ec.europa.eu/dgs/informatics/
+<http://ec.europa.eu/dgs/informatics/> rdf:type owl:NamedIndividual .
+
+
+###  http://makxdekkers.com/
+<http://makxdekkers.com/> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/dc/terms/Agent
+dcterms:Agent rdf:type owl:NamedIndividual ,
+                       dcterms:AgentClass ;
+              rdfs:label "Agent"@en .
+
+
+###  http://purl.org/dc/terms/DCMIType
+dcterms:DCMIType rdf:type owl:NamedIndividual ,
+                          <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+                 rdfs:label "DCMI Type Vocabulary"@en .
+
+
+###  http://purl.org/dc/terms/DDC
+dcterms:DDC rdf:type owl:NamedIndividual ,
+                     <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+            rdfs:label "DDC"@en .
+
+
+###  http://purl.org/dc/terms/IMT
+dcterms:IMT rdf:type owl:NamedIndividual ,
+                     <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+            rdfs:label "IMT"@en .
+
+
+###  http://purl.org/dc/terms/LCC
+dcterms:LCC rdf:type owl:NamedIndividual ,
+                     <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+            rdfs:label "LCC"@en .
+
+
+###  http://purl.org/dc/terms/LCSH
+dcterms:LCSH rdf:type owl:NamedIndividual ,
+                      <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+             rdfs:label "LCSH"@en .
+
+
+###  http://purl.org/dc/terms/MESH
+dcterms:MESH rdf:type owl:NamedIndividual ,
+                      <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+             rdfs:label "MeSH"@en .
+
+
+###  http://purl.org/dc/terms/NLM
+dcterms:NLM rdf:type owl:NamedIndividual ,
+                     <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+            rdfs:label "NLM"@en .
+
+
+###  http://purl.org/dc/terms/TGN
+dcterms:TGN rdf:type owl:NamedIndividual ,
+                     <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+            rdfs:label "TGN"@en .
+
+
+###  http://purl.org/dc/terms/UDC
+dcterms:UDC rdf:type owl:NamedIndividual ,
+                     <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
+            rdfs:label "UDC"@en .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:NamedIndividual .
+
+
+###  http://www.asahi-net.or.jp/~ax2s-kmtn/
+<http://www.asahi-net.or.jp/~ax2s-kmtn/> rdf:type owl:NamedIndividual .
+
+
+###  http://www.deri.ie/
+<http://www.deri.ie/> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/dcat
+<http://www.w3.org/ns/dcat> rdf:type owl:NamedIndividual ;
+                            dcat:hasCurrentVersion <http://www.w3.org/ns/dcat3> ;
+                            dcat:hasVersion <http://www.w3.org/ns/dcat2> ,
+                                            <http://www.w3.org/ns/dcat2014> ,
+                                            <http://www.w3.org/ns/dcat3> ;
+                            dcat:previousVersion <http://www.w3.org/ns/dcat2> ;
+                            dcat:version "3" .
+
+
+###  http://www.w3.org/ns/dcat2
+<http://www.w3.org/ns/dcat2> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/dcat2014
+<http://www.w3.org/ns/dcat2014> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/dcat3
+<http://www.w3.org/ns/dcat3> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/prov-o
+<http://www.w3.org/ns/prov-o> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/prov-o-20130312
+<http://www.w3.org/ns/prov-o-20130312> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/odrl/2/Action
+odrl:Action rdf:type owl:NamedIndividual ,
+                     skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Agreement
+odrl:Agreement rdf:type owl:NamedIndividual ,
+                        skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/All
+odrl:All rdf:type owl:NamedIndividual ,
+                  skos:Concept ,
+                  odrl:PartyScope ;
+         rdfs:label "All"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/All2ndConnections
+odrl:All2ndConnections rdf:type owl:NamedIndividual ,
+                                skos:Concept ,
+                                odrl:PartyScope ;
+                       rdfs:label "All Second-level Connections"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/AllConnections
+odrl:AllConnections rdf:type owl:NamedIndividual ,
+                             skos:Concept ,
+                             odrl:PartyScope ;
+                    rdfs:label "All First-Level Connections"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/AllGroups
+odrl:AllGroups rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:PartyScope ;
+               rdfs:label "All Group Connections"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/Assertion
+odrl:Assertion rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               rdfs:label "Assertion"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/Asset
+odrl:Asset rdf:type owl:NamedIndividual ,
+                    skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/AssetCollection
+odrl:AssetCollection rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:label "Asset Collection"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/AssetScope
+odrl:AssetScope rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:label "Asset Scope"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/ConflictTerm
+odrl:ConflictTerm rdf:type owl:NamedIndividual ,
+                           skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Constraint
+odrl:Constraint rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Duty
+odrl:Duty rdf:type owl:NamedIndividual ,
+                   skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Group
+odrl:Group rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:PartyScope ;
+           rdfs:label "Group"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/Individual
+odrl:Individual rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:PartyScope ;
+                rdfs:label "Individual"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/LeftOperand
+odrl:LeftOperand rdf:type owl:NamedIndividual ,
+                          skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/LogicalConstraint
+odrl:LogicalConstraint rdf:type owl:NamedIndividual ,
+                                skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Offer
+odrl:Offer rdf:type owl:NamedIndividual ,
+                    skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Operator
+odrl:Operator rdf:type owl:NamedIndividual ,
+                       skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Party
+odrl:Party rdf:type owl:NamedIndividual ,
+                    skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/PartyCollection
+odrl:PartyCollection rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:label "Party Collection"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/PartyScope
+odrl:PartyScope rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Permission
+odrl:Permission rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Policy
+odrl:Policy rdf:type owl:NamedIndividual ,
+                     skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Privacy
+odrl:Privacy rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             rdfs:label "Privacy Policy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/Prohibition
+odrl:Prohibition rdf:type owl:NamedIndividual ,
+                          skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Request
+odrl:Request rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             rdfs:label "Request"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/RightOperand
+odrl:RightOperand rdf:type owl:NamedIndividual ,
+                           skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Rule
+odrl:Rule rdf:type owl:NamedIndividual ,
+                   skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Set
+odrl:Set rdf:type owl:NamedIndividual ,
+                  skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/Ticket
+odrl:Ticket rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:label "Ticket"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/UndefinedTerm
+odrl:UndefinedTerm rdf:type owl:NamedIndividual ,
+                            skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/absolutePosition
+odrl:absolutePosition rdf:type owl:NamedIndividual ,
+                               skos:Concept ,
+                               odrl:LeftOperand ;
+                      rdfs:label "Absolute Asset Position"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/absoluteSize
+odrl:absoluteSize rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:LeftOperand ;
+                  rdfs:label "Absolute Asset Size"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/absoluteSpatialPosition
+odrl:absoluteSpatialPosition rdf:type owl:NamedIndividual ,
+                                      skos:Concept ,
+                                      odrl:LeftOperand ;
+                             rdfs:label "Absolute Spatial Asset Position"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/absoluteTemporalPosition
+odrl:absoluteTemporalPosition rdf:type owl:NamedIndividual ,
+                                       skos:Concept ,
+                                       odrl:LeftOperand ;
+                              rdfs:label "Absolute Temporal Asset Position"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/acceptTracking
+odrl:acceptTracking rdf:type owl:NamedIndividual ,
+                             skos:Concept ,
+                             odrl:Action ;
+                    odrl:includedIn odrl:use ;
+                    rdfs:label "Accept Tracking"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/action
+odrl:action rdf:type owl:NamedIndividual ,
+                     skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/adHocShare
+odrl:adHocShare rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:Action ;
+                rdfs:label "Ad-hoc sharing"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/aggregate
+odrl:aggregate rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Aggregate"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/and
+odrl:and rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         rdfs:label "And"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/andSequence
+odrl:andSequence rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 rdfs:label "And Sequence"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/annotate
+odrl:annotate rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Action ;
+              odrl:includedIn odrl:use ;
+              rdfs:label "Annotate"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/anonymize
+odrl:anonymize rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Anonymize"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/append
+odrl:append rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            rdfs:label "Append"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/appendTo
+odrl:appendTo rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Action ;
+              rdfs:label "Append To"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/archive
+odrl:archive rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:use ;
+             rdfs:label "Archive"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/assignee
+odrl:assignee rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Assignee"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/assigneeOf
+odrl:assigneeOf rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:label "Assignee Of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/assigner
+odrl:assigner rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Assigner"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/assignerOf
+odrl:assignerOf rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:label "Assigner Of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/attachPolicy
+odrl:attachPolicy rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:Action ;
+                  rdfs:label "Attach policy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/attachSource
+odrl:attachSource rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:Action ;
+                  rdfs:label "Attach source"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/attribute
+odrl:attribute rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Attribute"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/attributedParty
+odrl:attributedParty rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:label "Attributed Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/attributingParty
+odrl:attributingParty rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      rdfs:label "Attributing Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/commercialize
+odrl:commercialize rdf:type owl:NamedIndividual ,
+                            skos:Concept ,
+                            odrl:Action ;
+                   rdfs:label "Commercialize"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/compensate
+odrl:compensate rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:Action ;
+                odrl:includedIn odrl:use ;
+                rdfs:label "Compensate"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/compensatedParty
+odrl:compensatedParty rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      rdfs:label "Compensated Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/compensatingParty
+odrl:compensatingParty rdf:type owl:NamedIndividual ,
+                                skos:Concept ;
+                       rdfs:label "Compensating Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/concurrentUse
+odrl:concurrentUse rdf:type owl:NamedIndividual ,
+                            skos:Concept ,
+                            odrl:Action ;
+                   odrl:includedIn odrl:use ;
+                   rdfs:label "Concurrent Use"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/conflict
+odrl:conflict rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Handle Policy Conflicts"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/consentedParty
+odrl:consentedParty rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    rdfs:label "Consented Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/consentingParty
+odrl:consentingParty rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:label "Consenting Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/consequence
+odrl:consequence rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 rdfs:label "Consequence"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/constraint
+odrl:constraint rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/contractedParty
+odrl:contractedParty rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:label "Contracted Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/contractingParty
+odrl:contractingParty rdf:type owl:NamedIndividual ,
+                               skos:Concept ;
+                      rdfs:label "Contracting Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/copy
+odrl:copy rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          owl:sameAs odrl:reproduce ;
+          rdfs:label "Copy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/reproduce
+
+###  http://www.w3.org/ns/odrl/2/core
+odrl:core rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          rdfs:label "ODRL Core Profile"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/count
+odrl:count rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:LeftOperand ;
+           rdfs:label "Count"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/dataType
+odrl:dataType rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Datatype"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/dateTime
+odrl:dateTime rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:LeftOperand ;
+              rdfs:label "Datetime"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/delayPeriod
+odrl:delayPeriod rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:LeftOperand ;
+                 rdfs:label "Delay Period"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/delete
+odrl:delete rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            odrl:includedIn odrl:use ;
+            rdfs:label "Delete"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/deliveryChannel
+odrl:deliveryChannel rdf:type owl:NamedIndividual ,
+                              skos:Concept ,
+                              odrl:LeftOperand ;
+                     rdfs:label "Delivery Channel"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/derive
+odrl:derive rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            odrl:includedIn odrl:use ;
+            rdfs:label "Derive"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/device
+odrl:device rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:LeftOperand ;
+            rdfs:label "Device"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/digitize
+odrl:digitize rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Action ;
+              odrl:includedIn odrl:use ;
+              rdfs:label "Digitize"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/display
+odrl:display rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:play ;
+             rdfs:label "Display"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/distribute
+odrl:distribute rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:Action ;
+                odrl:includedIn odrl:use ;
+                rdfs:label "Distribute"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/duty
+odrl:duty rdf:type owl:NamedIndividual ,
+                   skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/elapsedTime
+odrl:elapsedTime rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:LeftOperand ;
+                 rdfs:label "Elapsed Time"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/ensureExclusivity
+odrl:ensureExclusivity rdf:type owl:NamedIndividual ,
+                                skos:Concept ,
+                                odrl:Action ;
+                       odrl:includedIn odrl:use ;
+                       rdfs:label "Ensure Exclusivity"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/eq
+odrl:eq rdf:type owl:NamedIndividual ,
+                 skos:Concept ,
+                 odrl:Operator ;
+        rdfs:label "Equal to"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/event
+odrl:event rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:LeftOperand ;
+           rdfs:label "Event"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/execute
+odrl:execute rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:use ;
+             rdfs:label "Execute"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/export
+odrl:export rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            rdfs:label "Export"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/extract
+odrl:extract rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:reproduce ;
+             rdfs:label "Extract"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/extractChar
+odrl:extractChar rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:Action ;
+                 rdfs:label "Extract character"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/extractPage
+odrl:extractPage rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:Action ;
+                 rdfs:label "Extract page"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/extractWord
+odrl:extractWord rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:Action ;
+                 rdfs:label "Extract word"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/failure
+odrl:failure rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             rdfs:label "Failure"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/fileFormat
+odrl:fileFormat rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:LeftOperand ;
+                rdfs:label "File Format"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/function
+odrl:function rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Function"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/give
+odrl:give rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          odrl:includedIn odrl:transfer ;
+          rdfs:label "Give"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/grantUse
+odrl:grantUse rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Action ;
+              odrl:includedIn odrl:use ;
+              rdfs:label "Grant Use"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/gt
+odrl:gt rdf:type owl:NamedIndividual ,
+                 skos:Concept ,
+                 odrl:Operator ;
+        rdfs:label "Greater than"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/gteq
+odrl:gteq rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Operator ;
+          rdfs:label "Greater than or equal to"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/hasPart
+odrl:hasPart rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Operator ;
+             rdfs:label "Has part"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/hasPolicy
+odrl:hasPolicy rdf:type owl:NamedIndividual ,
+                        skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/ignore
+odrl:ignore rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:UndefinedTerm ;
+            rdfs:label "Ignore Undefined Actions"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/implies
+odrl:implies rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             rdfs:label "Implies"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/include
+odrl:include rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:use ;
+             rdfs:label "Include"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/includedIn
+odrl:includedIn rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/index
+odrl:index rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:Action ;
+           odrl:includedIn odrl:use ;
+           rdfs:label "Index"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/industry
+odrl:industry rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:LeftOperand ;
+              rdfs:label "Industry Context"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/inform
+odrl:inform rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            odrl:includedIn odrl:use ;
+            rdfs:label "Inform"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/informedParty
+odrl:informedParty rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   rdfs:label "Informed Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/informingParty
+odrl:informingParty rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    rdfs:label "Informing Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/inheritAllowed
+odrl:inheritAllowed rdf:type owl:NamedIndividual ,
+                             skos:Concept ;
+                    rdfs:label "Inheritance Allowed"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/inheritFrom
+odrl:inheritFrom rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 rdfs:label "Inherits From"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/inheritRelation
+odrl:inheritRelation rdf:type owl:NamedIndividual ,
+                              skos:Concept ;
+                     rdfs:label "Inherit Relation"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/install
+odrl:install rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:use ;
+             rdfs:label "Install"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/invalid
+odrl:invalid rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:ConflictTerm ;
+             rdfs:label "Void Policy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/isA
+odrl:isA rdf:type owl:NamedIndividual ,
+                  skos:Concept ,
+                  odrl:Operator ;
+         rdfs:label "Is a"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/isAllOf
+odrl:isAllOf rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Operator ;
+             rdfs:label "Is all of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/isAnyOf
+odrl:isAnyOf rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Operator ;
+             rdfs:label "Is any of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/isNoneOf
+odrl:isNoneOf rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Operator ;
+              rdfs:label "Is none of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/isPartOf
+odrl:isPartOf rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Operator ;
+              rdfs:label "Is part of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/language
+odrl:language rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:LeftOperand ;
+              rdfs:label "Language"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/lease
+odrl:lease rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:Action ;
+           rdfs:label "Lease"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/leftOperand
+odrl:leftOperand rdf:type owl:NamedIndividual ,
+                          skos:Concept ;
+                 rdfs:label "Has Left Operand"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/lend
+odrl:lend rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          rdfs:label "Lend"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/license
+odrl:license rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             rdfs:label "License"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/lt
+odrl:lt rdf:type owl:NamedIndividual ,
+                 skos:Concept ,
+                 odrl:Operator ;
+        rdfs:label "Less than"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/lteq
+odrl:lteq rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Operator ;
+          rdfs:label "Less than or equal to"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/media
+odrl:media rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:LeftOperand ;
+           rdfs:label "Media Context"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/meteredTime
+odrl:meteredTime rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:LeftOperand ;
+                 rdfs:label "Metered Time"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/modify
+odrl:modify rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            odrl:includedIn odrl:use ;
+            rdfs:label "Modify"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/move
+odrl:move rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          odrl:includedIn odrl:use ;
+          rdfs:label "Move"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/neq
+odrl:neq rdf:type owl:NamedIndividual ,
+                  skos:Concept ,
+                  odrl:Operator ;
+         rdfs:label "Not equal to"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/nextPolicy
+odrl:nextPolicy rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:Action ;
+                odrl:includedIn odrl:use ;
+                rdfs:label "Next Policy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/obligation
+odrl:obligation rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/obtainConsent
+odrl:obtainConsent rdf:type owl:NamedIndividual ,
+                            skos:Concept ,
+                            odrl:Action ;
+                   odrl:includedIn odrl:use ;
+                   rdfs:label "Obtain Consent"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/operand
+odrl:operand rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             rdfs:label "Operand"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/operator
+odrl:operator rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Has Operator"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/or
+odrl:or rdf:type owl:NamedIndividual ,
+                 skos:Concept ;
+        rdfs:label "Or"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/output
+odrl:output rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:label "Output"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/partOf
+odrl:partOf rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:label "Part Of"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/pay
+odrl:pay rdf:type owl:NamedIndividual ,
+                  skos:Concept ,
+                  odrl:Action ;
+         rdfs:label "Pay"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/payAmount
+odrl:payAmount rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:LeftOperand ;
+               rdfs:label "Payment Amount"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/payeeParty
+odrl:payeeParty rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:label "Payee Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/percentage
+odrl:percentage rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:LeftOperand ;
+                rdfs:label "Asset Percentage"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/perm
+odrl:perm rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:ConflictTerm ;
+          rdfs:label "Prefer Permissions"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/permission
+odrl:permission rdf:type owl:NamedIndividual ,
+                         skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/play
+odrl:play rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          odrl:includedIn odrl:use ;
+          rdfs:label "Play"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/policyUsage
+odrl:policyUsage rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:RightOperand ;
+                 rdfs:label "Policy Rule Usage"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/present
+odrl:present rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             odrl:includedIn odrl:use ;
+             rdfs:label "Present"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/preview
+odrl:preview rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             rdfs:label "Preview"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/print
+odrl:print rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:Action ;
+           odrl:includedIn odrl:use ;
+           rdfs:label "Print"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/product
+odrl:product rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:LeftOperand ;
+             rdfs:label "Product Context"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/profile
+odrl:profile rdf:type owl:NamedIndividual ,
+                      skos:Concept ;
+             rdfs:label "Profile"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/prohibit
+odrl:prohibit rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:ConflictTerm ;
+              rdfs:label "Prefer Prohibitions"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/prohibition
+odrl:prohibition rdf:type owl:NamedIndividual ,
+                          skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/proximity
+odrl:proximity rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               rdfs:label "proximity"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/purpose
+odrl:purpose rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:LeftOperand ;
+             rdfs:label "Purpose"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/read
+odrl:read rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          odrl:includedIn odrl:use ;
+          rdfs:label "Read"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/recipient
+odrl:recipient rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:LeftOperand ;
+               rdfs:label "Recipient"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/refinement
+odrl:refinement rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:label "Refinement"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/relation
+odrl:relation rdf:type owl:NamedIndividual ,
+                       skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/relativePosition
+odrl:relativePosition rdf:type owl:NamedIndividual ,
+                               skos:Concept ,
+                               odrl:LeftOperand ;
+                      rdfs:label "Relative Asset Position"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/relativeSize
+odrl:relativeSize rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:LeftOperand ;
+                  rdfs:label "Relative Asset Size"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/relativeSpatialPosition
+odrl:relativeSpatialPosition rdf:type owl:NamedIndividual ,
+                                      skos:Concept ,
+                                      odrl:LeftOperand ;
+                             rdfs:label "Relative Spatial Asset Position"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/relativeTemporalPosition
+odrl:relativeTemporalPosition rdf:type owl:NamedIndividual ,
+                                       skos:Concept ,
+                                       odrl:LeftOperand ;
+                              rdfs:label "Relative Temporal Asset Position"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/remedy
+odrl:remedy rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:label "Remedy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/reproduce
+odrl:reproduce rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Reproduce"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/resolution
+odrl:resolution rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:LeftOperand ;
+                rdfs:label "Rendition Resolution"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/reviewPolicy
+odrl:reviewPolicy rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:Action ;
+                  odrl:includedIn odrl:use ;
+                  rdfs:label "Review Policy"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/rightOperand
+odrl:rightOperand rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Has Right Operand"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/rightOperandReference
+odrl:rightOperandReference rdf:type owl:NamedIndividual ,
+                                    skos:Concept ;
+                           rdfs:label "Has Right Operand Reference"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/scope
+odrl:scope rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           rdfs:label "Scope"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/secondaryUse
+odrl:secondaryUse rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:Action ;
+                  rdfs:label "Secondary Use"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/sell
+odrl:sell rdf:type owl:NamedIndividual ,
+                   skos:Concept ,
+                   odrl:Action ;
+          odrl:includedIn odrl:transfer ;
+          rdfs:label "Sell"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/share
+odrl:share rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:Action ;
+           rdfs:label "Share"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/shareAlike
+odrl:shareAlike rdf:type owl:NamedIndividual ,
+                         skos:Concept ,
+                         odrl:Action ;
+                rdfs:label "Share-alike"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/source
+odrl:source rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:label "Source"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/spatial
+odrl:spatial rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:LeftOperand ;
+             rdfs:label "Geospatial Named Area"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/spatialCoordinates
+odrl:spatialCoordinates rdf:type owl:NamedIndividual ,
+                                 skos:Concept ,
+                                 odrl:LeftOperand ;
+                        rdfs:label "Geospatial Coordinates"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/status
+odrl:status rdf:type owl:NamedIndividual ,
+                     skos:Concept ;
+            rdfs:label "Status"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/stream
+odrl:stream rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:Action ;
+            odrl:includedIn odrl:use ;
+            rdfs:label "Stream"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/support
+odrl:support rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:UndefinedTerm ;
+             rdfs:label "Support Undefined Actions"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/synchronize
+odrl:synchronize rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:Action ;
+                 odrl:includedIn odrl:use ;
+                 rdfs:label "Synchronize"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/system
+odrl:system rdf:type owl:NamedIndividual ,
+                     skos:Concept ,
+                     odrl:LeftOperand ;
+            rdfs:label "System"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/systemDevice
+odrl:systemDevice rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:LeftOperand ;
+                  rdfs:label "System Device"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/target
+odrl:target rdf:type owl:NamedIndividual ,
+                     skos:Concept .
+
+
+###  http://www.w3.org/ns/odrl/2/textToSpeech
+odrl:textToSpeech rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:Action ;
+                  odrl:includedIn odrl:use ;
+                  rdfs:label "Text-to-speech"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/timeInterval
+odrl:timeInterval rdf:type owl:NamedIndividual ,
+                           skos:Concept ,
+                           odrl:LeftOperand ;
+                  rdfs:label "Recurring Time Interval"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/timedCount
+odrl:timedCount rdf:type owl:NamedIndividual ,
+                         skos:Concept ;
+                rdfs:label "Timed Count"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/trackedParty
+odrl:trackedParty rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Tracked Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/trackingParty
+odrl:trackingParty rdf:type owl:NamedIndividual ,
+                            skos:Concept ;
+                   rdfs:label "Tracking Party"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/transfer
+odrl:transfer rdf:type owl:NamedIndividual ,
+                       skos:Concept ,
+                       odrl:Action ;
+              rdfs:label "Transfer Ownership"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/transform
+odrl:transform rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Transform"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/translate
+odrl:translate rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Translate"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/uid
+odrl:uid rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
+         rdfs:label "Unique Identifier"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/undefined
+odrl:undefined rdf:type owl:NamedIndividual ,
+                        skos:Concept ;
+               rdfs:label "Handle Undefined Term"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/uninstall
+odrl:uninstall rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Uninstall"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/unitOfCount
+odrl:unitOfCount rdf:type owl:NamedIndividual ,
+                          skos:Concept ,
+                          odrl:LeftOperand ;
+                 rdfs:label "Unit Of Count"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/use
+odrl:use rdf:type owl:NamedIndividual ,
+                  skos:Concept ,
+                  odrl:Action ;
+         rdfs:label "Use"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/version
+odrl:version rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:LeftOperand ;
+             rdfs:label "Version"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/virtualLocation
+odrl:virtualLocation rdf:type owl:NamedIndividual ,
+                              skos:Concept ,
+                              odrl:LeftOperand ;
+                     rdfs:label "Virtual IT Communication Location"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/watermark
+odrl:watermark rdf:type owl:NamedIndividual ,
+                        skos:Concept ,
+                        odrl:Action ;
+               odrl:includedIn odrl:use ;
+               rdfs:label "Watermark"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/write
+odrl:write rdf:type owl:NamedIndividual ,
+                    skos:Concept ,
+                    odrl:Action ;
+           rdfs:label "Write"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/writeTo
+odrl:writeTo rdf:type owl:NamedIndividual ,
+                      skos:Concept ,
+                      odrl:Action ;
+             rdfs:label "Write to"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/xone
+odrl:xone rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
+          rdfs:label "Only One"@en .
+
+
+###  http://www.w3.org/ns/odrl/2/#actionConcepts
+<http://www.w3.org/ns/odrl/2/#actionConcepts> rdf:type owl:NamedIndividual ,
+                                                       skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#actions
+<http://www.w3.org/ns/odrl/2/#actions> rdf:type owl:NamedIndividual ,
+                                                skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#actionsCommon
+<http://www.w3.org/ns/odrl/2/#actionsCommon> rdf:type owl:NamedIndividual ,
+                                                      skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#assetConcepts
+<http://www.w3.org/ns/odrl/2/#assetConcepts> rdf:type owl:NamedIndividual ,
+                                                      skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#assetParty
+<http://www.w3.org/ns/odrl/2/#assetParty> rdf:type owl:NamedIndividual ,
+                                                   skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#assetRelations
+<http://www.w3.org/ns/odrl/2/#assetRelations> rdf:type owl:NamedIndividual ,
+                                                       skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#assetRelationsCommon
+<http://www.w3.org/ns/odrl/2/#assetRelationsCommon> rdf:type owl:NamedIndividual ,
+                                                             skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#conflictConcepts
+<http://www.w3.org/ns/odrl/2/#conflictConcepts> rdf:type owl:NamedIndividual ,
+                                                         skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon
+<http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon> rdf:type owl:NamedIndividual ,
+                                                                    skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#constraintLogicalOperands
+<http://www.w3.org/ns/odrl/2/#constraintLogicalOperands> rdf:type owl:NamedIndividual ,
+                                                                  skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#constraintRelationalOperators
+<http://www.w3.org/ns/odrl/2/#constraintRelationalOperators> rdf:type owl:NamedIndividual ,
+                                                                      skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#constraintRightOpCommon
+<http://www.w3.org/ns/odrl/2/#constraintRightOpCommon> rdf:type owl:NamedIndividual ,
+                                                                skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#constraints
+<http://www.w3.org/ns/odrl/2/#constraints> rdf:type owl:NamedIndividual ,
+                                                    skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#deprecatedTerms
+<http://www.w3.org/ns/odrl/2/#deprecatedTerms> rdf:type owl:NamedIndividual ,
+                                                        skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#duties
+<http://www.w3.org/ns/odrl/2/#duties> rdf:type owl:NamedIndividual ,
+                                               skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#logicalConstraints
+<http://www.w3.org/ns/odrl/2/#logicalConstraints> rdf:type owl:NamedIndividual ,
+                                                           skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#partyConcepts
+<http://www.w3.org/ns/odrl/2/#partyConcepts> rdf:type owl:NamedIndividual ,
+                                                      skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#partyRoles
+<http://www.w3.org/ns/odrl/2/#partyRoles> rdf:type owl:NamedIndividual ,
+                                                   skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#partyRolesCommon
+<http://www.w3.org/ns/odrl/2/#partyRolesCommon> rdf:type owl:NamedIndividual ,
+                                                         skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#permissions
+<http://www.w3.org/ns/odrl/2/#permissions> rdf:type owl:NamedIndividual ,
+                                                    skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#policyConcepts
+<http://www.w3.org/ns/odrl/2/#policyConcepts> rdf:type owl:NamedIndividual ,
+                                                       skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#policySubClasses
+<http://www.w3.org/ns/odrl/2/#policySubClasses> rdf:type owl:NamedIndividual ,
+                                                         skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#policySubClassesCommon
+<http://www.w3.org/ns/odrl/2/#policySubClassesCommon> rdf:type owl:NamedIndividual ,
+                                                               skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#prohibitions
+<http://www.w3.org/ns/odrl/2/#prohibitions> rdf:type owl:NamedIndividual ,
+                                                     skos:Collection .
+
+
+###  http://www.w3.org/ns/odrl/2/#ruleConcepts
+<http://www.w3.org/ns/odrl/2/#ruleConcepts> rdf:type owl:NamedIndividual ,
+                                                     skos:Collection .
+
+
+###  http://www.w3.org/ns/prov-o#
+<http://www.w3.org/ns/prov-o#> rdf:type owl:NamedIndividual ;
+                               prov:specializationOf <http://www.w3.org/ns/prov-o> ;
+                               prov:wasRevisionOf <http://www.w3.org/ns/prov-o-20130312> .
+
+
+###  https://agbeltran.github.io
+<https://agbeltran.github.io> rdf:type owl:NamedIndividual .
+
+
+###  https://www.csiro.au
+<https://www.csiro.au> rdf:type owl:NamedIndividual .
+
+
+###  https://jakub.klímek.com/
+<https://jakub.klímek.com/> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/people/ralbertoni/
+<https://w3id.org/people/ralbertoni/> rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3.org/
+<https://www.w3.org/> rdf:type owl:NamedIndividual .
+
+
+[ rdf:type foaf:Person
+] .
+
+[ rdf:type foaf:Person
+ ] .
+
+[ rdf:type foaf:Person
+ ] .
+
+[ rdf:type foaf:Person
+ ] .
+
+[ rdf:type foaf:Person
+ ] .
+
+[ rdf:type foaf:Person
+ ] .
+
+[ rdf:type foaf:Person
+ ] .
+
+[ rdf:type foaf:Person ;
+   foaf:homepage <http://makxdekkers.com/>
+ ] .
+
+[ rdf:type <http://www.w3.org/ns/org#Organization> ;
+   foaf:homepage <https://www.w3.org/>
+ ] .
+
+[ rdf:type foaf:Person ;
+   foaf:homepage <https://w3id.org/people/ralbertoni/>
+ ] .
+
+[ rdf:type foaf:Person ;
+   foaf:homepage <https://agbeltran.github.io>
+ ] .
+
+[ rdf:type foaf:Person ;
+   foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/>
+ ] .
+
+[ rdf:type foaf:Person ;
+   foaf:homepage <https://jakub.klímek.com/>
+ ] .
+
+[ foaf:homepage <https://www.csiro.au>
+ ] .
+
+[ foaf:homepage <http://stfc.ac.uk>
+ ] .
+
+[ foaf:homepage <http://ec.europa.eu/dgs/informatics/>
+ ] .
+
+[ foaf:homepage <http://www.deri.ie/>
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+dcterms:description rdfs:label "description" .
+
+
+dcterms:license rdfs:label "license" .
+
+
+dcterms:title rdfs:label "Title"@en ,
+                         "title" .
+
+
+odrl:Action rdfs:label "Action"@en .
+
+
+odrl:Agreement rdfs:label "Agreement"@en .
+
+
+odrl:Asset rdfs:label "Asset"@en .
+
+
+odrl:ConflictTerm rdfs:label "Conflict Strategy Preference"@en .
+
+
+odrl:Constraint rdfs:label "Constraint"@en .
+
+
+odrl:Duty rdfs:label "Duty"@en .
+
+
+odrl:LeftOperand rdfs:label "Left Operand"@en .
+
+
+odrl:LogicalConstraint rdfs:label "Logical Constraint"@en .
+
+
+odrl:Offer rdfs:label "Offer"@en .
+
+
+odrl:Operator rdfs:label "Operator"@en .
+
+
+odrl:Party rdfs:label "Party"@en .
+
+
+odrl:PartyScope rdfs:label "Party Scope"@en .
+
+
+odrl:Permission rdfs:label "Permission"@en .
+
+
+odrl:Policy rdfs:label "Policy"@en .
+
+
+odrl:Prohibition rdfs:label "Prohibition"@en .
+
+
+odrl:RightOperand rdfs:label "Right Operand"@en .
+
+
+odrl:Rule rdfs:label "Rule"@en .
+
+
+odrl:Set rdfs:label "Set"@en .
+
+
+odrl:UndefinedTerm rdfs:label "Undefined Term"@en .
+
+
+odrl:action rdfs:label "Has Action"@en .
+
+
+odrl:constraint rdfs:label "Has Constraint"@en .
+
+
+odrl:duty rdfs:label "Has Duty"@en .
+
+
+odrl:hasPolicy rdfs:label "Target Policy"@en .
+
+
+odrl:includedIn rdfs:label "Included In"@en .
+
+
+odrl:obligation rdfs:label "Obligation"@en .
+
+
+odrl:permission rdfs:label "Has Permission"@en .
+
+
+odrl:prohibition rdfs:label "Has Prohibition"@en .
+
+
+odrl:relation rdfs:label "Relation"@en .
+
+
+odrl:target rdfs:label "Target"@en .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

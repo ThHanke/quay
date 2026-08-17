@@ -191,7 +191,7 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dc
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Catalog>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Dataset>)
 
-# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribution)
+# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribución)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribuce"@cs)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribución"@es)
@@ -239,7 +239,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "tjeneste
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/ns/dcat#DataService>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#endpointURL> rdfs:Resource)
 
-# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (tiene versión actual)
+# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (ha versione attuale)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "ha versione attuale"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "has current version"@en)
@@ -265,7 +265,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in serie"@i
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in series"@en)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#inSeries> <http://www.w3.org/ns/dcat#seriesMember>)
 
-# Object Property: <http://www.w3.org/ns/dcat#mediaType> (typ média)
+# Object Property: <http://www.w3.org/ns/dcat#mediaType> (tipo de media)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "media type"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "medietype"@da)
@@ -317,7 +317,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "serves
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/ns/dcat#DataService>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/ns/dcat#Dataset>)
 
-# Object Property: <http://www.w3.org/ns/dcat#service> (service)
+# Object Property: <http://www.w3.org/ns/dcat#service> (servicio)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "datatjeneste"@da)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "service"@en)
@@ -427,7 +427,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "t
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "časové rozlišení"@cs)
 DataPropertyRange(<http://www.w3.org/ns/dcat#temporalResolution> xsd:duration)
 
-# Data Property: <http://www.w3.org/ns/dcat#version> (versión)
+# Data Property: <http://www.w3.org/ns/dcat#version> (versione)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "version"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versione"@it)
