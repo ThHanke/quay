@@ -1,12 +1,106 @@
-Prefix(:=<https://w3id.org/quay//imports/dcterms_import.owl>)
+Prefix(:=<https://w3id.org/quay//imports/dcterms_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
+
 Ontology(<https://w3id.org/quay//imports/dcterms_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+<https://w3id.org/quay//releases/2026-08-17/imports/dcterms_import.owl>
+Annotation(owl:versionInfo "2026-08-17")
+
+Declaration(Class(<http://purl.org/dc/dcam/VocabularyEncodingScheme>))
+Declaration(Class(dc:AgentClass))
+Declaration(Class(rdfs:Class))
+Declaration(DataProperty(dc:title))
+Declaration(NamedIndividual(dc:Agent))
+Declaration(NamedIndividual(dc:DCMIType))
+Declaration(NamedIndividual(dc:DDC))
+Declaration(NamedIndividual(dc:IMT))
+Declaration(NamedIndividual(dc:LCC))
+Declaration(NamedIndividual(dc:LCSH))
+Declaration(NamedIndividual(dc:MESH))
+Declaration(NamedIndividual(dc:NLM))
+Declaration(NamedIndividual(dc:TGN))
+Declaration(NamedIndividual(dc:UDC))
+Declaration(NamedIndividual(dc:description))
+Declaration(NamedIndividual(dc:license))
+Declaration(NamedIndividual(dc:title))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: dc:AgentClass (Agent Class)
+
+AnnotationAssertion(rdfs:label dc:AgentClass "Agent Class"@en)
+SubClassOf(dc:AgentClass rdfs:Class)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: dc:Agent (Agent)
+
+AnnotationAssertion(rdfs:label dc:Agent "Agent"@en)
+ClassAssertion(dc:AgentClass dc:Agent)
+
+# Individual: dc:DCMIType (DCMI Type Vocabulary)
+
+AnnotationAssertion(rdfs:label dc:DCMIType "DCMI Type Vocabulary"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:DCMIType)
+
+# Individual: dc:DDC (DDC)
+
+AnnotationAssertion(rdfs:label dc:DDC "DDC"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:DDC)
+
+# Individual: dc:IMT (IMT)
+
+AnnotationAssertion(rdfs:label dc:IMT "IMT"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:IMT)
+
+# Individual: dc:LCC (LCC)
+
+AnnotationAssertion(rdfs:label dc:LCC "LCC"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:LCC)
+
+# Individual: dc:LCSH (LCSH)
+
+AnnotationAssertion(rdfs:label dc:LCSH "LCSH"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:LCSH)
+
+# Individual: dc:MESH (MeSH)
+
+AnnotationAssertion(rdfs:label dc:MESH "MeSH"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:MESH)
+
+# Individual: dc:NLM (NLM)
+
+AnnotationAssertion(rdfs:label dc:NLM "NLM"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:NLM)
+
+# Individual: dc:TGN (TGN)
+
+AnnotationAssertion(rdfs:label dc:TGN "TGN"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:TGN)
+
+# Individual: dc:UDC (UDC)
+
+AnnotationAssertion(rdfs:label dc:UDC "UDC"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:UDC)
+
+
 )

@@ -1,12 +1,140 @@
-Prefix(:=<https://w3id.org/quay//imports/dcat_import.owl>)
+Prefix(:=<https://w3id.org/quay//imports/dcat_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
+
 Ontology(<https://w3id.org/quay//imports/dcat_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+<https://w3id.org/quay//releases/2026-08-17/imports/dcat_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/ns/dcat3>)
+Annotation(owl:versionInfo "2026-08-17")
+
+Declaration(Class(<http://www.w3.org/ns/org#Organization>))
+Declaration(Class(foaf:Person))
+Declaration(ObjectProperty(dc:hasVersion))
+Declaration(ObjectProperty(<http://purl.org/pav/hasVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#hasCurrentVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#hasVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#isVersionOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#nextVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#previousVersion>))
+Declaration(ObjectProperty(prov:generalizationOf))
+Declaration(ObjectProperty(prov:wasRevisionOf))
+Declaration(ObjectProperty(foaf:homepage))
+Declaration(DataProperty(<http://www.w3.org/ns/dcat#version>))
+Declaration(NamedIndividual(<http://stfc.ac.uk>))
+Declaration(NamedIndividual(<http://ec.europa.eu/dgs/informatics/>))
+Declaration(NamedIndividual(<http://makxdekkers.com/>))
+Declaration(NamedIndividual(<http://www.asahi-net.or.jp/~ax2s-kmtn/>))
+Declaration(NamedIndividual(<http://www.deri.ie/>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/dcat>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/dcat2>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/dcat2014>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/dcat3>))
+Declaration(NamedIndividual(<https://agbeltran.github.io>))
+Declaration(NamedIndividual(<https://www.csiro.au>))
+Declaration(NamedIndividual(<https://jakub.klímek.com/>))
+Declaration(NamedIndividual(<https://w3id.org/people/ralbertoni/>))
+Declaration(NamedIndividual(<https://www.w3.org/>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:license))
+Declaration(AnnotationProperty(dc:title))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.org/pav/hasVersion> (<http://purl.org/pav/hasVersion>)
+
+EquivalentObjectProperties(<http://purl.org/pav/hasVersion> <http://www.w3.org/ns/dcat#hasVersion>)
+
+# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (tiene versión actual)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "ha versione attuale"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "has current version"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "tiene versión actual"@es)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasCurrentVersion> <http://purl.org/pav/hasVersion>)
+
+# Object Property: <http://www.w3.org/ns/dcat#hasVersion> (ha versione)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasVersion> "ha versione"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasVersion> "has version"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasVersion> "tiene versión"@es)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasVersion> dc:hasVersion)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasVersion> prov:generalizationOf)
+InverseObjectProperties(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/dcat#isVersionOf>)
+
+# Object Property: <http://www.w3.org/ns/dcat#nextVersion> (<http://www.w3.org/ns/dcat#nextVersion>)
+
+InverseObjectProperties(<http://www.w3.org/ns/dcat#nextVersion> <http://www.w3.org/ns/dcat#previousVersion>)
+
+# Object Property: <http://www.w3.org/ns/dcat#previousVersion> (versione precedente)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#previousVersion> "previous version"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#previousVersion> "versione precedente"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#previousVersion> "versión anterior"@es)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#previousVersion> prov:wasRevisionOf)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.w3.org/ns/dcat#version> (versión)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "version"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versione"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versión"@es)
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.w3.org/ns/dcat> (<http://www.w3.org/ns/dcat>)
+
+ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#hasCurrentVersion> <http://www.w3.org/ns/dcat> <http://www.w3.org/ns/dcat3>)
+ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/dcat> <http://www.w3.org/ns/dcat2>)
+ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/dcat> <http://www.w3.org/ns/dcat2014>)
+ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/dcat> <http://www.w3.org/ns/dcat3>)
+ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#previousVersion> <http://www.w3.org/ns/dcat> <http://www.w3.org/ns/dcat2>)
+DataPropertyAssertion(<http://www.w3.org/ns/dcat#version> <http://www.w3.org/ns/dcat> "3")
+
+
+ClassAssertion(foaf:Person _:genid2147483649)
+ClassAssertion(foaf:Person _:genid2147483651)
+ClassAssertion(foaf:Person _:genid2147483653)
+ClassAssertion(foaf:Person _:genid2147483655)
+ClassAssertion(foaf:Person _:genid2147483657)
+ClassAssertion(foaf:Person _:genid2147483659)
+ClassAssertion(foaf:Person _:genid2147483661)
+ClassAssertion(foaf:Person _:genid2147483662)
+ClassAssertion(<http://www.w3.org/ns/org#Organization> _:genid2147483663)
+ClassAssertion(foaf:Person _:genid2147483664)
+ClassAssertion(foaf:Person _:genid2147483665)
+ClassAssertion(foaf:Person _:genid2147483666)
+ClassAssertion(foaf:Person _:genid2147483667)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483662 <http://makxdekkers.com/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483663 <https://www.w3.org/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483664 <https://w3id.org/people/ralbertoni/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483665 <https://agbeltran.github.io>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483666 <http://www.asahi-net.or.jp/~ax2s-kmtn/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483667 <https://jakub.klímek.com/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483675 <http://ec.europa.eu/dgs/informatics/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483676 <http://www.deri.ie/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483677 <https://www.csiro.au>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483678 <http://stfc.ac.uk>)
 )
