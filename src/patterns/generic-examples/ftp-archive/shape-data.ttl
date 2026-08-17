@@ -1,0 +1,27 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:ftp-dataset a dcat:Dataset ;
+    dcterms:title "University Genomics Archive" .
+
+ex:ftp-distribution a dcat:Distribution ;
+    dcterms:title "FTP archive distribution" ;
+    dcat:downloadURL <ftp://ftp.genomics.example.edu/pub/sequences/> ;
+    quay:QUAY_0000046 ex:ftp-access ;
+    quay:QUAY_0000047 ex:ftp-yield .
+
+ex:ftp-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000013 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+
+ex:ftp-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000037 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .

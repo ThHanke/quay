@@ -1,0 +1,33 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:sparql-dataset a dcat:Dataset ;
+    dcterms:title "DBpedia Knowledge Graph" .
+
+ex:sparql-service a dcat:DataService ;
+    dcterms:title "DBpedia SPARQL Endpoint" ;
+    dcat:endpointURL <https://dbpedia.org/sparql> ;
+    dcat:servesDataset ex:sparql-dataset .
+
+ex:sparql-distribution a dcat:Distribution ;
+    dcterms:title "SPARQL query distribution" ;
+    dcat:accessService ex:sparql-service ;
+    dcat:mediaType "application/sparql-results+json" ;
+    quay:QUAY_0000046 ex:sparql-access ;
+    quay:QUAY_0000047 ex:sparql-yield ;
+    quay:QUAY_0000057 "TLS 1.2" .
+
+ex:sparql-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] .
+
+ex:sparql-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000031 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000035 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000041 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .

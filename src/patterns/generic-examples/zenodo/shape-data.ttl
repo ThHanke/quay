@@ -1,0 +1,32 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:zenodo-dataset a dcat:Dataset ;
+    dcterms:title "Climate Model Output Dataset" ;
+    dcterms:identifier <https://doi.org/10.5281/zenodo.1234567> .
+
+ex:zenodo-distribution a dcat:Distribution ;
+    dcterms:title "Zenodo deposit distribution" ;
+    dcat:downloadURL <https://zenodo.org/records/1234567/files/climate-data-v2.tar.gz> ;
+    dcat:mediaType "application/gzip" ;
+    quay:QUAY_0000046 ex:zenodo-access ;
+    quay:QUAY_0000047 ex:zenodo-yield ;
+    quay:QUAY_0000057 "TLS 1.2" ;
+    quay:QUAY_0000059 "MD5" .
+
+ex:zenodo-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000017 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+
+ex:zenodo-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000038 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000062 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .

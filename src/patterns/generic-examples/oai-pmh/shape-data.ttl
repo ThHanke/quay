@@ -1,0 +1,34 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:oai-dataset a dcat:Dataset ;
+    dcterms:title "Institutional Repository Metadata" .
+
+ex:oai-service a dcat:DataService ;
+    dcterms:title "OAI-PMH Harvesting Endpoint" ;
+    dcat:endpointURL <https://repository.example.edu/oai> ;
+    dcat:servesDataset ex:oai-dataset .
+
+ex:oai-distribution a dcat:Distribution ;
+    dcterms:title "OAI-PMH harvested distribution" ;
+    dcat:accessService ex:oai-service ;
+    dcat:mediaType "application/xml" ;
+    quay:QUAY_0000046 ex:oai-access ;
+    quay:QUAY_0000047 ex:oai-yield ;
+    quay:QUAY_0000057 "TLS 1.2" .
+
+ex:oai-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+
+ex:oai-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000032 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000037 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000043 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
