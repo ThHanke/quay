@@ -1,0 +1,90 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# =============================================
+# QUAY SHACL Shapes
+# Validates ABox data against QUAY structural constraints.
+# Mirrors OWL restriction axioms from quay-edit.owl.
+# =============================================
+
+# --- Distribution Shape ---
+
+quay:DistributionShape a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:property [
+        sh:path quay:QUAY_0000046 ;
+        sh:minCount 1 ;
+        sh:name "access description" ;
+        sh:message "Distribution must have at least one access description."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000047 ;
+        sh:minCount 1 ;
+        sh:name "yield description" ;
+        sh:message "Distribution must have at least one yield description."
+    ] .
+
+# --- AccessDescription Shape ---
+# OWL: exactly 1 protocol, >=1 authScheme, >=1 operation
+
+quay:AccessDescriptionShape a sh:NodeShape ;
+    sh:targetClass quay:QUAY_0000001 ;
+    sh:property [
+        sh:path quay:QUAY_0000048 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "protocol" ;
+        sh:message "AccessDescription must have exactly one protocol."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000049 ;
+        sh:minCount 1 ;
+        sh:name "authentication scheme" ;
+        sh:message "AccessDescription must have at least one authentication scheme."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000050 ;
+        sh:minCount 1 ;
+        sh:name "supported operation" ;
+        sh:message "AccessDescription must have at least one supported operation."
+    ] .
+
+# --- YieldDescription Shape ---
+# OWL: exactly 1 deliveryMode, <=1 temporalQuality, <=1 coverage,
+#       <=1 serviceQuality, <=1 verificationMethod
+
+quay:YieldDescriptionShape a sh:NodeShape ;
+    sh:targetClass quay:QUAY_0000002 ;
+    sh:property [
+        sh:path quay:QUAY_0000051 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "delivery mode" ;
+        sh:message "YieldDescription must have exactly one delivery mode."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000052 ;
+        sh:maxCount 1 ;
+        sh:name "temporal quality" ;
+        sh:message "YieldDescription must have at most one temporal quality."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000053 ;
+        sh:maxCount 1 ;
+        sh:name "coverage" ;
+        sh:message "YieldDescription must have at most one coverage."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000054 ;
+        sh:maxCount 1 ;
+        sh:name "service quality" ;
+        sh:message "YieldDescription must have at most one service quality."
+    ] ;
+    sh:property [
+        sh:path quay:QUAY_0000055 ;
+        sh:maxCount 1 ;
+        sh:name "verification method" ;
+        sh:message "YieldDescription must have at most one verification method."
+    ] .
