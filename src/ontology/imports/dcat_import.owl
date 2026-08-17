@@ -265,7 +265,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in serie"@i
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in series"@en)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#inSeries> <http://www.w3.org/ns/dcat#seriesMember>)
 
-# Object Property: <http://www.w3.org/ns/dcat#mediaType> (tipo de media)
+# Object Property: <http://www.w3.org/ns/dcat#mediaType> (type de média)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "media type"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "medietype"@da)
@@ -396,7 +396,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "الحجم 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "バイト・サイズ"@ja)
 DataPropertyDomain(<http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/ns/dcat#Distribution>)
 
-# Data Property: <http://www.w3.org/ns/dcat#keyword> (keyword)
+# Data Property: <http://www.w3.org/ns/dcat#keyword> (キーワード/タグ)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "keyword"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "klíčové slovo"@cs)
