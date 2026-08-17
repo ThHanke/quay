@@ -9,30 +9,34 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/quay.owl>
-
 Import(<https://w3id.org/quay/imports/dcat_import.owl>)
-Import(<https://w3id.org/quay/imports/dcterms_import.owl>)
 Import(<https://w3id.org/quay/imports/odrl_import.owl>)
-
-
 Annotation(dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata.
 ")
-Annotation(dcterms:license <CC-BY-4.0>)
+Annotation(dcterms:license :CC-BY-4.0)
 Annotation(dcterms:title "QUAY: Qualified Usage, Access and Yield")
-
 
 Declaration(Class(<https://w3id.org/QUAY_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (Title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
+
 
 ############################
 #   Classes

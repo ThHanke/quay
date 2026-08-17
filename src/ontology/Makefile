@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                480bc8422ef777a63ab154913144c5478dd70b3875bf0d8342976fac44c4c94c
+CONFIG_HASH=                3cb56a73458c757e4719054721eb874147fb405edd7b0de1acb6c2c4e13a8179
 
 
 # ----------------------------------------
@@ -21,7 +21,7 @@ CONFIG_HASH=                480bc8422ef777a63ab154913144c5478dd70b3875bf0d834297
 OBOBASE=                    http://purl.obolibrary.org/obo
 URIBASE=                    https://w3id.org
 ONT=                        quay
-ONTBASE=                    https://w3id.org/quay/
+ONTBASE=                    https://w3id.org/quay
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  dcat dcterms odrl
+IMPORTS =  dcat odrl
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -483,21 +483,14 @@ ifeq ($(MIR),true)
 .PHONY: mirror-dcat
 .PRECIOUS: $(MIRRORDIR)/dcat.owl
 mirror-dcat: | $(TMPDIR)
-	$(ROBOT) convert -I file:///work/mirrors/dcat3.ttl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: dcterms
-.PHONY: mirror-dcterms
-.PRECIOUS: $(MIRRORDIR)/dcterms.owl
-mirror-dcterms: | $(TMPDIR)
-	$(ROBOT) convert -I file:///work/mirrors/dcterms.ttl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://www.w3.org/ns/dcat3.ttl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: odrl
 .PHONY: mirror-odrl
 .PRECIOUS: $(MIRRORDIR)/odrl.owl
 mirror-odrl: | $(TMPDIR)
-	$(ROBOT) convert -I file:///work/mirrors/odrl.ttl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://www.w3.org/ns/odrl/2/ODRL22.ttl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

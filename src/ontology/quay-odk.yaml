@@ -11,7 +11,7 @@ edit_format: owl
 edit_ontology_file: "src/ontology/quay-edit.owl"
 
 uribase: "https://w3id.org"
-uribase_suffix: "quay/"
+uribase_suffix: "quay"
 preferredPrefix: "QUAY"
 
 namespaces:
@@ -24,19 +24,13 @@ import_group:
   products:
     - id: dcat
       title: "DCAT - Data Catalog Vocabulary"
-      mirror_from: "file:///work/mirrors/dcat3.ttl"
+      mirror_from: "https://www.w3.org/ns/dcat3.ttl"
       module_type: slme
       base_iris:
         - https://www.w3.org/ns/dcat#
-    - id: dcterms
-      title: "Dublin Core Terms"
-      mirror_from: "file:///work/mirrors/dcterms.ttl"
-      module_type: slme
-      base_iris:
-        - http://purl.org/dc/terms/
     - id: odrl
       title: "ODRL Information Model"
-      mirror_from: "file:///work/mirrors/odrl.ttl"
+      mirror_from: "https://www.w3.org/ns/odrl/2/ODRL22.ttl"
       module_type: slme
       base_iris:
         - http://www.w3.org/ns/odrl/2/

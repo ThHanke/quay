@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/quay//imports/dcat_import.owl#>)
+Prefix(:=<https://w3id.org/quay/imports/dcat_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -14,13 +14,17 @@ Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<https://w3id.org/quay//imports/dcat_import.owl>
-<https://w3id.org/quay//releases/2026-08-17/imports/dcat_import.owl>
+Ontology(<https://w3id.org/quay/imports/dcat_import.owl>
+<https://w3id.org/quay/releases/2026-08-17/imports/dcat_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/ns/dcat3>)
 Annotation(owl:versionInfo "2026-08-17")
 
+Declaration(Class(<http://purl.org/dc/dcam/VocabularyEncodingScheme>))
 Declaration(Class(<http://purl.org/dc/dcmitype/Service>))
+Declaration(Class(dc:AgentClass))
 Declaration(Class(dc:MediaType))
+Declaration(Class(dc:MediaTypeOrExtent))
+Declaration(Class(rdfs:Class))
 Declaration(Class(rdfs:Resource))
 Declaration(Class(<http://www.w3.org/2006/vcard/ns#Kind>))
 Declaration(Class(<http://www.w3.org/ns/dcat#Catalog>))
@@ -30,13 +34,10 @@ Declaration(Class(<http://www.w3.org/ns/dcat#DatasetSeries>))
 Declaration(Class(<http://www.w3.org/ns/dcat#Distribution>))
 Declaration(Class(<http://www.w3.org/ns/dcat#Resource>))
 Declaration(Class(<http://www.w3.org/ns/org#Organization>))
+Declaration(Class(prov:Activity))
+Declaration(Class(prov:Agent))
+Declaration(Class(prov:Entity))
 Declaration(Class(foaf:Person))
-Declaration(ObjectProperty(dc:format))
-Declaration(ObjectProperty(dc:hasPart))
-Declaration(ObjectProperty(dc:hasVersion))
-Declaration(ObjectProperty(dc:isPartOf))
-Declaration(ObjectProperty(dc:relation))
-Declaration(ObjectProperty(dc:subject))
 Declaration(ObjectProperty(<http://purl.org/pav/hasVersion>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#accessService>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#accessURL>))
@@ -63,9 +64,15 @@ Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#seriesMember>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#servesDataset>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#service>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#theme>))
+Declaration(ObjectProperty(prov:alternateOf))
 Declaration(ObjectProperty(prov:generalizationOf))
+Declaration(ObjectProperty(prov:influenced))
+Declaration(ObjectProperty(prov:specializationOf))
+Declaration(ObjectProperty(prov:wasDerivedFrom))
+Declaration(ObjectProperty(prov:wasInfluencedBy))
 Declaration(ObjectProperty(prov:wasRevisionOf))
 Declaration(ObjectProperty(foaf:homepage))
+Declaration(DataProperty(dc:title))
 Declaration(DataProperty(<http://www.w3.org/ns/dcat#byteSize>))
 Declaration(DataProperty(<http://www.w3.org/ns/dcat#keyword>))
 Declaration(DataProperty(<http://www.w3.org/ns/dcat#spatialResolutionInMeters>))
@@ -74,21 +81,34 @@ Declaration(DataProperty(<http://www.w3.org/ns/dcat#version>))
 Declaration(NamedIndividual(<http://stfc.ac.uk>))
 Declaration(NamedIndividual(<http://ec.europa.eu/dgs/informatics/>))
 Declaration(NamedIndividual(<http://makxdekkers.com/>))
+Declaration(NamedIndividual(dc:Agent))
+Declaration(NamedIndividual(dc:DCMIType))
+Declaration(NamedIndividual(dc:DDC))
+Declaration(NamedIndividual(dc:IMT))
+Declaration(NamedIndividual(dc:LCC))
+Declaration(NamedIndividual(dc:LCSH))
+Declaration(NamedIndividual(dc:MESH))
+Declaration(NamedIndividual(dc:NLM))
+Declaration(NamedIndividual(dc:TGN))
+Declaration(NamedIndividual(dc:UDC))
+Declaration(NamedIndividual(dc:description))
+Declaration(NamedIndividual(dc:license))
+Declaration(NamedIndividual(dc:title))
 Declaration(NamedIndividual(<http://www.asahi-net.or.jp/~ax2s-kmtn/>))
 Declaration(NamedIndividual(<http://www.deri.ie/>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/dcat>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/dcat2>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/dcat2014>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/dcat3>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o-20130312>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o#>))
 Declaration(NamedIndividual(<https://agbeltran.github.io>))
 Declaration(NamedIndividual(<https://www.csiro.au>))
 Declaration(NamedIndividual(<https://jakub.klímek.com/>))
 Declaration(NamedIndividual(<https://w3id.org/people/ralbertoni/>))
 Declaration(NamedIndividual(<https://www.w3.org/>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
-Declaration(AnnotationProperty(dc:description))
-Declaration(AnnotationProperty(dc:license))
-Declaration(AnnotationProperty(dc:title))
 Declaration(Datatype(xsd:duration))
 
 ############################
@@ -140,7 +160,6 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "forma
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "formato di compressione"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "formát komprese"@cs)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "kompressionsformat"@da)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#compressFormat> dc:format)
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#compressFormat> <http://www.w3.org/ns/dcat#Distribution>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#compressFormat> dc:MediaType)
 
@@ -172,7 +191,7 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dc
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Catalog>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Dataset>)
 
-# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribución)
+# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribution)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribuce"@cs)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribución"@es)
@@ -183,7 +202,6 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distrib
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "διανομή"@el)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "توزيع"@ar)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "データセット配信"@ja)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#distribution> dc:relation)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#isDistributionOf>)
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Dataset>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Distribution>)
@@ -221,7 +239,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "tjeneste
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/ns/dcat#DataService>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#endpointURL> rdfs:Resource)
 
-# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (ha versione attuale)
+# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (tiene versión actual)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "ha versione attuale"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "has current version"@en)
@@ -233,7 +251,6 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasCurrentVersion> <http://purl.o
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasVersion> "ha versione"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasVersion> "has version"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasVersion> "tiene versión"@es)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasVersion> dc:hasVersion)
 SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasVersion> prov:generalizationOf)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/dcat#isVersionOf>)
 
@@ -246,10 +263,9 @@ InverseObjectProperties(<http://www.w3.org/ns/dcat#inCatalog> <http://www.w3.org
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "en serie"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in serie"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in series"@en)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#inSeries> dc:isPartOf)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#inSeries> <http://www.w3.org/ns/dcat#seriesMember>)
 
-# Object Property: <http://www.w3.org/ns/dcat#mediaType> (type de média)
+# Object Property: <http://www.w3.org/ns/dcat#mediaType> (typ média)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "media type"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "medietype"@da)
@@ -260,7 +276,6 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "type de m�
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "τύπος μέσου"@el)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "نوع الميديا"@ar)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "メディア・タイプ"@ja)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#mediaType> dc:format)
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#mediaType> <http://www.w3.org/ns/dcat#Distribution>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#mediaType> dc:MediaType)
 
@@ -268,14 +283,13 @@ ObjectPropertyRange(<http://www.w3.org/ns/dcat#mediaType> dc:MediaType)
 
 InverseObjectProperties(<http://www.w3.org/ns/dcat#nextVersion> <http://www.w3.org/ns/dcat#previousVersion>)
 
-# Object Property: <http://www.w3.org/ns/dcat#packageFormat> (formato de empaquetado)
+# Object Property: <http://www.w3.org/ns/dcat#packageFormat> (packaging format)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formato de empaquetado"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formato di impacchettamento"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formát balíčku"@cs)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "packaging format"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "pakkeformat"@da)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#packageFormat> dc:format)
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#packageFormat> <http://www.w3.org/ns/dcat#Distribution>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#packageFormat> dc:MediaType)
 
@@ -290,7 +304,6 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#previousVersion> prov:wasRevision
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#resource> "resource"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#resource> "risorsa"@it)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#resource> dc:hasPart)
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#resource> <http://www.w3.org/ns/dcat#Catalog>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#resource> <http://www.w3.org/ns/dcat#Resource>)
 
@@ -315,7 +328,7 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dc
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#Catalog>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#DataService>)
 
-# Object Property: <http://www.w3.org/ns/dcat#theme> (tema)
+# Object Property: <http://www.w3.org/ns/dcat#theme> (Θέμα)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "emne"@da)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "tema"@es)
@@ -326,12 +339,49 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "téma"@cs)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "Θέμα"@el)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "التصنيف"@ar)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "テーマ/カテゴリー"@ja)
-SubObjectPropertyOf(<http://www.w3.org/ns/dcat#theme> dc:subject)
+
+# Object Property: prov:alternateOf (alternateOf)
+
+AnnotationAssertion(rdfs:label prov:alternateOf "alternateOf")
+ObjectPropertyDomain(prov:alternateOf prov:Entity)
+ObjectPropertyRange(prov:alternateOf prov:Entity)
+
+# Object Property: prov:influenced (influenced)
+
+AnnotationAssertion(rdfs:label prov:influenced "influenced")
+InverseObjectProperties(prov:influenced prov:wasInfluencedBy)
+
+# Object Property: prov:specializationOf (specializationOf)
+
+AnnotationAssertion(rdfs:label prov:specializationOf "specializationOf")
+SubObjectPropertyOf(prov:specializationOf prov:alternateOf)
+ObjectPropertyDomain(prov:specializationOf prov:Entity)
+
+# Object Property: prov:wasDerivedFrom (wasDerivedFrom)
+
+AnnotationAssertion(rdfs:label prov:wasDerivedFrom "wasDerivedFrom")
+SubObjectPropertyOf(prov:wasDerivedFrom prov:wasInfluencedBy)
+ObjectPropertyDomain(prov:wasDerivedFrom prov:Entity)
+ObjectPropertyRange(prov:wasDerivedFrom prov:Entity)
+
+# Object Property: prov:wasInfluencedBy (wasInfluencedBy)
+
+AnnotationAssertion(rdfs:label prov:wasInfluencedBy "wasInfluencedBy")
+
+# Object Property: prov:wasRevisionOf (wasRevisionOf)
+
+AnnotationAssertion(rdfs:label prov:wasRevisionOf "wasRevisionOf")
+SubObjectPropertyOf(prov:wasRevisionOf prov:wasDerivedFrom)
+ObjectPropertyDomain(prov:wasRevisionOf prov:Entity)
 
 
 ############################
 #   Data Properties
 ############################
+
+# Data Property: dc:title (Title)
+
+AnnotationAssertion(rdfs:label dc:title "Title"@en)
 
 # Data Property: <http://www.w3.org/ns/dcat#byteSize> (byte size)
 
@@ -346,7 +396,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "الحجم 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "バイト・サイズ"@ja)
 DataPropertyDomain(<http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/ns/dcat#Distribution>)
 
-# Data Property: <http://www.w3.org/ns/dcat#keyword> (キーワード/タグ)
+# Data Property: <http://www.w3.org/ns/dcat#keyword> (keyword)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "keyword"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "klíčové slovo"@cs)
@@ -377,7 +427,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "t
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "časové rozlišení"@cs)
 DataPropertyRange(<http://www.w3.org/ns/dcat#temporalResolution> xsd:duration)
 
-# Data Property: <http://www.w3.org/ns/dcat#version> (versione)
+# Data Property: <http://www.w3.org/ns/dcat#version> (versión)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "version"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versione"@it)
@@ -388,6 +438,20 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versión"@es
 ############################
 #   Classes
 ############################
+
+# Class: dc:AgentClass (Agent Class)
+
+AnnotationAssertion(rdfs:label dc:AgentClass "Agent Class"@en)
+SubClassOf(dc:AgentClass rdfs:Class)
+
+# Class: dc:MediaType (Media Type)
+
+AnnotationAssertion(rdfs:label dc:MediaType "Media Type"@en)
+SubClassOf(dc:MediaType dc:MediaTypeOrExtent)
+
+# Class: dc:MediaTypeOrExtent (Media Type or Extent)
+
+AnnotationAssertion(rdfs:label dc:MediaTypeOrExtent "Media Type or Extent"@en)
 
 # Class: <http://www.w3.org/ns/dcat#Catalog> (Katalog)
 
@@ -451,10 +515,73 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Katalogizov
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Recurso catalogado"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Risorsa catalogata"@it)
 
+# Class: prov:Activity (Activity)
+
+AnnotationAssertion(rdfs:label prov:Activity "Activity")
+DisjointClasses(prov:Activity prov:Entity)
+
+# Class: prov:Agent (Agent)
+
+AnnotationAssertion(rdfs:label prov:Agent "Agent")
+
+# Class: prov:Entity (Entity)
+
+AnnotationAssertion(rdfs:label prov:Entity "Entity")
+
 
 ############################
 #   Named Individuals
 ############################
+
+# Individual: dc:Agent (Agent)
+
+AnnotationAssertion(rdfs:label dc:Agent "Agent"@en)
+ClassAssertion(dc:AgentClass dc:Agent)
+
+# Individual: dc:DCMIType (DCMI Type Vocabulary)
+
+AnnotationAssertion(rdfs:label dc:DCMIType "DCMI Type Vocabulary"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:DCMIType)
+
+# Individual: dc:DDC (DDC)
+
+AnnotationAssertion(rdfs:label dc:DDC "DDC"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:DDC)
+
+# Individual: dc:IMT (IMT)
+
+AnnotationAssertion(rdfs:label dc:IMT "IMT"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:IMT)
+
+# Individual: dc:LCC (LCC)
+
+AnnotationAssertion(rdfs:label dc:LCC "LCC"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:LCC)
+
+# Individual: dc:LCSH (LCSH)
+
+AnnotationAssertion(rdfs:label dc:LCSH "LCSH"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:LCSH)
+
+# Individual: dc:MESH (MeSH)
+
+AnnotationAssertion(rdfs:label dc:MESH "MeSH"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:MESH)
+
+# Individual: dc:NLM (NLM)
+
+AnnotationAssertion(rdfs:label dc:NLM "NLM"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:NLM)
+
+# Individual: dc:TGN (TGN)
+
+AnnotationAssertion(rdfs:label dc:TGN "TGN"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:TGN)
+
+# Individual: dc:UDC (UDC)
+
+AnnotationAssertion(rdfs:label dc:UDC "UDC"@en)
+ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:UDC)
 
 # Individual: <http://www.w3.org/ns/dcat> (<http://www.w3.org/ns/dcat>)
 
@@ -465,29 +592,34 @@ ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.or
 ObjectPropertyAssertion(<http://www.w3.org/ns/dcat#previousVersion> <http://www.w3.org/ns/dcat> <http://www.w3.org/ns/dcat2>)
 DataPropertyAssertion(<http://www.w3.org/ns/dcat#version> <http://www.w3.org/ns/dcat> "3")
 
+# Individual: <http://www.w3.org/ns/prov-o#> (<http://www.w3.org/ns/prov-o#>)
 
-ClassAssertion(foaf:Person _:genid2147483649)
-ClassAssertion(foaf:Person _:genid2147483651)
-ClassAssertion(foaf:Person _:genid2147483653)
-ClassAssertion(foaf:Person _:genid2147483655)
-ClassAssertion(foaf:Person _:genid2147483657)
-ClassAssertion(foaf:Person _:genid2147483659)
-ClassAssertion(foaf:Person _:genid2147483661)
-ClassAssertion(foaf:Person _:genid2147483662)
-ClassAssertion(<http://www.w3.org/ns/org#Organization> _:genid2147483663)
-ClassAssertion(foaf:Person _:genid2147483664)
-ClassAssertion(foaf:Person _:genid2147483665)
-ClassAssertion(foaf:Person _:genid2147483666)
-ClassAssertion(foaf:Person _:genid2147483667)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483662 <http://makxdekkers.com/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483663 <https://www.w3.org/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483664 <https://w3id.org/people/ralbertoni/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483665 <https://agbeltran.github.io>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483666 <http://www.asahi-net.or.jp/~ax2s-kmtn/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483667 <https://jakub.klímek.com/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483675 <http://ec.europa.eu/dgs/informatics/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483676 <http://www.deri.ie/>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483677 <https://www.csiro.au>)
-ObjectPropertyAssertion(foaf:homepage _:genid2147483678 <http://stfc.ac.uk>)
+ObjectPropertyAssertion(prov:specializationOf <http://www.w3.org/ns/prov-o#> <http://www.w3.org/ns/prov-o>)
+ObjectPropertyAssertion(prov:wasRevisionOf <http://www.w3.org/ns/prov-o#> <http://www.w3.org/ns/prov-o-20130312>)
+
+
+ClassAssertion(foaf:Person _:genid2147483720)
+ClassAssertion(foaf:Person _:genid2147483722)
+ClassAssertion(foaf:Person _:genid2147483724)
+ClassAssertion(foaf:Person _:genid2147483726)
+ClassAssertion(foaf:Person _:genid2147483728)
+ClassAssertion(foaf:Person _:genid2147483730)
+ClassAssertion(foaf:Person _:genid2147483732)
+ClassAssertion(foaf:Person _:genid2147483733)
+ClassAssertion(<http://www.w3.org/ns/org#Organization> _:genid2147483734)
+ClassAssertion(foaf:Person _:genid2147483735)
+ClassAssertion(foaf:Person _:genid2147483736)
+ClassAssertion(foaf:Person _:genid2147483737)
+ClassAssertion(foaf:Person _:genid2147483738)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483733 <http://makxdekkers.com/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483734 <https://www.w3.org/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483735 <https://w3id.org/people/ralbertoni/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483736 <https://agbeltran.github.io>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483737 <http://www.asahi-net.or.jp/~ax2s-kmtn/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483738 <https://jakub.klímek.com/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483746 <https://www.csiro.au>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483747 <http://stfc.ac.uk>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483748 <http://ec.europa.eu/dgs/informatics/>)
+ObjectPropertyAssertion(foaf:homepage _:genid2147483749 <http://www.deri.ie/>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/ns/dcat#endpointURL>) <http://www.w3.org/ns/dcat#accessURL>)
 )

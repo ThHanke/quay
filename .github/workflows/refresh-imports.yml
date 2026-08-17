@@ -217,7 +217,6 @@ jobs:
             # Fallback: refresh specific import targets one by one.
             # To find target names: check src/ontology/imports/ for *_import.owl files
             make IMP=true MIR=true PAT=false imports/dcat_import.owl -B && \
-            make IMP=true MIR=true PAT=false imports/dcterms_import.owl -B && \
             make IMP=true MIR=true PAT=false imports/odrl_import.owl -B || \
               echo "Fallback target also failed; imports may already be up to date."
           }
