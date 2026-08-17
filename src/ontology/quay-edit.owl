@@ -1,50 +1,345 @@
-Prefix(:=<https://w3id.org/quay.owl#>)
+Prefix(:=<https://w3id.org/quay/>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcat:=<http://www.w3.org/ns/dcat#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/quay.owl>
 Import(<https://w3id.org/quay/imports/dcat_import.owl>)
 Import(<https://w3id.org/quay/imports/odrl_import.owl>)
-Annotation(dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata.
-")
-Annotation(dcterms:license :CC-BY-4.0)
+Annotation(dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata.")
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "QUAY: Qualified Usage, Access and Yield")
 
-Declaration(Class(<https://w3id.org/QUAY_0000000>))
+############################
+#   Declarations
+############################
+
+# Core Qualification Classes
+Declaration(Class(:QUAY_0000001))
+Declaration(Class(:QUAY_0000002))
+
+# Protocol Hierarchy
+Declaration(Class(:QUAY_0000003))
+Declaration(Class(:QUAY_0000004))
+Declaration(Class(:QUAY_0000005))
+Declaration(Class(:QUAY_0000006))
+Declaration(Class(:QUAY_0000007))
+Declaration(Class(:QUAY_0000008))
+Declaration(Class(:QUAY_0000009))
+Declaration(Class(:QUAY_0000010))
+Declaration(Class(:QUAY_0000011))
+Declaration(Class(:QUAY_0000012))
+Declaration(Class(:QUAY_0000013))
+Declaration(Class(:QUAY_0000014))
+
+# Authentication Scheme Hierarchy
+Declaration(Class(:QUAY_0000015))
+Declaration(Class(:QUAY_0000016))
+Declaration(Class(:QUAY_0000017))
+Declaration(Class(:QUAY_0000018))
+Declaration(Class(:QUAY_0000019))
+Declaration(Class(:QUAY_0000020))
+Declaration(Class(:QUAY_0000021))
+Declaration(Class(:QUAY_0000022))
+
+# Operation Hierarchy
+Declaration(Class(:QUAY_0000023))
+Declaration(Class(:QUAY_0000024))
+Declaration(Class(:QUAY_0000025))
+Declaration(Class(:QUAY_0000026))
+Declaration(Class(:QUAY_0000027))
+Declaration(Class(:QUAY_0000028))
+
+# Yield: Delivery Mode
+Declaration(Class(:QUAY_0000029))
+Declaration(Class(:QUAY_0000030))
+Declaration(Class(:QUAY_0000031))
+Declaration(Class(:QUAY_0000032))
+Declaration(Class(:QUAY_0000033))
+
+# Yield: Temporal Quality
+Declaration(Class(:QUAY_0000034))
+Declaration(Class(:QUAY_0000035))
+Declaration(Class(:QUAY_0000036))
+Declaration(Class(:QUAY_0000037))
+Declaration(Class(:QUAY_0000038))
+
+# Yield: Coverage
+Declaration(Class(:QUAY_0000039))
+Declaration(Class(:QUAY_0000040))
+Declaration(Class(:QUAY_0000041))
+Declaration(Class(:QUAY_0000042))
+Declaration(Class(:QUAY_0000043))
+
+# Yield: Service Quality & Verification
+Declaration(Class(:QUAY_0000044))
+Declaration(Class(:QUAY_0000045))
+
+# Object Properties
+Declaration(ObjectProperty(:QUAY_0000046))
+Declaration(ObjectProperty(:QUAY_0000047))
+Declaration(ObjectProperty(:QUAY_0000048))
+Declaration(ObjectProperty(:QUAY_0000049))
+Declaration(ObjectProperty(:QUAY_0000050))
+Declaration(ObjectProperty(:QUAY_0000051))
+Declaration(ObjectProperty(:QUAY_0000052))
+Declaration(ObjectProperty(:QUAY_0000053))
+Declaration(ObjectProperty(:QUAY_0000054))
+Declaration(ObjectProperty(:QUAY_0000055))
+
+# Datatype Properties
+Declaration(DataProperty(:QUAY_0000056))
+Declaration(DataProperty(:QUAY_0000057))
+Declaration(DataProperty(:QUAY_0000058))
+Declaration(DataProperty(:QUAY_0000059))
+
+# Annotation Properties
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+
 ############################
 #   Annotation Properties
 ############################
 
-# Annotation Property: dcterms:description (description)
-
 AnnotationAssertion(rdfs:label dcterms:description "description")
-
-# Annotation Property: dcterms:license (license)
-
 AnnotationAssertion(rdfs:label dcterms:license "license")
-
-# Annotation Property: dcterms:title (Title)
-
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
-
-
 ############################
-#   Classes
+#   Classes — Annotations
 ############################
 
-# Class: <https://w3id.org/QUAY_0000000> (root node)
+# Core
+AnnotationAssertion(rdfs:label :QUAY_0000001 "Access Description")
+AnnotationAssertion(rdfs:comment :QUAY_0000001 "Qualifies HOW a Distribution is reached.")
+AnnotationAssertion(rdfs:label :QUAY_0000002 "Yield Description")
+AnnotationAssertion(rdfs:comment :QUAY_0000002 "Qualifies WHAT a Distribution delivers.")
 
-AnnotationAssertion(rdfs:label <https://w3id.org/QUAY_0000000> "root node"@en)
+# Protocol
+AnnotationAssertion(rdfs:label :QUAY_0000003 "Protocol")
+AnnotationAssertion(rdfs:label :QUAY_0000004 "HTTP/HTTPS")
+AnnotationAssertion(rdfs:label :QUAY_0000005 "S3")
+AnnotationAssertion(rdfs:label :QUAY_0000006 "Rsync")
+AnnotationAssertion(rdfs:label :QUAY_0000007 "WebDAV")
+AnnotationAssertion(rdfs:label :QUAY_0000008 "SSH/SFTP")
+AnnotationAssertion(rdfs:label :QUAY_0000009 "BitTorrent")
+AnnotationAssertion(rdfs:label :QUAY_0000010 "IPFS")
+AnnotationAssertion(rdfs:label :QUAY_0000011 "Local Filesystem")
+AnnotationAssertion(rdfs:label :QUAY_0000012 "Rclone")
+AnnotationAssertion(rdfs:label :QUAY_0000013 "FTP")
+AnnotationAssertion(rdfs:label :QUAY_0000014 "Git")
+
+# Authentication Scheme
+AnnotationAssertion(rdfs:label :QUAY_0000015 "Authentication Scheme")
+AnnotationAssertion(rdfs:label :QUAY_0000016 "No Authentication")
+AnnotationAssertion(rdfs:label :QUAY_0000017 "API Key")
+AnnotationAssertion(rdfs:label :QUAY_0000018 "OAuth 2.0")
+AnnotationAssertion(rdfs:label :QUAY_0000019 "Basic Authentication")
+AnnotationAssertion(rdfs:label :QUAY_0000020 "SSH Key")
+AnnotationAssertion(rdfs:label :QUAY_0000021 "GPG Key")
+AnnotationAssertion(rdfs:label :QUAY_0000022 "AWS Credential")
+
+# Operation
+AnnotationAssertion(rdfs:label :QUAY_0000023 "Read")
+AnnotationAssertion(rdfs:label :QUAY_0000024 "Write")
+AnnotationAssertion(rdfs:label :QUAY_0000025 "Delete")
+AnnotationAssertion(rdfs:label :QUAY_0000026 "List")
+AnnotationAssertion(rdfs:label :QUAY_0000027 "Replicate")
+AnnotationAssertion(rdfs:label :QUAY_0000028 "Operation")
+
+# Delivery Mode
+AnnotationAssertion(rdfs:label :QUAY_0000029 "Delivery Mode")
+AnnotationAssertion(rdfs:label :QUAY_0000030 "Bulk Delivery")
+AnnotationAssertion(rdfs:label :QUAY_0000031 "Streaming Delivery")
+AnnotationAssertion(rdfs:label :QUAY_0000032 "Paginated Delivery")
+AnnotationAssertion(rdfs:label :QUAY_0000033 "Event-Driven Delivery")
+
+# Temporal Quality
+AnnotationAssertion(rdfs:label :QUAY_0000034 "Temporal Quality")
+AnnotationAssertion(rdfs:label :QUAY_0000035 "Real-Time")
+AnnotationAssertion(rdfs:label :QUAY_0000036 "Snapshot")
+AnnotationAssertion(rdfs:label :QUAY_0000037 "Archived")
+AnnotationAssertion(rdfs:label :QUAY_0000038 "Versioned")
+
+# Coverage
+AnnotationAssertion(rdfs:label :QUAY_0000039 "Coverage")
+AnnotationAssertion(rdfs:label :QUAY_0000040 "Complete")
+AnnotationAssertion(rdfs:label :QUAY_0000041 "Subset")
+AnnotationAssertion(rdfs:label :QUAY_0000042 "Sample")
+AnnotationAssertion(rdfs:label :QUAY_0000043 "Incremental")
+
+# Service Quality & Verification
+AnnotationAssertion(rdfs:label :QUAY_0000044 "Service Quality")
+AnnotationAssertion(rdfs:label :QUAY_0000045 "Verification Method")
+
+############################
+#   Object Properties — Annotations, Domain, Range
+############################
+
+AnnotationAssertion(rdfs:label :QUAY_0000046 "access description")
+ObjectPropertyDomain(:QUAY_0000046 dcat:Distribution)
+ObjectPropertyRange(:QUAY_0000046 :QUAY_0000001)
+
+AnnotationAssertion(rdfs:label :QUAY_0000047 "yield description")
+ObjectPropertyDomain(:QUAY_0000047 dcat:Distribution)
+ObjectPropertyRange(:QUAY_0000047 :QUAY_0000002)
+
+AnnotationAssertion(rdfs:label :QUAY_0000048 "protocol")
+ObjectPropertyDomain(:QUAY_0000048 :QUAY_0000001)
+ObjectPropertyRange(:QUAY_0000048 :QUAY_0000003)
+
+AnnotationAssertion(rdfs:label :QUAY_0000049 "authentication scheme")
+ObjectPropertyDomain(:QUAY_0000049 :QUAY_0000001)
+ObjectPropertyRange(:QUAY_0000049 :QUAY_0000015)
+
+AnnotationAssertion(rdfs:label :QUAY_0000050 "supported operation")
+ObjectPropertyDomain(:QUAY_0000050 :QUAY_0000001)
+ObjectPropertyRange(:QUAY_0000050 :QUAY_0000028)
+
+AnnotationAssertion(rdfs:label :QUAY_0000051 "delivery mode")
+ObjectPropertyDomain(:QUAY_0000051 :QUAY_0000002)
+ObjectPropertyRange(:QUAY_0000051 :QUAY_0000029)
+
+AnnotationAssertion(rdfs:label :QUAY_0000052 "temporal quality")
+ObjectPropertyDomain(:QUAY_0000052 :QUAY_0000002)
+ObjectPropertyRange(:QUAY_0000052 :QUAY_0000034)
+
+AnnotationAssertion(rdfs:label :QUAY_0000053 "coverage")
+ObjectPropertyDomain(:QUAY_0000053 :QUAY_0000002)
+ObjectPropertyRange(:QUAY_0000053 :QUAY_0000039)
+
+AnnotationAssertion(rdfs:label :QUAY_0000054 "service quality")
+ObjectPropertyDomain(:QUAY_0000054 :QUAY_0000002)
+ObjectPropertyRange(:QUAY_0000054 :QUAY_0000044)
+
+AnnotationAssertion(rdfs:label :QUAY_0000055 "verification method")
+ObjectPropertyDomain(:QUAY_0000055 :QUAY_0000002)
+ObjectPropertyRange(:QUAY_0000055 :QUAY_0000045)
+
+############################
+#   Datatype Properties — Annotations, Domain, Range
+############################
+
+AnnotationAssertion(rdfs:label :QUAY_0000056 "encryption at rest")
+DataPropertyDomain(:QUAY_0000056 dcat:Distribution)
+DataPropertyRange(:QUAY_0000056 xsd:string)
+
+AnnotationAssertion(rdfs:label :QUAY_0000057 "encryption in transit")
+DataPropertyDomain(:QUAY_0000057 dcat:Distribution)
+DataPropertyRange(:QUAY_0000057 xsd:string)
+
+AnnotationAssertion(rdfs:label :QUAY_0000058 "checksum")
+DataPropertyDomain(:QUAY_0000058 dcat:Distribution)
+DataPropertyRange(:QUAY_0000058 xsd:string)
+
+AnnotationAssertion(rdfs:label :QUAY_0000059 "checksum algorithm")
+DataPropertyDomain(:QUAY_0000059 dcat:Distribution)
+DataPropertyRange(:QUAY_0000059 xsd:string)
+
+############################
+#   Subclass Axioms
+############################
+
+# Protocol hierarchy
+SubClassOf(:QUAY_0000004 :QUAY_0000003)
+SubClassOf(:QUAY_0000005 :QUAY_0000003)
+SubClassOf(:QUAY_0000006 :QUAY_0000003)
+SubClassOf(:QUAY_0000007 :QUAY_0000003)
+SubClassOf(:QUAY_0000008 :QUAY_0000003)
+SubClassOf(:QUAY_0000009 :QUAY_0000003)
+SubClassOf(:QUAY_0000010 :QUAY_0000003)
+SubClassOf(:QUAY_0000011 :QUAY_0000003)
+SubClassOf(:QUAY_0000012 :QUAY_0000003)
+SubClassOf(:QUAY_0000013 :QUAY_0000003)
+SubClassOf(:QUAY_0000014 :QUAY_0000003)
+
+# AuthScheme hierarchy
+SubClassOf(:QUAY_0000016 :QUAY_0000015)
+SubClassOf(:QUAY_0000017 :QUAY_0000015)
+SubClassOf(:QUAY_0000018 :QUAY_0000015)
+SubClassOf(:QUAY_0000019 :QUAY_0000015)
+SubClassOf(:QUAY_0000020 :QUAY_0000015)
+SubClassOf(:QUAY_0000021 :QUAY_0000015)
+SubClassOf(:QUAY_0000022 :QUAY_0000015)
+
+# Operation hierarchy
+SubClassOf(:QUAY_0000023 :QUAY_0000028)
+SubClassOf(:QUAY_0000024 :QUAY_0000028)
+SubClassOf(:QUAY_0000025 :QUAY_0000028)
+SubClassOf(:QUAY_0000026 :QUAY_0000028)
+SubClassOf(:QUAY_0000027 :QUAY_0000028)
+
+# DeliveryMode hierarchy
+SubClassOf(:QUAY_0000030 :QUAY_0000029)
+SubClassOf(:QUAY_0000031 :QUAY_0000029)
+SubClassOf(:QUAY_0000032 :QUAY_0000029)
+SubClassOf(:QUAY_0000033 :QUAY_0000029)
+
+# TemporalQuality hierarchy
+SubClassOf(:QUAY_0000035 :QUAY_0000034)
+SubClassOf(:QUAY_0000036 :QUAY_0000034)
+SubClassOf(:QUAY_0000037 :QUAY_0000034)
+SubClassOf(:QUAY_0000038 :QUAY_0000034)
+
+# Coverage hierarchy
+SubClassOf(:QUAY_0000040 :QUAY_0000039)
+SubClassOf(:QUAY_0000041 :QUAY_0000039)
+SubClassOf(:QUAY_0000042 :QUAY_0000039)
+SubClassOf(:QUAY_0000043 :QUAY_0000039)
+
+############################
+#   Disjointness Axioms
+############################
+
+# Top-level category classes
+DisjointClasses(:QUAY_0000001 :QUAY_0000002 :QUAY_0000003 :QUAY_0000015 :QUAY_0000028 :QUAY_0000029 :QUAY_0000034 :QUAY_0000039 :QUAY_0000044 :QUAY_0000045)
+
+# Protocol subclasses
+DisjointClasses(:QUAY_0000004 :QUAY_0000005 :QUAY_0000006 :QUAY_0000007 :QUAY_0000008 :QUAY_0000009 :QUAY_0000010 :QUAY_0000011 :QUAY_0000012 :QUAY_0000013 :QUAY_0000014)
+
+# AuthScheme subclasses
+DisjointClasses(:QUAY_0000016 :QUAY_0000017 :QUAY_0000018 :QUAY_0000019 :QUAY_0000020 :QUAY_0000021 :QUAY_0000022)
+
+# Operation subclasses
+DisjointClasses(:QUAY_0000023 :QUAY_0000024 :QUAY_0000025 :QUAY_0000026 :QUAY_0000027)
+
+# DeliveryMode subclasses
+DisjointClasses(:QUAY_0000030 :QUAY_0000031 :QUAY_0000032 :QUAY_0000033)
+
+# TemporalQuality subclasses
+DisjointClasses(:QUAY_0000035 :QUAY_0000036 :QUAY_0000037 :QUAY_0000038)
+
+# Coverage subclasses
+DisjointClasses(:QUAY_0000040 :QUAY_0000041 :QUAY_0000042 :QUAY_0000043)
+
+############################
+#   Restriction Axioms
+############################
+
+# AccessDescription: exactly 1 protocol
+SubClassOf(:QUAY_0000001 ObjectExactCardinality(1 :QUAY_0000048 :QUAY_0000003))
+
+# AccessDescription: at least 1 authentication scheme
+SubClassOf(:QUAY_0000001 ObjectSomeValuesFrom(:QUAY_0000049 :QUAY_0000015))
+
+# AccessDescription: at least 1 supported operation
+SubClassOf(:QUAY_0000001 ObjectSomeValuesFrom(:QUAY_0000050 :QUAY_0000028))
+
+# YieldDescription: exactly 1 delivery mode
+SubClassOf(:QUAY_0000002 ObjectExactCardinality(1 :QUAY_0000051 :QUAY_0000029))
+
+# YieldDescription: at most 1 temporal quality
+SubClassOf(:QUAY_0000002 ObjectMaxCardinality(1 :QUAY_0000052 :QUAY_0000034))
+
+# YieldDescription: at most 1 coverage
+SubClassOf(:QUAY_0000002 ObjectMaxCardinality(1 :QUAY_0000053 :QUAY_0000039))
 
 
 )

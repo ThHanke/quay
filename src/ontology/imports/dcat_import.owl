@@ -206,7 +206,7 @@ InverseObjectProperties(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Dataset>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Distribution>)
 
-# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (URL souboru ke stažení)
+# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (downloadURL)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de descarga"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de téléchargement"@fr)
@@ -239,7 +239,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "tjeneste
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/ns/dcat#DataService>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#endpointURL> rdfs:Resource)
 
-# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (ha versione attuale)
+# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (tiene versión actual)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "ha versione attuale"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "has current version"@en)
