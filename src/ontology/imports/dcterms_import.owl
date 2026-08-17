@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/quay/imports/dcterms_import.owl#>)
+Prefix(:=<https://w3id.org/quay//imports/dcterms_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -14,13 +14,23 @@ Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<https://w3id.org/quay/imports/dcterms_import.owl>
-<https://w3id.org/quay/releases/2026-08-17/imports/dcterms_import.owl>
+Ontology(<https://w3id.org/quay//imports/dcterms_import.owl>
+<https://w3id.org/quay//releases/2026-08-17/imports/dcterms_import.owl>
 Annotation(owl:versionInfo "2026-08-17")
 
 Declaration(Class(<http://purl.org/dc/dcam/VocabularyEncodingScheme>))
 Declaration(Class(dc:AgentClass))
+Declaration(Class(dc:Location))
+Declaration(Class(dc:LocationPeriodOrJurisdiction))
+Declaration(Class(dc:MediaType))
+Declaration(Class(dc:MediaTypeOrExtent))
+Declaration(Class(dc:RightsStatement))
+Declaration(Class(dc:Standard))
 Declaration(Class(rdfs:Class))
+Declaration(DataProperty(dc:date))
+Declaration(DataProperty(dc:identifier))
+Declaration(DataProperty(dc:issued))
+Declaration(DataProperty(dc:modified))
 Declaration(DataProperty(dc:title))
 Declaration(NamedIndividual(dc:Agent))
 Declaration(NamedIndividual(dc:DCMIType))
@@ -28,13 +38,47 @@ Declaration(NamedIndividual(dc:DDC))
 Declaration(NamedIndividual(dc:IMT))
 Declaration(NamedIndividual(dc:LCC))
 Declaration(NamedIndividual(dc:LCSH))
+Declaration(NamedIndividual(dc:Location))
 Declaration(NamedIndividual(dc:MESH))
+Declaration(NamedIndividual(dc:MediaType))
 Declaration(NamedIndividual(dc:NLM))
+Declaration(NamedIndividual(dc:RightsStatement))
+Declaration(NamedIndividual(dc:Standard))
 Declaration(NamedIndividual(dc:TGN))
 Declaration(NamedIndividual(dc:UDC))
+Declaration(NamedIndividual(dc:accessRights))
+Declaration(NamedIndividual(dc:conformsTo))
+Declaration(NamedIndividual(dc:creator))
 Declaration(NamedIndividual(dc:description))
+Declaration(NamedIndividual(dc:format))
+Declaration(NamedIndividual(dc:identifier))
+Declaration(NamedIndividual(dc:issued))
+Declaration(NamedIndividual(dc:language))
 Declaration(NamedIndividual(dc:license))
+Declaration(NamedIndividual(dc:modified))
+Declaration(NamedIndividual(dc:publisher))
+Declaration(NamedIndividual(dc:rights))
+Declaration(NamedIndividual(dc:rightsHolder))
+Declaration(NamedIndividual(dc:spatial))
+Declaration(NamedIndividual(dc:temporal))
 Declaration(NamedIndividual(dc:title))
+Declaration(NamedIndividual(dc:type))
+
+############################
+#   Data Properties
+############################
+
+# Data Property: dc:date (Date)
+
+AnnotationAssertion(rdfs:label dc:date "Date"@en)
+
+# Data Property: dc:issued (dc:issued)
+
+SubDataPropertyOf(dc:issued dc:date)
+
+# Data Property: dc:modified (dc:modified)
+
+SubDataPropertyOf(dc:modified dc:date)
 
 
 
@@ -46,6 +90,32 @@ Declaration(NamedIndividual(dc:title))
 
 AnnotationAssertion(rdfs:label dc:AgentClass "Agent Class"@en)
 SubClassOf(dc:AgentClass rdfs:Class)
+
+# Class: dc:Location (Location)
+
+AnnotationAssertion(rdfs:label dc:Location "Location"@en)
+SubClassOf(dc:Location dc:LocationPeriodOrJurisdiction)
+
+# Class: dc:LocationPeriodOrJurisdiction (Location, Period, or Jurisdiction)
+
+AnnotationAssertion(rdfs:label dc:LocationPeriodOrJurisdiction "Location, Period, or Jurisdiction"@en)
+
+# Class: dc:MediaType (Media Type)
+
+AnnotationAssertion(rdfs:label dc:MediaType "Media Type"@en)
+SubClassOf(dc:MediaType dc:MediaTypeOrExtent)
+
+# Class: dc:MediaTypeOrExtent (Media Type or Extent)
+
+AnnotationAssertion(rdfs:label dc:MediaTypeOrExtent "Media Type or Extent"@en)
+
+# Class: dc:RightsStatement (Rights Statement)
+
+AnnotationAssertion(rdfs:label dc:RightsStatement "Rights Statement"@en)
+
+# Class: dc:Standard (Standard)
+
+AnnotationAssertion(rdfs:label dc:Standard "Standard"@en)
 
 
 ############################
@@ -101,6 +171,10 @@ ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:TGN)
 
 AnnotationAssertion(rdfs:label dc:UDC "UDC"@en)
 ClassAssertion(<http://purl.org/dc/dcam/VocabularyEncodingScheme> dc:UDC)
+
+# Individual: dc:rightsHolder (Rights Holder)
+
+AnnotationAssertion(rdfs:label dc:rightsHolder "Rights Holder"@en)
 
 
 )

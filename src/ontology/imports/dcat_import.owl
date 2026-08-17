@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/quay/imports/dcat_import.owl#>)
+Prefix(:=<https://w3id.org/quay//imports/dcat_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -14,23 +14,62 @@ Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<https://w3id.org/quay/imports/dcat_import.owl>
-<https://w3id.org/quay/releases/2026-08-17/imports/dcat_import.owl>
+Ontology(<https://w3id.org/quay//imports/dcat_import.owl>
+<https://w3id.org/quay//releases/2026-08-17/imports/dcat_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/ns/dcat3>)
 Annotation(owl:versionInfo "2026-08-17")
 
+Declaration(Class(<http://purl.org/dc/dcmitype/Service>))
+Declaration(Class(dc:MediaType))
+Declaration(Class(rdfs:Resource))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Kind>))
+Declaration(Class(<http://www.w3.org/ns/dcat#Catalog>))
+Declaration(Class(<http://www.w3.org/ns/dcat#DataService>))
+Declaration(Class(<http://www.w3.org/ns/dcat#Dataset>))
+Declaration(Class(<http://www.w3.org/ns/dcat#DatasetSeries>))
+Declaration(Class(<http://www.w3.org/ns/dcat#Distribution>))
+Declaration(Class(<http://www.w3.org/ns/dcat#Resource>))
 Declaration(Class(<http://www.w3.org/ns/org#Organization>))
 Declaration(Class(foaf:Person))
+Declaration(ObjectProperty(dc:format))
+Declaration(ObjectProperty(dc:hasPart))
 Declaration(ObjectProperty(dc:hasVersion))
+Declaration(ObjectProperty(dc:isPartOf))
+Declaration(ObjectProperty(dc:relation))
+Declaration(ObjectProperty(dc:subject))
 Declaration(ObjectProperty(<http://purl.org/pav/hasVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#accessService>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#accessURL>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#catalog>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#compressFormat>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#contactPoint>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#dataset>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#distribution>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#downloadURL>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#endpointDescription>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#endpointURL>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#hasCurrentVersion>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#hasVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#inCatalog>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#inSeries>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#isDistributionOf>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#isVersionOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#mediaType>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#nextVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#packageFormat>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#previousVersion>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#resource>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#seriesMember>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#servesDataset>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#service>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dcat#theme>))
 Declaration(ObjectProperty(prov:generalizationOf))
 Declaration(ObjectProperty(prov:wasRevisionOf))
 Declaration(ObjectProperty(foaf:homepage))
+Declaration(DataProperty(<http://www.w3.org/ns/dcat#byteSize>))
+Declaration(DataProperty(<http://www.w3.org/ns/dcat#keyword>))
+Declaration(DataProperty(<http://www.w3.org/ns/dcat#spatialResolutionInMeters>))
+Declaration(DataProperty(<http://www.w3.org/ns/dcat#temporalResolution>))
 Declaration(DataProperty(<http://www.w3.org/ns/dcat#version>))
 Declaration(NamedIndividual(<http://stfc.ac.uk>))
 Declaration(NamedIndividual(<http://ec.europa.eu/dgs/informatics/>))
@@ -50,6 +89,7 @@ Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(dc:description))
 Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(dc:title))
+Declaration(Datatype(xsd:duration))
 
 ############################
 #   Object Properties
@@ -59,7 +99,129 @@ Declaration(AnnotationProperty(dc:title))
 
 EquivalentObjectProperties(<http://purl.org/pav/hasVersion> <http://www.w3.org/ns/dcat#hasVersion>)
 
-# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (tiene versión actual)
+# Object Property: <http://www.w3.org/ns/dcat#accessService> (servicio de acceso de datos)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessService> "data access service"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessService> "dataadgangstjeneste"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessService> "servicio de acceso de datos"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessService> "servizio di accesso ai dati"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessService> "služba pro přístup k datům"@cs)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/ns/dcat#DataService>)
+
+# Object Property: <http://www.w3.org/ns/dcat#accessURL> (přístupová adresa)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "URL d'accès"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "URL de acceso"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "URL πρόσβασης"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "access address"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "adgangsadresse"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "indirizzo di accesso"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "přístupová adresa"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "رابط وصول"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#accessURL> "アクセスURL"@ja)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#accessURL> <http://www.w3.org/ns/dcat#Distribution>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#accessURL> rdfs:Resource)
+
+# Object Property: <http://www.w3.org/ns/dcat#catalog> (catalogo)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#catalog> "catalog"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#catalog> "catalogo"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#catalog> "catálogo"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#catalog> "katalog"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#catalog> "katalog"@da)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#catalog> <http://www.w3.org/ns/dcat#resource>)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#catalog> <http://www.w3.org/ns/dcat#Catalog>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#catalog> <http://www.w3.org/ns/dcat#Catalog>)
+
+# Object Property: <http://www.w3.org/ns/dcat#compressFormat> (compression format)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "compression format"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "formato de compresión"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "formato di compressione"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "formát komprese"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#compressFormat> "kompressionsformat"@da)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#compressFormat> dc:format)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#compressFormat> <http://www.w3.org/ns/dcat#Distribution>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#compressFormat> dc:MediaType)
+
+# Object Property: <http://www.w3.org/ns/dcat#contactPoint> (kontaktpunkt)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "Punto de contacto"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "contact point"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "kontaktní bod"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "kontaktpunkt"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "point de contact"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "punto di contatto"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "σημείο επικοινωνίας"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "عنوان اتصال"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#contactPoint> "窓口"@ja)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#contactPoint> <http://www.w3.org/2006/vcard/ns#Kind>)
+
+# Object Property: <http://www.w3.org/ns/dcat#dataset> (データセット)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "conjunto de datos"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "dataset"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "dataset"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "datasæt"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "datová sada"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "jeu de données"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "σύνολο δεδομένων"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "قائمة بيانات"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#dataset> "データセット"@ja)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#resource>)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Catalog>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Dataset>)
+
+# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribución)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribuce"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribución"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribution"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribution"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribution"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribuzione"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "διανομή"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "توزيع"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "データセット配信"@ja)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#distribution> dc:relation)
+InverseObjectProperties(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#isDistributionOf>)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Dataset>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Distribution>)
+
+# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (URL souboru ke stažení)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de descarga"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de téléchargement"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL di scarico"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL souboru ke stažení"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL μεταφόρτωσης"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "download URL"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "downloadURL"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "رابط تحميل"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "ダウンロードURL"@ja)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/ns/dcat#Distribution>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#downloadURL> rdfs:Resource)
+
+# Object Property: <http://www.w3.org/ns/dcat#endpointDescription> (endpointbeskrivelse)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointDescription> "descripción del end-point del servicio"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointDescription> "description of service end-point"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointDescription> "descrizione dell'endpoint del servizio"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointDescription> "endpointbeskrivelse"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointDescription> "popis přístupového bodu služby"@cs)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#endpointDescription> <http://www.w3.org/ns/dcat#DataService>)
+
+# Object Property: <http://www.w3.org/ns/dcat#endpointURL> (end-point del servicio)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "end-point del servicio"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "end-point del servizio"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "přístupový bod služby"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "service end-point"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "tjenesteendpoint"@da)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/ns/dcat#DataService>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#endpointURL> rdfs:Resource)
+
+# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (ha versione attuale)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "ha versione attuale"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "has current version"@en)
@@ -75,9 +237,47 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasVersion> dc:hasVersion)
 SubObjectPropertyOf(<http://www.w3.org/ns/dcat#hasVersion> prov:generalizationOf)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#hasVersion> <http://www.w3.org/ns/dcat#isVersionOf>)
 
+# Object Property: <http://www.w3.org/ns/dcat#inCatalog> (<http://www.w3.org/ns/dcat#inCatalog>)
+
+InverseObjectProperties(<http://www.w3.org/ns/dcat#inCatalog> <http://www.w3.org/ns/dcat#resource>)
+
+# Object Property: <http://www.w3.org/ns/dcat#inSeries> (in series)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "en serie"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in serie"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in series"@en)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#inSeries> dc:isPartOf)
+InverseObjectProperties(<http://www.w3.org/ns/dcat#inSeries> <http://www.w3.org/ns/dcat#seriesMember>)
+
+# Object Property: <http://www.w3.org/ns/dcat#mediaType> (type de média)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "media type"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "medietype"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "tipo de media"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "tipo di media"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "typ média"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "type de média"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "τύπος μέσου"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "نوع الميديا"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "メディア・タイプ"@ja)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#mediaType> dc:format)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#mediaType> <http://www.w3.org/ns/dcat#Distribution>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#mediaType> dc:MediaType)
+
 # Object Property: <http://www.w3.org/ns/dcat#nextVersion> (<http://www.w3.org/ns/dcat#nextVersion>)
 
 InverseObjectProperties(<http://www.w3.org/ns/dcat#nextVersion> <http://www.w3.org/ns/dcat#previousVersion>)
+
+# Object Property: <http://www.w3.org/ns/dcat#packageFormat> (formato de empaquetado)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formato de empaquetado"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formato di impacchettamento"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formát balíčku"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "packaging format"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "pakkeformat"@da)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#packageFormat> dc:format)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#packageFormat> <http://www.w3.org/ns/dcat#Distribution>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#packageFormat> dc:MediaType)
 
 # Object Property: <http://www.w3.org/ns/dcat#previousVersion> (versione precedente)
 
@@ -86,18 +286,170 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#previousVersion> "vers
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#previousVersion> "versión anterior"@es)
 SubObjectPropertyOf(<http://www.w3.org/ns/dcat#previousVersion> prov:wasRevisionOf)
 
+# Object Property: <http://www.w3.org/ns/dcat#resource> (resource)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#resource> "resource"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#resource> "risorsa"@it)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#resource> dc:hasPart)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#resource> <http://www.w3.org/ns/dcat#Catalog>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#resource> <http://www.w3.org/ns/dcat#Resource>)
+
+# Object Property: <http://www.w3.org/ns/dcat#servesDataset> (provee conjunto de datos)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "datatjeneste for datasæt"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "poskytuje datovou sadu"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "provee conjunto de datos"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "serve set di dati"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "serves dataset"@en)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/ns/dcat#DataService>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/ns/dcat#Dataset>)
+
+# Object Property: <http://www.w3.org/ns/dcat#service> (service)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "datatjeneste"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "service"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "servicio"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "servizio"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "služba"@cs)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#resource>)
+ObjectPropertyDomain(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#Catalog>)
+ObjectPropertyRange(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#DataService>)
+
+# Object Property: <http://www.w3.org/ns/dcat#theme> (tema)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "emne"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "tema"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "tema"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "theme"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "thème"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "téma"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "Θέμα"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "التصنيف"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "テーマ/カテゴリー"@ja)
+SubObjectPropertyOf(<http://www.w3.org/ns/dcat#theme> dc:subject)
+
 
 ############################
 #   Data Properties
 ############################
 
-# Data Property: <http://www.w3.org/ns/dcat#version> (versión)
+# Data Property: <http://www.w3.org/ns/dcat#byteSize> (byte size)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "byte size"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "bytestørrelse"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "dimensione in byte"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "taille en octects"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "tamaño en bytes"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "velikost v bajtech"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "μέγεθος σε bytes"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "الحجم بالبايت"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "バイト・サイズ"@ja)
+DataPropertyDomain(<http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/ns/dcat#Distribution>)
+
+# Data Property: <http://www.w3.org/ns/dcat#keyword> (キーワード/タグ)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "keyword"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "klíčové slovo"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "mot-clés "@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "nøgleord"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "palabra clave"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "parola chiave"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "λέξη-κλειδί"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "كلمة  مفتاحية "@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "キーワード/タグ"@ja)
+
+# Data Property: <http://www.w3.org/ns/dcat#spatialResolutionInMeters> (resolución espacial (metros))
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#spatialResolutionInMeters> "geografisk opløsning (meter)"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#spatialResolutionInMeters> "prostorové rozlišení (metry)"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#spatialResolutionInMeters> "resolución espacial (metros)"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#spatialResolutionInMeters> "risoluzione spaziale (metri)"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#spatialResolutionInMeters> "spatial resolution (meters)"@en-us)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#spatialResolutionInMeters> "spatial resolution (metres)"@en-gb)
+DataPropertyRange(<http://www.w3.org/ns/dcat#spatialResolutionInMeters> xsd:decimal)
+
+# Data Property: <http://www.w3.org/ns/dcat#temporalResolution> (temporal resolution)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "resolución temporal"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "risoluzione temporale"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "temporal resolution"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "tidslig opløsning"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#temporalResolution> "časové rozlišení"@cs)
+DataPropertyRange(<http://www.w3.org/ns/dcat#temporalResolution> xsd:duration)
+
+# Data Property: <http://www.w3.org/ns/dcat#version> (versione)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "version"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versione"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#version> "versión"@es)
 
 
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.w3.org/ns/dcat#Catalog> (Katalog)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Catalog"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Catalogo"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Catalogue"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Catálogo"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Katalog"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Katalog"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "Κατάλογος"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "فهرس قوائم البيانات"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Catalog> "カタログ"@ja)
+SubClassOf(<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/ns/dcat#Dataset>)
+
+# Class: <http://www.w3.org/ns/dcat#DataService> (Data service)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DataService> "Data service"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DataService> "Datatjeneste"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DataService> "Servicio de datos"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DataService> "Servizio di dati"@it)
+SubClassOf(<http://www.w3.org/ns/dcat#DataService> <http://purl.org/dc/dcmitype/Service>)
+SubClassOf(<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/ns/dcat#Resource>)
+
+# Class: <http://www.w3.org/ns/dcat#Dataset> (Datová sada)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Conjunto de datos"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Dataset"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Dataset"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Datasæt"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Datová sada"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Jeu de données"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "Σύνολο Δεδομένων"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "قائمة بيانات"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Dataset> "データセット"@ja)
+SubClassOf(<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/ns/dcat#Resource>)
+
+# Class: <http://www.w3.org/ns/dcat#DatasetSeries> (Serie di dataset)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DatasetSeries> "Dataset series"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DatasetSeries> "Serie de conjuntos de datos"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#DatasetSeries> "Serie di dataset"@it)
+SubClassOf(<http://www.w3.org/ns/dcat#DatasetSeries> <http://www.w3.org/ns/dcat#Dataset>)
+
+# Class: <http://www.w3.org/ns/dcat#Distribution> (Distribuce)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Distribuce"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Distribución"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Distribution"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Distribution"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Distribution"@fr)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Distribuzione"@it)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "Διανομή"@el)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "التوزيع"@ar)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Distribution> "配信"@ja)
+
+# Class: <http://www.w3.org/ns/dcat#Resource> (Catalogued resource)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Catalogued resource"@en)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Katalogiseret ressource"@da)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Katalogizovaný zdroj"@cs)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Recurso catalogado"@es)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#Resource> "Risorsa catalogata"@it)
 
 
 ############################
@@ -137,4 +489,5 @@ ObjectPropertyAssertion(foaf:homepage _:genid2147483675 <http://ec.europa.eu/dgs
 ObjectPropertyAssertion(foaf:homepage _:genid2147483676 <http://www.deri.ie/>)
 ObjectPropertyAssertion(foaf:homepage _:genid2147483677 <https://www.csiro.au>)
 ObjectPropertyAssertion(foaf:homepage _:genid2147483678 <http://stfc.ac.uk>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/ns/dcat#endpointURL>) <http://www.w3.org/ns/dcat#accessURL>)
 )
