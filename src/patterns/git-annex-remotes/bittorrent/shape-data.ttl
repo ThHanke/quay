@@ -1,0 +1,26 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:bittorrent-dataset a dcat:Dataset ;
+    dcterms:title "Open Dataset Distributed via BitTorrent" .
+
+ex:bittorrent-distribution a dcat:Distribution ;
+    dcterms:title "BitTorrent swarm distribution" ;
+    dcat:accessURL <magnet:?xt=urn:btih:example-hash> ;
+    quay:QUAY_0000046 ex:bittorrent-access ;
+    quay:QUAY_0000047 ex:bittorrent-yield .
+
+ex:bittorrent-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000009 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] .
+
+ex:bittorrent-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000061 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000065 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000068 ] .

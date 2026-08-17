@@ -1,0 +1,32 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:gcrypt-dataset a dcat:Dataset ;
+    dcterms:title "Encrypted Repository on Untrusted Host" .
+
+ex:gcrypt-distribution a dcat:Distribution ;
+    dcterms:title "Gcrypt encrypted distribution" ;
+    dcat:accessURL <gcrypt::ssh://storage@untrusted-host.example.org/srv/encrypted-repo> ;
+    quay:QUAY_0000046 ex:gcrypt-access ;
+    quay:QUAY_0000047 ex:gcrypt-yield ;
+    quay:QUAY_0000056 "GPG" ;
+    quay:QUAY_0000057 "SSH" ;
+    quay:QUAY_0000059 "SHA-256" .
+
+ex:gcrypt-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000014 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000021 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000027 ] .
+
+ex:gcrypt-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000038 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000069 ] .

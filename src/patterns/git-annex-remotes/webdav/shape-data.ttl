@@ -1,0 +1,30 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:webdav-dataset a dcat:Dataset ;
+    dcterms:title "Shared Files on WebDAV Server" .
+
+ex:webdav-distribution a dcat:Distribution ;
+    dcterms:title "WebDAV distribution" ;
+    dcat:accessURL <https://webdav.example.com/annex/> ;
+    quay:QUAY_0000046 ex:webdav-access ;
+    quay:QUAY_0000047 ex:webdav-yield ;
+    quay:QUAY_0000057 "TLS 1.2" ;
+    quay:QUAY_0000059 "SHA-256" .
+
+ex:webdav-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000007 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000019 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] .
+
+ex:webdav-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .

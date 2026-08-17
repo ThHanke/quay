@@ -1,0 +1,31 @@
+@prefix quay: <https://w3id.org/quay/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/quay/examples/> .
+
+ex:git-dataset a dcat:Dataset ;
+    dcterms:title "Version-Controlled Research Data" .
+
+ex:git-distribution a dcat:Distribution ;
+    dcterms:title "Git remote distribution" ;
+    dcat:accessURL <ssh://git@gitlab.example.org/research/data.git> ;
+    quay:QUAY_0000046 ex:git-access ;
+    quay:QUAY_0000047 ex:git-yield ;
+    quay:QUAY_0000057 "SSH" ;
+    quay:QUAY_0000059 "SHA-256" .
+
+ex:git-access a quay:QUAY_0000001 ;
+    quay:QUAY_0000048 [ a quay:QUAY_0000014 ] ;
+    quay:QUAY_0000049 [ a quay:QUAY_0000020 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] ;
+    quay:QUAY_0000050 [ a quay:QUAY_0000027 ] .
+
+ex:git-yield a quay:QUAY_0000002 ;
+    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
+    quay:QUAY_0000052 [ a quay:QUAY_0000038 ] ;
+    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
+    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
+    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .
