@@ -1,9 +1,9 @@
 <https://w3id.org/quay/quay-full.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/quay/releases/2026-08-17/quay-full.owl> .
+<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/quay/releases/2026-08-18/quay-full.owl> .
 <https://w3id.org/quay/quay-full.owl> <http://purl.org/dc/terms/description> "A DCAT Profile for Data Access, Storage and Authorization Metadata." .
 <https://w3id.org/quay/quay-full.owl> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/quay/quay-full.owl> <http://purl.org/dc/terms/title> "QUAY: Qualified Usage, Access and Yield" .
-<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionInfo> "2026-08-17" .
+<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionInfo> "2026-08-18" .
 # 
 # 
 # #################################################################
@@ -12,6 +12,10 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.w3.org/2000/01/rdf-schema#label> "definition" .
 # 
 # http://purl.org/dc/elements/1.1/source
 <http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -49,6 +53,12 @@
 # http://purl.org/pav/hasVersion
 <http://purl.org/pav/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/pav/hasVersion> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/dcat#hasVersion> .
+# 
+# http://spdx.org/rdf/terms#algorithm
+<http://spdx.org/rdf/terms#algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://spdx.org/rdf/terms#checksum
+<http://spdx.org/rdf/terms#checksum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://www.w3.org/ns/dcat#accessService
 <http://www.w3.org/ns/dcat#accessService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -419,65 +429,75 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# https://w3id.org/quay/QUAY_0000046
-<https://w3id.org/quay/QUAY_0000046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000046> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
-<https://w3id.org/quay/QUAY_0000046> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000001> .
-<https://w3id.org/quay/QUAY_0000046> <http://www.w3.org/2000/01/rdf-schema#label> "access description" .
+# https://w3id.org/quay/accessDescription
+<https://w3id.org/quay/accessDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/accessDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/quay/accessDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/AccessDescription> .
+<https://w3id.org/quay/accessDescription> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a distribution to a qualification node that describes how it is accessed." .
+<https://w3id.org/quay/accessDescription> <http://www.w3.org/2000/01/rdf-schema#label> "access description" .
 # 
-# https://w3id.org/quay/QUAY_0000047
-<https://w3id.org/quay/QUAY_0000047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000047> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
-<https://w3id.org/quay/QUAY_0000047> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000002> .
-<https://w3id.org/quay/QUAY_0000047> <http://www.w3.org/2000/01/rdf-schema#label> "yield description" .
+# https://w3id.org/quay/authenticationScheme
+<https://w3id.org/quay/authenticationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/AccessDescription> .
+<https://w3id.org/quay/authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/authenticationScheme> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates an access description to the method used to verify the identity of the accessing agent." .
+<https://w3id.org/quay/authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#label> "authentication scheme" .
 # 
-# https://w3id.org/quay/QUAY_0000048
-<https://w3id.org/quay/QUAY_0000048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000048> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000001> .
-<https://w3id.org/quay/QUAY_0000048> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000048> <http://www.w3.org/2000/01/rdf-schema#label> "protocol" .
+# https://w3id.org/quay/coverage
+<https://w3id.org/quay/coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/coverage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/YieldDescription> .
+<https://w3id.org/quay/coverage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/Coverage> .
+<https://w3id.org/quay/coverage> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a yield description to the extent of dataset representation in the distribution." .
+<https://w3id.org/quay/coverage> <http://www.w3.org/2000/01/rdf-schema#label> "coverage" .
 # 
-# https://w3id.org/quay/QUAY_0000049
-<https://w3id.org/quay/QUAY_0000049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000049> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000001> .
-<https://w3id.org/quay/QUAY_0000049> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000049> <http://www.w3.org/2000/01/rdf-schema#label> "authentication scheme" .
+# https://w3id.org/quay/deliveryMode
+<https://w3id.org/quay/deliveryMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/deliveryMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/YieldDescription> .
+<https://w3id.org/quay/deliveryMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/deliveryMode> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a yield description to the mechanism by which data is transferred to the consumer." .
+<https://w3id.org/quay/deliveryMode> <http://www.w3.org/2000/01/rdf-schema#label> "delivery mode" .
 # 
-# https://w3id.org/quay/QUAY_0000050
-<https://w3id.org/quay/QUAY_0000050> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000050> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000001> .
-<https://w3id.org/quay/QUAY_0000050> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000028> .
-<https://w3id.org/quay/QUAY_0000050> <http://www.w3.org/2000/01/rdf-schema#label> "supported operation" .
+# https://w3id.org/quay/protocol
+<https://w3id.org/quay/protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/protocol> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/AccessDescription> .
+<https://w3id.org/quay/protocol> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/protocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates an access description to the communication protocol used for data exchange." .
+<https://w3id.org/quay/protocol> <http://www.w3.org/2000/01/rdf-schema#label> "protocol" .
 # 
-# https://w3id.org/quay/QUAY_0000051
-<https://w3id.org/quay/QUAY_0000051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000051> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000002> .
-<https://w3id.org/quay/QUAY_0000051> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000051> <http://www.w3.org/2000/01/rdf-schema#label> "delivery mode" .
+# https://w3id.org/quay/serviceQuality
+<https://w3id.org/quay/serviceQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/serviceQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/YieldDescription> .
+<https://w3id.org/quay/serviceQuality> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/ServiceQuality> .
+<https://w3id.org/quay/serviceQuality> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a yield description to the reliability and availability characterisation of the service." .
+<https://w3id.org/quay/serviceQuality> <http://www.w3.org/2000/01/rdf-schema#label> "service quality" .
 # 
-# https://w3id.org/quay/QUAY_0000052
-<https://w3id.org/quay/QUAY_0000052> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000052> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000002> .
-<https://w3id.org/quay/QUAY_0000052> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000034> .
-<https://w3id.org/quay/QUAY_0000052> <http://www.w3.org/2000/01/rdf-schema#label> "temporal quality" .
+# https://w3id.org/quay/supportedOperation
+<https://w3id.org/quay/supportedOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/supportedOperation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/AccessDescription> .
+<https://w3id.org/quay/supportedOperation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/Operation> .
+<https://w3id.org/quay/supportedOperation> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates an access description to an action that can be performed on the data resource." .
+<https://w3id.org/quay/supportedOperation> <http://www.w3.org/2000/01/rdf-schema#label> "supported operation" .
 # 
-# https://w3id.org/quay/QUAY_0000053
-<https://w3id.org/quay/QUAY_0000053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000053> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000002> .
-<https://w3id.org/quay/QUAY_0000053> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000039> .
-<https://w3id.org/quay/QUAY_0000053> <http://www.w3.org/2000/01/rdf-schema#label> "coverage" .
+# https://w3id.org/quay/temporalQuality
+<https://w3id.org/quay/temporalQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/temporalQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/YieldDescription> .
+<https://w3id.org/quay/temporalQuality> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/TemporalQuality> .
+<https://w3id.org/quay/temporalQuality> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a yield description to the freshness characterisation of the available data." .
+<https://w3id.org/quay/temporalQuality> <http://www.w3.org/2000/01/rdf-schema#label> "temporal quality" .
 # 
-# https://w3id.org/quay/QUAY_0000054
-<https://w3id.org/quay/QUAY_0000054> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000054> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000002> .
-<https://w3id.org/quay/QUAY_0000054> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000044> .
-<https://w3id.org/quay/QUAY_0000054> <http://www.w3.org/2000/01/rdf-schema#label> "service quality" .
+# https://w3id.org/quay/verificationMethod
+<https://w3id.org/quay/verificationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/verificationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/YieldDescription> .
+<https://w3id.org/quay/verificationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/VerificationMethod> .
+<https://w3id.org/quay/verificationMethod> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a yield description to the mechanism used to verify data integrity after transfer." .
+<https://w3id.org/quay/verificationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "verification method" .
 # 
-# https://w3id.org/quay/QUAY_0000055
-<https://w3id.org/quay/QUAY_0000055> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/quay/QUAY_0000055> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/quay/QUAY_0000002> .
-<https://w3id.org/quay/QUAY_0000055> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/QUAY_0000045> .
-<https://w3id.org/quay/QUAY_0000055> <http://www.w3.org/2000/01/rdf-schema#label> "verification method" .
+# https://w3id.org/quay/yieldDescription
+<https://w3id.org/quay/yieldDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/quay/yieldDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/quay/yieldDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/quay/YieldDescription> .
+<https://w3id.org/quay/yieldDescription> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a distribution to a qualification node that describes what it delivers." .
+<https://w3id.org/quay/yieldDescription> <http://www.w3.org/2000/01/rdf-schema#label> "yield description" .
 # 
 # 
 # 
@@ -490,6 +510,9 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://spdx.org/rdf/terms#checksumValue
+<http://spdx.org/rdf/terms#checksumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # http://www.w3.org/ns/dcat#byteSize
 <http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -541,29 +564,19 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#label> "versione"@it .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#label> "versión"@es .
 # 
-# https://w3id.org/quay/QUAY_0000056
-<https://w3id.org/quay/QUAY_0000056> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/quay/QUAY_0000056> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
-<https://w3id.org/quay/QUAY_0000056> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/quay/QUAY_0000056> <http://www.w3.org/2000/01/rdf-schema#label> "encryption at rest" .
+# https://w3id.org/quay/encryptionAtRest
+<https://w3id.org/quay/encryptionAtRest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/quay/encryptionAtRest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/quay/encryptionAtRest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/quay/encryptionAtRest> <http://purl.obolibrary.org/obo/IAO_0000115> "Encryption algorithm applied to data at rest within the storage backend." .
+<https://w3id.org/quay/encryptionAtRest> <http://www.w3.org/2000/01/rdf-schema#label> "encryption at rest" .
 # 
-# https://w3id.org/quay/QUAY_0000057
-<https://w3id.org/quay/QUAY_0000057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/quay/QUAY_0000057> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
-<https://w3id.org/quay/QUAY_0000057> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/quay/QUAY_0000057> <http://www.w3.org/2000/01/rdf-schema#label> "encryption in transit" .
-# 
-# https://w3id.org/quay/QUAY_0000058
-<https://w3id.org/quay/QUAY_0000058> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/quay/QUAY_0000058> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
-<https://w3id.org/quay/QUAY_0000058> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/quay/QUAY_0000058> <http://www.w3.org/2000/01/rdf-schema#label> "checksum" .
-# 
-# https://w3id.org/quay/QUAY_0000059
-<https://w3id.org/quay/QUAY_0000059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/quay/QUAY_0000059> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
-<https://w3id.org/quay/QUAY_0000059> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/quay/QUAY_0000059> <http://www.w3.org/2000/01/rdf-schema#label> "checksum algorithm" .
+# https://w3id.org/quay/encryptionInTransit
+<https://w3id.org/quay/encryptionInTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/quay/encryptionInTransit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/quay/encryptionInTransit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/quay/encryptionInTransit> <http://purl.obolibrary.org/obo/IAO_0000115> "Encryption protocol applied to data during transfer between client and server." .
+<https://w3id.org/quay/encryptionInTransit> <http://www.w3.org/2000/01/rdf-schema#label> "encryption in transit" .
 # 
 # 
 # 
@@ -602,6 +615,9 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://schema.org/Person
 <http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://spdx.org/rdf/terms#Checksum
+<http://spdx.org/rdf/terms#Checksum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2000/01/rdf-schema#Class
 <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -811,336 +827,393 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/quay/QUAY_0000001
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
-_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/QUAY_0000003> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000048> .
+# https://w3id.org/quay/AccessDescription
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/AuthenticationScheme> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/authenticationScheme> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/QUAY_0000015> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000049> .
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/Protocol> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/protocol> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/QUAY_0000028> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000050> .
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/Operation> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/supportedOperation> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
-_:genid30 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/QUAY_0000003> .
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/Protocol> .
 _:genid30 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000048> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/protocol> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualifies HOW a Distribution is reached." .
-<https://w3id.org/quay/QUAY_0000001> <http://www.w3.org/2000/01/rdf-schema#label> "Access Description" .
+<https://w3id.org/quay/AccessDescription> <http://purl.obolibrary.org/obo/IAO_0000115> "Qualification node that specifies how a distribution is reached, comprising exactly one protocol, at least one authentication scheme, and at least one supported operation." .
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualifies HOW a Distribution is reached." .
+<https://w3id.org/quay/AccessDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Access Description" .
 # 
-# https://w3id.org/quay/QUAY_0000002
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/QUAY_0000029> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000051> .
+# https://w3id.org/quay/ApiKeyAuthentication
+<https://w3id.org/quay/ApiKeyAuthentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/ApiKeyAuthentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/ApiKeyAuthentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that verifies identity by presenting a pre-shared secret key with each request." .
+<https://w3id.org/quay/ApiKeyAuthentication> <http://www.w3.org/2000/01/rdf-schema#label> "API Key" .
+# 
+# https://w3id.org/quay/Archived
+<https://w3id.org/quay/Archived> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Archived> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/TemporalQuality> .
+<https://w3id.org/quay/Archived> <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal quality in which data is preserved for long-term retention and is no longer actively updated." .
+<https://w3id.org/quay/Archived> <http://www.w3.org/2000/01/rdf-schema#label> "Archived" .
+# 
+# https://w3id.org/quay/AuthenticationScheme
+<https://w3id.org/quay/AuthenticationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/AuthenticationScheme> <http://purl.obolibrary.org/obo/IAO_0000115> "Method used to verify the identity of an agent requesting access to a data resource." .
+<https://w3id.org/quay/AuthenticationScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Authentication Scheme" .
+# 
+# https://w3id.org/quay/AwsCredentialAuthentication
+<https://w3id.org/quay/AwsCredentialAuthentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/AwsCredentialAuthentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/AwsCredentialAuthentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair." .
+<https://w3id.org/quay/AwsCredentialAuthentication> <http://www.w3.org/2000/01/rdf-schema#label> "AWS Credential" .
+# 
+# https://w3id.org/quay/BasicAuthentication
+<https://w3id.org/quay/BasicAuthentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/BasicAuthentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/BasicAuthentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that verifies identity by transmitting a username and password pair, typically Base64-encoded." .
+<https://w3id.org/quay/BasicAuthentication> <http://www.w3.org/2000/01/rdf-schema#label> "Basic Authentication" .
+# 
+# https://w3id.org/quay/BestEffort
+<https://w3id.org/quay/BestEffort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/BestEffort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/ServiceQuality> .
+<https://w3id.org/quay/BestEffort> <http://purl.obolibrary.org/obo/IAO_0000115> "Service quality in which availability depends on upstream network and server conditions without formal guarantees." .
+<https://w3id.org/quay/BestEffort> <http://www.w3.org/2000/01/rdf-schema#comment> "Quality depends on upstream server or network conditions." .
+<https://w3id.org/quay/BestEffort> <http://www.w3.org/2000/01/rdf-schema#label> "Best Effort" .
+# 
+# https://w3id.org/quay/BitTorrentProtocol
+<https://w3id.org/quay/BitTorrentProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/BitTorrentProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/BitTorrentProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination." .
+<https://w3id.org/quay/BitTorrentProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "BitTorrent" .
+# 
+# https://w3id.org/quay/BulkDelivery
+<https://w3id.org/quay/BulkDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/BulkDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/BulkDelivery> <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery mode in which data is transferred as a complete unit within a single transaction." .
+<https://w3id.org/quay/BulkDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Bulk Delivery" .
+# 
+# https://w3id.org/quay/CompleteCoverage
+<https://w3id.org/quay/CompleteCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/CompleteCoverage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Coverage> .
+<https://w3id.org/quay/CompleteCoverage> <http://purl.obolibrary.org/obo/IAO_0000115> "Coverage in which the distribution contains the entirety of the available data of its dataset." .
+<https://w3id.org/quay/CompleteCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "Complete" .
+# 
+# https://w3id.org/quay/ContentAddressing
+<https://w3id.org/quay/ContentAddressing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/ContentAddressing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/VerificationMethod> .
+<https://w3id.org/quay/ContentAddressing> <http://purl.obolibrary.org/obo/IAO_0000115> "Verification method in which data is both identified and verified by a hash derived from its content, such that the identifier itself proves integrity." .
+<https://w3id.org/quay/ContentAddressing> <http://www.w3.org/2000/01/rdf-schema#comment> "Content identified and verified by its hash, as in IPFS CIDs." .
+<https://w3id.org/quay/ContentAddressing> <http://www.w3.org/2000/01/rdf-schema#label> "Content Addressing" .
+# 
+# https://w3id.org/quay/Coverage
+<https://w3id.org/quay/Coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Coverage> <http://purl.obolibrary.org/obo/IAO_0000115> "Characterisation of the extent to which a distribution represents the total available data of a dataset." .
+<https://w3id.org/quay/Coverage> <http://www.w3.org/2000/01/rdf-schema#label> "Coverage" .
+# 
+# https://w3id.org/quay/DeleteOperation
+<https://w3id.org/quay/DeleteOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/DeleteOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Operation> .
+<https://w3id.org/quay/DeleteOperation> <http://purl.obolibrary.org/obo/IAO_0000115> "Operation that permanently removes data from a data resource." .
+<https://w3id.org/quay/DeleteOperation> <http://www.w3.org/2000/01/rdf-schema#label> "Delete" .
+# 
+# https://w3id.org/quay/DeliveryMode
+<https://w3id.org/quay/DeliveryMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/DeliveryMode> <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanism by which data is transferred from a data resource to a consuming agent." .
+<https://w3id.org/quay/DeliveryMode> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery Mode" .
+# 
+# https://w3id.org/quay/DigitalSignature
+<https://w3id.org/quay/DigitalSignature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/DigitalSignature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/VerificationMethod> .
+<https://w3id.org/quay/DigitalSignature> <http://purl.obolibrary.org/obo/IAO_0000115> "Verification method that confirms both integrity and authenticity of data by validating a cryptographic signature produced by a known key holder." .
+<https://w3id.org/quay/DigitalSignature> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity and authenticity verified via cryptographic signature." .
+<https://w3id.org/quay/DigitalSignature> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Signature" .
+# 
+# https://w3id.org/quay/Distributed
+<https://w3id.org/quay/Distributed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Distributed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/ServiceQuality> .
+<https://w3id.org/quay/Distributed> <http://purl.obolibrary.org/obo/IAO_0000115> "Service quality in which data is replicated across multiple independent nodes for fault tolerance." .
+<https://w3id.org/quay/Distributed> <http://www.w3.org/2000/01/rdf-schema#comment> "Data distributed across multiple peers or nodes." .
+<https://w3id.org/quay/Distributed> <http://www.w3.org/2000/01/rdf-schema#label> "Distributed" .
+# 
+# https://w3id.org/quay/EventDrivenDelivery
+<https://w3id.org/quay/EventDrivenDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/EventDrivenDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/EventDrivenDelivery> <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery mode in which data transfer is triggered by the occurrence of discrete events or state changes." .
+<https://w3id.org/quay/EventDrivenDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Event-Driven Delivery" .
+# 
+# https://w3id.org/quay/FtpProtocol
+<https://w3id.org/quay/FtpProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/FtpProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/FtpProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that transfers files between client and server using the File Transfer Protocol." .
+<https://w3id.org/quay/FtpProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "FTP" .
+# 
+# https://w3id.org/quay/GitProtocol
+<https://w3id.org/quay/GitProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/GitProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/GitProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that accesses version-controlled data through the Git distributed version control system." .
+<https://w3id.org/quay/GitProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Git" .
+# 
+# https://w3id.org/quay/GpgKeyAuthentication
+<https://w3id.org/quay/GpgKeyAuthentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/GpgKeyAuthentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/GpgKeyAuthentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair." .
+<https://w3id.org/quay/GpgKeyAuthentication> <http://www.w3.org/2000/01/rdf-schema#label> "GPG Key" .
+# 
+# https://w3id.org/quay/HashVerification
+<https://w3id.org/quay/HashVerification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/HashVerification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/VerificationMethod> .
+<https://w3id.org/quay/HashVerification> <http://purl.obolibrary.org/obo/IAO_0000115> "Verification method that confirms data integrity by computing a cryptographic hash of the received content and comparing it against a known reference value." .
+<https://w3id.org/quay/HashVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity verified by comparing cryptographic hash of content." .
+<https://w3id.org/quay/HashVerification> <http://www.w3.org/2000/01/rdf-schema#label> "Hash Verification" .
+# 
+# https://w3id.org/quay/HighAvailability
+<https://w3id.org/quay/HighAvailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/HighAvailability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/ServiceQuality> .
+<https://w3id.org/quay/HighAvailability> <http://purl.obolibrary.org/obo/IAO_0000115> "Service quality in which the service is operated with infrastructure redundancy and contractual uptime guarantees." .
+<https://w3id.org/quay/HighAvailability> <http://www.w3.org/2000/01/rdf-schema#comment> "Managed cloud services with SLA guarantees." .
+<https://w3id.org/quay/HighAvailability> <http://www.w3.org/2000/01/rdf-schema#label> "High Availability" .
+# 
+# https://w3id.org/quay/HookProtocol
+<https://w3id.org/quay/HookProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/HookProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/HookProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that delegates data access operations to user-defined external scripts or commands." .
+<https://w3id.org/quay/HookProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Custom protocol via user-defined hook scripts." .
+<https://w3id.org/quay/HookProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Hook" .
+# 
+# https://w3id.org/quay/HttpProtocol
+<https://w3id.org/quay/HttpProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/HttpProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/HttpProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security." .
+<https://w3id.org/quay/HttpProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "HTTP/HTTPS" .
+# 
+# https://w3id.org/quay/IncrementalCoverage
+<https://w3id.org/quay/IncrementalCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/IncrementalCoverage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Coverage> .
+<https://w3id.org/quay/IncrementalCoverage> <http://purl.obolibrary.org/obo/IAO_0000115> "Coverage in which the distribution contains only changes accumulated since a specified reference point." .
+<https://w3id.org/quay/IncrementalCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "Incremental" .
+# 
+# https://w3id.org/quay/IpfsProtocol
+<https://w3id.org/quay/IpfsProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/IpfsProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/IpfsProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network." .
+<https://w3id.org/quay/IpfsProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "IPFS" .
+# 
+# https://w3id.org/quay/ListOperation
+<https://w3id.org/quay/ListOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/ListOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Operation> .
+<https://w3id.org/quay/ListOperation> <http://purl.obolibrary.org/obo/IAO_0000115> "Operation that enumerates the available entries or contents of a data resource." .
+<https://w3id.org/quay/ListOperation> <http://www.w3.org/2000/01/rdf-schema#label> "List" .
+# 
+# https://w3id.org/quay/LocalFilesystemProtocol
+<https://w3id.org/quay/LocalFilesystemProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/LocalFilesystemProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/LocalFilesystemProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that accesses data directly through the operating system local filesystem interface without network transfer." .
+<https://w3id.org/quay/LocalFilesystemProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Local Filesystem" .
+# 
+# https://w3id.org/quay/NoAuthentication
+<https://w3id.org/quay/NoAuthentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/NoAuthentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/NoAuthentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that permits access without requiring identity verification." .
+<https://w3id.org/quay/NoAuthentication> <http://www.w3.org/2000/01/rdf-schema#label> "No Authentication" .
+# 
+# https://w3id.org/quay/NoVerification
+<https://w3id.org/quay/NoVerification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/NoVerification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/VerificationMethod> .
+<https://w3id.org/quay/NoVerification> <http://purl.obolibrary.org/obo/IAO_0000115> "Verification method designation indicating that no integrity or authenticity verification mechanism is applied." .
+<https://w3id.org/quay/NoVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "No integrity verification mechanism available." .
+<https://w3id.org/quay/NoVerification> <http://www.w3.org/2000/01/rdf-schema#label> "No Verification" .
+# 
+# https://w3id.org/quay/OAuth2Authentication
+<https://w3id.org/quay/OAuth2Authentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/OAuth2Authentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/OAuth2Authentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access." .
+<https://w3id.org/quay/OAuth2Authentication> <http://www.w3.org/2000/01/rdf-schema#label> "OAuth 2.0" .
+# 
+# https://w3id.org/quay/Operation
+<https://w3id.org/quay/Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Operation> <http://purl.obolibrary.org/obo/IAO_0000115> "Action that can be performed on a data resource through an access point." .
+<https://w3id.org/quay/Operation> <http://www.w3.org/2000/01/rdf-schema#label> "Operation" .
+# 
+# https://w3id.org/quay/PaginatedDelivery
+<https://w3id.org/quay/PaginatedDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/PaginatedDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/PaginatedDelivery> <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery mode in which data is transferred in discrete, sequentially ordered pages of bounded size." .
+<https://w3id.org/quay/PaginatedDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Paginated Delivery" .
+# 
+# https://w3id.org/quay/PeerToPeerDelivery
+<https://w3id.org/quay/PeerToPeerDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/PeerToPeerDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/PeerToPeerDelivery> <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery mode in which data is transferred directly between participating peers without routing through a central server." .
+<https://w3id.org/quay/PeerToPeerDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Peer-to-Peer Delivery" .
+# 
+# https://w3id.org/quay/PieceVerification
+<https://w3id.org/quay/PieceVerification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/PieceVerification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/VerificationMethod> .
+<https://w3id.org/quay/PieceVerification> <http://purl.obolibrary.org/obo/IAO_0000115> "Verification method that confirms integrity of individual data segments by validating each against a Merkle hash tree." .
+<https://w3id.org/quay/PieceVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity verified per-piece using a hash tree, as in BitTorrent." .
+<https://w3id.org/quay/PieceVerification> <http://www.w3.org/2000/01/rdf-schema#label> "Piece Verification" .
+# 
+# https://w3id.org/quay/Protocol
+<https://w3id.org/quay/Protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Protocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Communication method that governs the rules and format of data exchange between a client and a data resource." .
+<https://w3id.org/quay/Protocol> <http://www.w3.org/2000/01/rdf-schema#label> "Protocol" .
+# 
+# https://w3id.org/quay/RcloneProtocol
+<https://w3id.org/quay/RcloneProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/RcloneProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/RcloneProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends." .
+<https://w3id.org/quay/RcloneProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Rclone" .
+# 
+# https://w3id.org/quay/ReadOperation
+<https://w3id.org/quay/ReadOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/ReadOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Operation> .
+<https://w3id.org/quay/ReadOperation> <http://purl.obolibrary.org/obo/IAO_0000115> "Operation that retrieves data from a data resource without modifying it." .
+<https://w3id.org/quay/ReadOperation> <http://www.w3.org/2000/01/rdf-schema#label> "Read" .
+# 
+# https://w3id.org/quay/RealTime
+<https://w3id.org/quay/RealTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/RealTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/TemporalQuality> .
+<https://w3id.org/quay/RealTime> <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal quality in which data reflects the current state of its source with minimal latency." .
+<https://w3id.org/quay/RealTime> <http://www.w3.org/2000/01/rdf-schema#label> "Real-Time" .
+# 
+# https://w3id.org/quay/ReplicateOperation
+<https://w3id.org/quay/ReplicateOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/ReplicateOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Operation> .
+<https://w3id.org/quay/ReplicateOperation> <http://purl.obolibrary.org/obo/IAO_0000115> "Operation that copies data from one data resource to another for redundancy or distribution." .
+<https://w3id.org/quay/ReplicateOperation> <http://www.w3.org/2000/01/rdf-schema#label> "Replicate" .
+# 
+# https://w3id.org/quay/RsyncProtocol
+<https://w3id.org/quay/RsyncProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/RsyncProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/RsyncProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that synchronises files between locations using the rsync delta-transfer algorithm." .
+<https://w3id.org/quay/RsyncProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Rsync" .
+# 
+# https://w3id.org/quay/S3Protocol
+<https://w3id.org/quay/S3Protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/S3Protocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/S3Protocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that accesses object storage using the Amazon Simple Storage Service API." .
+<https://w3id.org/quay/S3Protocol> <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+# 
+# https://w3id.org/quay/SampleCoverage
+<https://w3id.org/quay/SampleCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/SampleCoverage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Coverage> .
+<https://w3id.org/quay/SampleCoverage> <http://purl.obolibrary.org/obo/IAO_0000115> "Coverage in which the distribution contains a statistically representative fraction of the available data." .
+<https://w3id.org/quay/SampleCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "Sample" .
+# 
+# https://w3id.org/quay/ServiceQuality
+<https://w3id.org/quay/ServiceQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/ServiceQuality> <http://purl.obolibrary.org/obo/IAO_0000115> "Characterisation of the reliability, availability, and redundancy properties of a data access service." .
+<https://w3id.org/quay/ServiceQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Service Quality" .
+# 
+# https://w3id.org/quay/SingleHost
+<https://w3id.org/quay/SingleHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/SingleHost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/ServiceQuality> .
+<https://w3id.org/quay/SingleHost> <http://purl.obolibrary.org/obo/IAO_0000115> "Service quality in which data resides on a single machine with no infrastructure redundancy." .
+<https://w3id.org/quay/SingleHost> <http://www.w3.org/2000/01/rdf-schema#comment> "Data resides on a single machine with no redundancy." .
+<https://w3id.org/quay/SingleHost> <http://www.w3.org/2000/01/rdf-schema#label> "Single Host" .
+# 
+# https://w3id.org/quay/Snapshot
+<https://w3id.org/quay/Snapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Snapshot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/TemporalQuality> .
+<https://w3id.org/quay/Snapshot> <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal quality in which data represents a consistent state captured at a specific point in time." .
+<https://w3id.org/quay/Snapshot> <http://www.w3.org/2000/01/rdf-schema#label> "Snapshot" .
+# 
+# https://w3id.org/quay/SshKeyAuthentication
+<https://w3id.org/quay/SshKeyAuthentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/SshKeyAuthentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/AuthenticationScheme> .
+<https://w3id.org/quay/SshKeyAuthentication> <http://purl.obolibrary.org/obo/IAO_0000115> "Authentication scheme that verifies identity using an asymmetric SSH key pair." .
+<https://w3id.org/quay/SshKeyAuthentication> <http://www.w3.org/2000/01/rdf-schema#label> "SSH Key" .
+# 
+# https://w3id.org/quay/SshProtocol
+<https://w3id.org/quay/SshProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/SshProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/SshProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection." .
+<https://w3id.org/quay/SshProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "SSH/SFTP" .
+# 
+# https://w3id.org/quay/StreamingDelivery
+<https://w3id.org/quay/StreamingDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/StreamingDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/StreamingDelivery> <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery mode in which data is transferred as a continuous flow of incremental units over a persistent connection." .
+<https://w3id.org/quay/StreamingDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Streaming Delivery" .
+# 
+# https://w3id.org/quay/SubsetCoverage
+<https://w3id.org/quay/SubsetCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/SubsetCoverage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Coverage> .
+<https://w3id.org/quay/SubsetCoverage> <http://purl.obolibrary.org/obo/IAO_0000115> "Coverage in which the distribution contains a defined, criteria-based portion of the available data." .
+<https://w3id.org/quay/SubsetCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "Subset" .
+# 
+# https://w3id.org/quay/SynchronousDelivery
+<https://w3id.org/quay/SynchronousDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/SynchronousDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/DeliveryMode> .
+<https://w3id.org/quay/SynchronousDelivery> <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery mode in which data is transferred within a blocking request-response cycle that completes before control returns to the caller." .
+<https://w3id.org/quay/SynchronousDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Synchronous Delivery" .
+# 
+# https://w3id.org/quay/TemporalQuality
+<https://w3id.org/quay/TemporalQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/TemporalQuality> <http://purl.obolibrary.org/obo/IAO_0000115> "Characterisation of the freshness and currency of data available from a distribution." .
+<https://w3id.org/quay/TemporalQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Quality" .
+# 
+# https://w3id.org/quay/VerificationMethod
+<https://w3id.org/quay/VerificationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/VerificationMethod> <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanism used to confirm the integrity or authenticity of data after transfer." .
+<https://w3id.org/quay/VerificationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Verification Method" .
+# 
+# https://w3id.org/quay/Versioned
+<https://w3id.org/quay/Versioned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/Versioned> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/TemporalQuality> .
+<https://w3id.org/quay/Versioned> <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal quality in which data is maintained as a sequence of immutable, individually identifiable revisions." .
+<https://w3id.org/quay/Versioned> <http://www.w3.org/2000/01/rdf-schema#label> "Versioned" .
+# 
+# https://w3id.org/quay/WebDavProtocol
+<https://w3id.org/quay/WebDavProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/WebDavProtocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Protocol> .
+<https://w3id.org/quay/WebDavProtocol> <http://purl.obolibrary.org/obo/IAO_0000115> "Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management." .
+<https://w3id.org/quay/WebDavProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "WebDAV" .
+# 
+# https://w3id.org/quay/WriteOperation
+<https://w3id.org/quay/WriteOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/WriteOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/Operation> .
+<https://w3id.org/quay/WriteOperation> <http://purl.obolibrary.org/obo/IAO_0000115> "Operation that stores new data in or modifies existing data within a data resource." .
+<https://w3id.org/quay/WriteOperation> <http://www.w3.org/2000/01/rdf-schema#label> "Write" .
+# 
+# https://w3id.org/quay/YieldDescription
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/Coverage> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/coverage> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
-_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/QUAY_0000034> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000052> .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/DeliveryMode> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/deliveryMode> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
-_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/QUAY_0000039> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000053> .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/quay/TemporalQuality> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/temporalQuality> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
-_:genid34 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/QUAY_0000029> .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/DeliveryMode> .
 _:genid34 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000051> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/deliveryMode> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/QUAY_0000034> .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/Coverage> .
 _:genid35 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000052> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/coverage> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/QUAY_0000039> .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/quay/TemporalQuality> .
 _:genid36 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/QUAY_0000053> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/quay/temporalQuality> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualifies WHAT a Distribution delivers." .
-<https://w3id.org/quay/QUAY_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "Yield Description" .
-# 
-# https://w3id.org/quay/QUAY_0000003
-<https://w3id.org/quay/QUAY_0000003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000003> <http://www.w3.org/2000/01/rdf-schema#label> "Protocol" .
-# 
-# https://w3id.org/quay/QUAY_0000004
-<https://w3id.org/quay/QUAY_0000004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000004> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000004> <http://www.w3.org/2000/01/rdf-schema#label> "HTTP/HTTPS" .
-# 
-# https://w3id.org/quay/QUAY_0000005
-<https://w3id.org/quay/QUAY_0000005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000005> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000005> <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
-# 
-# https://w3id.org/quay/QUAY_0000006
-<https://w3id.org/quay/QUAY_0000006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000006> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000006> <http://www.w3.org/2000/01/rdf-schema#label> "Rsync" .
-# 
-# https://w3id.org/quay/QUAY_0000007
-<https://w3id.org/quay/QUAY_0000007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000007> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000007> <http://www.w3.org/2000/01/rdf-schema#label> "WebDAV" .
-# 
-# https://w3id.org/quay/QUAY_0000008
-<https://w3id.org/quay/QUAY_0000008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000008> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000008> <http://www.w3.org/2000/01/rdf-schema#label> "SSH/SFTP" .
-# 
-# https://w3id.org/quay/QUAY_0000009
-<https://w3id.org/quay/QUAY_0000009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000009> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000009> <http://www.w3.org/2000/01/rdf-schema#label> "BitTorrent" .
-# 
-# https://w3id.org/quay/QUAY_0000010
-<https://w3id.org/quay/QUAY_0000010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000010> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000010> <http://www.w3.org/2000/01/rdf-schema#label> "IPFS" .
-# 
-# https://w3id.org/quay/QUAY_0000011
-<https://w3id.org/quay/QUAY_0000011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000011> <http://www.w3.org/2000/01/rdf-schema#label> "Local Filesystem" .
-# 
-# https://w3id.org/quay/QUAY_0000012
-<https://w3id.org/quay/QUAY_0000012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000012> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000012> <http://www.w3.org/2000/01/rdf-schema#label> "Rclone" .
-# 
-# https://w3id.org/quay/QUAY_0000013
-<https://w3id.org/quay/QUAY_0000013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000013> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000013> <http://www.w3.org/2000/01/rdf-schema#label> "FTP" .
-# 
-# https://w3id.org/quay/QUAY_0000014
-<https://w3id.org/quay/QUAY_0000014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000014> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000014> <http://www.w3.org/2000/01/rdf-schema#label> "Git" .
-# 
-# https://w3id.org/quay/QUAY_0000015
-<https://w3id.org/quay/QUAY_0000015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000015> <http://www.w3.org/2000/01/rdf-schema#label> "Authentication Scheme" .
-# 
-# https://w3id.org/quay/QUAY_0000016
-<https://w3id.org/quay/QUAY_0000016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000016> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000016> <http://www.w3.org/2000/01/rdf-schema#label> "No Authentication" .
-# 
-# https://w3id.org/quay/QUAY_0000017
-<https://w3id.org/quay/QUAY_0000017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000017> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000017> <http://www.w3.org/2000/01/rdf-schema#label> "API Key" .
-# 
-# https://w3id.org/quay/QUAY_0000018
-<https://w3id.org/quay/QUAY_0000018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000018> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000018> <http://www.w3.org/2000/01/rdf-schema#label> "OAuth 2.0" .
-# 
-# https://w3id.org/quay/QUAY_0000019
-<https://w3id.org/quay/QUAY_0000019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000019> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000019> <http://www.w3.org/2000/01/rdf-schema#label> "Basic Authentication" .
-# 
-# https://w3id.org/quay/QUAY_0000020
-<https://w3id.org/quay/QUAY_0000020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000020> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000020> <http://www.w3.org/2000/01/rdf-schema#label> "SSH Key" .
-# 
-# https://w3id.org/quay/QUAY_0000021
-<https://w3id.org/quay/QUAY_0000021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000021> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000021> <http://www.w3.org/2000/01/rdf-schema#label> "GPG Key" .
-# 
-# https://w3id.org/quay/QUAY_0000022
-<https://w3id.org/quay/QUAY_0000022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000022> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000015> .
-<https://w3id.org/quay/QUAY_0000022> <http://www.w3.org/2000/01/rdf-schema#label> "AWS Credential" .
-# 
-# https://w3id.org/quay/QUAY_0000023
-<https://w3id.org/quay/QUAY_0000023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000023> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000028> .
-<https://w3id.org/quay/QUAY_0000023> <http://www.w3.org/2000/01/rdf-schema#label> "Read" .
-# 
-# https://w3id.org/quay/QUAY_0000024
-<https://w3id.org/quay/QUAY_0000024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000024> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000028> .
-<https://w3id.org/quay/QUAY_0000024> <http://www.w3.org/2000/01/rdf-schema#label> "Write" .
-# 
-# https://w3id.org/quay/QUAY_0000025
-<https://w3id.org/quay/QUAY_0000025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000025> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000028> .
-<https://w3id.org/quay/QUAY_0000025> <http://www.w3.org/2000/01/rdf-schema#label> "Delete" .
-# 
-# https://w3id.org/quay/QUAY_0000026
-<https://w3id.org/quay/QUAY_0000026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000026> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000028> .
-<https://w3id.org/quay/QUAY_0000026> <http://www.w3.org/2000/01/rdf-schema#label> "List" .
-# 
-# https://w3id.org/quay/QUAY_0000027
-<https://w3id.org/quay/QUAY_0000027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000027> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000028> .
-<https://w3id.org/quay/QUAY_0000027> <http://www.w3.org/2000/01/rdf-schema#label> "Replicate" .
-# 
-# https://w3id.org/quay/QUAY_0000028
-<https://w3id.org/quay/QUAY_0000028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000028> <http://www.w3.org/2000/01/rdf-schema#label> "Operation" .
-# 
-# https://w3id.org/quay/QUAY_0000029
-<https://w3id.org/quay/QUAY_0000029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000029> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery Mode" .
-# 
-# https://w3id.org/quay/QUAY_0000030
-<https://w3id.org/quay/QUAY_0000030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000030> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000030> <http://www.w3.org/2000/01/rdf-schema#label> "Bulk Delivery" .
-# 
-# https://w3id.org/quay/QUAY_0000031
-<https://w3id.org/quay/QUAY_0000031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000031> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000031> <http://www.w3.org/2000/01/rdf-schema#label> "Streaming Delivery" .
-# 
-# https://w3id.org/quay/QUAY_0000032
-<https://w3id.org/quay/QUAY_0000032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000032> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000032> <http://www.w3.org/2000/01/rdf-schema#label> "Paginated Delivery" .
-# 
-# https://w3id.org/quay/QUAY_0000033
-<https://w3id.org/quay/QUAY_0000033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000033> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000033> <http://www.w3.org/2000/01/rdf-schema#label> "Event-Driven Delivery" .
-# 
-# https://w3id.org/quay/QUAY_0000034
-<https://w3id.org/quay/QUAY_0000034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000034> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Quality" .
-# 
-# https://w3id.org/quay/QUAY_0000035
-<https://w3id.org/quay/QUAY_0000035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000035> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000034> .
-<https://w3id.org/quay/QUAY_0000035> <http://www.w3.org/2000/01/rdf-schema#label> "Real-Time" .
-# 
-# https://w3id.org/quay/QUAY_0000036
-<https://w3id.org/quay/QUAY_0000036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000036> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000034> .
-<https://w3id.org/quay/QUAY_0000036> <http://www.w3.org/2000/01/rdf-schema#label> "Snapshot" .
-# 
-# https://w3id.org/quay/QUAY_0000037
-<https://w3id.org/quay/QUAY_0000037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000037> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000034> .
-<https://w3id.org/quay/QUAY_0000037> <http://www.w3.org/2000/01/rdf-schema#label> "Archived" .
-# 
-# https://w3id.org/quay/QUAY_0000038
-<https://w3id.org/quay/QUAY_0000038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000038> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000034> .
-<https://w3id.org/quay/QUAY_0000038> <http://www.w3.org/2000/01/rdf-schema#label> "Versioned" .
-# 
-# https://w3id.org/quay/QUAY_0000039
-<https://w3id.org/quay/QUAY_0000039> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000039> <http://www.w3.org/2000/01/rdf-schema#label> "Coverage" .
-# 
-# https://w3id.org/quay/QUAY_0000040
-<https://w3id.org/quay/QUAY_0000040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000040> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000039> .
-<https://w3id.org/quay/QUAY_0000040> <http://www.w3.org/2000/01/rdf-schema#label> "Complete" .
-# 
-# https://w3id.org/quay/QUAY_0000041
-<https://w3id.org/quay/QUAY_0000041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000041> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000039> .
-<https://w3id.org/quay/QUAY_0000041> <http://www.w3.org/2000/01/rdf-schema#label> "Subset" .
-# 
-# https://w3id.org/quay/QUAY_0000042
-<https://w3id.org/quay/QUAY_0000042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000042> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000039> .
-<https://w3id.org/quay/QUAY_0000042> <http://www.w3.org/2000/01/rdf-schema#label> "Sample" .
-# 
-# https://w3id.org/quay/QUAY_0000043
-<https://w3id.org/quay/QUAY_0000043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000043> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000039> .
-<https://w3id.org/quay/QUAY_0000043> <http://www.w3.org/2000/01/rdf-schema#label> "Incremental" .
-# 
-# https://w3id.org/quay/QUAY_0000044
-<https://w3id.org/quay/QUAY_0000044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000044> <http://www.w3.org/2000/01/rdf-schema#label> "Service Quality" .
-# 
-# https://w3id.org/quay/QUAY_0000045
-<https://w3id.org/quay/QUAY_0000045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000045> <http://www.w3.org/2000/01/rdf-schema#label> "Verification Method" .
-# 
-# https://w3id.org/quay/QUAY_0000060
-<https://w3id.org/quay/QUAY_0000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000060> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000060> <http://www.w3.org/2000/01/rdf-schema#label> "Synchronous Delivery" .
-# 
-# https://w3id.org/quay/QUAY_0000061
-<https://w3id.org/quay/QUAY_0000061> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000061> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000029> .
-<https://w3id.org/quay/QUAY_0000061> <http://www.w3.org/2000/01/rdf-schema#label> "Peer-to-Peer Delivery" .
-# 
-# https://w3id.org/quay/QUAY_0000062
-<https://w3id.org/quay/QUAY_0000062> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000062> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000044> .
-<https://w3id.org/quay/QUAY_0000062> <http://www.w3.org/2000/01/rdf-schema#comment> "Managed cloud services with SLA guarantees." .
-<https://w3id.org/quay/QUAY_0000062> <http://www.w3.org/2000/01/rdf-schema#label> "High Availability" .
-# 
-# https://w3id.org/quay/QUAY_0000063
-<https://w3id.org/quay/QUAY_0000063> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000063> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000044> .
-<https://w3id.org/quay/QUAY_0000063> <http://www.w3.org/2000/01/rdf-schema#comment> "Quality depends on upstream server or network conditions." .
-<https://w3id.org/quay/QUAY_0000063> <http://www.w3.org/2000/01/rdf-schema#label> "Best Effort" .
-# 
-# https://w3id.org/quay/QUAY_0000064
-<https://w3id.org/quay/QUAY_0000064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000064> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000044> .
-<https://w3id.org/quay/QUAY_0000064> <http://www.w3.org/2000/01/rdf-schema#comment> "Data resides on a single machine with no redundancy." .
-<https://w3id.org/quay/QUAY_0000064> <http://www.w3.org/2000/01/rdf-schema#label> "Single Host" .
-# 
-# https://w3id.org/quay/QUAY_0000065
-<https://w3id.org/quay/QUAY_0000065> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000065> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000044> .
-<https://w3id.org/quay/QUAY_0000065> <http://www.w3.org/2000/01/rdf-schema#comment> "Data distributed across multiple peers or nodes." .
-<https://w3id.org/quay/QUAY_0000065> <http://www.w3.org/2000/01/rdf-schema#label> "Distributed" .
-# 
-# https://w3id.org/quay/QUAY_0000066
-<https://w3id.org/quay/QUAY_0000066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000066> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000045> .
-<https://w3id.org/quay/QUAY_0000066> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity verified by comparing cryptographic hash of content." .
-<https://w3id.org/quay/QUAY_0000066> <http://www.w3.org/2000/01/rdf-schema#label> "Hash Verification" .
-# 
-# https://w3id.org/quay/QUAY_0000067
-<https://w3id.org/quay/QUAY_0000067> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000067> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000045> .
-<https://w3id.org/quay/QUAY_0000067> <http://www.w3.org/2000/01/rdf-schema#comment> "Content identified and verified by its hash, as in IPFS CIDs." .
-<https://w3id.org/quay/QUAY_0000067> <http://www.w3.org/2000/01/rdf-schema#label> "Content Addressing" .
-# 
-# https://w3id.org/quay/QUAY_0000068
-<https://w3id.org/quay/QUAY_0000068> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000068> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000045> .
-<https://w3id.org/quay/QUAY_0000068> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity verified per-piece using a hash tree, as in BitTorrent." .
-<https://w3id.org/quay/QUAY_0000068> <http://www.w3.org/2000/01/rdf-schema#label> "Piece Verification" .
-# 
-# https://w3id.org/quay/QUAY_0000069
-<https://w3id.org/quay/QUAY_0000069> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000069> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000045> .
-<https://w3id.org/quay/QUAY_0000069> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity and authenticity verified via cryptographic signature." .
-<https://w3id.org/quay/QUAY_0000069> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Signature" .
-# 
-# https://w3id.org/quay/QUAY_0000070
-<https://w3id.org/quay/QUAY_0000070> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000070> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000045> .
-<https://w3id.org/quay/QUAY_0000070> <http://www.w3.org/2000/01/rdf-schema#comment> "No integrity verification mechanism available." .
-<https://w3id.org/quay/QUAY_0000070> <http://www.w3.org/2000/01/rdf-schema#label> "No Verification" .
-# 
-# https://w3id.org/quay/QUAY_0000071
-<https://w3id.org/quay/QUAY_0000071> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/quay/QUAY_0000071> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/quay/QUAY_0000003> .
-<https://w3id.org/quay/QUAY_0000071> <http://www.w3.org/2000/01/rdf-schema#comment> "Custom protocol via user-defined hook scripts." .
-<https://w3id.org/quay/QUAY_0000071> <http://www.w3.org/2000/01/rdf-schema#label> "Hook" .
+<https://w3id.org/quay/YieldDescription> <http://purl.obolibrary.org/obo/IAO_0000115> "Qualification node that specifies what a distribution delivers, comprising exactly one delivery mode and optional temporal quality, coverage, service quality, and verification method descriptors." .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualifies WHAT a Distribution delivers." .
+<https://w3id.org/quay/YieldDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Yield Description" .
 # 
 # 
 # 
@@ -1281,6 +1354,12 @@ _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://spdx.org/rdf/terms#checksumAlgorithm_md5
+<http://spdx.org/rdf/terms#checksumAlgorithm_md5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://spdx.org/rdf/terms#checksumAlgorithm_sha256
+<http://spdx.org/rdf/terms#checksumAlgorithm_sha256> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # http://www.asahi-net.or.jp/~ax2s-kmtn/
 <http://www.asahi-net.or.jp/~ax2s-kmtn/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2710,34 +2789,29 @@ _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000045> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/YieldDescription> .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000044> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/VerificationMethod> .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000039> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/TemporalQuality> .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000034> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/ServiceQuality> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000029> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Protocol> .
 _:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000028> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Operation> .
 _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000015> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/DeliveryMode> .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000003> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Coverage> .
 _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000002> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/AuthenticationScheme> .
 _:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000001> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/AccessDescription> .
 _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid65 <http://www.w3.org/2002/07/owl#members> _:genid77 .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid65 <http://www.w3.org/2002/07/owl#members> _:genid72 .
 _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
@@ -2745,137 +2819,142 @@ _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
 _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
 _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000071> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/SshKeyAuthentication> .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000014> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/OAuth2Authentication> .
 _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000013> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/NoAuthentication> .
 _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000012> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/GpgKeyAuthentication> .
 _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000011> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/BasicAuthentication> .
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000010> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/AwsCredentialAuthentication> .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000009> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/ApiKeyAuthentication> .
 _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000008> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000007> .
+# 
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid73 <http://www.w3.org/2002/07/owl#members> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Versioned> .
 _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000006> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Snapshot> .
 _:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000005> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/RealTime> .
 _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000004> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Archived> .
 _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 _:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid78 <http://www.w3.org/2002/07/owl#members> _:genid85 .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid78 <http://www.w3.org/2002/07/owl#members> _:genid82 .
 _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
 _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
 _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
 _:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000022> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/SingleHost> .
 _:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000021> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/HighAvailability> .
 _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000020> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/Distributed> .
 _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000019> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/BestEffort> .
 _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000018> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000017> .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000016> .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid86 <http://www.w3.org/2002/07/owl#members> _:genid91 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid83 <http://www.w3.org/2002/07/owl#members> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid94 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
 _:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid90 .
 _:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid89 .
 _:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid88 .
 _:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid87 .
-_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000027> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/WebDavProtocol> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/SshProtocol> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/S3Protocol> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/RsyncProtocol> .
 _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000026> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/RcloneProtocol> .
 _:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000025> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/LocalFilesystemProtocol> .
 _:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000024> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/IpfsProtocol> .
 _:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000023> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/HttpProtocol> .
 _:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-# 
-_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid92 <http://www.w3.org/2002/07/owl#members> _:genid98 .
-_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid97 .
-_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid96 .
-_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid95 .
-_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid94 .
-_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid93 .
-_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000061> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/HookProtocol> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/GitProtocol> .
 _:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000060> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/FtpProtocol> .
 _:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000033> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/BitTorrentProtocol> .
 _:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000032> .
-_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000031> .
-_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000030> .
-_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid99 <http://www.w3.org/2002/07/owl#members> _:genid103 .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid102 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid96 <http://www.w3.org/2002/07/owl#members> _:genid102 .
 _:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid101 .
 _:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid100 .
-_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000038> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid99 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/SynchronousDelivery> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/StreamingDelivery> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/PeerToPeerDelivery> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/PaginatedDelivery> .
 _:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000037> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/EventDrivenDelivery> .
 _:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000036> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/BulkDelivery> .
 _:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000035> .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid104 <http://www.w3.org/2002/07/owl#members> _:genid108 .
-_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid107 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid103 <http://www.w3.org/2002/07/owl#members> _:genid107 .
 _:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid106 .
 _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid105 .
-_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000043> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/SubsetCoverage> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/SampleCoverage> .
 _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000042> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/IncrementalCoverage> .
 _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000041> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/CompleteCoverage> .
 _:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000040> .
-_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid109 <http://www.w3.org/2002/07/owl#members> _:genid113 .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid108 <http://www.w3.org/2002/07/owl#members> _:genid113 .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid112 .
 _:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid111 .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid110 .
-_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000065> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/PieceVerification> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/NoVerification> .
 _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000064> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/HashVerification> .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000063> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/DigitalSignature> .
 _:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000062> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/ContentAddressing> .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 _:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
@@ -2885,15 +2964,15 @@ _:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid117 .
 _:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid116 .
 _:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid115 .
 _:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000070> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/WriteOperation> .
 _:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000069> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/ReplicateOperation> .
 _:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000068> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/ReadOperation> .
 _:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000067> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/ListOperation> .
 _:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/QUAY_0000066> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/quay/DeleteOperation> .
 _:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
