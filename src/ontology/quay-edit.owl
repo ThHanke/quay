@@ -1,12 +1,12 @@
-Prefix(:=<https://w3id.org/quay/>)
+Prefix(:=<https://w3id.org/quay.owl#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcat:=<http://www.w3.org/ns/dcat#>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(spdx:=<http://spdx.org/rdf/terms#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
@@ -18,501 +18,564 @@ Annotation(dcterms:description "A DCAT Profile for Data Access, Storage and Auth
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "QUAY: Qualified Usage, Access and Yield")
 
-############################
-#   Declarations
-############################
-
-# Core Qualification Classes
-Declaration(Class(:AccessDescription))
-Declaration(Class(:YieldDescription))
-
-# Protocol Hierarchy
-Declaration(Class(:Protocol))
-Declaration(Class(:HttpProtocol))
-Declaration(Class(:S3Protocol))
-Declaration(Class(:RsyncProtocol))
-Declaration(Class(:WebDavProtocol))
-Declaration(Class(:SshProtocol))
-Declaration(Class(:BitTorrentProtocol))
-Declaration(Class(:IpfsProtocol))
-Declaration(Class(:LocalFilesystemProtocol))
-Declaration(Class(:RcloneProtocol))
-Declaration(Class(:FtpProtocol))
-Declaration(Class(:GitProtocol))
-
-# Authentication Scheme Hierarchy
-Declaration(Class(:AuthenticationScheme))
-Declaration(Class(:NoAuthentication))
-Declaration(Class(:ApiKeyAuthentication))
-Declaration(Class(:OAuth2Authentication))
-Declaration(Class(:BasicAuthentication))
-Declaration(Class(:SshKeyAuthentication))
-Declaration(Class(:GpgKeyAuthentication))
-Declaration(Class(:AwsCredentialAuthentication))
-
-# Operation Hierarchy
-Declaration(Class(:ReadOperation))
-Declaration(Class(:WriteOperation))
-Declaration(Class(:DeleteOperation))
-Declaration(Class(:ListOperation))
-Declaration(Class(:ReplicateOperation))
-Declaration(Class(:Operation))
-
-# Yield: Delivery Mode
-Declaration(Class(:DeliveryMode))
-Declaration(Class(:BulkDelivery))
-Declaration(Class(:StreamingDelivery))
-Declaration(Class(:PaginatedDelivery))
-Declaration(Class(:EventDrivenDelivery))
-
-# Yield: Temporal Quality
-Declaration(Class(:TemporalQuality))
-Declaration(Class(:RealTime))
-Declaration(Class(:Snapshot))
-Declaration(Class(:Archived))
-Declaration(Class(:Versioned))
-
-# Yield: Coverage
-Declaration(Class(:Coverage))
-Declaration(Class(:CompleteCoverage))
-Declaration(Class(:SubsetCoverage))
-Declaration(Class(:SampleCoverage))
-Declaration(Class(:IncrementalCoverage))
-
-# Yield: Service Quality & Verification
-Declaration(Class(:ServiceQuality))
-Declaration(Class(:VerificationMethod))
-
-# Delivery Mode additions
-Declaration(Class(:SynchronousDelivery))
-Declaration(Class(:PeerToPeerDelivery))
-
-# Service Quality subclasses
-Declaration(Class(:HighAvailability))
-Declaration(Class(:BestEffort))
-Declaration(Class(:SingleHost))
-Declaration(Class(:Distributed))
-
-# Verification Method subclasses
-Declaration(Class(:HashVerification))
-Declaration(Class(:ContentAddressing))
-Declaration(Class(:PieceVerification))
-Declaration(Class(:DigitalSignature))
-Declaration(Class(:NoVerification))
-
-# Protocol addition
-Declaration(Class(:HookProtocol))
-
-# Object Properties
-Declaration(ObjectProperty(:accessDescription))
-Declaration(ObjectProperty(:yieldDescription))
-Declaration(ObjectProperty(:protocol))
-Declaration(ObjectProperty(:authenticationScheme))
-Declaration(ObjectProperty(:supportedOperation))
-Declaration(ObjectProperty(:deliveryMode))
-Declaration(ObjectProperty(:temporalQuality))
-Declaration(ObjectProperty(:coverage))
-Declaration(ObjectProperty(:serviceQuality))
-Declaration(ObjectProperty(:verificationMethod))
-
-# Datatype Properties
-Declaration(DataProperty(:encryptionAtRest))
-Declaration(DataProperty(:encryptionInTransit))
-# SPDX Checksum (external declarations for DCAT 3 interoperability)
 Declaration(Class(spdx:Checksum))
-Declaration(ObjectProperty(spdx:checksum))
+Declaration(Class(<https://w3id.org/quay/AccessDescription>))
+Declaration(Class(<https://w3id.org/quay/ApiKeyAuthentication>))
+Declaration(Class(<https://w3id.org/quay/Archived>))
+Declaration(Class(<https://w3id.org/quay/AuthenticationScheme>))
+Declaration(Class(<https://w3id.org/quay/AwsCredentialAuthentication>))
+Declaration(Class(<https://w3id.org/quay/BasicAuthentication>))
+Declaration(Class(<https://w3id.org/quay/BestEffort>))
+Declaration(Class(<https://w3id.org/quay/BitTorrentProtocol>))
+Declaration(Class(<https://w3id.org/quay/BulkDelivery>))
+Declaration(Class(<https://w3id.org/quay/CompleteCoverage>))
+Declaration(Class(<https://w3id.org/quay/ContentAddressing>))
+Declaration(Class(<https://w3id.org/quay/Coverage>))
+Declaration(Class(<https://w3id.org/quay/DeleteOperation>))
+Declaration(Class(<https://w3id.org/quay/DeliveryMode>))
+Declaration(Class(<https://w3id.org/quay/DigitalSignature>))
+Declaration(Class(<https://w3id.org/quay/Distributed>))
+Declaration(Class(<https://w3id.org/quay/EventDrivenDelivery>))
+Declaration(Class(<https://w3id.org/quay/FtpProtocol>))
+Declaration(Class(<https://w3id.org/quay/GitProtocol>))
+Declaration(Class(<https://w3id.org/quay/GpgKeyAuthentication>))
+Declaration(Class(<https://w3id.org/quay/HashVerification>))
+Declaration(Class(<https://w3id.org/quay/HighAvailability>))
+Declaration(Class(<https://w3id.org/quay/HookProtocol>))
+Declaration(Class(<https://w3id.org/quay/HttpProtocol>))
+Declaration(Class(<https://w3id.org/quay/IncrementalCoverage>))
+Declaration(Class(<https://w3id.org/quay/IpfsProtocol>))
+Declaration(Class(<https://w3id.org/quay/ListOperation>))
+Declaration(Class(<https://w3id.org/quay/LocalFilesystemProtocol>))
+Declaration(Class(<https://w3id.org/quay/NoAuthentication>))
+Declaration(Class(<https://w3id.org/quay/NoVerification>))
+Declaration(Class(<https://w3id.org/quay/OAuth2Authentication>))
+Declaration(Class(<https://w3id.org/quay/Operation>))
+Declaration(Class(<https://w3id.org/quay/PaginatedDelivery>))
+Declaration(Class(<https://w3id.org/quay/PeerToPeerDelivery>))
+Declaration(Class(<https://w3id.org/quay/PieceVerification>))
+Declaration(Class(<https://w3id.org/quay/Protocol>))
+Declaration(Class(<https://w3id.org/quay/RcloneProtocol>))
+Declaration(Class(<https://w3id.org/quay/ReadOperation>))
+Declaration(Class(<https://w3id.org/quay/RealTime>))
+Declaration(Class(<https://w3id.org/quay/ReplicateOperation>))
+Declaration(Class(<https://w3id.org/quay/RsyncProtocol>))
+Declaration(Class(<https://w3id.org/quay/S3Protocol>))
+Declaration(Class(<https://w3id.org/quay/SampleCoverage>))
+Declaration(Class(<https://w3id.org/quay/ServiceQuality>))
+Declaration(Class(<https://w3id.org/quay/SingleHost>))
+Declaration(Class(<https://w3id.org/quay/Snapshot>))
+Declaration(Class(<https://w3id.org/quay/SshKeyAuthentication>))
+Declaration(Class(<https://w3id.org/quay/SshProtocol>))
+Declaration(Class(<https://w3id.org/quay/StreamingDelivery>))
+Declaration(Class(<https://w3id.org/quay/SubsetCoverage>))
+Declaration(Class(<https://w3id.org/quay/SynchronousDelivery>))
+Declaration(Class(<https://w3id.org/quay/TemporalQuality>))
+Declaration(Class(<https://w3id.org/quay/VerificationMethod>))
+Declaration(Class(<https://w3id.org/quay/Versioned>))
+Declaration(Class(<https://w3id.org/quay/WebDavProtocol>))
+Declaration(Class(<https://w3id.org/quay/WriteOperation>))
+Declaration(Class(<https://w3id.org/quay/YieldDescription>))
 Declaration(ObjectProperty(spdx:algorithm))
+Declaration(ObjectProperty(spdx:checksum))
+Declaration(ObjectProperty(<https://w3id.org/quay/accessDescription>))
+Declaration(ObjectProperty(<https://w3id.org/quay/authenticationScheme>))
+Declaration(ObjectProperty(<https://w3id.org/quay/coverage>))
+Declaration(ObjectProperty(<https://w3id.org/quay/deliveryMode>))
+Declaration(ObjectProperty(<https://w3id.org/quay/protocol>))
+Declaration(ObjectProperty(<https://w3id.org/quay/serviceQuality>))
+Declaration(ObjectProperty(<https://w3id.org/quay/supportedOperation>))
+Declaration(ObjectProperty(<https://w3id.org/quay/temporalQuality>))
+Declaration(ObjectProperty(<https://w3id.org/quay/verificationMethod>))
+Declaration(ObjectProperty(<https://w3id.org/quay/yieldDescription>))
 Declaration(DataProperty(spdx:checksumValue))
-Declaration(NamedIndividual(spdx:checksumAlgorithm_sha256))
+Declaration(DataProperty(<https://w3id.org/quay/encryptionAtRest>))
+Declaration(DataProperty(<https://w3id.org/quay/encryptionInTransit>))
 Declaration(NamedIndividual(spdx:checksumAlgorithm_md5))
-
-# Annotation Properties
+Declaration(NamedIndividual(spdx:checksumAlgorithm_sha256))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: obo:IAO_0000115 (definition)
+
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (Title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
-############################
-#   Classes — Annotations
-############################
-
-# Core
-AnnotationAssertion(rdfs:label :AccessDescription "Access Description")
-AnnotationAssertion(rdfs:comment :AccessDescription "Qualifies HOW a Distribution is reached.")
-AnnotationAssertion(rdfs:label :YieldDescription "Yield Description")
-AnnotationAssertion(rdfs:comment :YieldDescription "Qualifies WHAT a Distribution delivers.")
-
-# Protocol
-AnnotationAssertion(rdfs:label :Protocol "Protocol")
-AnnotationAssertion(rdfs:label :HttpProtocol "HTTP/HTTPS")
-AnnotationAssertion(rdfs:label :S3Protocol "S3")
-AnnotationAssertion(rdfs:label :RsyncProtocol "Rsync")
-AnnotationAssertion(rdfs:label :WebDavProtocol "WebDAV")
-AnnotationAssertion(rdfs:label :SshProtocol "SSH/SFTP")
-AnnotationAssertion(rdfs:label :BitTorrentProtocol "BitTorrent")
-AnnotationAssertion(rdfs:label :IpfsProtocol "IPFS")
-AnnotationAssertion(rdfs:label :LocalFilesystemProtocol "Local Filesystem")
-AnnotationAssertion(rdfs:label :RcloneProtocol "Rclone")
-AnnotationAssertion(rdfs:label :FtpProtocol "FTP")
-AnnotationAssertion(rdfs:label :GitProtocol "Git")
-
-# Authentication Scheme
-AnnotationAssertion(rdfs:label :AuthenticationScheme "Authentication Scheme")
-AnnotationAssertion(rdfs:label :NoAuthentication "No Authentication")
-AnnotationAssertion(rdfs:label :ApiKeyAuthentication "API Key")
-AnnotationAssertion(rdfs:label :OAuth2Authentication "OAuth 2.0")
-AnnotationAssertion(rdfs:label :BasicAuthentication "Basic Authentication")
-AnnotationAssertion(rdfs:label :SshKeyAuthentication "SSH Key")
-AnnotationAssertion(rdfs:label :GpgKeyAuthentication "GPG Key")
-AnnotationAssertion(rdfs:label :AwsCredentialAuthentication "AWS Credential")
-
-# Operation
-AnnotationAssertion(rdfs:label :ReadOperation "Read")
-AnnotationAssertion(rdfs:label :WriteOperation "Write")
-AnnotationAssertion(rdfs:label :DeleteOperation "Delete")
-AnnotationAssertion(rdfs:label :ListOperation "List")
-AnnotationAssertion(rdfs:label :ReplicateOperation "Replicate")
-AnnotationAssertion(rdfs:label :Operation "Operation")
-
-# Delivery Mode
-AnnotationAssertion(rdfs:label :DeliveryMode "Delivery Mode")
-AnnotationAssertion(rdfs:label :BulkDelivery "Bulk Delivery")
-AnnotationAssertion(rdfs:label :StreamingDelivery "Streaming Delivery")
-AnnotationAssertion(rdfs:label :PaginatedDelivery "Paginated Delivery")
-AnnotationAssertion(rdfs:label :EventDrivenDelivery "Event-Driven Delivery")
-
-# Temporal Quality
-AnnotationAssertion(rdfs:label :TemporalQuality "Temporal Quality")
-AnnotationAssertion(rdfs:label :RealTime "Real-Time")
-AnnotationAssertion(rdfs:label :Snapshot "Snapshot")
-AnnotationAssertion(rdfs:label :Archived "Archived")
-AnnotationAssertion(rdfs:label :Versioned "Versioned")
-
-# Coverage
-AnnotationAssertion(rdfs:label :Coverage "Coverage")
-AnnotationAssertion(rdfs:label :CompleteCoverage "Complete")
-AnnotationAssertion(rdfs:label :SubsetCoverage "Subset")
-AnnotationAssertion(rdfs:label :SampleCoverage "Sample")
-AnnotationAssertion(rdfs:label :IncrementalCoverage "Incremental")
-
-# Service Quality & Verification
-AnnotationAssertion(rdfs:label :ServiceQuality "Service Quality")
-AnnotationAssertion(rdfs:label :VerificationMethod "Verification Method")
-
-# Delivery Mode additions
-AnnotationAssertion(rdfs:label :SynchronousDelivery "Synchronous Delivery")
-AnnotationAssertion(rdfs:label :PeerToPeerDelivery "Peer-to-Peer Delivery")
-
-# Service Quality subclasses
-AnnotationAssertion(rdfs:label :HighAvailability "High Availability")
-AnnotationAssertion(rdfs:comment :HighAvailability "Managed cloud services with SLA guarantees.")
-AnnotationAssertion(rdfs:label :BestEffort "Best Effort")
-AnnotationAssertion(rdfs:comment :BestEffort "Quality depends on upstream server or network conditions.")
-AnnotationAssertion(rdfs:label :SingleHost "Single Host")
-AnnotationAssertion(rdfs:comment :SingleHost "Data resides on a single machine with no redundancy.")
-AnnotationAssertion(rdfs:label :Distributed "Distributed")
-AnnotationAssertion(rdfs:comment :Distributed "Data distributed across multiple peers or nodes.")
-
-# Verification Method subclasses
-AnnotationAssertion(rdfs:label :HashVerification "Hash Verification")
-AnnotationAssertion(rdfs:comment :HashVerification "Integrity verified by comparing cryptographic hash of content.")
-AnnotationAssertion(rdfs:label :ContentAddressing "Content Addressing")
-AnnotationAssertion(rdfs:comment :ContentAddressing "Content identified and verified by its hash, as in IPFS CIDs.")
-AnnotationAssertion(rdfs:label :PieceVerification "Piece Verification")
-AnnotationAssertion(rdfs:comment :PieceVerification "Integrity verified per-piece using a hash tree, as in BitTorrent.")
-AnnotationAssertion(rdfs:label :DigitalSignature "Digital Signature")
-AnnotationAssertion(rdfs:comment :DigitalSignature "Integrity and authenticity verified via cryptographic signature.")
-AnnotationAssertion(rdfs:label :NoVerification "No Verification")
-AnnotationAssertion(rdfs:comment :NoVerification "No integrity verification mechanism available.")
-
-# Protocol addition
-AnnotationAssertion(rdfs:label :HookProtocol "Hook")
-AnnotationAssertion(rdfs:comment :HookProtocol "Custom protocol via user-defined hook scripts.")
 
 ############################
-#   Definitions (IAO:0000115)
+#   Object Properties
 ############################
 
-# Core Qualification Classes
-AnnotationAssertion(obo:IAO_0000115 :AccessDescription "Qualification node that specifies how a distribution is reached, comprising exactly one protocol, at least one authentication scheme, and at least one supported operation.")
-AnnotationAssertion(obo:IAO_0000115 :YieldDescription "Qualification node that specifies what a distribution delivers, comprising exactly one delivery mode and optional temporal quality, coverage, service quality, and verification method descriptors.")
+# Object Property: <https://w3id.org/quay/accessDescription> (access description)
 
-# Protocol hierarchy
-AnnotationAssertion(obo:IAO_0000115 :Protocol "Communication method that governs the rules and format of data exchange between a client and a data resource.")
-AnnotationAssertion(obo:IAO_0000115 :HttpProtocol "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security.")
-AnnotationAssertion(obo:IAO_0000115 :S3Protocol "Protocol that accesses object storage using the Amazon Simple Storage Service API.")
-AnnotationAssertion(obo:IAO_0000115 :RsyncProtocol "Protocol that synchronises files between locations using the rsync delta-transfer algorithm.")
-AnnotationAssertion(obo:IAO_0000115 :WebDavProtocol "Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management.")
-AnnotationAssertion(obo:IAO_0000115 :SshProtocol "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection.")
-AnnotationAssertion(obo:IAO_0000115 :BitTorrentProtocol "Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination.")
-AnnotationAssertion(obo:IAO_0000115 :IpfsProtocol "Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network.")
-AnnotationAssertion(obo:IAO_0000115 :LocalFilesystemProtocol "Protocol that accesses data directly through the operating system local filesystem interface without network transfer.")
-AnnotationAssertion(obo:IAO_0000115 :RcloneProtocol "Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends.")
-AnnotationAssertion(obo:IAO_0000115 :FtpProtocol "Protocol that transfers files between client and server using the File Transfer Protocol.")
-AnnotationAssertion(obo:IAO_0000115 :GitProtocol "Protocol that accesses version-controlled data through the Git distributed version control system.")
-AnnotationAssertion(obo:IAO_0000115 :HookProtocol "Protocol that delegates data access operations to user-defined external scripts or commands.")
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/accessDescription> "Relates a distribution to a qualification node that describes how it is accessed.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/accessDescription> "access description")
+ObjectPropertyDomain(<https://w3id.org/quay/accessDescription> dcat:Distribution)
+ObjectPropertyRange(<https://w3id.org/quay/accessDescription> <https://w3id.org/quay/AccessDescription>)
 
-# Authentication Scheme hierarchy
-AnnotationAssertion(obo:IAO_0000115 :AuthenticationScheme "Method used to verify the identity of an agent requesting access to a data resource.")
-AnnotationAssertion(obo:IAO_0000115 :NoAuthentication "Authentication scheme that permits access without requiring identity verification.")
-AnnotationAssertion(obo:IAO_0000115 :ApiKeyAuthentication "Authentication scheme that verifies identity by presenting a pre-shared secret key with each request.")
-AnnotationAssertion(obo:IAO_0000115 :OAuth2Authentication "Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access.")
-AnnotationAssertion(obo:IAO_0000115 :BasicAuthentication "Authentication scheme that verifies identity by transmitting a username and password pair, typically Base64-encoded.")
-AnnotationAssertion(obo:IAO_0000115 :SshKeyAuthentication "Authentication scheme that verifies identity using an asymmetric SSH key pair.")
-AnnotationAssertion(obo:IAO_0000115 :GpgKeyAuthentication "Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair.")
-AnnotationAssertion(obo:IAO_0000115 :AwsCredentialAuthentication "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair.")
+# Object Property: <https://w3id.org/quay/authenticationScheme> (authentication scheme)
 
-# Operation hierarchy
-AnnotationAssertion(obo:IAO_0000115 :Operation "Action that can be performed on a data resource through an access point.")
-AnnotationAssertion(obo:IAO_0000115 :ReadOperation "Operation that retrieves data from a data resource without modifying it.")
-AnnotationAssertion(obo:IAO_0000115 :WriteOperation "Operation that stores new data in or modifies existing data within a data resource.")
-AnnotationAssertion(obo:IAO_0000115 :DeleteOperation "Operation that permanently removes data from a data resource.")
-AnnotationAssertion(obo:IAO_0000115 :ListOperation "Operation that enumerates the available entries or contents of a data resource.")
-AnnotationAssertion(obo:IAO_0000115 :ReplicateOperation "Operation that copies data from one data resource to another for redundancy or distribution.")
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/authenticationScheme> "Relates an access description to the method used to verify the identity of the accessing agent.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/authenticationScheme> "authentication scheme")
+ObjectPropertyDomain(<https://w3id.org/quay/authenticationScheme> <https://w3id.org/quay/AccessDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/authenticationScheme> <https://w3id.org/quay/AuthenticationScheme>)
 
-# Delivery Mode hierarchy
-AnnotationAssertion(obo:IAO_0000115 :DeliveryMode "Mechanism by which data is transferred from a data resource to a consuming agent.")
-AnnotationAssertion(obo:IAO_0000115 :BulkDelivery "Delivery mode in which data is transferred as a complete unit within a single transaction.")
-AnnotationAssertion(obo:IAO_0000115 :StreamingDelivery "Delivery mode in which data is transferred as a continuous flow of incremental units over a persistent connection.")
-AnnotationAssertion(obo:IAO_0000115 :PaginatedDelivery "Delivery mode in which data is transferred in discrete, sequentially ordered pages of bounded size.")
-AnnotationAssertion(obo:IAO_0000115 :EventDrivenDelivery "Delivery mode in which data transfer is triggered by the occurrence of discrete events or state changes.")
-AnnotationAssertion(obo:IAO_0000115 :SynchronousDelivery "Delivery mode in which data is transferred within a blocking request-response cycle that completes before control returns to the caller.")
-AnnotationAssertion(obo:IAO_0000115 :PeerToPeerDelivery "Delivery mode in which data is transferred directly between participating peers without routing through a central server.")
+# Object Property: <https://w3id.org/quay/coverage> (coverage)
 
-# Temporal Quality hierarchy
-AnnotationAssertion(obo:IAO_0000115 :TemporalQuality "Characterisation of the freshness and currency of data available from a distribution.")
-AnnotationAssertion(obo:IAO_0000115 :RealTime "Temporal quality in which data reflects the current state of its source with minimal latency.")
-AnnotationAssertion(obo:IAO_0000115 :Snapshot "Temporal quality in which data represents a consistent state captured at a specific point in time.")
-AnnotationAssertion(obo:IAO_0000115 :Archived "Temporal quality in which data is preserved for long-term retention and is no longer actively updated.")
-AnnotationAssertion(obo:IAO_0000115 :Versioned "Temporal quality in which data is maintained as a sequence of immutable, individually identifiable revisions.")
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/coverage> "Relates a yield description to the extent of dataset representation in the distribution.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/coverage> "coverage")
+ObjectPropertyDomain(<https://w3id.org/quay/coverage> <https://w3id.org/quay/YieldDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/coverage> <https://w3id.org/quay/Coverage>)
 
-# Coverage hierarchy
-AnnotationAssertion(obo:IAO_0000115 :Coverage "Characterisation of the extent to which a distribution represents the total available data of a dataset.")
-AnnotationAssertion(obo:IAO_0000115 :CompleteCoverage "Coverage in which the distribution contains the entirety of the available data of its dataset.")
-AnnotationAssertion(obo:IAO_0000115 :SubsetCoverage "Coverage in which the distribution contains a defined, criteria-based portion of the available data.")
-AnnotationAssertion(obo:IAO_0000115 :SampleCoverage "Coverage in which the distribution contains a statistically representative fraction of the available data.")
-AnnotationAssertion(obo:IAO_0000115 :IncrementalCoverage "Coverage in which the distribution contains only changes accumulated since a specified reference point.")
+# Object Property: <https://w3id.org/quay/deliveryMode> (delivery mode)
 
-# Service Quality hierarchy
-AnnotationAssertion(obo:IAO_0000115 :ServiceQuality "Characterisation of the reliability, availability, and redundancy properties of a data access service.")
-AnnotationAssertion(obo:IAO_0000115 :HighAvailability "Service quality in which the service is operated with infrastructure redundancy and contractual uptime guarantees.")
-AnnotationAssertion(obo:IAO_0000115 :BestEffort "Service quality in which availability depends on upstream network and server conditions without formal guarantees.")
-AnnotationAssertion(obo:IAO_0000115 :SingleHost "Service quality in which data resides on a single machine with no infrastructure redundancy.")
-AnnotationAssertion(obo:IAO_0000115 :Distributed "Service quality in which data is replicated across multiple independent nodes for fault tolerance.")
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/deliveryMode> "Relates a yield description to the mechanism by which data is transferred to the consumer.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/deliveryMode> "delivery mode")
+ObjectPropertyDomain(<https://w3id.org/quay/deliveryMode> <https://w3id.org/quay/YieldDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/deliveryMode> <https://w3id.org/quay/DeliveryMode>)
 
-# Verification Method hierarchy
-AnnotationAssertion(obo:IAO_0000115 :VerificationMethod "Mechanism used to confirm the integrity or authenticity of data after transfer.")
-AnnotationAssertion(obo:IAO_0000115 :HashVerification "Verification method that confirms data integrity by computing a cryptographic hash of the received content and comparing it against a known reference value.")
-AnnotationAssertion(obo:IAO_0000115 :ContentAddressing "Verification method in which data is both identified and verified by a hash derived from its content, such that the identifier itself proves integrity.")
-AnnotationAssertion(obo:IAO_0000115 :PieceVerification "Verification method that confirms integrity of individual data segments by validating each against a Merkle hash tree.")
-AnnotationAssertion(obo:IAO_0000115 :DigitalSignature "Verification method that confirms both integrity and authenticity of data by validating a cryptographic signature produced by a known key holder.")
-AnnotationAssertion(obo:IAO_0000115 :NoVerification "Verification method designation indicating that no integrity or authenticity verification mechanism is applied.")
+# Object Property: <https://w3id.org/quay/protocol> (protocol)
 
-# Object Properties
-AnnotationAssertion(obo:IAO_0000115 :accessDescription "Relates a distribution to a qualification node that describes how it is accessed.")
-AnnotationAssertion(obo:IAO_0000115 :yieldDescription "Relates a distribution to a qualification node that describes what it delivers.")
-AnnotationAssertion(obo:IAO_0000115 :protocol "Relates an access description to the communication protocol used for data exchange.")
-AnnotationAssertion(obo:IAO_0000115 :authenticationScheme "Relates an access description to the method used to verify the identity of the accessing agent.")
-AnnotationAssertion(obo:IAO_0000115 :supportedOperation "Relates an access description to an action that can be performed on the data resource.")
-AnnotationAssertion(obo:IAO_0000115 :deliveryMode "Relates a yield description to the mechanism by which data is transferred to the consumer.")
-AnnotationAssertion(obo:IAO_0000115 :temporalQuality "Relates a yield description to the freshness characterisation of the available data.")
-AnnotationAssertion(obo:IAO_0000115 :coverage "Relates a yield description to the extent of dataset representation in the distribution.")
-AnnotationAssertion(obo:IAO_0000115 :serviceQuality "Relates a yield description to the reliability and availability characterisation of the service.")
-AnnotationAssertion(obo:IAO_0000115 :verificationMethod "Relates a yield description to the mechanism used to verify data integrity after transfer.")
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/protocol> "Relates an access description to the communication protocol used for data exchange.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/protocol> "protocol")
+ObjectPropertyDomain(<https://w3id.org/quay/protocol> <https://w3id.org/quay/AccessDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/protocol> <https://w3id.org/quay/Protocol>)
 
-# Datatype Properties
-AnnotationAssertion(obo:IAO_0000115 :encryptionAtRest "Encryption algorithm applied to data at rest within the storage backend.")
-AnnotationAssertion(obo:IAO_0000115 :encryptionInTransit "Encryption protocol applied to data during transfer between client and server.")
+# Object Property: <https://w3id.org/quay/serviceQuality> (service quality)
 
-############################
-#   Object Properties — Annotations, Domain, Range
-############################
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/serviceQuality> "Relates a yield description to the reliability and availability characterisation of the service.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/serviceQuality> "service quality")
+ObjectPropertyDomain(<https://w3id.org/quay/serviceQuality> <https://w3id.org/quay/YieldDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/serviceQuality> <https://w3id.org/quay/ServiceQuality>)
 
-AnnotationAssertion(rdfs:label :accessDescription "access description")
-ObjectPropertyDomain(:accessDescription dcat:Distribution)
-ObjectPropertyRange(:accessDescription :AccessDescription)
+# Object Property: <https://w3id.org/quay/supportedOperation> (supported operation)
 
-AnnotationAssertion(rdfs:label :yieldDescription "yield description")
-ObjectPropertyDomain(:yieldDescription dcat:Distribution)
-ObjectPropertyRange(:yieldDescription :YieldDescription)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/supportedOperation> "Relates an access description to an action that can be performed on the data resource.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/supportedOperation> "supported operation")
+ObjectPropertyDomain(<https://w3id.org/quay/supportedOperation> <https://w3id.org/quay/AccessDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/supportedOperation> <https://w3id.org/quay/Operation>)
 
-AnnotationAssertion(rdfs:label :protocol "protocol")
-ObjectPropertyDomain(:protocol :AccessDescription)
-ObjectPropertyRange(:protocol :Protocol)
+# Object Property: <https://w3id.org/quay/temporalQuality> (temporal quality)
 
-AnnotationAssertion(rdfs:label :authenticationScheme "authentication scheme")
-ObjectPropertyDomain(:authenticationScheme :AccessDescription)
-ObjectPropertyRange(:authenticationScheme :AuthenticationScheme)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/temporalQuality> "Relates a yield description to the freshness characterisation of the available data.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/temporalQuality> "temporal quality")
+ObjectPropertyDomain(<https://w3id.org/quay/temporalQuality> <https://w3id.org/quay/YieldDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/temporalQuality> <https://w3id.org/quay/TemporalQuality>)
 
-AnnotationAssertion(rdfs:label :supportedOperation "supported operation")
-ObjectPropertyDomain(:supportedOperation :AccessDescription)
-ObjectPropertyRange(:supportedOperation :Operation)
+# Object Property: <https://w3id.org/quay/verificationMethod> (verification method)
 
-AnnotationAssertion(rdfs:label :deliveryMode "delivery mode")
-ObjectPropertyDomain(:deliveryMode :YieldDescription)
-ObjectPropertyRange(:deliveryMode :DeliveryMode)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/verificationMethod> "Relates a yield description to the mechanism used to verify data integrity after transfer.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/verificationMethod> "verification method")
+ObjectPropertyDomain(<https://w3id.org/quay/verificationMethod> <https://w3id.org/quay/YieldDescription>)
+ObjectPropertyRange(<https://w3id.org/quay/verificationMethod> <https://w3id.org/quay/VerificationMethod>)
 
-AnnotationAssertion(rdfs:label :temporalQuality "temporal quality")
-ObjectPropertyDomain(:temporalQuality :YieldDescription)
-ObjectPropertyRange(:temporalQuality :TemporalQuality)
+# Object Property: <https://w3id.org/quay/yieldDescription> (yield description)
 
-AnnotationAssertion(rdfs:label :coverage "coverage")
-ObjectPropertyDomain(:coverage :YieldDescription)
-ObjectPropertyRange(:coverage :Coverage)
-
-AnnotationAssertion(rdfs:label :serviceQuality "service quality")
-ObjectPropertyDomain(:serviceQuality :YieldDescription)
-ObjectPropertyRange(:serviceQuality :ServiceQuality)
-
-AnnotationAssertion(rdfs:label :verificationMethod "verification method")
-ObjectPropertyDomain(:verificationMethod :YieldDescription)
-ObjectPropertyRange(:verificationMethod :VerificationMethod)
-
-############################
-#   Datatype Properties — Annotations, Domain, Range
-############################
-
-AnnotationAssertion(rdfs:label :encryptionAtRest "encryption at rest")
-DataPropertyDomain(:encryptionAtRest dcat:Distribution)
-DataPropertyRange(:encryptionAtRest xsd:string)
-
-AnnotationAssertion(rdfs:label :encryptionInTransit "encryption in transit")
-DataPropertyDomain(:encryptionInTransit dcat:Distribution)
-DataPropertyRange(:encryptionInTransit xsd:string)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/yieldDescription> "Relates a distribution to a qualification node that describes what it delivers.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/yieldDescription> "yield description")
+ObjectPropertyDomain(<https://w3id.org/quay/yieldDescription> dcat:Distribution)
+ObjectPropertyRange(<https://w3id.org/quay/yieldDescription> <https://w3id.org/quay/YieldDescription>)
 
 
 ############################
-#   Subclass Axioms
+#   Data Properties
 ############################
 
-# Protocol hierarchy
-SubClassOf(:HttpProtocol :Protocol)
-SubClassOf(:S3Protocol :Protocol)
-SubClassOf(:RsyncProtocol :Protocol)
-SubClassOf(:WebDavProtocol :Protocol)
-SubClassOf(:SshProtocol :Protocol)
-SubClassOf(:BitTorrentProtocol :Protocol)
-SubClassOf(:IpfsProtocol :Protocol)
-SubClassOf(:LocalFilesystemProtocol :Protocol)
-SubClassOf(:RcloneProtocol :Protocol)
-SubClassOf(:FtpProtocol :Protocol)
-SubClassOf(:GitProtocol :Protocol)
+# Data Property: <https://w3id.org/quay/encryptionAtRest> (encryption at rest)
 
-# AuthScheme hierarchy
-SubClassOf(:NoAuthentication :AuthenticationScheme)
-SubClassOf(:ApiKeyAuthentication :AuthenticationScheme)
-SubClassOf(:OAuth2Authentication :AuthenticationScheme)
-SubClassOf(:BasicAuthentication :AuthenticationScheme)
-SubClassOf(:SshKeyAuthentication :AuthenticationScheme)
-SubClassOf(:GpgKeyAuthentication :AuthenticationScheme)
-SubClassOf(:AwsCredentialAuthentication :AuthenticationScheme)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/encryptionAtRest> "Encryption algorithm applied to data at rest within the storage backend.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/encryptionAtRest> "encryption at rest")
+DataPropertyDomain(<https://w3id.org/quay/encryptionAtRest> dcat:Distribution)
+DataPropertyRange(<https://w3id.org/quay/encryptionAtRest> xsd:string)
 
-# Operation hierarchy
-SubClassOf(:ReadOperation :Operation)
-SubClassOf(:WriteOperation :Operation)
-SubClassOf(:DeleteOperation :Operation)
-SubClassOf(:ListOperation :Operation)
-SubClassOf(:ReplicateOperation :Operation)
+# Data Property: <https://w3id.org/quay/encryptionInTransit> (encryption in transit)
 
-# DeliveryMode hierarchy
-SubClassOf(:BulkDelivery :DeliveryMode)
-SubClassOf(:StreamingDelivery :DeliveryMode)
-SubClassOf(:PaginatedDelivery :DeliveryMode)
-SubClassOf(:EventDrivenDelivery :DeliveryMode)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/encryptionInTransit> "Encryption protocol applied to data during transfer between client and server.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/encryptionInTransit> "encryption in transit")
+DataPropertyDomain(<https://w3id.org/quay/encryptionInTransit> dcat:Distribution)
+DataPropertyRange(<https://w3id.org/quay/encryptionInTransit> xsd:string)
 
-# TemporalQuality hierarchy
-SubClassOf(:RealTime :TemporalQuality)
-SubClassOf(:Snapshot :TemporalQuality)
-SubClassOf(:Archived :TemporalQuality)
-SubClassOf(:Versioned :TemporalQuality)
 
-# Coverage hierarchy
-SubClassOf(:CompleteCoverage :Coverage)
-SubClassOf(:SubsetCoverage :Coverage)
-SubClassOf(:SampleCoverage :Coverage)
-SubClassOf(:IncrementalCoverage :Coverage)
-
-# DeliveryMode additions
-SubClassOf(:SynchronousDelivery :DeliveryMode)
-SubClassOf(:PeerToPeerDelivery :DeliveryMode)
-
-# ServiceQuality hierarchy
-SubClassOf(:HighAvailability :ServiceQuality)
-SubClassOf(:BestEffort :ServiceQuality)
-SubClassOf(:SingleHost :ServiceQuality)
-SubClassOf(:Distributed :ServiceQuality)
-
-# VerificationMethod hierarchy
-SubClassOf(:HashVerification :VerificationMethod)
-SubClassOf(:ContentAddressing :VerificationMethod)
-SubClassOf(:PieceVerification :VerificationMethod)
-SubClassOf(:DigitalSignature :VerificationMethod)
-SubClassOf(:NoVerification :VerificationMethod)
-
-# Protocol addition
-SubClassOf(:HookProtocol :Protocol)
 
 ############################
-#   Disjointness Axioms
+#   Classes
 ############################
 
-# Top-level category classes
-DisjointClasses(:AccessDescription :YieldDescription :Protocol :AuthenticationScheme :Operation :DeliveryMode :TemporalQuality :Coverage :ServiceQuality :VerificationMethod)
+# Class: <https://w3id.org/quay/AccessDescription> (Access Description)
 
-# Protocol subclasses
-DisjointClasses(:HttpProtocol :S3Protocol :RsyncProtocol :WebDavProtocol :SshProtocol :BitTorrentProtocol :IpfsProtocol :LocalFilesystemProtocol :RcloneProtocol :FtpProtocol :GitProtocol :HookProtocol)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/AccessDescription> "Qualification node that specifies how a distribution is reached, comprising exactly one protocol, at least one authentication scheme, and at least one supported operation.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/AccessDescription> "Qualifies HOW a Distribution is reached.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/AccessDescription> "Access Description")
+SubClassOf(<https://w3id.org/quay/AccessDescription> ObjectSomeValuesFrom(<https://w3id.org/quay/authenticationScheme> <https://w3id.org/quay/AuthenticationScheme>))
+SubClassOf(<https://w3id.org/quay/AccessDescription> ObjectSomeValuesFrom(<https://w3id.org/quay/supportedOperation> <https://w3id.org/quay/Operation>))
+SubClassOf(<https://w3id.org/quay/AccessDescription> ObjectExactCardinality(1 <https://w3id.org/quay/protocol> <https://w3id.org/quay/Protocol>))
 
-# AuthScheme subclasses
-DisjointClasses(:NoAuthentication :ApiKeyAuthentication :OAuth2Authentication :BasicAuthentication :SshKeyAuthentication :GpgKeyAuthentication :AwsCredentialAuthentication)
+# Class: <https://w3id.org/quay/ApiKeyAuthentication> (API Key)
 
-# Operation subclasses
-DisjointClasses(:ReadOperation :WriteOperation :DeleteOperation :ListOperation :ReplicateOperation)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/ApiKeyAuthentication> "Authentication scheme that verifies identity by presenting a pre-shared secret key with each request.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/ApiKeyAuthentication> "API Key")
+SubClassOf(<https://w3id.org/quay/ApiKeyAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
 
-# DeliveryMode subclasses
-DisjointClasses(:BulkDelivery :StreamingDelivery :PaginatedDelivery :EventDrivenDelivery :SynchronousDelivery :PeerToPeerDelivery)
+# Class: <https://w3id.org/quay/Archived> (Archived)
 
-# TemporalQuality subclasses
-DisjointClasses(:RealTime :Snapshot :Archived :Versioned)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Archived> "Temporal quality in which data is preserved for long-term retention and is no longer actively updated.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Archived> "Archived")
+SubClassOf(<https://w3id.org/quay/Archived> <https://w3id.org/quay/TemporalQuality>)
 
-# Coverage subclasses
-DisjointClasses(:CompleteCoverage :SubsetCoverage :SampleCoverage :IncrementalCoverage)
+# Class: <https://w3id.org/quay/AuthenticationScheme> (Authentication Scheme)
 
-# ServiceQuality subclasses
-DisjointClasses(:HighAvailability :BestEffort :SingleHost :Distributed)
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/AuthenticationScheme> "Method used to verify the identity of an agent requesting access to a data resource.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/AuthenticationScheme> "Authentication Scheme")
 
-# VerificationMethod subclasses
-DisjointClasses(:HashVerification :ContentAddressing :PieceVerification :DigitalSignature :NoVerification)
+# Class: <https://w3id.org/quay/AwsCredentialAuthentication> (AWS Credential)
 
-############################
-#   Restriction Axioms
-############################
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/AwsCredentialAuthentication> "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/AwsCredentialAuthentication> "AWS Credential")
+SubClassOf(<https://w3id.org/quay/AwsCredentialAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
 
-# AccessDescription: exactly 1 protocol
-SubClassOf(:AccessDescription ObjectExactCardinality(1 :protocol :Protocol))
+# Class: <https://w3id.org/quay/BasicAuthentication> (Basic Authentication)
 
-# AccessDescription: at least 1 authentication scheme
-SubClassOf(:AccessDescription ObjectSomeValuesFrom(:authenticationScheme :AuthenticationScheme))
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/BasicAuthentication> "Authentication scheme that verifies identity by transmitting a username and password pair, typically Base64-encoded.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/BasicAuthentication> "Basic Authentication")
+SubClassOf(<https://w3id.org/quay/BasicAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
 
-# AccessDescription: at least 1 supported operation
-SubClassOf(:AccessDescription ObjectSomeValuesFrom(:supportedOperation :Operation))
+# Class: <https://w3id.org/quay/BestEffort> (Best Effort)
 
-# YieldDescription: exactly 1 delivery mode
-SubClassOf(:YieldDescription ObjectExactCardinality(1 :deliveryMode :DeliveryMode))
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/BestEffort> "Service quality in which availability depends on upstream network and server conditions without formal guarantees.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/BestEffort> "Quality depends on upstream server or network conditions.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/BestEffort> "Best Effort")
+SubClassOf(<https://w3id.org/quay/BestEffort> <https://w3id.org/quay/ServiceQuality>)
 
-# YieldDescription: at most 1 temporal quality
-SubClassOf(:YieldDescription ObjectMaxCardinality(1 :temporalQuality :TemporalQuality))
+# Class: <https://w3id.org/quay/BitTorrentProtocol> (BitTorrent)
 
-# YieldDescription: at most 1 coverage
-SubClassOf(:YieldDescription ObjectMaxCardinality(1 :coverage :Coverage))
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/BitTorrentProtocol> "Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/BitTorrentProtocol> "BitTorrent")
+SubClassOf(<https://w3id.org/quay/BitTorrentProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/BulkDelivery> (Bulk Delivery)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/BulkDelivery> "Delivery mode in which data is transferred as a complete unit within a single transaction.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/BulkDelivery> "Bulk Delivery")
+SubClassOf(<https://w3id.org/quay/BulkDelivery> <https://w3id.org/quay/DeliveryMode>)
+
+# Class: <https://w3id.org/quay/CompleteCoverage> (Complete)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/CompleteCoverage> "Coverage in which the distribution contains the entirety of the available data of its dataset.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/CompleteCoverage> "Complete")
+SubClassOf(<https://w3id.org/quay/CompleteCoverage> <https://w3id.org/quay/Coverage>)
+
+# Class: <https://w3id.org/quay/ContentAddressing> (Content Addressing)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/ContentAddressing> "Verification method in which data is both identified and verified by a hash derived from its content, such that the identifier itself proves integrity.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/ContentAddressing> "Content identified and verified by its hash, as in IPFS CIDs.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/ContentAddressing> "Content Addressing")
+SubClassOf(<https://w3id.org/quay/ContentAddressing> <https://w3id.org/quay/VerificationMethod>)
+
+# Class: <https://w3id.org/quay/Coverage> (Coverage)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Coverage> "Characterisation of the extent to which a distribution represents the total available data of a dataset.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Coverage> "Coverage")
+
+# Class: <https://w3id.org/quay/DeleteOperation> (Delete)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/DeleteOperation> "Operation that permanently removes data from a data resource.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/DeleteOperation> "Delete")
+SubClassOf(<https://w3id.org/quay/DeleteOperation> <https://w3id.org/quay/Operation>)
+
+# Class: <https://w3id.org/quay/DeliveryMode> (Delivery Mode)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/DeliveryMode> "Mechanism by which data is transferred from a data resource to a consuming agent.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/DeliveryMode> "Delivery Mode")
+
+# Class: <https://w3id.org/quay/DigitalSignature> (Digital Signature)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/DigitalSignature> "Verification method that confirms both integrity and authenticity of data by validating a cryptographic signature produced by a known key holder.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/DigitalSignature> "Integrity and authenticity verified via cryptographic signature.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/DigitalSignature> "Digital Signature")
+SubClassOf(<https://w3id.org/quay/DigitalSignature> <https://w3id.org/quay/VerificationMethod>)
+
+# Class: <https://w3id.org/quay/Distributed> (Distributed)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Distributed> "Service quality in which data is replicated across multiple independent nodes for fault tolerance.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/Distributed> "Data distributed across multiple peers or nodes.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Distributed> "Distributed")
+SubClassOf(<https://w3id.org/quay/Distributed> <https://w3id.org/quay/ServiceQuality>)
+
+# Class: <https://w3id.org/quay/EventDrivenDelivery> (Event-Driven Delivery)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/EventDrivenDelivery> "Delivery mode in which data transfer is triggered by the occurrence of discrete events or state changes.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/EventDrivenDelivery> "Event-Driven Delivery")
+SubClassOf(<https://w3id.org/quay/EventDrivenDelivery> <https://w3id.org/quay/DeliveryMode>)
+
+# Class: <https://w3id.org/quay/FtpProtocol> (FTP)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/FtpProtocol> "Protocol that transfers files between client and server using the File Transfer Protocol.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/FtpProtocol> "FTP")
+SubClassOf(<https://w3id.org/quay/FtpProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/GitProtocol> (Git)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/GitProtocol> "Protocol that accesses version-controlled data through the Git distributed version control system.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/GitProtocol> "Git")
+SubClassOf(<https://w3id.org/quay/GitProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/GpgKeyAuthentication> (GPG Key)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/GpgKeyAuthentication> "Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/GpgKeyAuthentication> "GPG Key")
+SubClassOf(<https://w3id.org/quay/GpgKeyAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
+
+# Class: <https://w3id.org/quay/HashVerification> (Hash Verification)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/HashVerification> "Verification method that confirms data integrity by computing a cryptographic hash of the received content and comparing it against a known reference value.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/HashVerification> "Integrity verified by comparing cryptographic hash of content.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/HashVerification> "Hash Verification")
+SubClassOf(<https://w3id.org/quay/HashVerification> <https://w3id.org/quay/VerificationMethod>)
+
+# Class: <https://w3id.org/quay/HighAvailability> (High Availability)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/HighAvailability> "Service quality in which the service is operated with infrastructure redundancy and contractual uptime guarantees.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/HighAvailability> "Managed cloud services with SLA guarantees.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/HighAvailability> "High Availability")
+SubClassOf(<https://w3id.org/quay/HighAvailability> <https://w3id.org/quay/ServiceQuality>)
+
+# Class: <https://w3id.org/quay/HookProtocol> (Hook)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/HookProtocol> "Protocol that delegates data access operations to user-defined external scripts or commands.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/HookProtocol> "Custom protocol via user-defined hook scripts.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/HookProtocol> "Hook")
+SubClassOf(<https://w3id.org/quay/HookProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/HttpProtocol> (HTTP/HTTPS)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/HttpProtocol> "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/HttpProtocol> "HTTP/HTTPS")
+SubClassOf(<https://w3id.org/quay/HttpProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/IncrementalCoverage> (Incremental)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/IncrementalCoverage> "Coverage in which the distribution contains only changes accumulated since a specified reference point.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/IncrementalCoverage> "Incremental")
+SubClassOf(<https://w3id.org/quay/IncrementalCoverage> <https://w3id.org/quay/Coverage>)
+
+# Class: <https://w3id.org/quay/IpfsProtocol> (IPFS)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/IpfsProtocol> "Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/IpfsProtocol> "IPFS")
+SubClassOf(<https://w3id.org/quay/IpfsProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/ListOperation> (List)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/ListOperation> "Operation that enumerates the available entries or contents of a data resource.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/ListOperation> "List")
+SubClassOf(<https://w3id.org/quay/ListOperation> <https://w3id.org/quay/Operation>)
+
+# Class: <https://w3id.org/quay/LocalFilesystemProtocol> (Local Filesystem)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/LocalFilesystemProtocol> "Protocol that accesses data directly through the operating system local filesystem interface without network transfer.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/LocalFilesystemProtocol> "Local Filesystem")
+SubClassOf(<https://w3id.org/quay/LocalFilesystemProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/NoAuthentication> (No Authentication)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/NoAuthentication> "Authentication scheme that permits access without requiring identity verification.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/NoAuthentication> "No Authentication")
+SubClassOf(<https://w3id.org/quay/NoAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
+
+# Class: <https://w3id.org/quay/NoVerification> (No Verification)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/NoVerification> "Verification method designation indicating that no integrity or authenticity verification mechanism is applied.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/NoVerification> "No integrity verification mechanism available.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/NoVerification> "No Verification")
+SubClassOf(<https://w3id.org/quay/NoVerification> <https://w3id.org/quay/VerificationMethod>)
+
+# Class: <https://w3id.org/quay/OAuth2Authentication> (OAuth 2.0)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/OAuth2Authentication> "Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/OAuth2Authentication> "OAuth 2.0")
+SubClassOf(<https://w3id.org/quay/OAuth2Authentication> <https://w3id.org/quay/AuthenticationScheme>)
+
+# Class: <https://w3id.org/quay/Operation> (Operation)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Operation> "Action that can be performed on a data resource through an access point.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Operation> "Operation")
+
+# Class: <https://w3id.org/quay/PaginatedDelivery> (Paginated Delivery)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/PaginatedDelivery> "Delivery mode in which data is transferred in discrete, sequentially ordered pages of bounded size.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/PaginatedDelivery> "Paginated Delivery")
+SubClassOf(<https://w3id.org/quay/PaginatedDelivery> <https://w3id.org/quay/DeliveryMode>)
+
+# Class: <https://w3id.org/quay/PeerToPeerDelivery> (Peer-to-Peer Delivery)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/PeerToPeerDelivery> "Delivery mode in which data is transferred directly between participating peers without routing through a central server.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/PeerToPeerDelivery> "Peer-to-Peer Delivery")
+SubClassOf(<https://w3id.org/quay/PeerToPeerDelivery> <https://w3id.org/quay/DeliveryMode>)
+
+# Class: <https://w3id.org/quay/PieceVerification> (Piece Verification)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/PieceVerification> "Verification method that confirms integrity of individual data segments by validating each against a Merkle hash tree.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/PieceVerification> "Integrity verified per-piece using a hash tree, as in BitTorrent.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/PieceVerification> "Piece Verification")
+SubClassOf(<https://w3id.org/quay/PieceVerification> <https://w3id.org/quay/VerificationMethod>)
+
+# Class: <https://w3id.org/quay/Protocol> (Protocol)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Protocol> "Communication method that governs the rules and format of data exchange between a client and a data resource.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Protocol> "Protocol")
+
+# Class: <https://w3id.org/quay/RcloneProtocol> (Rclone)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/RcloneProtocol> "Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/RcloneProtocol> "Rclone")
+SubClassOf(<https://w3id.org/quay/RcloneProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/ReadOperation> (Read)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/ReadOperation> "Operation that retrieves data from a data resource without modifying it.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/ReadOperation> "Read")
+SubClassOf(<https://w3id.org/quay/ReadOperation> <https://w3id.org/quay/Operation>)
+
+# Class: <https://w3id.org/quay/RealTime> (Real-Time)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/RealTime> "Temporal quality in which data reflects the current state of its source with minimal latency.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/RealTime> "Real-Time")
+SubClassOf(<https://w3id.org/quay/RealTime> <https://w3id.org/quay/TemporalQuality>)
+
+# Class: <https://w3id.org/quay/ReplicateOperation> (Replicate)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/ReplicateOperation> "Operation that copies data from one data resource to another for redundancy or distribution.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/ReplicateOperation> "Replicate")
+SubClassOf(<https://w3id.org/quay/ReplicateOperation> <https://w3id.org/quay/Operation>)
+
+# Class: <https://w3id.org/quay/RsyncProtocol> (Rsync)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/RsyncProtocol> "Protocol that synchronises files between locations using the rsync delta-transfer algorithm.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/RsyncProtocol> "Rsync")
+SubClassOf(<https://w3id.org/quay/RsyncProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/S3Protocol> (S3)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/S3Protocol> "Protocol that accesses object storage using the Amazon Simple Storage Service API.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/S3Protocol> "S3")
+SubClassOf(<https://w3id.org/quay/S3Protocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/SampleCoverage> (Sample)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/SampleCoverage> "Coverage in which the distribution contains a statistically representative fraction of the available data.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/SampleCoverage> "Sample")
+SubClassOf(<https://w3id.org/quay/SampleCoverage> <https://w3id.org/quay/Coverage>)
+
+# Class: <https://w3id.org/quay/ServiceQuality> (Service Quality)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/ServiceQuality> "Characterisation of the reliability, availability, and redundancy properties of a data access service.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/ServiceQuality> "Service Quality")
+
+# Class: <https://w3id.org/quay/SingleHost> (Single Host)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/SingleHost> "Service quality in which data resides on a single machine with no infrastructure redundancy.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/SingleHost> "Data resides on a single machine with no redundancy.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/SingleHost> "Single Host")
+SubClassOf(<https://w3id.org/quay/SingleHost> <https://w3id.org/quay/ServiceQuality>)
+
+# Class: <https://w3id.org/quay/Snapshot> (Snapshot)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Snapshot> "Temporal quality in which data represents a consistent state captured at a specific point in time.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Snapshot> "Snapshot")
+SubClassOf(<https://w3id.org/quay/Snapshot> <https://w3id.org/quay/TemporalQuality>)
+
+# Class: <https://w3id.org/quay/SshKeyAuthentication> (SSH Key)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/SshKeyAuthentication> "Authentication scheme that verifies identity using an asymmetric SSH key pair.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/SshKeyAuthentication> "SSH Key")
+SubClassOf(<https://w3id.org/quay/SshKeyAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
+
+# Class: <https://w3id.org/quay/SshProtocol> (SSH/SFTP)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/SshProtocol> "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/SshProtocol> "SSH/SFTP")
+SubClassOf(<https://w3id.org/quay/SshProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/StreamingDelivery> (Streaming Delivery)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/StreamingDelivery> "Delivery mode in which data is transferred as a continuous flow of incremental units over a persistent connection.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/StreamingDelivery> "Streaming Delivery")
+SubClassOf(<https://w3id.org/quay/StreamingDelivery> <https://w3id.org/quay/DeliveryMode>)
+
+# Class: <https://w3id.org/quay/SubsetCoverage> (Subset)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/SubsetCoverage> "Coverage in which the distribution contains a defined, criteria-based portion of the available data.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/SubsetCoverage> "Subset")
+SubClassOf(<https://w3id.org/quay/SubsetCoverage> <https://w3id.org/quay/Coverage>)
+
+# Class: <https://w3id.org/quay/SynchronousDelivery> (Synchronous Delivery)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/SynchronousDelivery> "Delivery mode in which data is transferred within a blocking request-response cycle that completes before control returns to the caller.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/SynchronousDelivery> "Synchronous Delivery")
+SubClassOf(<https://w3id.org/quay/SynchronousDelivery> <https://w3id.org/quay/DeliveryMode>)
+
+# Class: <https://w3id.org/quay/TemporalQuality> (Temporal Quality)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/TemporalQuality> "Characterisation of the freshness and currency of data available from a distribution.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/TemporalQuality> "Temporal Quality")
+
+# Class: <https://w3id.org/quay/VerificationMethod> (Verification Method)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/VerificationMethod> "Mechanism used to confirm the integrity or authenticity of data after transfer.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/VerificationMethod> "Verification Method")
+
+# Class: <https://w3id.org/quay/Versioned> (Versioned)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/Versioned> "Temporal quality in which data is maintained as a sequence of immutable, individually identifiable revisions.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/Versioned> "Versioned")
+SubClassOf(<https://w3id.org/quay/Versioned> <https://w3id.org/quay/TemporalQuality>)
+
+# Class: <https://w3id.org/quay/WebDavProtocol> (WebDAV)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/WebDavProtocol> "Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/WebDavProtocol> "WebDAV")
+SubClassOf(<https://w3id.org/quay/WebDavProtocol> <https://w3id.org/quay/Protocol>)
+
+# Class: <https://w3id.org/quay/WriteOperation> (Write)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/WriteOperation> "Operation that stores new data in or modifies existing data within a data resource.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/WriteOperation> "Write")
+SubClassOf(<https://w3id.org/quay/WriteOperation> <https://w3id.org/quay/Operation>)
+
+# Class: <https://w3id.org/quay/YieldDescription> (Yield Description)
+
+AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/YieldDescription> "Qualification node that specifies what a distribution delivers, comprising exactly one delivery mode and optional temporal quality, coverage, service quality, and verification method descriptors.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/quay/YieldDescription> "Qualifies WHAT a Distribution delivers.")
+AnnotationAssertion(rdfs:label <https://w3id.org/quay/YieldDescription> "Yield Description")
+SubClassOf(<https://w3id.org/quay/YieldDescription> ObjectExactCardinality(1 <https://w3id.org/quay/deliveryMode> <https://w3id.org/quay/DeliveryMode>))
+SubClassOf(<https://w3id.org/quay/YieldDescription> ObjectMaxCardinality(1 <https://w3id.org/quay/coverage> <https://w3id.org/quay/Coverage>))
+SubClassOf(<https://w3id.org/quay/YieldDescription> ObjectMaxCardinality(1 <https://w3id.org/quay/temporalQuality> <https://w3id.org/quay/TemporalQuality>))
 
 
+
+DisjointClasses(<https://w3id.org/quay/AccessDescription> <https://w3id.org/quay/AuthenticationScheme> <https://w3id.org/quay/Coverage> <https://w3id.org/quay/DeliveryMode> <https://w3id.org/quay/Operation> <https://w3id.org/quay/Protocol> <https://w3id.org/quay/ServiceQuality> <https://w3id.org/quay/TemporalQuality> <https://w3id.org/quay/VerificationMethod> <https://w3id.org/quay/YieldDescription>)
+DisjointClasses(<https://w3id.org/quay/ApiKeyAuthentication> <https://w3id.org/quay/AwsCredentialAuthentication> <https://w3id.org/quay/BasicAuthentication> <https://w3id.org/quay/GpgKeyAuthentication> <https://w3id.org/quay/NoAuthentication> <https://w3id.org/quay/OAuth2Authentication> <https://w3id.org/quay/SshKeyAuthentication>)
+DisjointClasses(<https://w3id.org/quay/Archived> <https://w3id.org/quay/RealTime> <https://w3id.org/quay/Snapshot> <https://w3id.org/quay/Versioned>)
+DisjointClasses(<https://w3id.org/quay/BestEffort> <https://w3id.org/quay/Distributed> <https://w3id.org/quay/HighAvailability> <https://w3id.org/quay/SingleHost>)
+DisjointClasses(<https://w3id.org/quay/BitTorrentProtocol> <https://w3id.org/quay/FtpProtocol> <https://w3id.org/quay/GitProtocol> <https://w3id.org/quay/HookProtocol> <https://w3id.org/quay/HttpProtocol> <https://w3id.org/quay/IpfsProtocol> <https://w3id.org/quay/LocalFilesystemProtocol> <https://w3id.org/quay/RcloneProtocol> <https://w3id.org/quay/RsyncProtocol> <https://w3id.org/quay/S3Protocol> <https://w3id.org/quay/SshProtocol> <https://w3id.org/quay/WebDavProtocol>)
+DisjointClasses(<https://w3id.org/quay/BulkDelivery> <https://w3id.org/quay/EventDrivenDelivery> <https://w3id.org/quay/PaginatedDelivery> <https://w3id.org/quay/PeerToPeerDelivery> <https://w3id.org/quay/StreamingDelivery> <https://w3id.org/quay/SynchronousDelivery>)
+DisjointClasses(<https://w3id.org/quay/CompleteCoverage> <https://w3id.org/quay/IncrementalCoverage> <https://w3id.org/quay/SampleCoverage> <https://w3id.org/quay/SubsetCoverage>)
+DisjointClasses(<https://w3id.org/quay/ContentAddressing> <https://w3id.org/quay/DigitalSignature> <https://w3id.org/quay/HashVerification> <https://w3id.org/quay/NoVerification> <https://w3id.org/quay/PieceVerification>)
+DisjointClasses(<https://w3id.org/quay/DeleteOperation> <https://w3id.org/quay/ListOperation> <https://w3id.org/quay/ReadOperation> <https://w3id.org/quay/ReplicateOperation> <https://w3id.org/quay/WriteOperation>)
 )
