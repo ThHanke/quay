@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/quay/quay-full.owl#"
-     xml:base="https://w3id.org/quay/quay-full.owl"
+<rdf:RDF xmlns="https://w3id.org/quay.owl#"
+     xml:base="https://w3id.org/quay.owl"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -18,8 +18,8 @@
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="https://w3id.org/quay/quay-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/quay/releases/2026-08-18/quay-full.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/quay.owl">
+        <owl:versionIRI rdf:resource="https://w3id.org/quay/releases/2026-08-18/quay.owl"/>
         <dcterms:description>A DCAT Profile for Data Access, Storage and Authorization Metadata.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title>QUAY: Qualified Usage, Access and Yield</dcterms:title>
@@ -4482,13 +4482,13 @@
         <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="https://www.csiro.au"/>
+        <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+        <foaf:homepage rdf:resource="https://www.csiro.au"/>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="http://www.deri.ie/"/>

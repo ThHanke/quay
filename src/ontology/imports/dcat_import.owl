@@ -206,7 +206,7 @@ InverseObjectProperties(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Dataset>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/ns/dcat#Distribution>)
 
-# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (URL souboru ke stažení)
+# Object Property: <http://www.w3.org/ns/dcat#downloadURL> (URL di scarico)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de descarga"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#downloadURL> "URL de téléchargement"@fr)
@@ -239,7 +239,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#endpointURL> "tjeneste
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/ns/dcat#DataService>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#endpointURL> rdfs:Resource)
 
-# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (tiene versión actual)
+# Object Property: <http://www.w3.org/ns/dcat#hasCurrentVersion> (ha versione attuale)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "ha versione attuale"@it)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#hasCurrentVersion> "has current version"@en)
@@ -265,7 +265,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in serie"@i
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#inSeries> "in series"@en)
 InverseObjectProperties(<http://www.w3.org/ns/dcat#inSeries> <http://www.w3.org/ns/dcat#seriesMember>)
 
-# Object Property: <http://www.w3.org/ns/dcat#mediaType> (tipo de media)
+# Object Property: <http://www.w3.org/ns/dcat#mediaType> (type de média)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "media type"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#mediaType> "medietype"@da)
@@ -317,7 +317,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#servesDataset> "serves
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/ns/dcat#DataService>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#servesDataset> <http://www.w3.org/ns/dcat#Dataset>)
 
-# Object Property: <http://www.w3.org/ns/dcat#service> (servicio)
+# Object Property: <http://www.w3.org/ns/dcat#service> (service)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "datatjeneste"@da)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#service> "service"@en)
@@ -328,7 +328,7 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dc
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#Catalog>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#service> <http://www.w3.org/ns/dcat#DataService>)
 
-# Object Property: <http://www.w3.org/ns/dcat#theme> (tema)
+# Object Property: <http://www.w3.org/ns/dcat#theme> (Θέμα)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "emne"@da)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#theme> "tema"@es)
@@ -396,7 +396,7 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "الحجم 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#byteSize> "バイト・サイズ"@ja)
 DataPropertyDomain(<http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/ns/dcat#Distribution>)
 
-# Data Property: <http://www.w3.org/ns/dcat#keyword> (キーワード/タグ)
+# Data Property: <http://www.w3.org/ns/dcat#keyword> (keyword)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "keyword"@en)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#keyword> "klíčové slovo"@cs)

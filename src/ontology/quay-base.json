@@ -1,0 +1,947 @@
+{
+  "graphs" : [ {
+    "id" : "https://w3id.org/quay/quay-base.json",
+    "meta" : {
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/type",
+        "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
+      }, {
+        "pred" : "http://purl.org/dc/terms/description",
+        "val" : "A DCAT Profile for Data Access, Storage and Authorization Metadata."
+      }, {
+        "pred" : "http://purl.org/dc/terms/license",
+        "val" : "https://creativecommons.org/licenses/by/4.0/"
+      }, {
+        "pred" : "http://purl.org/dc/terms/title",
+        "val" : "QUAY: Qualified Usage, Access and Yield"
+      }, {
+        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+        "val" : "2026-08-18"
+      } ],
+      "version" : "https://w3id.org/quay/releases/2026-08-18/quay-base.json"
+    },
+    "nodes" : [ {
+      "id" : "http://www.w3.org/ns/dcat#Distribution",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/quay/AccessDescription",
+      "lbl" : "Access Description",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Qualification node that specifies how a distribution is reached, comprising exactly one protocol, at least one authentication scheme, and at least one supported operation."
+        },
+        "comments" : [ "Qualifies HOW a Distribution is reached." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ApiKeyAuthentication",
+      "lbl" : "API Key",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity by presenting a pre-shared secret key with each request."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Archived",
+      "lbl" : "Archived",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data is preserved for long-term retention and is no longer actively updated."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/AuthenticationScheme",
+      "lbl" : "Authentication Scheme",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Method used to verify the identity of an agent requesting access to a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/AwsCredentialAuthentication",
+      "lbl" : "AWS Credential",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BasicAuthentication",
+      "lbl" : "Basic Authentication",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity by transmitting a username and password pair, typically Base64-encoded."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BestEffort",
+      "lbl" : "Best Effort",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which availability depends on upstream network and server conditions without formal guarantees."
+        },
+        "comments" : [ "Quality depends on upstream server or network conditions." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BitTorrentProtocol",
+      "lbl" : "BitTorrent",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BulkDelivery",
+      "lbl" : "Bulk Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred as a complete unit within a single transaction."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/CompleteCoverage",
+      "lbl" : "Complete",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains the entirety of the available data of its dataset."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ContentAddressing",
+      "lbl" : "Content Addressing",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method in which data is both identified and verified by a hash derived from its content, such that the identifier itself proves integrity."
+        },
+        "comments" : [ "Content identified and verified by its hash, as in IPFS CIDs." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Coverage",
+      "lbl" : "Coverage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Characterisation of the extent to which a distribution represents the total available data of a dataset."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/DeleteOperation",
+      "lbl" : "Delete",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that permanently removes data from a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/DeliveryMode",
+      "lbl" : "Delivery Mode",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Mechanism by which data is transferred from a data resource to a consuming agent."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/DigitalSignature",
+      "lbl" : "Digital Signature",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method that confirms both integrity and authenticity of data by validating a cryptographic signature produced by a known key holder."
+        },
+        "comments" : [ "Integrity and authenticity verified via cryptographic signature." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Distributed",
+      "lbl" : "Distributed",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which data is replicated across multiple independent nodes for fault tolerance."
+        },
+        "comments" : [ "Data distributed across multiple peers or nodes." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/EventDrivenDelivery",
+      "lbl" : "Event-Driven Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data transfer is triggered by the occurrence of discrete events or state changes."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/FtpProtocol",
+      "lbl" : "FTP",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that transfers files between client and server using the File Transfer Protocol."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/GitProtocol",
+      "lbl" : "Git",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that accesses version-controlled data through the Git distributed version control system."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/GpgKeyAuthentication",
+      "lbl" : "GPG Key",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HashVerification",
+      "lbl" : "Hash Verification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method that confirms data integrity by computing a cryptographic hash of the received content and comparing it against a known reference value."
+        },
+        "comments" : [ "Integrity verified by comparing cryptographic hash of content." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HighAvailability",
+      "lbl" : "High Availability",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which the service is operated with infrastructure redundancy and contractual uptime guarantees."
+        },
+        "comments" : [ "Managed cloud services with SLA guarantees." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HookProtocol",
+      "lbl" : "Hook",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that delegates data access operations to user-defined external scripts or commands."
+        },
+        "comments" : [ "Custom protocol via user-defined hook scripts." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HttpProtocol",
+      "lbl" : "HTTP/HTTPS",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/IncrementalCoverage",
+      "lbl" : "Incremental",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains only changes accumulated since a specified reference point."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/IpfsProtocol",
+      "lbl" : "IPFS",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ListOperation",
+      "lbl" : "List",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that enumerates the available entries or contents of a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/LocalFilesystemProtocol",
+      "lbl" : "Local Filesystem",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that accesses data directly through the operating system local filesystem interface without network transfer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/NoAuthentication",
+      "lbl" : "No Authentication",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that permits access without requiring identity verification."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/NoVerification",
+      "lbl" : "No Verification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method designation indicating that no integrity or authenticity verification mechanism is applied."
+        },
+        "comments" : [ "No integrity verification mechanism available." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/OAuth2Authentication",
+      "lbl" : "OAuth 2.0",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Operation",
+      "lbl" : "Operation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Action that can be performed on a data resource through an access point."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/PaginatedDelivery",
+      "lbl" : "Paginated Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred in discrete, sequentially ordered pages of bounded size."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/PeerToPeerDelivery",
+      "lbl" : "Peer-to-Peer Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred directly between participating peers without routing through a central server."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/PieceVerification",
+      "lbl" : "Piece Verification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method that confirms integrity of individual data segments by validating each against a Merkle hash tree."
+        },
+        "comments" : [ "Integrity verified per-piece using a hash tree, as in BitTorrent." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Protocol",
+      "lbl" : "Protocol",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Communication method that governs the rules and format of data exchange between a client and a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/RcloneProtocol",
+      "lbl" : "Rclone",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ReadOperation",
+      "lbl" : "Read",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that retrieves data from a data resource without modifying it."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/RealTime",
+      "lbl" : "Real-Time",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data reflects the current state of its source with minimal latency."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ReplicateOperation",
+      "lbl" : "Replicate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that copies data from one data resource to another for redundancy or distribution."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/RsyncProtocol",
+      "lbl" : "Rsync",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that synchronises files between locations using the rsync delta-transfer algorithm."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/S3Protocol",
+      "lbl" : "S3",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that accesses object storage using the Amazon Simple Storage Service API."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SampleCoverage",
+      "lbl" : "Sample",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains a statistically representative fraction of the available data."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ServiceQuality",
+      "lbl" : "Service Quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Characterisation of the reliability, availability, and redundancy properties of a data access service."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SingleHost",
+      "lbl" : "Single Host",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which data resides on a single machine with no infrastructure redundancy."
+        },
+        "comments" : [ "Data resides on a single machine with no redundancy." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Snapshot",
+      "lbl" : "Snapshot",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data represents a consistent state captured at a specific point in time."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SshKeyAuthentication",
+      "lbl" : "SSH Key",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity using an asymmetric SSH key pair."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SshProtocol",
+      "lbl" : "SSH/SFTP",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/StreamingDelivery",
+      "lbl" : "Streaming Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred as a continuous flow of incremental units over a persistent connection."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SubsetCoverage",
+      "lbl" : "Subset",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains a defined, criteria-based portion of the available data."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SynchronousDelivery",
+      "lbl" : "Synchronous Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred within a blocking request-response cycle that completes before control returns to the caller."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/TemporalQuality",
+      "lbl" : "Temporal Quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Characterisation of the freshness and currency of data available from a distribution."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/VerificationMethod",
+      "lbl" : "Verification Method",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Mechanism used to confirm the integrity or authenticity of data after transfer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Versioned",
+      "lbl" : "Versioned",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data is maintained as a sequence of immutable, individually identifiable revisions."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/WebDavProtocol",
+      "lbl" : "WebDAV",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/WriteOperation",
+      "lbl" : "Write",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that stores new data in or modifies existing data within a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/YieldDescription",
+      "lbl" : "Yield Description",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Qualification node that specifies what a distribution delivers, comprising exactly one delivery mode and optional temporal quality, coverage, service quality, and verification method descriptors."
+        },
+        "comments" : [ "Qualifies WHAT a Distribution delivers." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/accessDescription",
+      "lbl" : "access description",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to a qualification node that describes how it is accessed."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/authenticationScheme",
+      "lbl" : "authentication scheme",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an access description to the method used to verify the identity of the accessing agent."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/coverage",
+      "lbl" : "coverage",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the extent of dataset representation in the distribution."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/deliveryMode",
+      "lbl" : "delivery mode",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the mechanism by which data is transferred to the consumer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/protocol",
+      "lbl" : "protocol",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an access description to the communication protocol used for data exchange."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/serviceQuality",
+      "lbl" : "service quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the reliability and availability characterisation of the service."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/supportedOperation",
+      "lbl" : "supported operation",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an access description to an action that can be performed on the data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/temporalQuality",
+      "lbl" : "temporal quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the freshness characterisation of the available data."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/verificationMethod",
+      "lbl" : "verification method",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the mechanism used to verify data integrity after transfer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/yieldDescription",
+      "lbl" : "yield description",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to a qualification node that describes what it delivers."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/encryptionAtRest",
+      "lbl" : "encryption at rest",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption algorithm applied to data at rest within the storage backend."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/encryptionInTransit",
+      "lbl" : "encryption in transit",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption protocol applied to data during transfer between client and server."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/type",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    } ],
+    "edges" : [ {
+      "sub" : "https://w3id.org/quay/AccessDescription",
+      "pred" : "https://w3id.org/quay/authenticationScheme",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/AccessDescription",
+      "pred" : "https://w3id.org/quay/protocol",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/AccessDescription",
+      "pred" : "https://w3id.org/quay/supportedOperation",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/ApiKeyAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/Archived",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/AwsCredentialAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/BasicAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/BestEffort",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/BitTorrentProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/BulkDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/CompleteCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/ContentAddressing",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/DeleteOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/DigitalSignature",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/Distributed",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/EventDrivenDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/FtpProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/GitProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/GpgKeyAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/HashVerification",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/HighAvailability",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/HookProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/HttpProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/IncrementalCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/IpfsProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/ListOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/LocalFilesystemProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/NoAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/NoVerification",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/OAuth2Authentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/PaginatedDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/PeerToPeerDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/PieceVerification",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/RcloneProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/ReadOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/RealTime",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/ReplicateOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/RsyncProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/S3Protocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/SampleCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/SingleHost",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/Snapshot",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/SshKeyAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/SshProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/StreamingDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/SubsetCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/SynchronousDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/Versioned",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/WebDavProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/WriteOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/YieldDescription",
+      "pred" : "https://w3id.org/quay/coverage",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/YieldDescription",
+      "pred" : "https://w3id.org/quay/deliveryMode",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/YieldDescription",
+      "pred" : "https://w3id.org/quay/temporalQuality",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    } ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "https://w3id.org/quay/accessDescription",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/AccessDescription" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/authenticationScheme",
+      "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/AuthenticationScheme" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/coverage",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/Coverage" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/deliveryMode",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/DeliveryMode" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/protocol",
+      "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/Protocol" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/serviceQuality",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/ServiceQuality" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/supportedOperation",
+      "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/Operation" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/temporalQuality",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/TemporalQuality" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/verificationMethod",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/VerificationMethod" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/yieldDescription",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/YieldDescription" ]
+    } ]
+  } ]
+}

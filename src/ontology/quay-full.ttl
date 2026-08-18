@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/quay.ttl#> .
+@prefix : <https://w3id.org/quay/quay-full.ttl#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -17,14 +17,14 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@base <https://w3id.org/quay.ttl> .
+@base <https://w3id.org/quay/quay-full.ttl> .
 
-<https://w3id.org/quay.ttl> rdf:type owl:Ontology ;
-                             owl:versionIRI <https://w3id.org/quay/releases/2026-08-18/quay.ttl> ;
-                             dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata." ;
-                             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                             dcterms:title "QUAY: Qualified Usage, Access and Yield" ;
-                             owl:versionInfo "2026-08-18" .
+<https://w3id.org/quay/quay-full.ttl> rdf:type owl:Ontology ;
+                                       owl:versionIRI <https://w3id.org/quay/releases/2026-08-18/quay-full.ttl> ;
+                                       dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata." ;
+                                       dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                       dcterms:title "QUAY: Qualified Usage, Access and Yield" ;
+                                       owl:versionInfo "2026-08-18" .
 
 #################################################################
 #    Annotation properties
@@ -3116,13 +3116,13 @@ odrl:xone rdf:type owl:NamedIndividual ,
    foaf:homepage <https://jakub.klímek.com/>
  ] .
 
-[ foaf:homepage <https://www.csiro.au>
+[ foaf:homepage <http://ec.europa.eu/dgs/informatics/>
  ] .
 
 [ foaf:homepage <http://stfc.ac.uk>
  ] .
 
-[ foaf:homepage <http://ec.europa.eu/dgs/informatics/>
+[ foaf:homepage <https://www.csiro.au>
  ] .
 
 [ foaf:homepage <http://www.deri.ie/>

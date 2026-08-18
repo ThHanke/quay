@@ -1,0 +1,4368 @@
+{
+  "graphs" : [ {
+    "id" : "https://w3id.org/quay/quay-full.json",
+    "meta" : {
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/terms/description",
+        "val" : "A DCAT Profile for Data Access, Storage and Authorization Metadata."
+      }, {
+        "pred" : "http://purl.org/dc/terms/license",
+        "val" : "https://creativecommons.org/licenses/by/4.0/"
+      }, {
+        "pred" : "http://purl.org/dc/terms/title",
+        "val" : "QUAY: Qualified Usage, Access and Yield"
+      }, {
+        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+        "val" : "2026-08-18"
+      } ],
+      "version" : "https://w3id.org/quay/releases/2026-08-18/quay-full.json"
+    },
+    "nodes" : [ {
+      "id" : "http://purl.org/dc/dcam/VocabularyEncodingScheme",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.org/dc/dcmitype/Service",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.org/dc/terms/AgentClass",
+      "lbl" : "Agent Class",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.org/dc/terms/MediaType",
+      "lbl" : "Media Type",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.org/dc/terms/MediaTypeOrExtent",
+      "lbl" : "Media Type or Extent",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://schema.org/Action",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://schema.org/Organization",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://schema.org/Person",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://spdx.org/rdf/terms#Checksum",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#Class",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2004/02/skos/core#Collection",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2004/02/skos/core#Concept",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2006/vcard/ns#Agent",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2006/vcard/ns#Individual",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2006/vcard/ns#Kind",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/2006/vcard/ns#Organization",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#Catalog",
+      "lbl" : "カタログ",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#DataService",
+      "lbl" : "Servizio di dati",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#Dataset",
+      "lbl" : "データセット",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#DatasetSeries",
+      "lbl" : "Serie di dataset",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#Distribution",
+      "lbl" : "配信",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#Resource",
+      "lbl" : "Risorsa catalogata",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Action",
+      "lbl" : "Action",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Agreement",
+      "lbl" : "Agreement",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Asset",
+      "lbl" : "Asset",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/ConflictTerm",
+      "lbl" : "Conflict Strategy Preference",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Constraint",
+      "lbl" : "Constraint",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Duty",
+      "lbl" : "Duty",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/LeftOperand",
+      "lbl" : "Left Operand",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/LogicalConstraint",
+      "lbl" : "Logical Constraint",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Offer",
+      "lbl" : "Offer",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Operator",
+      "lbl" : "Operator",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Party",
+      "lbl" : "Party",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/PartyScope",
+      "lbl" : "Party Scope",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Permission",
+      "lbl" : "Permission",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Policy",
+      "lbl" : "Policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Prohibition",
+      "lbl" : "Prohibition",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/RightOperand",
+      "lbl" : "Right Operand",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Rule",
+      "lbl" : "Rule",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Set",
+      "lbl" : "Set",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/UndefinedTerm",
+      "lbl" : "Undefined Term",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/org#Organization",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#Activity",
+      "lbl" : "Activity",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#Agent",
+      "lbl" : "Agent",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#Entity",
+      "lbl" : "Entity",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://xmlns.com/foaf/0.1/Agent",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://xmlns.com/foaf/0.1/Organization",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://xmlns.com/foaf/0.1/Person",
+      "type" : "CLASS"
+    }, {
+      "id" : "https://w3id.org/quay/AccessDescription",
+      "lbl" : "Access Description",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Qualification node that specifies how a distribution is reached, comprising exactly one protocol, at least one authentication scheme, and at least one supported operation."
+        },
+        "comments" : [ "Qualifies HOW a Distribution is reached." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ApiKeyAuthentication",
+      "lbl" : "API Key",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity by presenting a pre-shared secret key with each request."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Archived",
+      "lbl" : "Archived",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data is preserved for long-term retention and is no longer actively updated."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/AuthenticationScheme",
+      "lbl" : "Authentication Scheme",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Method used to verify the identity of an agent requesting access to a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/AwsCredentialAuthentication",
+      "lbl" : "AWS Credential",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BasicAuthentication",
+      "lbl" : "Basic Authentication",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity by transmitting a username and password pair, typically Base64-encoded."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BestEffort",
+      "lbl" : "Best Effort",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which availability depends on upstream network and server conditions without formal guarantees."
+        },
+        "comments" : [ "Quality depends on upstream server or network conditions." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BitTorrentProtocol",
+      "lbl" : "BitTorrent",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/BulkDelivery",
+      "lbl" : "Bulk Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred as a complete unit within a single transaction."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/CompleteCoverage",
+      "lbl" : "Complete",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains the entirety of the available data of its dataset."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ContentAddressing",
+      "lbl" : "Content Addressing",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method in which data is both identified and verified by a hash derived from its content, such that the identifier itself proves integrity."
+        },
+        "comments" : [ "Content identified and verified by its hash, as in IPFS CIDs." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Coverage",
+      "lbl" : "Coverage",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Characterisation of the extent to which a distribution represents the total available data of a dataset."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/DeleteOperation",
+      "lbl" : "Delete",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that permanently removes data from a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/DeliveryMode",
+      "lbl" : "Delivery Mode",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Mechanism by which data is transferred from a data resource to a consuming agent."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/DigitalSignature",
+      "lbl" : "Digital Signature",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method that confirms both integrity and authenticity of data by validating a cryptographic signature produced by a known key holder."
+        },
+        "comments" : [ "Integrity and authenticity verified via cryptographic signature." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Distributed",
+      "lbl" : "Distributed",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which data is replicated across multiple independent nodes for fault tolerance."
+        },
+        "comments" : [ "Data distributed across multiple peers or nodes." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/EventDrivenDelivery",
+      "lbl" : "Event-Driven Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data transfer is triggered by the occurrence of discrete events or state changes."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/FtpProtocol",
+      "lbl" : "FTP",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that transfers files between client and server using the File Transfer Protocol."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/GitProtocol",
+      "lbl" : "Git",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that accesses version-controlled data through the Git distributed version control system."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/GpgKeyAuthentication",
+      "lbl" : "GPG Key",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HashVerification",
+      "lbl" : "Hash Verification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method that confirms data integrity by computing a cryptographic hash of the received content and comparing it against a known reference value."
+        },
+        "comments" : [ "Integrity verified by comparing cryptographic hash of content." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HighAvailability",
+      "lbl" : "High Availability",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which the service is operated with infrastructure redundancy and contractual uptime guarantees."
+        },
+        "comments" : [ "Managed cloud services with SLA guarantees." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HookProtocol",
+      "lbl" : "Hook",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that delegates data access operations to user-defined external scripts or commands."
+        },
+        "comments" : [ "Custom protocol via user-defined hook scripts." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/HttpProtocol",
+      "lbl" : "HTTP/HTTPS",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/IncrementalCoverage",
+      "lbl" : "Incremental",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains only changes accumulated since a specified reference point."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/IpfsProtocol",
+      "lbl" : "IPFS",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ListOperation",
+      "lbl" : "List",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that enumerates the available entries or contents of a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/LocalFilesystemProtocol",
+      "lbl" : "Local Filesystem",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that accesses data directly through the operating system local filesystem interface without network transfer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/NoAuthentication",
+      "lbl" : "No Authentication",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that permits access without requiring identity verification."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/NoVerification",
+      "lbl" : "No Verification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method designation indicating that no integrity or authenticity verification mechanism is applied."
+        },
+        "comments" : [ "No integrity verification mechanism available." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/OAuth2Authentication",
+      "lbl" : "OAuth 2.0",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Operation",
+      "lbl" : "Operation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Action that can be performed on a data resource through an access point."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/PaginatedDelivery",
+      "lbl" : "Paginated Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred in discrete, sequentially ordered pages of bounded size."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/PeerToPeerDelivery",
+      "lbl" : "Peer-to-Peer Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred directly between participating peers without routing through a central server."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/PieceVerification",
+      "lbl" : "Piece Verification",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Verification method that confirms integrity of individual data segments by validating each against a Merkle hash tree."
+        },
+        "comments" : [ "Integrity verified per-piece using a hash tree, as in BitTorrent." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Protocol",
+      "lbl" : "Protocol",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Communication method that governs the rules and format of data exchange between a client and a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/RcloneProtocol",
+      "lbl" : "Rclone",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ReadOperation",
+      "lbl" : "Read",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that retrieves data from a data resource without modifying it."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/RealTime",
+      "lbl" : "Real-Time",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data reflects the current state of its source with minimal latency."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ReplicateOperation",
+      "lbl" : "Replicate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that copies data from one data resource to another for redundancy or distribution."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/RsyncProtocol",
+      "lbl" : "Rsync",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that synchronises files between locations using the rsync delta-transfer algorithm."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/S3Protocol",
+      "lbl" : "S3",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that accesses object storage using the Amazon Simple Storage Service API."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SampleCoverage",
+      "lbl" : "Sample",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains a statistically representative fraction of the available data."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/ServiceQuality",
+      "lbl" : "Service Quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Characterisation of the reliability, availability, and redundancy properties of a data access service."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SingleHost",
+      "lbl" : "Single Host",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Service quality in which data resides on a single machine with no infrastructure redundancy."
+        },
+        "comments" : [ "Data resides on a single machine with no redundancy." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Snapshot",
+      "lbl" : "Snapshot",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data represents a consistent state captured at a specific point in time."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SshKeyAuthentication",
+      "lbl" : "SSH Key",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Authentication scheme that verifies identity using an asymmetric SSH key pair."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SshProtocol",
+      "lbl" : "SSH/SFTP",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/StreamingDelivery",
+      "lbl" : "Streaming Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred as a continuous flow of incremental units over a persistent connection."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SubsetCoverage",
+      "lbl" : "Subset",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Coverage in which the distribution contains a defined, criteria-based portion of the available data."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/SynchronousDelivery",
+      "lbl" : "Synchronous Delivery",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Delivery mode in which data is transferred within a blocking request-response cycle that completes before control returns to the caller."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/TemporalQuality",
+      "lbl" : "Temporal Quality",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Characterisation of the freshness and currency of data available from a distribution."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/VerificationMethod",
+      "lbl" : "Verification Method",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Mechanism used to confirm the integrity or authenticity of data after transfer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Versioned",
+      "lbl" : "Versioned",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Temporal quality in which data is maintained as a sequence of immutable, individually identifiable revisions."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/WebDavProtocol",
+      "lbl" : "WebDAV",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/WriteOperation",
+      "lbl" : "Write",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Operation that stores new data in or modifies existing data within a data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/YieldDescription",
+      "lbl" : "Yield Description",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Qualification node that specifies what a distribution delivers, comprising exactly one delivery mode and optional temporal quality, coverage, service quality, and verification method descriptors."
+        },
+        "comments" : [ "Qualifies WHAT a Distribution delivers." ]
+      }
+    }, {
+      "id" : "http://purl.org/pav/hasVersion",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://spdx.org/rdf/terms#algorithm",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://spdx.org/rdf/terms#checksum",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#accessService",
+      "lbl" : "služba pro přístup k datům",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#accessURL",
+      "lbl" : "アクセスURL",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#catalog",
+      "lbl" : "katalog",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#compressFormat",
+      "lbl" : "kompressionsformat",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#contactPoint",
+      "lbl" : "窓口",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#dataset",
+      "lbl" : "データセット",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#distribution",
+      "lbl" : "データセット配信",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#downloadURL",
+      "lbl" : "ダウンロードURL",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#endpointDescription",
+      "lbl" : "popis přístupového bodu služby",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#endpointURL",
+      "lbl" : "tjenesteendpoint",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#hasCurrentVersion",
+      "lbl" : "tiene versión actual",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#hasVersion",
+      "lbl" : "tiene versión",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#inCatalog",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#inSeries",
+      "lbl" : "in series",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#isDistributionOf",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#isVersionOf",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#mediaType",
+      "lbl" : "メディア・タイプ",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#nextVersion",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#packageFormat",
+      "lbl" : "pakkeformat",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#previousVersion",
+      "lbl" : "versión anterior",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#resource",
+      "lbl" : "risorsa",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#seriesMember",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#servesDataset",
+      "lbl" : "serves dataset",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#service",
+      "lbl" : "služba",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#theme",
+      "lbl" : "テーマ/カテゴリー",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/action",
+      "lbl" : "Has Action",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/constraint",
+      "lbl" : "Has Constraint",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/duty",
+      "lbl" : "Has Duty",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/hasPolicy",
+      "lbl" : "Target Policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "lbl" : "Included In",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/obligation",
+      "lbl" : "Obligation",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/permission",
+      "lbl" : "Has Permission",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/prohibition",
+      "lbl" : "Has Prohibition",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/relation",
+      "lbl" : "Relation",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/target",
+      "lbl" : "Target",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#alternateOf",
+      "lbl" : "alternateOf",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#generalizationOf",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#influenced",
+      "lbl" : "influenced",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#specializationOf",
+      "lbl" : "specializationOf",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "lbl" : "wasDerivedFrom",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#wasInfluencedBy",
+      "lbl" : "wasInfluencedBy",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://www.w3.org/ns/prov#wasRevisionOf",
+      "lbl" : "wasRevisionOf",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "http://xmlns.com/foaf/0.1/homepage",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
+    }, {
+      "id" : "https://w3id.org/quay/accessDescription",
+      "lbl" : "access description",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to a qualification node that describes how it is accessed."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/authenticationScheme",
+      "lbl" : "authentication scheme",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an access description to the method used to verify the identity of the accessing agent."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/coverage",
+      "lbl" : "coverage",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the extent of dataset representation in the distribution."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/deliveryMode",
+      "lbl" : "delivery mode",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the mechanism by which data is transferred to the consumer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/protocol",
+      "lbl" : "protocol",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an access description to the communication protocol used for data exchange."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/serviceQuality",
+      "lbl" : "service quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the reliability and availability characterisation of the service."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/supportedOperation",
+      "lbl" : "supported operation",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates an access description to an action that can be performed on the data resource."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/temporalQuality",
+      "lbl" : "temporal quality",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the freshness characterisation of the available data."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/verificationMethod",
+      "lbl" : "verification method",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a yield description to the mechanism used to verify data integrity after transfer."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/yieldDescription",
+      "lbl" : "yield description",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to a qualification node that describes what it delivers."
+        }
+      }
+    }, {
+      "id" : "http://purl.org/dc/terms/title",
+      "lbl" : "title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://spdx.org/rdf/terms#checksumValue",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#byteSize",
+      "lbl" : "バイト・サイズ",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#keyword",
+      "lbl" : "キーワード/タグ",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
+      "lbl" : "spatial resolution (metres)",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#temporalResolution",
+      "lbl" : "časové rozlišení",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat#version",
+      "lbl" : "versión",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA"
+    }, {
+      "id" : "https://w3id.org/quay/encryptionAtRest",
+      "lbl" : "encryption at rest",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption algorithm applied to data at rest within the storage backend."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/encryptionInTransit",
+      "lbl" : "encryption in transit",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption protocol applied to data during transfer between client and server."
+        }
+      }
+    }, {
+      "id" : "http://stfc.ac.uk",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#Attribution",
+      "lbl" : "Attribution",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#CommercialUse",
+      "lbl" : "Commercial Use",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#DerivativeWorks",
+      "lbl" : "Derivative Works",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#Distribution",
+      "lbl" : "Distribution",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#Notice",
+      "lbl" : "Notice",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#Reproduction",
+      "lbl" : "Reproduction",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#ShareAlike",
+      "lbl" : "Share Alike",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#Sharing",
+      "lbl" : "Sharing",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://creativecommons.org/ns#SourceCode",
+      "lbl" : "Source Code",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://ec.europa.eu/dgs/informatics/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://makxdekkers.com/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/Agent",
+      "lbl" : "Agent",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/DCMIType",
+      "lbl" : "DCMI Type Vocabulary",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/DDC",
+      "lbl" : "DDC",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/IMT",
+      "lbl" : "IMT",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/LCC",
+      "lbl" : "LCC",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/LCSH",
+      "lbl" : "LCSH",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/MESH",
+      "lbl" : "MeSH",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/NLM",
+      "lbl" : "NLM",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/TGN",
+      "lbl" : "TGN",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/UDC",
+      "lbl" : "UDC",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.org/dc/terms/description",
+      "lbl" : "description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/license",
+      "lbl" : "license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://spdx.org/rdf/terms#checksumAlgorithm_md5",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://spdx.org/rdf/terms#checksumAlgorithm_sha256",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.asahi-net.or.jp/~ax2s-kmtn/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.deri.ie/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat2",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat2014",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/dcat3",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/prov-o",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/prov-o-20130312",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/All",
+      "lbl" : "All",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/All2ndConnections",
+      "lbl" : "All Second-level Connections",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/AllConnections",
+      "lbl" : "All First-Level Connections",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/AllGroups",
+      "lbl" : "All Group Connections",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Assertion",
+      "lbl" : "Assertion",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/AssetCollection",
+      "lbl" : "Asset Collection",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/AssetScope",
+      "lbl" : "Asset Scope",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Group",
+      "lbl" : "Group",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Individual",
+      "lbl" : "Individual",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/PartyCollection",
+      "lbl" : "Party Collection",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Privacy",
+      "lbl" : "Privacy Policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Request",
+      "lbl" : "Request",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Ticket",
+      "lbl" : "Ticket",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/absolutePosition",
+      "lbl" : "Absolute Asset Position",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/absoluteSize",
+      "lbl" : "Absolute Asset Size",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/absoluteSpatialPosition",
+      "lbl" : "Absolute Spatial Asset Position",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/absoluteTemporalPosition",
+      "lbl" : "Absolute Temporal Asset Position",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/acceptTracking",
+      "lbl" : "Accept Tracking",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/adHocShare",
+      "lbl" : "Ad-hoc sharing",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/aggregate",
+      "lbl" : "Aggregate",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/and",
+      "lbl" : "And",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/andSequence",
+      "lbl" : "And Sequence",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/annotate",
+      "lbl" : "Annotate",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/anonymize",
+      "lbl" : "Anonymize",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/append",
+      "lbl" : "Append",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/appendTo",
+      "lbl" : "Append To",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/archive",
+      "lbl" : "Archive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/assignee",
+      "lbl" : "Assignee",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/assigneeOf",
+      "lbl" : "Assignee Of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/assigner",
+      "lbl" : "Assigner",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/assignerOf",
+      "lbl" : "Assigner Of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/attachPolicy",
+      "lbl" : "Attach policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/attachSource",
+      "lbl" : "Attach source",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/attribute",
+      "lbl" : "Attribute",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/attributedParty",
+      "lbl" : "Attributed Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/attributingParty",
+      "lbl" : "Attributing Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/commercialize",
+      "lbl" : "Commercialize",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/compensate",
+      "lbl" : "Compensate",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/compensatedParty",
+      "lbl" : "Compensated Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/compensatingParty",
+      "lbl" : "Compensating Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/concurrentUse",
+      "lbl" : "Concurrent Use",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/conflict",
+      "lbl" : "Handle Policy Conflicts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/consentedParty",
+      "lbl" : "Consented Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/consentingParty",
+      "lbl" : "Consenting Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/consequence",
+      "lbl" : "Consequence",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/contractedParty",
+      "lbl" : "Contracted Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/contractingParty",
+      "lbl" : "Contracting Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/copy",
+      "lbl" : "Copy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/core",
+      "lbl" : "ODRL Core Profile",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/count",
+      "lbl" : "Count",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/dataType",
+      "lbl" : "Datatype",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/dateTime",
+      "lbl" : "Datetime",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/delayPeriod",
+      "lbl" : "Delay Period",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/delete",
+      "lbl" : "Delete",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/deliveryChannel",
+      "lbl" : "Delivery Channel",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/derive",
+      "lbl" : "Derive",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/device",
+      "lbl" : "Device",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/digitize",
+      "lbl" : "Digitize",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/display",
+      "lbl" : "Display",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/distribute",
+      "lbl" : "Distribute",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/elapsedTime",
+      "lbl" : "Elapsed Time",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/ensureExclusivity",
+      "lbl" : "Ensure Exclusivity",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/eq",
+      "lbl" : "Equal to",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/event",
+      "lbl" : "Event",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/execute",
+      "lbl" : "Execute",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/export",
+      "lbl" : "Export",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/extract",
+      "lbl" : "Extract",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/extractChar",
+      "lbl" : "Extract character",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/extractPage",
+      "lbl" : "Extract page",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/extractWord",
+      "lbl" : "Extract word",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/failure",
+      "lbl" : "Failure",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/fileFormat",
+      "lbl" : "File Format",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/function",
+      "lbl" : "Function",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/give",
+      "lbl" : "Give",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/grantUse",
+      "lbl" : "Grant Use",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/gt",
+      "lbl" : "Greater than",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/gteq",
+      "lbl" : "Greater than or equal to",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/hasPart",
+      "lbl" : "Has part",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/ignore",
+      "lbl" : "Ignore Undefined Actions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/implies",
+      "lbl" : "Implies",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/include",
+      "lbl" : "Include",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/index",
+      "lbl" : "Index",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/industry",
+      "lbl" : "Industry Context",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/inform",
+      "lbl" : "Inform",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/informedParty",
+      "lbl" : "Informed Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/informingParty",
+      "lbl" : "Informing Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/inheritAllowed",
+      "lbl" : "Inheritance Allowed",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/inheritFrom",
+      "lbl" : "Inherits From",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/inheritRelation",
+      "lbl" : "Inherit Relation",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/install",
+      "lbl" : "Install",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/invalid",
+      "lbl" : "Void Policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/isA",
+      "lbl" : "Is a",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/isAllOf",
+      "lbl" : "Is all of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/isAnyOf",
+      "lbl" : "Is any of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/isNoneOf",
+      "lbl" : "Is none of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/isPartOf",
+      "lbl" : "Is part of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/language",
+      "lbl" : "Language",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/lease",
+      "lbl" : "Lease",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/leftOperand",
+      "lbl" : "Has Left Operand",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/lend",
+      "lbl" : "Lend",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/license",
+      "lbl" : "License",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/lt",
+      "lbl" : "Less than",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/lteq",
+      "lbl" : "Less than or equal to",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/media",
+      "lbl" : "Media Context",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/meteredTime",
+      "lbl" : "Metered Time",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/modify",
+      "lbl" : "Modify",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/move",
+      "lbl" : "Move",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/neq",
+      "lbl" : "Not equal to",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/nextPolicy",
+      "lbl" : "Next Policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/obtainConsent",
+      "lbl" : "Obtain Consent",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/operand",
+      "lbl" : "Operand",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/operator",
+      "lbl" : "Has Operator",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/or",
+      "lbl" : "Or",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/output",
+      "lbl" : "Output",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/partOf",
+      "lbl" : "Part Of",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/pay",
+      "lbl" : "Pay",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/payAmount",
+      "lbl" : "Payment Amount",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/payeeParty",
+      "lbl" : "Payee Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/percentage",
+      "lbl" : "Asset Percentage",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/perm",
+      "lbl" : "Prefer Permissions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/play",
+      "lbl" : "Play",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/policyUsage",
+      "lbl" : "Policy Rule Usage",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/present",
+      "lbl" : "Present",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/preview",
+      "lbl" : "Preview",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/print",
+      "lbl" : "Print",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/product",
+      "lbl" : "Product Context",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/profile",
+      "lbl" : "Profile",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/prohibit",
+      "lbl" : "Prefer Prohibitions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/proximity",
+      "lbl" : "proximity",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/purpose",
+      "lbl" : "Purpose",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/read",
+      "lbl" : "Read",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/recipient",
+      "lbl" : "Recipient",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/refinement",
+      "lbl" : "Refinement",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/relativePosition",
+      "lbl" : "Relative Asset Position",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/relativeSize",
+      "lbl" : "Relative Asset Size",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/relativeSpatialPosition",
+      "lbl" : "Relative Spatial Asset Position",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/relativeTemporalPosition",
+      "lbl" : "Relative Temporal Asset Position",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/remedy",
+      "lbl" : "Remedy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/reproduce",
+      "lbl" : "Reproduce",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/resolution",
+      "lbl" : "Rendition Resolution",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/reviewPolicy",
+      "lbl" : "Review Policy",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/rightOperand",
+      "lbl" : "Has Right Operand",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/rightOperandReference",
+      "lbl" : "Has Right Operand Reference",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/scope",
+      "lbl" : "Scope",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/secondaryUse",
+      "lbl" : "Secondary Use",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/sell",
+      "lbl" : "Sell",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/share",
+      "lbl" : "Share",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/shareAlike",
+      "lbl" : "Share-alike",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/source",
+      "lbl" : "Source",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/spatial",
+      "lbl" : "Geospatial Named Area",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/spatialCoordinates",
+      "lbl" : "Geospatial Coordinates",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/status",
+      "lbl" : "Status",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/stream",
+      "lbl" : "Stream",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/support",
+      "lbl" : "Support Undefined Actions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/synchronize",
+      "lbl" : "Synchronize",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/system",
+      "lbl" : "System",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/systemDevice",
+      "lbl" : "System Device",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/textToSpeech",
+      "lbl" : "Text-to-speech",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/timeInterval",
+      "lbl" : "Recurring Time Interval",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/timedCount",
+      "lbl" : "Timed Count",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/trackedParty",
+      "lbl" : "Tracked Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/trackingParty",
+      "lbl" : "Tracking Party",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/transfer",
+      "lbl" : "Transfer Ownership",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/transform",
+      "lbl" : "Transform",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/translate",
+      "lbl" : "Translate",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/uid",
+      "lbl" : "Unique Identifier",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/undefined",
+      "lbl" : "Handle Undefined Term",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/uninstall",
+      "lbl" : "Uninstall",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/unitOfCount",
+      "lbl" : "Unit Of Count",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/use",
+      "lbl" : "Use",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/version",
+      "lbl" : "Version",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/virtualLocation",
+      "lbl" : "Virtual IT Communication Location",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/watermark",
+      "lbl" : "Watermark",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/write",
+      "lbl" : "Write",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/writeTo",
+      "lbl" : "Write to",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/xone",
+      "lbl" : "Only One",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#actionConcepts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#actions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#actionsCommon",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#assetConcepts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#assetParty",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#assetRelations",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#assetRelationsCommon",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#conflictConcepts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#constraintLogicalOperands",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#constraintRelationalOperators",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#constraintRightOpCommon",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#constraints",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#deprecatedTerms",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#duties",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#logicalConstraints",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#partyConcepts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#partyRoles",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#partyRolesCommon",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#permissions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#policyConcepts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#policySubClasses",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#policySubClassesCommon",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#prohibitions",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/#ruleConcepts",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://www.w3.org/ns/prov-o#",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://agbeltran.github.io",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://www.csiro.au",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://jakub.klímek.com/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://w3id.org/people/ralbertoni/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "https://www.w3.org/",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "lbl" : "definition",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/source",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "_:genid2147483685"
+    }, {
+      "id" : "_:genid2147483687"
+    }, {
+      "id" : "_:genid2147483689"
+    }, {
+      "id" : "_:genid2147483691"
+    }, {
+      "id" : "_:genid2147483693"
+    }, {
+      "id" : "_:genid2147483695"
+    }, {
+      "id" : "_:genid2147483697"
+    }, {
+      "id" : "_:genid2147483699"
+    }, {
+      "id" : "_:genid2147483701"
+    }, {
+      "id" : "_:genid2147483703"
+    }, {
+      "id" : "_:genid2147483705"
+    }, {
+      "id" : "_:genid2147483707"
+    }, {
+      "id" : "_:genid2147483709"
+    }, {
+      "id" : "_:genid2147483780"
+    }, {
+      "id" : "_:genid2147483781"
+    }, {
+      "id" : "_:genid2147483782"
+    }, {
+      "id" : "_:genid2147483783"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.org/dc/terms/AgentClass",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    }, {
+      "sub" : "http://purl.org/dc/terms/MediaType",
+      "pred" : "is_a",
+      "obj" : "http://purl.org/dc/terms/MediaTypeOrExtent"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#Catalog",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/dcat#Dataset"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#DataService",
+      "pred" : "is_a",
+      "obj" : "http://purl.org/dc/dcmitype/Service"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#DataService",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/dcat#Resource"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#Dataset",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/dcat#Resource"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#DatasetSeries",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/dcat#Dataset"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Action",
+      "pred" : "is_a",
+      "obj" : "http://schema.org/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Agreement",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Policy"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Duty",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Rule"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Offer",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Policy"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Permission",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Rule"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Prohibition",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Rule"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Set",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Policy"
+    }, {
+      "sub" : "https://w3id.org/quay/AccessDescription",
+      "pred" : "https://w3id.org/quay/authenticationScheme",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/AccessDescription",
+      "pred" : "https://w3id.org/quay/protocol",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/AccessDescription",
+      "pred" : "https://w3id.org/quay/supportedOperation",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/ApiKeyAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/Archived",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/AwsCredentialAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/BasicAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/BestEffort",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/BitTorrentProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/BulkDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/CompleteCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/ContentAddressing",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/DeleteOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/DigitalSignature",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/Distributed",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/EventDrivenDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/FtpProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/GitProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/GpgKeyAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/HashVerification",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/HighAvailability",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/HookProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/HttpProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/IncrementalCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/IpfsProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/ListOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/LocalFilesystemProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/NoAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/NoVerification",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/OAuth2Authentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/PaginatedDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/PeerToPeerDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/PieceVerification",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/VerificationMethod"
+    }, {
+      "sub" : "https://w3id.org/quay/RcloneProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/ReadOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/RealTime",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/ReplicateOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/RsyncProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/S3Protocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/SampleCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/SingleHost",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/ServiceQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/Snapshot",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/SshKeyAuthentication",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/SshProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/StreamingDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/SubsetCoverage",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/SynchronousDelivery",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/Versioned",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "https://w3id.org/quay/WebDavProtocol",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Protocol"
+    }, {
+      "sub" : "https://w3id.org/quay/WriteOperation",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/YieldDescription",
+      "pred" : "https://w3id.org/quay/coverage",
+      "obj" : "https://w3id.org/quay/Coverage"
+    }, {
+      "sub" : "https://w3id.org/quay/YieldDescription",
+      "pred" : "https://w3id.org/quay/deliveryMode",
+      "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/YieldDescription",
+      "pred" : "https://w3id.org/quay/temporalQuality",
+      "obj" : "https://w3id.org/quay/TemporalQuality"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Attribution",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Attribution",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#CommercialUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#CommercialUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#DerivativeWorks",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#DerivativeWorks",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Distribution",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Distribution",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Notice",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Notice",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Reproduction",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Reproduction",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#ShareAlike",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#ShareAlike",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Sharing",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Sharing",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://creativecommons.org/ns#SourceCode",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://creativecommons.org/ns#SourceCode",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://purl.org/dc/terms/Agent",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/terms/AgentClass"
+    }, {
+      "sub" : "http://purl.org/dc/terms/DCMIType",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/DDC",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/IMT",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/LCC",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/LCSH",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/MESH",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/NLM",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/TGN",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://purl.org/dc/terms/UDC",
+      "pred" : "type",
+      "obj" : "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Action",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Agreement",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/All",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/All",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/PartyScope"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/All2ndConnections",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/All2ndConnections",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/PartyScope"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/AllConnections",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/AllConnections",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/PartyScope"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/AllGroups",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/AllGroups",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/PartyScope"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Assertion",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Asset",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/AssetCollection",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/AssetScope",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/ConflictTerm",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Constraint",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Duty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Group",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Group",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/PartyScope"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Individual",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Individual",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/PartyScope"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/LeftOperand",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/LogicalConstraint",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Offer",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Operator",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Party",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/PartyCollection",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/PartyScope",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Permission",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Policy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Privacy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Prohibition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Request",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/RightOperand",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Rule",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Set",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/Ticket",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/UndefinedTerm",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absolutePosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absolutePosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absoluteSize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absoluteSize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absoluteSpatialPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absoluteSpatialPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absoluteTemporalPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/absoluteTemporalPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/acceptTracking",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/acceptTracking",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/action",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/adHocShare",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/adHocShare",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/aggregate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/aggregate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/and",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/andSequence",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/annotate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/annotate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/anonymize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/anonymize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/append",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/append",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/appendTo",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/appendTo",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/archive",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/archive",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/assignee",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/assigneeOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/assigner",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/assignerOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attachPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attachPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attachSource",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attachSource",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attribute",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attribute",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attributedParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attributingParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/commercialize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/commercialize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/compensate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/compensate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/compensatedParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/compensatingParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/concurrentUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/concurrentUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/conflict",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/consentedParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/consentingParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/consequence",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/constraint",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/contractedParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/contractingParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/copy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/copy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/core",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/count",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/count",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/dataType",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/dateTime",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/dateTime",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/delayPeriod",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/delayPeriod",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/delete",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/delete",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/deliveryChannel",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/deliveryChannel",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/derive",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/derive",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/device",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/device",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/digitize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/digitize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/display",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/display",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/distribute",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/distribute",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/duty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/elapsedTime",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/elapsedTime",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/ensureExclusivity",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/ensureExclusivity",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/eq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/eq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/event",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/event",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/execute",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/execute",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/export",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/export",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extract",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extract",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extractChar",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extractChar",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extractPage",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extractPage",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extractWord",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extractWord",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/failure",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/fileFormat",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/fileFormat",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/function",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/give",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/give",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/grantUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/grantUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/gt",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/gt",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/gteq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/gteq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/hasPart",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/hasPart",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/hasPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/ignore",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/ignore",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/UndefinedTerm"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/implies",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/include",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/include",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/index",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/index",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/industry",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/industry",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/inform",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/inform",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/informedParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/informingParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/inheritAllowed",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/inheritFrom",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/inheritRelation",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/install",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/install",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/invalid",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/invalid",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/ConflictTerm"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isA",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isA",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isAllOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isAllOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isAnyOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isAnyOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isNoneOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isNoneOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isPartOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/isPartOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/language",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/language",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lease",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lease",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/leftOperand",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lend",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lend",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/license",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/license",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lt",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lt",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lteq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/lteq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/media",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/media",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/meteredTime",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/meteredTime",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/modify",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/modify",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/move",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/move",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/neq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/neq",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Operator"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/nextPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/nextPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/obligation",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/obtainConsent",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/obtainConsent",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/operand",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/operator",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/or",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/output",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/partOf",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/pay",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/pay",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/payAmount",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/payAmount",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/payeeParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/percentage",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/percentage",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/perm",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/perm",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/ConflictTerm"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/permission",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/play",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/play",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/policyUsage",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/policyUsage",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/RightOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/present",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/present",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/preview",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/preview",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/print",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/print",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/product",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/product",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/profile",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/prohibit",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/prohibit",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/ConflictTerm"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/prohibition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/proximity",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/purpose",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/purpose",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/read",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/read",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/recipient",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/recipient",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/refinement",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relation",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativePosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativePosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativeSize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativeSize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativeSpatialPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativeSpatialPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativeTemporalPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/relativeTemporalPosition",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/remedy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/reproduce",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/reproduce",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/resolution",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/resolution",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/reviewPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/reviewPolicy",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/rightOperand",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/rightOperandReference",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/scope",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/secondaryUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/secondaryUse",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/sell",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/sell",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/share",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/share",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/shareAlike",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/shareAlike",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/source",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/spatial",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/spatial",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/spatialCoordinates",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/spatialCoordinates",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/status",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/stream",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/stream",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/support",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/support",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/UndefinedTerm"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/synchronize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/synchronize",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/system",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/system",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/systemDevice",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/systemDevice",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/target",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/textToSpeech",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/textToSpeech",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/timeInterval",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/timeInterval",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/timedCount",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/trackedParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/trackingParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/transfer",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/transfer",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/transform",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/transform",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/translate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/translate",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/uid",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/undefined",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/uninstall",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/uninstall",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/unitOfCount",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/unitOfCount",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/use",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/use",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/version",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/version",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/virtualLocation",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/virtualLocation",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/LeftOperand"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/watermark",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/watermark",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/write",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/write",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/writeTo",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/writeTo",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/xone",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#actionConcepts",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#actions",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#actionsCommon",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#assetConcepts",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#assetParty",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#assetRelations",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#assetRelationsCommon",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#conflictConcepts",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#constraintLogicalOperands",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#constraintRelationalOperators",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#constraintRightOpCommon",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#constraints",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#deprecatedTerms",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#duties",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#logicalConstraints",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#partyConcepts",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#partyRoles",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#partyRolesCommon",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#permissions",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#policyConcepts",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#policySubClasses",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#policySubClassesCommon",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#prohibitions",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/#ruleConcepts",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/2004/02/skos/core#Collection"
+    }, {
+      "sub" : "_:genid2147483685",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483687",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483689",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483691",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483693",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483695",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483697",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483699",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483701",
+      "pred" : "type",
+      "obj" : "http://www.w3.org/ns/org#Organization"
+    }, {
+      "sub" : "_:genid2147483703",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483705",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483707",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "_:genid2147483709",
+      "pred" : "type",
+      "obj" : "http://xmlns.com/foaf/0.1/Person"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Attribution",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#CommercialUse",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#DerivativeWorks",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Distribution",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Notice",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Reproduction",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#ShareAlike",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#Sharing",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://creativecommons.org/ns#SourceCode",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat",
+      "pred" : "http://www.w3.org/ns/dcat#hasCurrentVersion",
+      "obj" : "http://www.w3.org/ns/dcat3"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat",
+      "pred" : "http://www.w3.org/ns/dcat#hasVersion",
+      "obj" : "http://www.w3.org/ns/dcat2"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat",
+      "pred" : "http://www.w3.org/ns/dcat#hasVersion",
+      "obj" : "http://www.w3.org/ns/dcat2014"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat",
+      "pred" : "http://www.w3.org/ns/dcat#hasVersion",
+      "obj" : "http://www.w3.org/ns/dcat3"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat",
+      "pred" : "http://www.w3.org/ns/dcat#previousVersion",
+      "obj" : "http://www.w3.org/ns/dcat2"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/acceptTracking",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/aggregate",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/annotate",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/anonymize",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/archive",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/attribute",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/compensate",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/concurrentUse",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/delete",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/derive",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/digitize",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/display",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/play"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/distribute",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/ensureExclusivity",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/execute",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/extract",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/reproduce"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/give",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/transfer"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/grantUse",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/include",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/index",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/inform",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/install",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/modify",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/move",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/nextPolicy",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/obtainConsent",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/play",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/present",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/print",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/read",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/reproduce",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/reviewPolicy",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/sell",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/transfer"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/stream",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/synchronize",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/textToSpeech",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/transform",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/translate",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/uninstall",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/watermark",
+      "pred" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "obj" : "http://www.w3.org/ns/odrl/2/use"
+    }, {
+      "sub" : "http://www.w3.org/ns/prov-o#",
+      "pred" : "http://www.w3.org/ns/prov#specializationOf",
+      "obj" : "http://www.w3.org/ns/prov-o"
+    }, {
+      "sub" : "http://www.w3.org/ns/prov-o#",
+      "pred" : "http://www.w3.org/ns/prov#wasRevisionOf",
+      "obj" : "http://www.w3.org/ns/prov-o-20130312"
+    }, {
+      "sub" : "_:genid2147483699",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "http://makxdekkers.com/"
+    }, {
+      "sub" : "_:genid2147483701",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "https://www.w3.org/"
+    }, {
+      "sub" : "_:genid2147483703",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "https://w3id.org/people/ralbertoni/"
+    }, {
+      "sub" : "_:genid2147483705",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "https://agbeltran.github.io"
+    }, {
+      "sub" : "_:genid2147483707",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "http://www.asahi-net.or.jp/~ax2s-kmtn/"
+    }, {
+      "sub" : "_:genid2147483709",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "https://jakub.klímek.com/"
+    }, {
+      "sub" : "_:genid2147483780",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "http://ec.europa.eu/dgs/informatics/"
+    }, {
+      "sub" : "_:genid2147483781",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "http://stfc.ac.uk"
+    }, {
+      "sub" : "_:genid2147483782",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "https://www.csiro.au"
+    }, {
+      "sub" : "_:genid2147483783",
+      "pred" : "http://xmlns.com/foaf/0.1/homepage",
+      "obj" : "http://www.deri.ie/"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#catalog",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/dcat#resource"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#dataset",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/dcat#resource"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#hasCurrentVersion",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.org/pav/hasVersion"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#hasVersion",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/prov#generalizationOf"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#previousVersion",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/prov#wasRevisionOf"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#service",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/dcat#resource"
+    }, {
+      "sub" : "http://www.w3.org/ns/odrl/2/target",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/odrl/2/relation"
+    }, {
+      "sub" : "http://www.w3.org/ns/prov#specializationOf",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/prov#alternateOf"
+    }, {
+      "sub" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/prov#wasInfluencedBy"
+    }, {
+      "sub" : "http://www.w3.org/ns/prov#wasRevisionOf",
+      "pred" : "subPropertyOf",
+      "obj" : "http://www.w3.org/ns/prov#wasDerivedFrom"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#distribution",
+      "pred" : "inverseOf",
+      "obj" : "http://www.w3.org/ns/dcat#isDistributionOf"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#hasVersion",
+      "pred" : "inverseOf",
+      "obj" : "http://www.w3.org/ns/dcat#isVersionOf"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#inCatalog",
+      "pred" : "inverseOf",
+      "obj" : "http://www.w3.org/ns/dcat#resource"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#inSeries",
+      "pred" : "inverseOf",
+      "obj" : "http://www.w3.org/ns/dcat#seriesMember"
+    }, {
+      "sub" : "http://www.w3.org/ns/dcat#nextVersion",
+      "pred" : "inverseOf",
+      "obj" : "http://www.w3.org/ns/dcat#previousVersion"
+    }, {
+      "sub" : "http://www.w3.org/ns/prov#influenced",
+      "pred" : "inverseOf",
+      "obj" : "http://www.w3.org/ns/prov#wasInfluencedBy"
+    } ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "http://www.w3.org/ns/dcat#accessURL",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "http://www.w3.org/2000/01/rdf-schema#Resource" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#catalog",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Catalog" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#Catalog" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#compressFormat",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "http://purl.org/dc/terms/MediaType" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#dataset",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Catalog" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#Dataset" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#distribution",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Dataset" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#downloadURL",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "http://www.w3.org/2000/01/rdf-schema#Resource" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#endpointDescription",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#DataService" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#endpointURL",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#DataService" ],
+      "rangeClassIds" : [ "http://www.w3.org/2000/01/rdf-schema#Resource" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#mediaType",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "http://purl.org/dc/terms/MediaType" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#packageFormat",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "http://purl.org/dc/terms/MediaType" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#resource",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Catalog" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#Resource" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#servesDataset",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#DataService" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#Dataset" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#service",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Catalog" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#DataService" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/duty",
+      "domainClassIds" : [ "http://www.w3.org/ns/odrl/2/Permission" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Duty" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/hasPolicy",
+      "domainClassIds" : [ "http://www.w3.org/ns/odrl/2/Asset" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Policy" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/includedIn",
+      "domainClassIds" : [ "http://www.w3.org/ns/odrl/2/Action" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Action" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/obligation",
+      "domainClassIds" : [ "http://www.w3.org/ns/odrl/2/Policy" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Duty" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/permission",
+      "domainClassIds" : [ "http://www.w3.org/ns/odrl/2/Policy" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Permission" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/prohibition",
+      "domainClassIds" : [ "http://www.w3.org/ns/odrl/2/Policy" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Prohibition" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/prov#alternateOf",
+      "domainClassIds" : [ "http://www.w3.org/ns/prov#Entity" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/prov#Entity" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/prov#specializationOf",
+      "domainClassIds" : [ "http://www.w3.org/ns/prov#Entity" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "domainClassIds" : [ "http://www.w3.org/ns/prov#Entity" ],
+      "rangeClassIds" : [ "http://www.w3.org/ns/prov#Entity" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/prov#wasRevisionOf",
+      "domainClassIds" : [ "http://www.w3.org/ns/prov#Entity" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/accessDescription",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/AccessDescription" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/authenticationScheme",
+      "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/AuthenticationScheme" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/coverage",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/Coverage" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/deliveryMode",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/DeliveryMode" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/protocol",
+      "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/Protocol" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/serviceQuality",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/ServiceQuality" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/supportedOperation",
+      "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/Operation" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/temporalQuality",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/TemporalQuality" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/verificationMethod",
+      "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/VerificationMethod" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/yieldDescription",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/YieldDescription" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#accessService",
+      "rangeClassIds" : [ "http://www.w3.org/ns/dcat#DataService" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/dcat#contactPoint",
+      "rangeClassIds" : [ "http://www.w3.org/2006/vcard/ns#Kind" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/action",
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Action" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/relation",
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Asset" ]
+    }, {
+      "predicateId" : "http://www.w3.org/ns/odrl/2/target",
+      "rangeClassIds" : [ "http://www.w3.org/ns/odrl/2/Asset" ]
+    } ],
+    "propertyChainAxioms" : [ {
+      "predicateId" : "http://www.w3.org/ns/dcat#accessURL",
+      "chainPredicateIds" : [ "http://www.w3.org/ns/dcat#accessService", "http://www.w3.org/ns/dcat#endpointURL" ]
+    } ]
+  } ]
+}
