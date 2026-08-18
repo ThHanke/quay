@@ -1,8 +1,9 @@
 <https://w3id.org/quay/quay-full.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/quay/releases/2026-08-18/quay-full.owl> .
+<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/quay/0.0.1> .
 <https://w3id.org/quay/quay-full.owl> <http://purl.org/dc/terms/description> "A DCAT Profile for Data Access, Storage and Authorization Metadata." .
 <https://w3id.org/quay/quay-full.owl> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/quay/quay-full.owl> <http://purl.org/dc/terms/title> "QUAY: Qualified Usage, Access and Yield" .
+<https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 <https://w3id.org/quay/quay-full.owl> <http://www.w3.org/2002/07/owl#versionInfo> "2026-08-18" .
 # 
 # 
@@ -2028,10 +2029,10 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/fo
 _:genid24 <http://xmlns.com/foaf/0.1/homepage> <http://www.asahi-net.or.jp/~ax2s-kmtn/> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 _:genid25 <http://xmlns.com/foaf/0.1/homepage> <https://jakub.klímek.com/> .
-_:genid26 <http://xmlns.com/foaf/0.1/homepage> <http://www.deri.ie/> .
-_:genid27 <http://xmlns.com/foaf/0.1/homepage> <http://ec.europa.eu/dgs/informatics/> .
-_:genid28 <http://xmlns.com/foaf/0.1/homepage> <http://stfc.ac.uk> .
-_:genid29 <http://xmlns.com/foaf/0.1/homepage> <https://www.csiro.au> .
+_:genid26 <http://xmlns.com/foaf/0.1/homepage> <https://www.csiro.au> .
+_:genid27 <http://xmlns.com/foaf/0.1/homepage> <http://stfc.ac.uk> .
+_:genid28 <http://xmlns.com/foaf/0.1/homepage> <http://ec.europa.eu/dgs/informatics/> .
+_:genid29 <http://xmlns.com/foaf/0.1/homepage> <http://www.deri.ie/> .
 # 
 # 
 # #################################################################

@@ -14,10 +14,11 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/quay/quay-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/quay/releases/2026-08-18/quay-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/quay/0.0.1"/>
         <terms:description>A DCAT Profile for Data Access, Storage and Authorization Metadata.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title>QUAY: Qualified Usage, Access and Yield</terms:title>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
         <owl:versionInfo>2026-08-18</owl:versionInfo>
     </owl:Ontology>
     
@@ -3723,16 +3724,16 @@
         <foaf:homepage rdf:resource="https://jakub.klímek.com/"/>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.deri.ie/"/>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+        <foaf:homepage rdf:resource="https://www.csiro.au"/>
     </rdf:Description>
     <rdf:Description>
         <foaf:homepage rdf:resource="http://stfc.ac.uk"/>
     </rdf:Description>
     <rdf:Description>
-        <foaf:homepage rdf:resource="https://www.csiro.au"/>
+        <foaf:homepage rdf:resource="http://ec.europa.eu/dgs/informatics/"/>
+    </rdf:Description>
+    <rdf:Description>
+        <foaf:homepage rdf:resource="http://www.deri.ie/"/>
     </rdf:Description>
     
 

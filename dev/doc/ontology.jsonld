@@ -155,22 +155,22 @@
 }, {
   "@id" : "_:genid26",
   "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://www.deri.ie/"
+    "@id" : "https://www.csiro.au"
   } ]
 }, {
   "@id" : "_:genid27",
   "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://ec.europa.eu/dgs/informatics/"
+    "@id" : "http://stfc.ac.uk"
   } ]
 }, {
   "@id" : "_:genid28",
   "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://stfc.ac.uk"
+    "@id" : "http://ec.europa.eu/dgs/informatics/"
   } ]
 }, {
   "@id" : "_:genid29",
   "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://www.csiro.au"
+    "@id" : "http://www.deri.ie/"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -4080,9 +4080,11 @@
     "@value" : "QUAY: Qualified Usage, Access and Yield"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/quay/releases/2026-08-18/quay-full.owl"
+    "@id" : "https://w3id.org/quay/0.0.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  }, {
     "@value" : "2026-08-18"
   } ]
 }, {
