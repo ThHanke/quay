@@ -3,6 +3,11 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+# Skip ID range validation — QUAY uses human-readable IRIs, not numeric ranges.
+.PHONY: validate_idranges
+validate_idranges:
+	@echo "Skipping ID range validation (QUAY uses human-readable IRIs)"
+
 # Skip OWL 2 DL profile validation — DCAT and dcterms contain OWL Full
 # constructs (property punning, rdfs:Resource ranges) that are not DL-compliant.
 $(REPORTDIR)/validate_profile_owl2dl_%.txt: % | $(REPORTDIR) $(TMPDIR)
