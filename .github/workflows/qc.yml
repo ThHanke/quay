@@ -330,10 +330,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git add src/ontology/*.owl       || true
-          git add src/ontology/*.ttl       || true
-          git add src/ontology/*.json      || true
-          git add src/ontology/imports/*.owl || true
+          git add -f src/ontology/*.owl       || true
+          git add -f src/ontology/*.ttl       || true
+          git add -f src/ontology/*.json      || true
+          git add -f src/ontology/imports/*.owl || true
 
       - name: Commit ontology release assets
         run: |
