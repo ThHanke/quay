@@ -20,11 +20,12 @@
 @base <https://w3id.org/quay.ttl> .
 
 <https://w3id.org/quay.ttl> rdf:type owl:Ontology ;
-                             owl:versionIRI <https://w3id.org/quay/releases/2026-08-18/quay.ttl> ;
+                             owl:versionIRI <https://w3id.org/quay/0.0.1> ;
                              dcterms:description "A DCAT Profile for Data Access, Storage and Authorization Metadata." ;
                              dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                              dcterms:title "QUAY: Qualified Usage, Access and Yield" ;
-                             owl:versionInfo "2026-08-18" .
+                             owl:versionInfo "0.0.1" ,
+                                             "2026-08-18" .
 
 #################################################################
 #    Annotation properties
@@ -2378,9 +2379,6 @@ odrl:writeTo rdf:type owl:NamedIndividual ,
    foaf:homepage <https://jakub.klímek.com/>
  ] .
 
-[ foaf:homepage <https://www.csiro.au>
- ] .
-
 [ foaf:homepage <http://stfc.ac.uk>
  ] .
 
@@ -2388,6 +2386,9 @@ odrl:writeTo rdf:type owl:NamedIndividual ,
  ] .
 
 [ foaf:homepage <http://www.deri.ie/>
+ ] .
+
+[ foaf:homepage <https://www.csiro.au>
  ] .
 
 #################################################################
