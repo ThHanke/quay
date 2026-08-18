@@ -19,7 +19,7 @@ ex:git-lfs-distribution a dcat:Distribution ;
     dcat:accessURL <https://github.com/org/data-repo.git> ;
     quay:accessDescription ex:git-lfs-access ;
     quay:yieldDescription ex:git-lfs-yield ;
-    quay:encryptionInTransit "TLS 1.2" ;
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:git-lfs-access a quay:AccessDescription ;

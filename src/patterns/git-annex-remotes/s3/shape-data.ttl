@@ -19,8 +19,9 @@ ex:s3-distribution a dcat:Distribution ;
     dcat:accessURL <s3://research-data-bucket/> ;
     quay:accessDescription ex:s3-access ;
     quay:yieldDescription ex:s3-yield ;
-    quay:encryptionAtRest "AES-256" ;
-    quay:encryptionInTransit "TLS 1.2" ;
+    quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
+    quay:retentionPeriod "P5Y"^^xsd:duration ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:s3-access a quay:AccessDescription ;
@@ -36,4 +37,6 @@ ex:s3-yield a quay:YieldDescription ;
     quay:temporalQuality [ a quay:Snapshot ] ;
     quay:coverage [ a quay:CompleteCoverage ] ;
     quay:serviceQuality [ a quay:HighAvailability ] ;
-    quay:verificationMethod [ a quay:HashVerification ] .
+    quay:verificationMethod [ a quay:HashVerification ] ;
+    quay:uptimePercentage "99.95"^^xsd:decimal ;
+    quay:replicationFactor "3"^^xsd:nonNegativeInteger .

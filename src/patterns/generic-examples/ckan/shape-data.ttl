@@ -24,7 +24,7 @@ ex:ckan-distribution a dcat:Distribution ;
     dcat:mediaType "application/json" ;
     quay:accessDescription ex:ckan-access ;
     quay:yieldDescription ex:ckan-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
 
 ex:ckan-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;

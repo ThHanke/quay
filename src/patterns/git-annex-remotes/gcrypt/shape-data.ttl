@@ -19,8 +19,8 @@ ex:gcrypt-distribution a dcat:Distribution ;
     dcat:accessURL <gcrypt::ssh://storage@untrusted-host.example.org/srv/encrypted-repo> ;
     quay:accessDescription ex:gcrypt-access ;
     quay:yieldDescription ex:gcrypt-yield ;
-    quay:encryptionAtRest "GPG" ;
-    quay:encryptionInTransit "SSH" ;
+    quay:encryptionAtRest [ a quay:GpgEncryption ] ;
+    quay:encryptionInTransit [ a quay:SshEncryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:gcrypt-access a quay:AccessDescription ;

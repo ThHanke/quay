@@ -18,7 +18,7 @@ ex:rclone-distribution a dcat:Distribution ;
     dcterms:title "Rclone remote distribution" ;
     quay:accessDescription ex:rclone-access ;
     quay:yieldDescription ex:rclone-yield ;
-    quay:encryptionInTransit "TLS" ;
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:rclone-access a quay:AccessDescription ;

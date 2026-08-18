@@ -23,7 +23,7 @@ ex:postgresql-distribution a dcat:Distribution ;
     dcat:accessService ex:postgresql-service ;
     quay:accessDescription ex:postgresql-access ;
     quay:yieldDescription ex:postgresql-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
 
 ex:postgresql-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;

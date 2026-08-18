@@ -24,6 +24,25 @@ quay:DistributionShape a sh:NodeShape ;
         sh:minCount 1 ;
         sh:name "yield description" ;
         sh:message "Distribution must have at least one yield description."
+    ] ;
+    sh:property [
+        sh:path quay:encryptionAtRest ;
+        sh:class quay:EncryptionAlgorithm ;
+        sh:name "encryption at rest" ;
+        sh:message "encryptionAtRest must reference an EncryptionAlgorithm."
+    ] ;
+    sh:property [
+        sh:path quay:encryptionInTransit ;
+        sh:class quay:EncryptionAlgorithm ;
+        sh:name "encryption in transit" ;
+        sh:message "encryptionInTransit must reference an EncryptionAlgorithm."
+    ] ;
+    sh:property [
+        sh:path quay:retentionPeriod ;
+        sh:datatype xsd:duration ;
+        sh:maxCount 1 ;
+        sh:name "retention period" ;
+        sh:message "retentionPeriod must be an xsd:duration."
     ] .
 
 # --- AccessDescription Shape ---
@@ -87,4 +106,59 @@ quay:YieldDescriptionShape a sh:NodeShape ;
         sh:maxCount 1 ;
         sh:name "verification method" ;
         sh:message "YieldDescription must have at most one verification method."
+    ] ;
+    sh:property [
+        sh:path quay:uptimePercentage ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:name "uptime percentage" ;
+        sh:message "uptimePercentage must be an xsd:decimal."
+    ] ;
+    sh:property [
+        sh:path quay:recoveryTimeObjective ;
+        sh:datatype xsd:duration ;
+        sh:maxCount 1 ;
+        sh:name "recovery time objective" ;
+        sh:message "recoveryTimeObjective must be an xsd:duration."
+    ] ;
+    sh:property [
+        sh:path quay:recoveryPointObjective ;
+        sh:datatype xsd:duration ;
+        sh:maxCount 1 ;
+        sh:name "recovery point objective" ;
+        sh:message "recoveryPointObjective must be an xsd:duration."
+    ] ;
+    sh:property [
+        sh:path quay:replicationFactor ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:maxCount 1 ;
+        sh:name "replication factor" ;
+        sh:message "replicationFactor must be an xsd:nonNegativeInteger."
+    ] .
+
+# --- AccessDescription extended constraints ---
+# Rate limit, quota, and cost properties
+
+quay:AccessDescriptionExtendedShape a sh:NodeShape ;
+    sh:targetClass quay:AccessDescription ;
+    sh:property [
+        sh:path quay:rateLimit ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:maxCount 1 ;
+        sh:name "rate limit" ;
+        sh:message "rateLimit must be an xsd:nonNegativeInteger."
+    ] ;
+    sh:property [
+        sh:path quay:quotaLimit ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:name "quota limit" ;
+        sh:message "quotaLimit must be an xsd:string."
+    ] ;
+    sh:property [
+        sh:path quay:costDescription ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:name "cost description" ;
+        sh:message "costDescription must be an xsd:string."
     ] .

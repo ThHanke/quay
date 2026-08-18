@@ -24,13 +24,16 @@ ex:rest-api-distribution a dcat:Distribution ;
     dcat:mediaType "application/json" ;
     quay:accessDescription ex:rest-api-access ;
     quay:yieldDescription ex:rest-api-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
+    dcterms:conformsTo <https://api.airquality.gov/v2/openapi.json> .
 
 ex:rest-api-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
     quay:authenticationScheme [ a quay:OAuth2Authentication ] ;
     quay:supportedOperation [ a quay:ReadOperation ] ;
-    quay:supportedOperation [ a quay:ListOperation ] .
+    quay:supportedOperation [ a quay:ListOperation ] ;
+    quay:rateLimit "1000"^^xsd:nonNegativeInteger ;
+    quay:costDescription "free" .
 
 ex:rest-api-yield a quay:YieldDescription ;
     quay:deliveryMode [ a quay:PaginatedDelivery ] ;

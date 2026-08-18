@@ -19,7 +19,7 @@ ex:rsync-distribution a dcat:Distribution ;
     dcat:accessURL <rsync://backup-host.example.org/annex/> ;
     quay:accessDescription ex:rsync-access ;
     quay:yieldDescription ex:rsync-yield ;
-    quay:encryptionInTransit "SSH" ;
+    quay:encryptionInTransit [ a quay:SshEncryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:rsync-access a quay:AccessDescription ;

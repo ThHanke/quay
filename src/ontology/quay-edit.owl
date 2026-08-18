@@ -18,6 +18,135 @@ Annotation(dcterms:description "A DCAT Profile for Data Access, Storage and Auth
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "QUAY: Qualified Usage, Access and Yield")
 
+############################
+#   Declarations
+############################
+
+# Core Qualification Classes
+Declaration(Class(:AccessDescription))
+Declaration(Class(:YieldDescription))
+
+# Protocol Hierarchy
+Declaration(Class(:Protocol))
+Declaration(Class(:HttpProtocol))
+Declaration(Class(:S3Protocol))
+Declaration(Class(:RsyncProtocol))
+Declaration(Class(:WebDavProtocol))
+Declaration(Class(:SshProtocol))
+Declaration(Class(:BitTorrentProtocol))
+Declaration(Class(:IpfsProtocol))
+Declaration(Class(:LocalFilesystemProtocol))
+Declaration(Class(:RcloneProtocol))
+Declaration(Class(:FtpProtocol))
+Declaration(Class(:GitProtocol))
+
+# Authentication Scheme Hierarchy
+Declaration(Class(:AuthenticationScheme))
+Declaration(Class(:NoAuthentication))
+Declaration(Class(:ApiKeyAuthentication))
+Declaration(Class(:OAuth2Authentication))
+Declaration(Class(:BasicAuthentication))
+Declaration(Class(:SshKeyAuthentication))
+Declaration(Class(:GpgKeyAuthentication))
+Declaration(Class(:AwsCredentialAuthentication))
+
+# Operation Hierarchy
+Declaration(Class(:ReadOperation))
+Declaration(Class(:WriteOperation))
+Declaration(Class(:DeleteOperation))
+Declaration(Class(:ListOperation))
+Declaration(Class(:ReplicateOperation))
+Declaration(Class(:Operation))
+
+# Yield: Delivery Mode
+Declaration(Class(:DeliveryMode))
+Declaration(Class(:BulkDelivery))
+Declaration(Class(:StreamingDelivery))
+Declaration(Class(:PaginatedDelivery))
+Declaration(Class(:EventDrivenDelivery))
+
+# Yield: Temporal Quality
+Declaration(Class(:TemporalQuality))
+Declaration(Class(:RealTime))
+Declaration(Class(:Snapshot))
+Declaration(Class(:Archived))
+Declaration(Class(:Versioned))
+
+# Yield: Coverage
+Declaration(Class(:Coverage))
+Declaration(Class(:CompleteCoverage))
+Declaration(Class(:SubsetCoverage))
+Declaration(Class(:SampleCoverage))
+Declaration(Class(:IncrementalCoverage))
+
+# Yield: Service Quality & Verification
+Declaration(Class(:ServiceQuality))
+Declaration(Class(:VerificationMethod))
+
+# Delivery Mode additions
+Declaration(Class(:SynchronousDelivery))
+Declaration(Class(:PeerToPeerDelivery))
+
+# Service Quality subclasses
+Declaration(Class(:HighAvailability))
+Declaration(Class(:BestEffort))
+Declaration(Class(:SingleHost))
+Declaration(Class(:Distributed))
+
+# Verification Method subclasses
+Declaration(Class(:HashVerification))
+Declaration(Class(:ContentAddressing))
+Declaration(Class(:PieceVerification))
+Declaration(Class(:DigitalSignature))
+Declaration(Class(:NoVerification))
+
+# Protocol addition
+Declaration(Class(:HookProtocol))
+
+# Object Properties
+Declaration(ObjectProperty(:accessDescription))
+Declaration(ObjectProperty(:yieldDescription))
+Declaration(ObjectProperty(:protocol))
+Declaration(ObjectProperty(:authenticationScheme))
+Declaration(ObjectProperty(:supportedOperation))
+Declaration(ObjectProperty(:deliveryMode))
+Declaration(ObjectProperty(:temporalQuality))
+Declaration(ObjectProperty(:coverage))
+Declaration(ObjectProperty(:serviceQuality))
+Declaration(ObjectProperty(:verificationMethod))
+
+# Encryption Algorithm Hierarchy
+Declaration(Class(:EncryptionAlgorithm))
+Declaration(Class(:Aes256Encryption))
+Declaration(Class(:Aes128Encryption))
+Declaration(Class(:GpgEncryption))
+Declaration(Class(:Tls13Encryption))
+Declaration(Class(:Tls12Encryption))
+Declaration(Class(:SshEncryption))
+Declaration(Class(:NoEncryption))
+
+# Encryption Object Properties (formerly Datatype Properties)
+Declaration(ObjectProperty(:encryptionAtRest))
+Declaration(ObjectProperty(:encryptionInTransit))
+
+# Service Quality Data Properties
+Declaration(DataProperty(:uptimePercentage))
+Declaration(DataProperty(:recoveryTimeObjective))
+Declaration(DataProperty(:recoveryPointObjective))
+Declaration(DataProperty(:replicationFactor))
+
+# Access Constraint Data Properties
+Declaration(DataProperty(:rateLimit))
+Declaration(DataProperty(:quotaLimit))
+Declaration(DataProperty(:costDescription))
+
+# Storage Jurisdiction
+Declaration(ObjectProperty(:storageJurisdiction))
+
+# Retention
+Declaration(DataProperty(:retentionPeriod))
+
+# SPDX Checksum (external declarations for DCAT 3 interoperability)
 Declaration(Class(spdx:Checksum))
 Declaration(Class(<https://w3id.org/quay/AccessDescription>))
 Declaration(Class(<https://w3id.org/quay/ApiKeyAuthentication>))
@@ -118,6 +247,23 @@ AnnotationAssertion(rdfs:label dcterms:license "license")
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
 
+# Encryption Algorithm
+AnnotationAssertion(rdfs:label :EncryptionAlgorithm "Encryption Algorithm")
+AnnotationAssertion(rdfs:label :Aes256Encryption "AES-256 Encryption")
+AnnotationAssertion(rdfs:comment :Aes256Encryption "256-bit Advanced Encryption Standard.")
+AnnotationAssertion(rdfs:label :Aes128Encryption "AES-128 Encryption")
+AnnotationAssertion(rdfs:comment :Aes128Encryption "128-bit Advanced Encryption Standard.")
+AnnotationAssertion(rdfs:label :GpgEncryption "GPG Encryption")
+AnnotationAssertion(rdfs:comment :GpgEncryption "GNU Privacy Guard / OpenPGP encryption.")
+AnnotationAssertion(rdfs:label :Tls13Encryption "TLS 1.3 Encryption")
+AnnotationAssertion(rdfs:comment :Tls13Encryption "Transport Layer Security version 1.3.")
+AnnotationAssertion(rdfs:label :Tls12Encryption "TLS 1.2 Encryption")
+AnnotationAssertion(rdfs:comment :Tls12Encryption "Transport Layer Security version 1.2.")
+AnnotationAssertion(rdfs:label :SshEncryption "SSH Encryption")
+AnnotationAssertion(rdfs:comment :SshEncryption "Secure Shell encrypted transport.")
+AnnotationAssertion(rdfs:label :NoEncryption "No Encryption")
+AnnotationAssertion(rdfs:comment :NoEncryption "No encryption applied.")
+
 ############################
 #   Object Properties
 ############################
@@ -157,6 +303,38 @@ AnnotationAssertion(rdfs:label <https://w3id.org/quay/protocol> "protocol")
 ObjectPropertyDomain(<https://w3id.org/quay/protocol> <https://w3id.org/quay/AccessDescription>)
 ObjectPropertyRange(<https://w3id.org/quay/protocol> <https://w3id.org/quay/Protocol>)
 
+
+# Encryption Algorithm hierarchy
+AnnotationAssertion(obo:IAO_0000115 :EncryptionAlgorithm "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit.")
+AnnotationAssertion(obo:IAO_0000115 :Aes256Encryption "Encryption using the Advanced Encryption Standard with a 256-bit key.")
+AnnotationAssertion(obo:IAO_0000115 :Aes128Encryption "Encryption using the Advanced Encryption Standard with a 128-bit key.")
+AnnotationAssertion(obo:IAO_0000115 :GpgEncryption "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard.")
+AnnotationAssertion(obo:IAO_0000115 :Tls13Encryption "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446.")
+AnnotationAssertion(obo:IAO_0000115 :Tls12Encryption "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246.")
+AnnotationAssertion(obo:IAO_0000115 :SshEncryption "Encryption using the Secure Shell protocol for transport-layer data protection.")
+AnnotationAssertion(obo:IAO_0000115 :NoEncryption "Designation indicating that no encryption is applied to the data.")
+
+# Object Properties — encryption
+AnnotationAssertion(obo:IAO_0000115 :encryptionAtRest "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend.")
+AnnotationAssertion(obo:IAO_0000115 :encryptionInTransit "Relates a distribution to the encryption protocol applied to data during transfer between client and server.")
+
+# Object Properties — storage jurisdiction
+AnnotationAssertion(obo:IAO_0000115 :storageJurisdiction "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored.")
+
+# Datatype Properties — service quality metrics
+AnnotationAssertion(obo:IAO_0000115 :uptimePercentage "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100.")
+AnnotationAssertion(obo:IAO_0000115 :recoveryTimeObjective "Maximum acceptable duration to restore service after a disruption.")
+AnnotationAssertion(obo:IAO_0000115 :recoveryPointObjective "Maximum acceptable duration of data loss measured as a time window before the disruption.")
+AnnotationAssertion(obo:IAO_0000115 :replicationFactor "Number of independent copies of the data maintained across storage nodes.")
+
+# Datatype Properties — access constraints
+AnnotationAssertion(obo:IAO_0000115 :rateLimit "Maximum number of requests permitted within a time window.")
+AnnotationAssertion(obo:IAO_0000115 :quotaLimit "Usage quota describing the maximum allowed consumption of the service.")
+AnnotationAssertion(obo:IAO_0000115 :costDescription "Human-readable description of the cost or pricing model for accessing the distribution.")
+
+# Datatype Properties — retention
+AnnotationAssertion(obo:IAO_0000115 :retentionPeriod "Duration for which data is guaranteed to be retained before deletion or archival.")
+
 # Object Property: <https://w3id.org/quay/serviceQuality> (service quality)
 
 AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/serviceQuality> "Relates a yield description to the reliability and availability characterisation of the service.")
@@ -192,6 +370,77 @@ AnnotationAssertion(rdfs:label <https://w3id.org/quay/yieldDescription> "yield d
 ObjectPropertyDomain(<https://w3id.org/quay/yieldDescription> dcat:Distribution)
 ObjectPropertyRange(<https://w3id.org/quay/yieldDescription> <https://w3id.org/quay/YieldDescription>)
 
+AnnotationAssertion(rdfs:label :coverage "coverage")
+ObjectPropertyDomain(:coverage :YieldDescription)
+ObjectPropertyRange(:coverage :Coverage)
+
+AnnotationAssertion(rdfs:label :serviceQuality "service quality")
+ObjectPropertyDomain(:serviceQuality :YieldDescription)
+ObjectPropertyRange(:serviceQuality :ServiceQuality)
+
+AnnotationAssertion(rdfs:label :verificationMethod "verification method")
+ObjectPropertyDomain(:verificationMethod :YieldDescription)
+ObjectPropertyRange(:verificationMethod :VerificationMethod)
+
+############################
+#   Encryption Object Properties — Annotations, Domain, Range
+############################
+
+AnnotationAssertion(rdfs:label :encryptionAtRest "encryption at rest")
+ObjectPropertyDomain(:encryptionAtRest dcat:Distribution)
+ObjectPropertyRange(:encryptionAtRest :EncryptionAlgorithm)
+
+AnnotationAssertion(rdfs:label :encryptionInTransit "encryption in transit")
+ObjectPropertyDomain(:encryptionInTransit dcat:Distribution)
+ObjectPropertyRange(:encryptionInTransit :EncryptionAlgorithm)
+
+############################
+#   Storage Jurisdiction — Annotations, Domain, Range
+############################
+
+AnnotationAssertion(rdfs:label :storageJurisdiction "storage jurisdiction")
+ObjectPropertyDomain(:storageJurisdiction dcat:Distribution)
+ObjectPropertyRange(:storageJurisdiction rdfs:Resource)
+
+############################
+#   Datatype Properties — Annotations, Domain, Range
+############################
+
+# Service Quality Metrics (on YieldDescription)
+AnnotationAssertion(rdfs:label :uptimePercentage "uptime percentage")
+DataPropertyDomain(:uptimePercentage :YieldDescription)
+DataPropertyRange(:uptimePercentage xsd:decimal)
+
+AnnotationAssertion(rdfs:label :recoveryTimeObjective "recovery time objective")
+DataPropertyDomain(:recoveryTimeObjective :YieldDescription)
+DataPropertyRange(:recoveryTimeObjective xsd:duration)
+
+AnnotationAssertion(rdfs:label :recoveryPointObjective "recovery point objective")
+DataPropertyDomain(:recoveryPointObjective :YieldDescription)
+DataPropertyRange(:recoveryPointObjective xsd:duration)
+
+AnnotationAssertion(rdfs:label :replicationFactor "replication factor")
+DataPropertyDomain(:replicationFactor :YieldDescription)
+DataPropertyRange(:replicationFactor xsd:nonNegativeInteger)
+
+# Access Constraints (on AccessDescription)
+AnnotationAssertion(rdfs:label :rateLimit "rate limit")
+DataPropertyDomain(:rateLimit :AccessDescription)
+DataPropertyRange(:rateLimit xsd:nonNegativeInteger)
+
+AnnotationAssertion(rdfs:label :quotaLimit "quota limit")
+DataPropertyDomain(:quotaLimit :AccessDescription)
+DataPropertyRange(:quotaLimit xsd:string)
+
+AnnotationAssertion(rdfs:label :costDescription "cost description")
+DataPropertyDomain(:costDescription :AccessDescription)
+DataPropertyRange(:costDescription xsd:string)
+
+# Retention (on Distribution)
+AnnotationAssertion(rdfs:label :retentionPeriod "retention period")
+DataPropertyDomain(:retentionPeriod dcat:Distribution)
+DataPropertyRange(:retentionPeriod xsd:duration)
+
 
 ############################
 #   Data Properties
@@ -213,9 +462,21 @@ DataPropertyRange(<https://w3id.org/quay/encryptionInTransit> xsd:string)
 
 
 
+# EncryptionAlgorithm hierarchy
+SubClassOf(:Aes256Encryption :EncryptionAlgorithm)
+SubClassOf(:Aes128Encryption :EncryptionAlgorithm)
+SubClassOf(:GpgEncryption :EncryptionAlgorithm)
+SubClassOf(:Tls13Encryption :EncryptionAlgorithm)
+SubClassOf(:Tls12Encryption :EncryptionAlgorithm)
+SubClassOf(:SshEncryption :EncryptionAlgorithm)
+SubClassOf(:NoEncryption :EncryptionAlgorithm)
+
 ############################
 #   Classes
 ############################
+
+# Top-level category classes
+DisjointClasses(:AccessDescription :YieldDescription :Protocol :AuthenticationScheme :Operation :DeliveryMode :TemporalQuality :Coverage :ServiceQuality :VerificationMethod :EncryptionAlgorithm)
 
 # Class: <https://w3id.org/quay/AccessDescription> (Access Description)
 
@@ -248,6 +509,9 @@ AnnotationAssertion(rdfs:label <https://w3id.org/quay/AuthenticationScheme> "Aut
 AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/AwsCredentialAuthentication> "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair.")
 AnnotationAssertion(rdfs:label <https://w3id.org/quay/AwsCredentialAuthentication> "AWS Credential")
 SubClassOf(<https://w3id.org/quay/AwsCredentialAuthentication> <https://w3id.org/quay/AuthenticationScheme>)
+
+# EncryptionAlgorithm subclasses
+DisjointClasses(:Aes256Encryption :Aes128Encryption :GpgEncryption :Tls13Encryption :Tls12Encryption :SshEncryption :NoEncryption)
 
 # Class: <https://w3id.org/quay/BasicAuthentication> (Basic Authentication)
 

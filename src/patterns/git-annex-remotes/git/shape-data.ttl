@@ -19,7 +19,7 @@ ex:git-distribution a dcat:Distribution ;
     dcat:accessURL <ssh://git@gitlab.example.org/research/data.git> ;
     quay:accessDescription ex:git-access ;
     quay:yieldDescription ex:git-yield ;
-    quay:encryptionInTransit "SSH" ;
+    quay:encryptionInTransit [ a quay:SshEncryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:git-access a quay:AccessDescription ;

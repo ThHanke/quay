@@ -24,7 +24,8 @@ ex:sparql-distribution a dcat:Distribution ;
     dcat:mediaType "application/sparql-results+json" ;
     quay:accessDescription ex:sparql-access ;
     quay:yieldDescription ex:sparql-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
+    dcterms:conformsTo <http://www.w3.org/TR/sparql11-protocol/> .
 
 ex:sparql-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;

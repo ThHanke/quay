@@ -19,8 +19,10 @@ ex:glacier-distribution a dcat:Distribution ;
     dcat:accessURL <s3://archive-vault/glacier/> ;
     quay:accessDescription ex:glacier-access ;
     quay:yieldDescription ex:glacier-yield ;
-    quay:encryptionAtRest "AES-256" ;
-    quay:encryptionInTransit "TLS 1.2" ;
+    quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
+    quay:retentionPeriod "P99Y"^^xsd:duration ;
+    quay:storageJurisdiction <http://publications.europa.eu/resource/authority/country/USA> ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:glacier-access a quay:AccessDescription ;
@@ -35,4 +37,8 @@ ex:glacier-yield a quay:YieldDescription ;
     quay:temporalQuality [ a quay:Archived ] ;
     quay:coverage [ a quay:CompleteCoverage ] ;
     quay:serviceQuality [ a quay:HighAvailability ] ;
-    quay:verificationMethod [ a quay:HashVerification ] .
+    quay:verificationMethod [ a quay:HashVerification ] ;
+    quay:uptimePercentage "99.99"^^xsd:decimal ;
+    quay:recoveryTimeObjective "PT12H"^^xsd:duration ;
+    quay:recoveryPointObjective "PT1H"^^xsd:duration ;
+    quay:replicationFactor "3"^^xsd:nonNegativeInteger .

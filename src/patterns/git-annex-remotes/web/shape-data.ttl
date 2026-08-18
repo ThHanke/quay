@@ -18,7 +18,7 @@ ex:web-distribution a dcat:Distribution ;
     dcat:downloadURL <https://example.org/data/archive.tar.gz> ;
     quay:accessDescription ex:web-access ;
     quay:yieldDescription ex:web-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
 
 ex:web-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;

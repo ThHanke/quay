@@ -24,7 +24,7 @@ ex:kafka-distribution a dcat:Distribution ;
     dcat:mediaType "application/avro" ;
     quay:accessDescription ex:kafka-access ;
     quay:yieldDescription ex:kafka-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
 
 ex:kafka-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;

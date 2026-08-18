@@ -21,7 +21,7 @@ ex:zenodo-distribution a dcat:Distribution ;
     dcat:mediaType "application/gzip" ;
     quay:accessDescription ex:zenodo-access ;
     quay:yieldDescription ex:zenodo-yield ;
-    quay:encryptionInTransit "TLS 1.2" ;
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_md5 ] .
 
 ex:zenodo-access a quay:AccessDescription ;

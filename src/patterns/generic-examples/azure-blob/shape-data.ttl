@@ -19,8 +19,8 @@ ex:azure-distribution a dcat:Distribution ;
     dcat:accessURL <https://researchdata.blob.core.windows.net/datasets/> ;
     quay:accessDescription ex:azure-access ;
     quay:yieldDescription ex:azure-yield ;
-    quay:encryptionAtRest "AES-256" ;
-    quay:encryptionInTransit "TLS 1.2" ;
+    quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_md5 ] .
 
 ex:azure-access a quay:AccessDescription ;

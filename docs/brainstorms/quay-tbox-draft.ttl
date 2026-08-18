@@ -251,17 +251,17 @@ quay:verificationMethod a owl:ObjectProperty;
     rdfs:domain quay:YieldDescription;
     rdfs:range quay:VerificationMethod.
 
-# === Datatype Properties ===
+# === Encryption Object Properties ===
 
-quay:encryptionAtRest a owl:DatatypeProperty;
+quay:encryptionAtRest a owl:ObjectProperty;
     rdfs:label "encryption at rest";
     rdfs:domain dcat:Distribution;
-    rdfs:range xsd:string.
+    rdfs:range quay:EncryptionAlgorithm.
 
-quay:encryptionInTransit a owl:DatatypeProperty;
+quay:encryptionInTransit a owl:ObjectProperty;
     rdfs:label "encryption in transit";
     rdfs:domain dcat:Distribution;
-    rdfs:range xsd:string.
+    rdfs:range quay:EncryptionAlgorithm.
 
 quay:checksum a owl:DatatypeProperty;
     rdfs:label "checksum";

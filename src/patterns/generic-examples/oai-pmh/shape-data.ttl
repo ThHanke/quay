@@ -24,7 +24,7 @@ ex:oai-distribution a dcat:Distribution ;
     dcat:mediaType "application/xml" ;
     quay:accessDescription ex:oai-access ;
     quay:yieldDescription ex:oai-yield ;
-    quay:encryptionInTransit "TLS 1.2" .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
 
 ex:oai-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;

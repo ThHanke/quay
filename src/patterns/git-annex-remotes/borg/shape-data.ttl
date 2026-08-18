@@ -19,8 +19,8 @@ ex:borg-distribution a dcat:Distribution ;
     dcat:accessURL <ssh://backup@borg-host.example.org/srv/borg/annex> ;
     quay:accessDescription ex:borg-access ;
     quay:yieldDescription ex:borg-yield ;
-    quay:encryptionAtRest "AES-256-CTR" ;
-    quay:encryptionInTransit "SSH" ;
+    quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
+    quay:encryptionInTransit [ a quay:SshEncryption ] ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:borg-access a quay:AccessDescription ;
