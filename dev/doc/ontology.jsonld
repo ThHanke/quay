@@ -186,27 +186,27 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/quay.owl#AccessDescription"
+      "@id" : "https://w3id.org/quay/AccessDescription"
     }, {
-      "@id" : "https://w3id.org/quay.owl#AuthenticationScheme"
+      "@id" : "https://w3id.org/quay/AuthenticationScheme"
     }, {
-      "@id" : "https://w3id.org/quay.owl#Coverage"
+      "@id" : "https://w3id.org/quay/Coverage"
     }, {
-      "@id" : "https://w3id.org/quay.owl#DeliveryMode"
+      "@id" : "https://w3id.org/quay/DeliveryMode"
     }, {
-      "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+      "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
     }, {
-      "@id" : "https://w3id.org/quay.owl#Operation"
+      "@id" : "https://w3id.org/quay/Operation"
     }, {
-      "@id" : "https://w3id.org/quay.owl#Protocol"
+      "@id" : "https://w3id.org/quay/Protocol"
     }, {
-      "@id" : "https://w3id.org/quay.owl#ServiceQuality"
+      "@id" : "https://w3id.org/quay/ServiceQuality"
     }, {
-      "@id" : "https://w3id.org/quay.owl#TemporalQuality"
+      "@id" : "https://w3id.org/quay/TemporalQuality"
     }, {
-      "@id" : "https://w3id.org/quay.owl#VerificationMethod"
+      "@id" : "https://w3id.org/quay/VerificationMethod"
     }, {
-      "@id" : "https://w3id.org/quay.owl#YieldDescription"
+      "@id" : "https://w3id.org/quay/YieldDescription"
     } ]
   } ]
 }, {
@@ -220,35 +220,6 @@
   } ]
 }, {
   "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/quay.owl#Aes128Encryption"
-    }, {
-      "@id" : "https://w3id.org/quay.owl#Aes256Encryption"
-    }, {
-      "@id" : "https://w3id.org/quay.owl#GpgEncryption"
-    }, {
-      "@id" : "https://w3id.org/quay.owl#NoEncryption"
-    }, {
-      "@id" : "https://w3id.org/quay.owl#SshEncryption"
-    }, {
-      "@id" : "https://w3id.org/quay.owl#Tls12Encryption"
-    }, {
-      "@id" : "https://w3id.org/quay.owl#Tls13Encryption"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/supportedOperation"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/quay/Operation"
-  } ]
-}, {
-  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -271,6 +242,35 @@
       "@id" : "https://w3id.org/quay/VerificationMethod"
     }, {
       "@id" : "https://w3id.org/quay/YieldDescription"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/supportedOperation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/quay/Operation"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/quay/Aes128Encryption"
+    }, {
+      "@id" : "https://w3id.org/quay/Aes256Encryption"
+    }, {
+      "@id" : "https://w3id.org/quay/GpgEncryption"
+    }, {
+      "@id" : "https://w3id.org/quay/NoEncryption"
+    }, {
+      "@id" : "https://w3id.org/quay/SshEncryption"
+    }, {
+      "@id" : "https://w3id.org/quay/Tls12Encryption"
+    }, {
+      "@id" : "https://w3id.org/quay/Tls13Encryption"
     } ]
   } ]
 }, {
@@ -3067,735 +3067,6 @@
   "@id" : "https://w3id.org/people/ralbertoni/",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://w3id.org/quay.owl#AccessDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Qualifies HOW a Distribution is reached."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Access Description"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Aes128Encryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption using the Advanced Encryption Standard with a 128-bit key."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "128-bit Advanced Encryption Standard."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "AES-128 Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Aes256Encryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption using the Advanced Encryption Standard with a 256-bit key."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "256-bit Advanced Encryption Standard."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "AES-256 Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#ApiKeyAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "API Key Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Archived",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Archived"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#AuthenticationScheme",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Authentication Scheme"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#AwsCredentialAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "AWS Credential Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#BasicAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Basic Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#BestEffort",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Quality depends on upstream server or network conditions."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Best Effort"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#BitTorrentProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "BitTorrent Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#BulkDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Bulk Delivery"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#CompleteCoverage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Complete Coverage"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#ContentAddressing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Content identified and verified by its hash, as in IPFS CIDs."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Content Addressing"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Coverage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Coverage"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#DeleteOperation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Delete Operation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#DeliveryMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Delivery Mode"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#DigitalSignature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Integrity and authenticity verified via cryptographic signature."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Digital Signature"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Distributed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Data distributed across multiple peers or nodes."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Distributed"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Encryption Algorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#EventDrivenDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Event-Driven Delivery"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#FtpProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "FTP Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#GitProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Git Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#GpgEncryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "GNU Privacy Guard / OpenPGP encryption."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GPG Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#GpgKeyAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GPG Key Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#HashVerification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Integrity verified by comparing cryptographic hash of content."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Hash Verification"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#HighAvailability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Managed cloud services with SLA guarantees."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "High Availability"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#HookProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Custom protocol via user-defined hook scripts."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Hook Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#HttpProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "HTTP Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#IncrementalCoverage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Incremental Coverage"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#IpfsProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "IPFS Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#ListOperation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "List Operation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#LocalFilesystemProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Local Filesystem Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#NoAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "No Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#NoEncryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Designation indicating that no encryption is applied to the data."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "No encryption applied."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "No Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#NoVerification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "No integrity verification mechanism available."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "No Verification"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#OAuth2Authentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "OAuth2 Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Operation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Operation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Action"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#PaginatedDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Paginated Delivery"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#PeerToPeerDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Peer-to-Peer Delivery"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#PieceVerification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Integrity verified per-piece using a hash tree, as in BitTorrent."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Piece Verification"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Protocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#RcloneProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Rclone Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#ReadOperation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Read Operation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#RealTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Real-Time"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#ReplicateOperation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Replicate Operation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#RsyncProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Rsync Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#S3Protocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "S3 Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SampleCoverage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Sample Coverage"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#ServiceQuality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Service Quality"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SingleHost",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Data resides on a single machine with no redundancy."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Single Host"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Snapshot",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Snapshot"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SshEncryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption using the Secure Shell protocol for transport-layer data protection."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Secure Shell encrypted transport."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SSH Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SshKeyAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SSH Key Authentication"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SshProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SSH Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#StreamingDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Streaming Delivery"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SubsetCoverage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Subset Coverage"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#SynchronousDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Synchronous Delivery"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#TemporalQuality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Temporal Quality"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Tls12Encryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Transport Layer Security version 1.2."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TLS 1.2 Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Tls13Encryption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Transport Layer Security version 1.3."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TLS 1.3 Encryption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#VerificationMethod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Verification Method"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#Versioned",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Versioned"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#WebDavProtocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "WebDAV Protocol"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#WriteOperation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Write Operation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#YieldDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Qualifies WHAT a Distribution delivers."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Yield Description"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#accessDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#authenticationScheme",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#costDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Human-readable description of the cost or pricing model for accessing the distribution."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#AccessDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "cost description"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#coverage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "coverage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/quay.owl#Coverage"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#deliveryMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#encryptionAtRest",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Distribution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "encryption at rest"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#encryptionInTransit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Relates a distribution to the encryption protocol applied to data during transfer between client and server."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Distribution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "encryption in transit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#protocol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#quotaLimit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Usage quota describing the maximum allowed consumption of the service."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#AccessDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "quota limit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#rateLimit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Maximum number of requests permitted within a time window."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#AccessDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "rate limit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#recoveryPointObjective",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Maximum acceptable duration of data loss measured as a time window before the disruption."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "recovery point objective"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#recoveryTimeObjective",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Maximum acceptable duration to restore service after a disruption."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "recovery time objective"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#replicationFactor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Number of independent copies of the data maintained across storage nodes."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "replication factor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#retentionPeriod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Duration for which data is guaranteed to be retained before deletion or archival."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Distribution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "retention period"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#serviceQuality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "service quality"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/quay.owl#ServiceQuality"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#storageJurisdiction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Distribution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "storage jurisdiction"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#supportedOperation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#temporalQuality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#uptimePercentage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uptime percentage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#verificationMethod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/quay.owl#YieldDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "verification method"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/quay.owl#VerificationMethod"
-  } ]
-}, {
-  "@id" : "https://w3id.org/quay.owl#yieldDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
   "@id" : "https://w3id.org/quay/AccessDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -3817,6 +3088,36 @@
     "@id" : "_:genid6"
   } ]
 }, {
+  "@id" : "https://w3id.org/quay/Aes128Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using the Advanced Encryption Standard with a 128-bit key."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "128-bit Advanced Encryption Standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AES-128 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/Aes256Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using the Advanced Encryption Standard with a 256-bit key."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "256-bit Advanced Encryption Standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AES-256 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
+  } ]
+}, {
   "@id" : "https://w3id.org/quay/ApiKeyAuthentication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -3824,6 +3125,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "API Key"
+  }, {
+    "@value" : "API Key Authentication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
@@ -3857,6 +3160,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "AWS Credential"
+  }, {
+    "@value" : "AWS Credential Authentication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
@@ -3896,6 +3201,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "BitTorrent"
+  }, {
+    "@value" : "BitTorrent Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -3920,6 +3227,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Complete"
+  }, {
+    "@value" : "Complete Coverage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Coverage"
@@ -3956,6 +3265,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Delete"
+  }, {
+    "@value" : "Delete Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Operation"
@@ -4000,6 +3311,15 @@
     "@id" : "https://w3id.org/quay/ServiceQuality"
   } ]
 }, {
+  "@id" : "https://w3id.org/quay/EncryptionAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Encryption Algorithm"
+  } ]
+}, {
   "@id" : "https://w3id.org/quay/EventDrivenDelivery",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -4019,6 +3339,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "FTP"
+  }, {
+    "@value" : "FTP Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4031,9 +3353,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Git"
+  }, {
+    "@value" : "Git Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/GpgEncryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "GNU Privacy Guard / OpenPGP encryption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPG Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/GpgKeyAuthentication",
@@ -4043,6 +3382,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "GPG Key"
+  }, {
+    "@value" : "GPG Key Authentication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
@@ -4088,6 +3429,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Hook"
+  }, {
+    "@value" : "Hook Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4099,6 +3442,8 @@
     "@value" : "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HTTP Protocol"
+  }, {
     "@value" : "HTTP/HTTPS"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -4112,6 +3457,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Incremental"
+  }, {
+    "@value" : "Incremental Coverage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Coverage"
@@ -4124,6 +3471,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "IPFS"
+  }, {
+    "@value" : "IPFS Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4136,6 +3485,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "List"
+  }, {
+    "@value" : "List Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Operation"
@@ -4148,6 +3499,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Local Filesystem"
+  }, {
+    "@value" : "Local Filesystem Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4163,6 +3516,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/NoEncryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Designation indicating that no encryption is applied to the data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No encryption applied."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "No Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/NoVerification",
@@ -4187,6 +3555,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "OAuth 2.0"
+  }, {
+    "@value" : "OAuth2 Authentication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
@@ -4199,6 +3569,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/PaginatedDelivery",
@@ -4256,6 +3629,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Rclone"
+  }, {
+    "@value" : "Rclone Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4268,6 +3643,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Read"
+  }, {
+    "@value" : "Read Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Operation"
@@ -4292,6 +3669,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Replicate"
+  }, {
+    "@value" : "Replicate Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Operation"
@@ -4304,6 +3683,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Rsync"
+  }, {
+    "@value" : "Rsync Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4316,6 +3697,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "S3"
+  }, {
+    "@value" : "S3 Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4328,6 +3711,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sample"
+  }, {
+    "@value" : "Sample Coverage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Coverage"
@@ -4369,6 +3754,21 @@
     "@id" : "https://w3id.org/quay/TemporalQuality"
   } ]
 }, {
+  "@id" : "https://w3id.org/quay/SshEncryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using the Secure Shell protocol for transport-layer data protection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Secure Shell encrypted transport."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SSH Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
+  } ]
+}, {
   "@id" : "https://w3id.org/quay/SshKeyAuthentication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -4376,6 +3776,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SSH Key"
+  }, {
+    "@value" : "SSH Key Authentication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
@@ -4387,6 +3789,8 @@
     "@value" : "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SSH Protocol"
+  }, {
     "@value" : "SSH/SFTP"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -4412,6 +3816,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Subset"
+  }, {
+    "@value" : "Subset Coverage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Coverage"
@@ -4436,6 +3842,36 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Temporal Quality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/Tls12Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transport Layer Security version 1.2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TLS 1.2 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/Tls13Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transport Layer Security version 1.3."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TLS 1.3 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/VerificationMethod",
@@ -4466,6 +3902,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "WebDAV"
+  }, {
+    "@value" : "WebDAV Protocol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Protocol"
@@ -4478,6 +3916,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Write"
+  }, {
+    "@value" : "Write Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/quay/Operation"
@@ -4538,6 +3978,21 @@
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
   } ]
 }, {
+  "@id" : "https://w3id.org/quay/costDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Human-readable description of the cost or pricing model for accessing the distribution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/AccessDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cost description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/quay/coverage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -4569,9 +4024,9 @@
   } ]
 }, {
   "@id" : "https://w3id.org/quay/encryptionAtRest",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption algorithm applied to data at rest within the storage backend."
+    "@value" : "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/dcat#Distribution"
@@ -4580,13 +4035,13 @@
     "@value" : "encryption at rest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/encryptionInTransit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "Encryption protocol applied to data during transfer between client and server."
+    "@value" : "Relates a distribution to the encryption protocol applied to data during transfer between client and server."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/dcat#Distribution"
@@ -4595,7 +4050,7 @@
     "@value" : "encryption in transit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "https://w3id.org/quay/EncryptionAlgorithm"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/protocol",
@@ -4631,6 +4086,96 @@
     "@value" : "2026-08-18"
   } ]
 }, {
+  "@id" : "https://w3id.org/quay/quotaLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Usage quota describing the maximum allowed consumption of the service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/AccessDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "quota limit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/rateLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Maximum number of requests permitted within a time window."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/AccessDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rate limit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/recoveryPointObjective",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Maximum acceptable duration of data loss measured as a time window before the disruption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recovery point objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/recoveryTimeObjective",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Maximum acceptable duration to restore service after a disruption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recovery time objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/replicationFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Number of independent copies of the data maintained across storage nodes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "replication factor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/retentionPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Duration for which data is guaranteed to be retained before deletion or archival."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "retention period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
   "@id" : "https://w3id.org/quay/serviceQuality",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -4644,6 +4189,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/quay/ServiceQuality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/storageJurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "storage jurisdiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/supportedOperation",
@@ -4674,6 +4234,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/quay/TemporalQuality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay/uptimePercentage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay/YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "uptime percentage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/verificationMethod",
