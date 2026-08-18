@@ -17,23 +17,23 @@ ex:s3-dataset a dcat:Dataset ;
 ex:s3-distribution a dcat:Distribution ;
     dcterms:title "S3 bucket distribution" ;
     dcat:accessURL <s3://research-data-bucket/> ;
-    quay:QUAY_0000046 ex:s3-access ;
-    quay:QUAY_0000047 ex:s3-yield ;
-    quay:QUAY_0000056 "AES-256" ;
-    quay:QUAY_0000057 "TLS 1.2" ;
+    quay:accessDescription ex:s3-access ;
+    quay:yieldDescription ex:s3-yield ;
+    quay:encryptionAtRest "AES-256" ;
+    quay:encryptionInTransit "TLS 1.2" ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
-ex:s3-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000005 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000022 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+ex:s3-access a quay:AccessDescription ;
+    quay:protocol [ a quay:S3Protocol ] ;
+    quay:authenticationScheme [ a quay:AwsCredentialAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:supportedOperation [ a quay:DeleteOperation ] ;
+    quay:supportedOperation [ a quay:ListOperation ] .
 
-ex:s3-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000062 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .
+ex:s3-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:BulkDelivery ] ;
+    quay:temporalQuality [ a quay:Snapshot ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:HighAvailability ] ;
+    quay:verificationMethod [ a quay:HashVerification ] .

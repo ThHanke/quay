@@ -19,21 +19,21 @@ ex:zenodo-distribution a dcat:Distribution ;
     dcterms:title "Zenodo deposit distribution" ;
     dcat:downloadURL <https://zenodo.org/records/1234567/files/climate-data-v2.tar.gz> ;
     dcat:mediaType "application/gzip" ;
-    quay:QUAY_0000046 ex:zenodo-access ;
-    quay:QUAY_0000047 ex:zenodo-yield ;
-    quay:QUAY_0000057 "TLS 1.2" ;
+    quay:accessDescription ex:zenodo-access ;
+    quay:yieldDescription ex:zenodo-yield ;
+    quay:encryptionInTransit "TLS 1.2" ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_md5 ] .
 
-ex:zenodo-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000017 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+ex:zenodo-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:ApiKeyAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:supportedOperation [ a quay:ListOperation ] .
 
-ex:zenodo-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000038 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000062 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .
+ex:zenodo-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:BulkDelivery ] ;
+    quay:temporalQuality [ a quay:Versioned ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:HighAvailability ] ;
+    quay:verificationMethod [ a quay:HashVerification ] .

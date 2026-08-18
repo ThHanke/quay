@@ -13,262 +13,262 @@
 
 # === Core Qualification Classes ===
 
-quay:QUAY_0000001 a owl:Class;
+quay:AccessDescription a owl:Class;
     rdfs:comment "Qualifies HOW a Distribution is reached.";
     rdfs:label "Access Description".
 
-quay:QUAY_0000002 a owl:Class;
+quay:YieldDescription a owl:Class;
     rdfs:comment "Qualifies WHAT a Distribution delivers.";
     rdfs:label "Yield Description".
 
 # === Protocol Hierarchy ===
 
-quay:QUAY_0000003 a owl:Class;
+quay:Protocol a owl:Class;
     rdfs:label "Protocol".
 
-quay:QUAY_0000004 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:HttpProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "HTTP/HTTPS".
 
-quay:QUAY_0000005 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:S3Protocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "S3".
 
-quay:QUAY_0000006 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:RsyncProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "Rsync".
 
-quay:QUAY_0000007 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:WebDavProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "WebDAV".
 
-quay:QUAY_0000008 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:SshProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "SSH/SFTP".
 
-quay:QUAY_0000009 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:BitTorrentProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "BitTorrent".
 
-quay:QUAY_0000010 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:IpfsProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "IPFS".
 
-quay:QUAY_0000011 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:LocalFilesystemProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "Local Filesystem".
 
-quay:QUAY_0000012 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:RcloneProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "Rclone".
 
-quay:QUAY_0000013 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:FtpProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "FTP".
 
-quay:QUAY_0000014 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000003;
+quay:GitProtocol a owl:Class;
+    rdfs:subClassOf quay:Protocol;
     rdfs:label "Git".
 
 # === Authentication Scheme Hierarchy ===
 
-quay:QUAY_0000015 a owl:Class;
+quay:AuthenticationScheme a owl:Class;
     rdfs:label "Authentication Scheme".
 
-quay:QUAY_0000016 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:NoAuthentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "No Authentication".
 
-quay:QUAY_0000017 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:ApiKeyAuthentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "API Key".
 
-quay:QUAY_0000018 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:OAuth2Authentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "OAuth 2.0".
 
-quay:QUAY_0000019 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:BasicAuthentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "Basic Authentication".
 
-quay:QUAY_0000020 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:SshKeyAuthentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "SSH Key".
 
-quay:QUAY_0000021 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:GpgKeyAuthentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "GPG Key".
 
-quay:QUAY_0000022 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000015;
+quay:AwsCredentialAuthentication a owl:Class;
+    rdfs:subClassOf quay:AuthenticationScheme;
     rdfs:label "AWS Credential".
 
 # === Operation Hierarchy ===
 
-quay:QUAY_0000028 a owl:Class;
+quay:Operation a owl:Class;
     rdfs:label "Operation".
 
-quay:QUAY_0000023 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000028;
+quay:ReadOperation a owl:Class;
+    rdfs:subClassOf quay:Operation;
     rdfs:label "Read".
 
-quay:QUAY_0000024 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000028;
+quay:WriteOperation a owl:Class;
+    rdfs:subClassOf quay:Operation;
     rdfs:label "Write".
 
-quay:QUAY_0000025 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000028;
+quay:DeleteOperation a owl:Class;
+    rdfs:subClassOf quay:Operation;
     rdfs:label "Delete".
 
-quay:QUAY_0000026 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000028;
+quay:ListOperation a owl:Class;
+    rdfs:subClassOf quay:Operation;
     rdfs:label "List".
 
-quay:QUAY_0000027 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000028;
+quay:ReplicateOperation a owl:Class;
+    rdfs:subClassOf quay:Operation;
     rdfs:label "Replicate".
 
 # === Yield: Delivery Mode ===
 
-quay:QUAY_0000029 a owl:Class;
+quay:DeliveryMode a owl:Class;
     rdfs:label "Delivery Mode".
 
-quay:QUAY_0000030 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000029;
+quay:BulkDelivery a owl:Class;
+    rdfs:subClassOf quay:DeliveryMode;
     rdfs:label "Bulk Delivery".
 
-quay:QUAY_0000031 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000029;
+quay:StreamingDelivery a owl:Class;
+    rdfs:subClassOf quay:DeliveryMode;
     rdfs:label "Streaming Delivery".
 
-quay:QUAY_0000032 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000029;
+quay:PaginatedDelivery a owl:Class;
+    rdfs:subClassOf quay:DeliveryMode;
     rdfs:label "Paginated Delivery".
 
-quay:QUAY_0000033 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000029;
+quay:EventDrivenDelivery a owl:Class;
+    rdfs:subClassOf quay:DeliveryMode;
     rdfs:label "Event-Driven Delivery".
 
 # === Yield: Temporal Quality ===
 
-quay:QUAY_0000034 a owl:Class;
+quay:TemporalQuality a owl:Class;
     rdfs:label "Temporal Quality".
 
-quay:QUAY_0000035 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000034;
+quay:RealTime a owl:Class;
+    rdfs:subClassOf quay:TemporalQuality;
     rdfs:label "Real-Time".
 
-quay:QUAY_0000036 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000034;
+quay:Snapshot a owl:Class;
+    rdfs:subClassOf quay:TemporalQuality;
     rdfs:label "Snapshot".
 
-quay:QUAY_0000037 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000034;
+quay:Archived a owl:Class;
+    rdfs:subClassOf quay:TemporalQuality;
     rdfs:label "Archived".
 
-quay:QUAY_0000038 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000034;
+quay:Versioned a owl:Class;
+    rdfs:subClassOf quay:TemporalQuality;
     rdfs:label "Versioned".
 
 # === Yield: Coverage ===
 
-quay:QUAY_0000039 a owl:Class;
+quay:Coverage a owl:Class;
     rdfs:label "Coverage".
 
-quay:QUAY_0000040 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000039;
+quay:CompleteCoverage a owl:Class;
+    rdfs:subClassOf quay:Coverage;
     rdfs:label "Complete".
 
-quay:QUAY_0000041 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000039;
+quay:SubsetCoverage a owl:Class;
+    rdfs:subClassOf quay:Coverage;
     rdfs:label "Subset".
 
-quay:QUAY_0000042 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000039;
+quay:SampleCoverage a owl:Class;
+    rdfs:subClassOf quay:Coverage;
     rdfs:label "Sample".
 
-quay:QUAY_0000043 a owl:Class;
-    rdfs:subClassOf quay:QUAY_0000039;
+quay:IncrementalCoverage a owl:Class;
+    rdfs:subClassOf quay:Coverage;
     rdfs:label "Incremental".
 
 # === Yield: Service Quality & Verification ===
 
-quay:QUAY_0000044 a owl:Class;
+quay:ServiceQuality a owl:Class;
     rdfs:label "Service Quality".
 
-quay:QUAY_0000045 a owl:Class;
+quay:VerificationMethod a owl:Class;
     rdfs:label "Verification Method".
 
 # === Object Properties ===
 
-quay:QUAY_0000046 a owl:ObjectProperty;
+quay:accessDescription a owl:ObjectProperty;
     rdfs:label "access description";
     rdfs:domain dcat:Distribution;
-    rdfs:range quay:QUAY_0000001.
+    rdfs:range quay:AccessDescription.
 
-quay:QUAY_0000047 a owl:ObjectProperty;
+quay:yieldDescription a owl:ObjectProperty;
     rdfs:label "yield description";
     rdfs:domain dcat:Distribution;
-    rdfs:range quay:QUAY_0000002.
+    rdfs:range quay:YieldDescription.
 
-quay:QUAY_0000048 a owl:ObjectProperty;
+quay:protocol a owl:ObjectProperty;
     rdfs:label "protocol";
-    rdfs:domain quay:QUAY_0000001;
-    rdfs:range quay:QUAY_0000003.
+    rdfs:domain quay:AccessDescription;
+    rdfs:range quay:Protocol.
 
-quay:QUAY_0000049 a owl:ObjectProperty;
+quay:authenticationScheme a owl:ObjectProperty;
     rdfs:label "authentication scheme";
-    rdfs:domain quay:QUAY_0000001;
-    rdfs:range quay:QUAY_0000015.
+    rdfs:domain quay:AccessDescription;
+    rdfs:range quay:AuthenticationScheme.
 
-quay:QUAY_0000050 a owl:ObjectProperty;
+quay:supportedOperation a owl:ObjectProperty;
     rdfs:label "supported operation";
-    rdfs:domain quay:QUAY_0000001;
-    rdfs:range quay:QUAY_0000028.
+    rdfs:domain quay:AccessDescription;
+    rdfs:range quay:Operation.
 
-quay:QUAY_0000051 a owl:ObjectProperty;
+quay:deliveryMode a owl:ObjectProperty;
     rdfs:label "delivery mode";
-    rdfs:domain quay:QUAY_0000002;
-    rdfs:range quay:QUAY_0000029.
+    rdfs:domain quay:YieldDescription;
+    rdfs:range quay:DeliveryMode.
 
-quay:QUAY_0000052 a owl:ObjectProperty;
+quay:temporalQuality a owl:ObjectProperty;
     rdfs:label "temporal quality";
-    rdfs:domain quay:QUAY_0000002;
-    rdfs:range quay:QUAY_0000034.
+    rdfs:domain quay:YieldDescription;
+    rdfs:range quay:TemporalQuality.
 
-quay:QUAY_0000053 a owl:ObjectProperty;
+quay:coverage a owl:ObjectProperty;
     rdfs:label "coverage";
-    rdfs:domain quay:QUAY_0000002;
-    rdfs:range quay:QUAY_0000039.
+    rdfs:domain quay:YieldDescription;
+    rdfs:range quay:Coverage.
 
-quay:QUAY_0000054 a owl:ObjectProperty;
+quay:serviceQuality a owl:ObjectProperty;
     rdfs:label "service quality";
-    rdfs:domain quay:QUAY_0000002;
-    rdfs:range quay:QUAY_0000044.
+    rdfs:domain quay:YieldDescription;
+    rdfs:range quay:ServiceQuality.
 
-quay:QUAY_0000055 a owl:ObjectProperty;
+quay:verificationMethod a owl:ObjectProperty;
     rdfs:label "verification method";
-    rdfs:domain quay:QUAY_0000002;
-    rdfs:range quay:QUAY_0000045.
+    rdfs:domain quay:YieldDescription;
+    rdfs:range quay:VerificationMethod.
 
 # === Datatype Properties ===
 
-quay:QUAY_0000056 a owl:DatatypeProperty;
+quay:encryptionAtRest a owl:DatatypeProperty;
     rdfs:label "encryption at rest";
     rdfs:domain dcat:Distribution;
     rdfs:range xsd:string.
 
-quay:QUAY_0000057 a owl:DatatypeProperty;
+quay:encryptionInTransit a owl:DatatypeProperty;
     rdfs:label "encryption in transit";
     rdfs:domain dcat:Distribution;
     rdfs:range xsd:string.
 
-quay:QUAY_0000058 a owl:DatatypeProperty;
+quay:checksum a owl:DatatypeProperty;
     rdfs:label "checksum";
     rdfs:domain dcat:Distribution;
     rdfs:range xsd:string.
 
-quay:QUAY_0000059 a owl:DatatypeProperty;
+quay:checksumAlgorithm a owl:DatatypeProperty;
     rdfs:label "checksum algorithm";
     rdfs:domain dcat:Distribution;
     rdfs:range xsd:string.
@@ -279,101 +279,101 @@ quay:QUAY_0000059 a owl:DatatypeProperty;
 
 # === Disjointness: Core qualification classes ===
 
-quay:QUAY_0000001 owl:disjointWith quay:QUAY_0000002.
+quay:AccessDescription owl:disjointWith quay:YieldDescription.
 
 # === Disjointness: Top-level category classes ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000001 quay:QUAY_0000002 quay:QUAY_0000003
-                 quay:QUAY_0000015 quay:QUAY_0000028 quay:QUAY_0000029
-                 quay:QUAY_0000034 quay:QUAY_0000039 quay:QUAY_0000044
-                 quay:QUAY_0000045).
+    owl:members (quay:AccessDescription quay:YieldDescription quay:Protocol
+                 quay:AuthenticationScheme quay:Operation quay:DeliveryMode
+                 quay:TemporalQuality quay:Coverage quay:ServiceQuality
+                 quay:VerificationMethod).
 
 # === Disjointness: Protocol subclasses ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000004 quay:QUAY_0000005 quay:QUAY_0000006
-                 quay:QUAY_0000007 quay:QUAY_0000008 quay:QUAY_0000009
-                 quay:QUAY_0000010 quay:QUAY_0000011 quay:QUAY_0000012
-                 quay:QUAY_0000013 quay:QUAY_0000014).
+    owl:members (quay:HttpProtocol quay:S3Protocol quay:RsyncProtocol
+                 quay:WebDavProtocol quay:SshProtocol quay:BitTorrentProtocol
+                 quay:IpfsProtocol quay:LocalFilesystemProtocol quay:RcloneProtocol
+                 quay:FtpProtocol quay:GitProtocol).
 
 # === Disjointness: AuthScheme subclasses ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000016 quay:QUAY_0000017 quay:QUAY_0000018
-                 quay:QUAY_0000019 quay:QUAY_0000020 quay:QUAY_0000021
-                 quay:QUAY_0000022).
+    owl:members (quay:NoAuthentication quay:ApiKeyAuthentication quay:OAuth2Authentication
+                 quay:BasicAuthentication quay:SshKeyAuthentication quay:GpgKeyAuthentication
+                 quay:AwsCredentialAuthentication).
 
 # === Disjointness: Operation subclasses ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000023 quay:QUAY_0000024 quay:QUAY_0000025
-                 quay:QUAY_0000026 quay:QUAY_0000027).
+    owl:members (quay:ReadOperation quay:WriteOperation quay:DeleteOperation
+                 quay:ListOperation quay:ReplicateOperation).
 
 # === Disjointness: DeliveryMode subclasses ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000030 quay:QUAY_0000031 quay:QUAY_0000032
-                 quay:QUAY_0000033).
+    owl:members (quay:BulkDelivery quay:StreamingDelivery quay:PaginatedDelivery
+                 quay:EventDrivenDelivery).
 
 # === Disjointness: TemporalQuality subclasses ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000035 quay:QUAY_0000036 quay:QUAY_0000037
-                 quay:QUAY_0000038).
+    owl:members (quay:RealTime quay:Snapshot quay:Archived
+                 quay:Versioned).
 
 # === Disjointness: Coverage subclasses ===
 
 [] a owl:AllDisjointClasses;
-    owl:members (quay:QUAY_0000040 quay:QUAY_0000041 quay:QUAY_0000042
-                 quay:QUAY_0000043).
+    owl:members (quay:CompleteCoverage quay:SubsetCoverage quay:SampleCoverage
+                 quay:IncrementalCoverage).
 
 # === Cardinality: AccessDescription ===
 
 # Exactly 1 protocol per AccessDescription
-quay:QUAY_0000001 rdfs:subClassOf [
+quay:AccessDescription rdfs:subClassOf [
     a owl:Restriction;
-    owl:onProperty quay:QUAY_0000048;
+    owl:onProperty quay:protocol;
     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
-    owl:onClass quay:QUAY_0000003
+    owl:onClass quay:Protocol
 ].
 
 # At least 1 authentication scheme
-quay:QUAY_0000001 rdfs:subClassOf [
+quay:AccessDescription rdfs:subClassOf [
     a owl:Restriction;
-    owl:onProperty quay:QUAY_0000049;
-    owl:someValuesFrom quay:QUAY_0000015
+    owl:onProperty quay:authenticationScheme;
+    owl:someValuesFrom quay:AuthenticationScheme
 ].
 
 # At least 1 supported operation
-quay:QUAY_0000001 rdfs:subClassOf [
+quay:AccessDescription rdfs:subClassOf [
     a owl:Restriction;
-    owl:onProperty quay:QUAY_0000050;
-    owl:someValuesFrom quay:QUAY_0000028
+    owl:onProperty quay:supportedOperation;
+    owl:someValuesFrom quay:Operation
 ].
 
 # === Cardinality: YieldDescription ===
 
 # Exactly 1 delivery mode
-quay:QUAY_0000002 rdfs:subClassOf [
+quay:YieldDescription rdfs:subClassOf [
     a owl:Restriction;
-    owl:onProperty quay:QUAY_0000051;
+    owl:onProperty quay:deliveryMode;
     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
-    owl:onClass quay:QUAY_0000029
+    owl:onClass quay:DeliveryMode
 ].
 
 # At most 1 temporal quality
-quay:QUAY_0000002 rdfs:subClassOf [
+quay:YieldDescription rdfs:subClassOf [
     a owl:Restriction;
-    owl:onProperty quay:QUAY_0000052;
+    owl:onProperty quay:temporalQuality;
     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-    owl:onClass quay:QUAY_0000034
+    owl:onClass quay:TemporalQuality
 ].
 
 # At most 1 coverage
-quay:QUAY_0000002 rdfs:subClassOf [
+quay:YieldDescription rdfs:subClassOf [
     a owl:Restriction;
-    owl:onProperty quay:QUAY_0000053;
+    owl:onProperty quay:coverage;
     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-    owl:onClass quay:QUAY_0000039
+    owl:onClass quay:Coverage
 ].

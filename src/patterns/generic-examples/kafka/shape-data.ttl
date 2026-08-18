@@ -22,19 +22,19 @@ ex:kafka-distribution a dcat:Distribution ;
     dcterms:title "Kafka topic distribution" ;
     dcat:accessService ex:kafka-service ;
     dcat:mediaType "application/avro" ;
-    quay:QUAY_0000046 ex:kafka-access ;
-    quay:QUAY_0000047 ex:kafka-yield ;
-    quay:QUAY_0000057 "TLS 1.2" .
+    quay:accessDescription ex:kafka-access ;
+    quay:yieldDescription ex:kafka-yield ;
+    quay:encryptionInTransit "TLS 1.2" .
 
-ex:kafka-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000017 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] .
+ex:kafka-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:ApiKeyAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] .
 
-ex:kafka-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000033 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000035 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000043 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000062 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
+ex:kafka-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:EventDrivenDelivery ] ;
+    quay:temporalQuality [ a quay:RealTime ] ;
+    quay:coverage [ a quay:IncrementalCoverage ] ;
+    quay:serviceQuality [ a quay:HighAvailability ] ;
+    quay:verificationMethod [ a quay:NoVerification ] .

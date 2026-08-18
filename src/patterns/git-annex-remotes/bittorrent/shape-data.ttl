@@ -16,17 +16,17 @@ ex:bittorrent-dataset a dcat:Dataset ;
 ex:bittorrent-distribution a dcat:Distribution ;
     dcterms:title "BitTorrent swarm distribution" ;
     dcat:accessURL <magnet:?xt=urn:btih:example-hash> ;
-    quay:QUAY_0000046 ex:bittorrent-access ;
-    quay:QUAY_0000047 ex:bittorrent-yield .
+    quay:accessDescription ex:bittorrent-access ;
+    quay:yieldDescription ex:bittorrent-yield .
 
-ex:bittorrent-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000009 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] .
+ex:bittorrent-access a quay:AccessDescription ;
+    quay:protocol [ a quay:BitTorrentProtocol ] ;
+    quay:authenticationScheme [ a quay:NoAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] .
 
-ex:bittorrent-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000061 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000065 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000068 ] .
+ex:bittorrent-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:PeerToPeerDelivery ] ;
+    quay:temporalQuality [ a quay:Snapshot ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:Distributed ] ;
+    quay:verificationMethod [ a quay:PieceVerification ] .

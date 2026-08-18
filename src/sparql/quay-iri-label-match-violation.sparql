@@ -1,0 +1,33 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+# IRI local name must match rdfs:label after normalisation.
+# Convention: Classes → PascalCase, Properties → camelCase.
+# This query finds QUAY terms where the local name does NOT match
+# the expected transformation of the label.
+#
+# Expected transforms:
+#   "Access Description" → "AccessDescription" (class)
+#   "access description" → "accessDescription" (property)
+#
+# SPARQL cannot do full case-transform, so this checks that the
+# label (stripped of spaces and hyphens) equals the local name
+# case-insensitively. Manual review needed for case convention.
+
+SELECT ?term ?localName ?label ?normalizedLabel WHERE {
+  {
+    ?term a owl:Class .
+  } UNION {
+    ?term a owl:ObjectProperty .
+  } UNION {
+    ?term a owl:DatatypeProperty .
+  }
+  FILTER(STRSTARTS(STR(?term), "https://w3id.org/quay/"))
+  ?term rdfs:label ?label .
+  FILTER(LANG(?label) = "en" || LANG(?label) = "")
+
+  BIND(REPLACE(STR(?term), ".*[/#]", "") AS ?localName)
+  BIND(REPLACE(REPLACE(STR(?label), "[- /]", ""), "[^a-zA-Z0-9]", "") AS ?normalizedLabel)
+
+  FILTER(LCASE(?localName) != LCASE(?normalizedLabel))
+}

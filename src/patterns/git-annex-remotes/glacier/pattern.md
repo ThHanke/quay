@@ -19,14 +19,14 @@ Modern approach uses S3 remote with storage class:
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | S3 (QUAY_0000005) | S3-compatible API with Glacier class |
-| Auth Scheme | AWS Credential (QUAY_0000022) | Access key + secret key |
+| Protocol | S3 (S3Protocol) | S3-compatible API with Glacier class |
+| Auth Scheme | AWS Credential (AwsCredentialAuthentication) | Access key + secret key |
 | Operations | Read, Write, Delete | Retrieval requires restore request |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete object after restore |
-| Temporal Quality | Archived (QUAY_0000037) | Long-term cold storage |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | High Availability (QUAY_0000062) | AWS 99.999999999% durability |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete object after restore |
+| Temporal Quality | Archived (Archived) | Long-term cold storage |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | High Availability (HighAvailability) | AWS 99.999999999% durability |
+| Verification | Hash Verification (HashVerification) | SHA-256 |
 | Encryption at rest | AES-256 (SSE) | Server-side encryption |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
 

@@ -14,13 +14,13 @@
 quay:DistributionShape a sh:NodeShape ;
     sh:targetClass dcat:Distribution ;
     sh:property [
-        sh:path quay:QUAY_0000046 ;
+        sh:path quay:accessDescription ;
         sh:minCount 1 ;
         sh:name "access description" ;
         sh:message "Distribution must have at least one access description."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000047 ;
+        sh:path quay:yieldDescription ;
         sh:minCount 1 ;
         sh:name "yield description" ;
         sh:message "Distribution must have at least one yield description."
@@ -30,22 +30,22 @@ quay:DistributionShape a sh:NodeShape ;
 # OWL: exactly 1 protocol, >=1 authScheme, >=1 operation
 
 quay:AccessDescriptionShape a sh:NodeShape ;
-    sh:targetClass quay:QUAY_0000001 ;
+    sh:targetClass quay:AccessDescription ;
     sh:property [
-        sh:path quay:QUAY_0000048 ;
+        sh:path quay:protocol ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:name "protocol" ;
         sh:message "AccessDescription must have exactly one protocol."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000049 ;
+        sh:path quay:authenticationScheme ;
         sh:minCount 1 ;
         sh:name "authentication scheme" ;
         sh:message "AccessDescription must have at least one authentication scheme."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000050 ;
+        sh:path quay:supportedOperation ;
         sh:minCount 1 ;
         sh:name "supported operation" ;
         sh:message "AccessDescription must have at least one supported operation."
@@ -56,34 +56,34 @@ quay:AccessDescriptionShape a sh:NodeShape ;
 #       <=1 serviceQuality, <=1 verificationMethod
 
 quay:YieldDescriptionShape a sh:NodeShape ;
-    sh:targetClass quay:QUAY_0000002 ;
+    sh:targetClass quay:YieldDescription ;
     sh:property [
-        sh:path quay:QUAY_0000051 ;
+        sh:path quay:deliveryMode ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:name "delivery mode" ;
         sh:message "YieldDescription must have exactly one delivery mode."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000052 ;
+        sh:path quay:temporalQuality ;
         sh:maxCount 1 ;
         sh:name "temporal quality" ;
         sh:message "YieldDescription must have at most one temporal quality."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000053 ;
+        sh:path quay:coverage ;
         sh:maxCount 1 ;
         sh:name "coverage" ;
         sh:message "YieldDescription must have at most one coverage."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000054 ;
+        sh:path quay:serviceQuality ;
         sh:maxCount 1 ;
         sh:name "service quality" ;
         sh:message "YieldDescription must have at most one service quality."
     ] ;
     sh:property [
-        sh:path quay:QUAY_0000055 ;
+        sh:path quay:verificationMethod ;
         sh:maxCount 1 ;
         sh:name "verification method" ;
         sh:message "YieldDescription must have at most one verification method."

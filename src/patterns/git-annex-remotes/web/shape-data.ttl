@@ -16,18 +16,18 @@ ex:web-dataset a dcat:Dataset ;
 ex:web-distribution a dcat:Distribution ;
     dcterms:title "Web URL distribution" ;
     dcat:downloadURL <https://example.org/data/archive.tar.gz> ;
-    quay:QUAY_0000046 ex:web-access ;
-    quay:QUAY_0000047 ex:web-yield ;
-    quay:QUAY_0000057 "TLS 1.2" .
+    quay:accessDescription ex:web-access ;
+    quay:yieldDescription ex:web-yield ;
+    quay:encryptionInTransit "TLS 1.2" .
 
-ex:web-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] .
+ex:web-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:NoAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] .
 
-ex:web-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
+ex:web-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:BulkDelivery ] ;
+    quay:temporalQuality [ a quay:Snapshot ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:BestEffort ] ;
+    quay:verificationMethod [ a quay:NoVerification ] .

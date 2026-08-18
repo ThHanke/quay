@@ -22,18 +22,18 @@ ex:sparql-distribution a dcat:Distribution ;
     dcterms:title "SPARQL query distribution" ;
     dcat:accessService ex:sparql-service ;
     dcat:mediaType "application/sparql-results+json" ;
-    quay:QUAY_0000046 ex:sparql-access ;
-    quay:QUAY_0000047 ex:sparql-yield ;
-    quay:QUAY_0000057 "TLS 1.2" .
+    quay:accessDescription ex:sparql-access ;
+    quay:yieldDescription ex:sparql-yield ;
+    quay:encryptionInTransit "TLS 1.2" .
 
-ex:sparql-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] .
+ex:sparql-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:NoAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] .
 
-ex:sparql-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000031 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000035 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000041 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
+ex:sparql-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:StreamingDelivery ] ;
+    quay:temporalQuality [ a quay:RealTime ] ;
+    quay:coverage [ a quay:SubsetCoverage ] ;
+    quay:serviceQuality [ a quay:BestEffort ] ;
+    quay:verificationMethod [ a quay:NoVerification ] .

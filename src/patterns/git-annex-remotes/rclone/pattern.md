@@ -17,14 +17,14 @@ Git-annex rclone special remote delegates storage operations to the rclone tool,
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | Rclone (QUAY_0000012) | Delegates to rclone backends |
-| Auth Scheme | API Key (QUAY_0000017) | Varies per backend, API key typical |
+| Protocol | Rclone (RcloneProtocol) | Delegates to rclone backends |
+| Auth Scheme | API Key (ApiKeyAuthentication) | Varies per backend, API key typical |
 | Operations | Read, Write, Delete | Standard CRUD via rclone |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete file per request |
-| Temporal Quality | Snapshot (QUAY_0000036) | File state at transfer time |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on backing service |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 via git-annex |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete file per request |
+| Temporal Quality | Snapshot (Snapshot) | File state at transfer time |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | Best Effort (BestEffort) | Depends on backing service |
+| Verification | Hash Verification (HashVerification) | SHA-256 via git-annex |
 | Encryption at rest | Optional (GPG) | Client-side if configured |
 | Encryption in transit | TLS | Backend-dependent |
 

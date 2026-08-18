@@ -15,14 +15,14 @@ Git-annex rsync special remote stores file contents on any host accessible via r
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | Rsync (QUAY_0000006) | rsync over SSH tunnel |
-| Auth Scheme | SSH Key (QUAY_0000020) | SSH key pair authentication |
+| Protocol | Rsync (RsyncProtocol) | rsync over SSH tunnel |
+| Auth Scheme | SSH Key (SshKeyAuthentication) | SSH key pair authentication |
 | Operations | Read, Write, Delete | No native enumeration |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Delta-transfer optimised |
-| Temporal Quality | Snapshot (QUAY_0000036) | File state at transfer time |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on remote host |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 via git-annex |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Delta-transfer optimised |
+| Temporal Quality | Snapshot (Snapshot) | File state at transfer time |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | Best Effort (BestEffort) | Depends on remote host |
+| Verification | Hash Verification (HashVerification) | SHA-256 via git-annex |
 | Encryption at rest | Optional (GPG) | Client-side if configured |
 | Encryption in transit | SSH | SSH tunnel |
 

@@ -15,14 +15,14 @@ Zenodo is a general-purpose open research data repository operated by CERN. Rese
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | REST API and file download |
-| Auth Scheme | API Key (QUAY_0000017) | Bearer token for uploads, public read |
+| Protocol | HTTP/HTTPS (HttpProtocol) | REST API and file download |
+| Auth Scheme | API Key (ApiKeyAuthentication) | Bearer token for uploads, public read |
 | Operations | Read, Write, List | Download, deposit, search |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete file download |
-| Temporal Quality | Versioned (QUAY_0000038) | DOI versioning, immutable records |
-| Coverage | Complete (QUAY_0000040) | Full deposited content |
-| Service Quality | High Availability (QUAY_0000062) | CERN infrastructure |
-| Verification | Hash Verification (QUAY_0000066) | MD5/SHA-256 checksums provided |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete file download |
+| Temporal Quality | Versioned (Versioned) | DOI versioning, immutable records |
+| Coverage | Complete (CompleteCoverage) | Full deposited content |
+| Service Quality | High Availability (HighAvailability) | CERN infrastructure |
+| Verification | Hash Verification (HashVerification) | MD5/SHA-256 checksums provided |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
 
 ## References

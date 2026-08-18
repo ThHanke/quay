@@ -17,22 +17,22 @@ ex:borg-dataset a dcat:Dataset ;
 ex:borg-distribution a dcat:Distribution ;
     dcterms:title "Borg repository distribution" ;
     dcat:accessURL <ssh://backup@borg-host.example.org/srv/borg/annex> ;
-    quay:QUAY_0000046 ex:borg-access ;
-    quay:QUAY_0000047 ex:borg-yield ;
-    quay:QUAY_0000056 "AES-256-CTR" ;
-    quay:QUAY_0000057 "SSH" ;
+    quay:accessDescription ex:borg-access ;
+    quay:yieldDescription ex:borg-yield ;
+    quay:encryptionAtRest "AES-256-CTR" ;
+    quay:encryptionInTransit "SSH" ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
-ex:borg-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000008 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000020 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] .
+ex:borg-access a quay:AccessDescription ;
+    quay:protocol [ a quay:SshProtocol ] ;
+    quay:authenticationScheme [ a quay:SshKeyAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:supportedOperation [ a quay:DeleteOperation ] .
 
-ex:borg-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000038 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000064 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .
+ex:borg-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:BulkDelivery ] ;
+    quay:temporalQuality [ a quay:Versioned ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:SingleHost ] ;
+    quay:verificationMethod [ a quay:HashVerification ] .

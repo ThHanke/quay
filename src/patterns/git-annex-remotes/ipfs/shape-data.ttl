@@ -16,18 +16,18 @@ ex:ipfs-dataset a dcat:Dataset ;
 ex:ipfs-distribution a dcat:Distribution ;
     dcterms:title "IPFS content-addressed distribution" ;
     dcat:accessURL <ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi> ;
-    quay:QUAY_0000046 ex:ipfs-access ;
-    quay:QUAY_0000047 ex:ipfs-yield .
+    quay:accessDescription ex:ipfs-access ;
+    quay:yieldDescription ex:ipfs-yield .
 
-ex:ipfs-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000010 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] .
+ex:ipfs-access a quay:AccessDescription ;
+    quay:protocol [ a quay:IpfsProtocol ] ;
+    quay:authenticationScheme [ a quay:NoAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] .
 
-ex:ipfs-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000061 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000038 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000065 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000067 ] .
+ex:ipfs-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:PeerToPeerDelivery ] ;
+    quay:temporalQuality [ a quay:Versioned ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:Distributed ] ;
+    quay:verificationMethod [ a quay:ContentAddressing ] .

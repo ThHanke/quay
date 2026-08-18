@@ -14,14 +14,14 @@ Git-annex gcrypt remote uses git-remote-gcrypt to store an entire git repository
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | Git (QUAY_0000014) | git-remote-gcrypt over SSH |
-| Auth Scheme | GPG Key (QUAY_0000021) | GPG key pair for encryption + SSH for transport |
+| Protocol | Git (GitProtocol) | git-remote-gcrypt over SSH |
+| Auth Scheme | GPG Key (GpgKeyAuthentication) | GPG key pair for encryption + SSH for transport |
 | Operations | Read, Write, Delete, Replicate | Full CRUD + sync |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete encrypted packfile |
-| Temporal Quality | Versioned (QUAY_0000038) | Full git history, encrypted |
-| Coverage | Complete (QUAY_0000040) | Full repository content |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on hosting |
-| Verification | Digital Signature (QUAY_0000069) | GPG-signed commits and encryption |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete encrypted packfile |
+| Temporal Quality | Versioned (Versioned) | Full git history, encrypted |
+| Coverage | Complete (CompleteCoverage) | Full repository content |
+| Service Quality | Best Effort (BestEffort) | Depends on hosting |
+| Verification | Digital Signature (DigitalSignature) | GPG-signed commits and encryption |
 | Encryption at rest | GPG (OpenPGP) | Full repository encrypted |
 | Encryption in transit | SSH | SSH tunnel |
 

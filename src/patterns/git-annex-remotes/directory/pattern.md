@@ -14,14 +14,14 @@ Git-annex directory special remote stores file contents in a local or mounted fi
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | Local Filesystem (QUAY_0000011) | Direct filesystem access |
-| Auth Scheme | No Authentication (QUAY_0000016) | OS-level permissions only |
+| Protocol | Local Filesystem (LocalFilesystemProtocol) | Direct filesystem access |
+| Auth Scheme | No Authentication (NoAuthentication) | OS-level permissions only |
 | Operations | Read, Write, Delete, List | Full CRUD + enumeration |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | File copy |
-| Temporal Quality | Snapshot (QUAY_0000036) | File state at copy time |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | Single Host (QUAY_0000064) | Local disk, no redundancy |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 via git-annex |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | File copy |
+| Temporal Quality | Snapshot (Snapshot) | File state at copy time |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | Single Host (SingleHost) | Local disk, no redundancy |
+| Verification | Hash Verification (HashVerification) | SHA-256 via git-annex |
 | Encryption at rest | Optional (GPG) | Client-side if configured |
 | Encryption in transit | N/A | No network transfer |
 

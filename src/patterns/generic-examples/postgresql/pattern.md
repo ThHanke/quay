@@ -15,14 +15,14 @@ Direct database connection to a PostgreSQL server for structured data access. Cl
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | PostgreSQL wire protocol (TCP) |
-| Auth Scheme | Basic Authentication (QUAY_0000019) | Username + password |
+| Protocol | HTTP/HTTPS (HttpProtocol) | PostgreSQL wire protocol (TCP) |
+| Auth Scheme | Basic Authentication (BasicAuthentication) | Username + password |
 | Operations | Read, Write, Delete, List | Full SQL DML |
-| Delivery Mode | Synchronous Delivery (QUAY_0000060) | Blocking query-response |
-| Temporal Quality | Real-Time (QUAY_0000035) | Live transactional data |
-| Coverage | Subset (QUAY_0000041) | Query-defined result set |
-| Service Quality | High Availability (QUAY_0000062) | Managed DB with replication |
-| Verification | No Verification (QUAY_0000070) | Trusted internal connection |
+| Delivery Mode | Synchronous Delivery (SynchronousDelivery) | Blocking query-response |
+| Temporal Quality | Real-Time (RealTime) | Live transactional data |
+| Coverage | Subset (SubsetCoverage) | Query-defined result set |
+| Service Quality | High Availability (HighAvailability) | Managed DB with replication |
+| Verification | No Verification (NoVerification) | Trusted internal connection |
 | Encryption in transit | TLS 1.2+ | SSL mode required |
 
 ## References

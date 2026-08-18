@@ -16,14 +16,14 @@ Apache Kafka topic providing event-driven data streaming. Producers publish even
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | Kafka wire protocol (TCP-based) |
-| Auth Scheme | API Key (QUAY_0000017) | SASL/PLAIN or SASL/SCRAM |
+| Protocol | HTTP/HTTPS (HttpProtocol) | Kafka wire protocol (TCP-based) |
+| Auth Scheme | API Key (ApiKeyAuthentication) | SASL/PLAIN or SASL/SCRAM |
 | Operations | Read, Write | Consume and produce messages |
-| Delivery Mode | Event-Driven Delivery (QUAY_0000033) | Continuous event stream |
-| Temporal Quality | Real-Time (QUAY_0000035) | Live event ingestion |
-| Coverage | Incremental (QUAY_0000043) | Offset-based consumption |
-| Service Quality | High Availability (QUAY_0000062) | Replicated partitions, ISR |
-| Verification | No Verification (QUAY_0000070) | Application-level if needed |
+| Delivery Mode | Event-Driven Delivery (EventDrivenDelivery) | Continuous event stream |
+| Temporal Quality | Real-Time (RealTime) | Live event ingestion |
+| Coverage | Incremental (IncrementalCoverage) | Offset-based consumption |
+| Service Quality | High Availability (HighAvailability) | Replicated partitions, ISR |
+| Verification | No Verification (NoVerification) | Application-level if needed |
 | Encryption at rest | Optional | Disk encryption on brokers |
 | Encryption in transit | TLS | SASL_SSL listener |
 

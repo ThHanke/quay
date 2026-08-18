@@ -15,14 +15,14 @@ Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) endpoint for
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | OAI-PMH over HTTP |
-| Auth Scheme | No Authentication (QUAY_0000016) | Public harvesting endpoint |
+| Protocol | HTTP/HTTPS (HttpProtocol) | OAI-PMH over HTTP |
+| Auth Scheme | No Authentication (NoAuthentication) | Public harvesting endpoint |
 | Operations | Read, List | Harvest and enumerate sets |
-| Delivery Mode | Paginated Delivery (QUAY_0000032) | Resumption token pagination |
-| Temporal Quality | Archived (QUAY_0000037) | Repository metadata records |
-| Coverage | Incremental (QUAY_0000043) | Date-based selective harvesting |
-| Service Quality | Best Effort (QUAY_0000063) | Institutional infrastructure |
-| Verification | No Verification (QUAY_0000070) | No integrity mechanism |
+| Delivery Mode | Paginated Delivery (PaginatedDelivery) | Resumption token pagination |
+| Temporal Quality | Archived (Archived) | Repository metadata records |
+| Coverage | Incremental (IncrementalCoverage) | Date-based selective harvesting |
+| Service Quality | Best Effort (BestEffort) | Institutional infrastructure |
+| Verification | No Verification (NoVerification) | No integrity mechanism |
 | Encryption in transit | TLS | HTTPS when available |
 
 ## References

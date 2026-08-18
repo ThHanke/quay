@@ -8,6 +8,11 @@
 $(REPORTDIR)/validate_profile_owl2dl_%.txt: % | $(REPORTDIR) $(TMPDIR)
 	echo "Skipping OWL 2 DL profile validation (DCAT/dcterms incompatible)" > $@
 
+# QUAY naming convention checks:
+# 1. Every QUAY term must have rdfs:label (English or untagged)
+# 2. IRI local name must match rdfs:label (PascalCase for classes, camelCase for properties)
+SPARQL_VALIDATION_CHECKS += quay-label-required quay-iri-label-match
+
 SHACL_SHAPES = ../shacl/quay-shapes.ttl
 PATTERN_DATA = $(shell find ../patterns -name 'shape-data.ttl' 2>/dev/null)
 

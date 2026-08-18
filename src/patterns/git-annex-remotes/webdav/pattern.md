@@ -15,14 +15,14 @@ Git-annex WebDAV special remote stores file contents on any WebDAV-compatible se
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | WebDAV (QUAY_0000007) | HTTP extension for authoring |
-| Auth Scheme | Basic Authentication (QUAY_0000019) | HTTP Basic over TLS |
+| Protocol | WebDAV (WebDavProtocol) | HTTP extension for authoring |
+| Auth Scheme | Basic Authentication (BasicAuthentication) | HTTP Basic over TLS |
 | Operations | Read, Write, Delete | Standard DAV methods |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete file per request |
-| Temporal Quality | Snapshot (QUAY_0000036) | File state at transfer time |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on WebDAV server |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 via git-annex |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete file per request |
+| Temporal Quality | Snapshot (Snapshot) | File state at transfer time |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | Best Effort (BestEffort) | Depends on WebDAV server |
+| Verification | Hash Verification (HashVerification) | SHA-256 via git-annex |
 | Encryption at rest | Optional (GPG) | Client-side if configured |
 | Encryption in transit | TLS 1.2+ | HTTPS required |
 

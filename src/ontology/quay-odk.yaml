@@ -49,10 +49,6 @@ export_formats:
 
 ci: []
 
-idranges:
-  - allocatedto: "Thomas Hanke"
-    idsfor: quay
-    idprefix: "https://w3id.org/quay/QUAY_"
-    iddigits: 7
-    range_start: 0
-    range_end: 9999
+## Human-readable IRIs used (no numeric ID allocation needed).
+## Convention: Classes=PascalCase, Properties=camelCase, derived from rdfs:label.
+## Enforced by SPARQL checks: quay-label-required.sparql, quay-iri-label-match.sparql

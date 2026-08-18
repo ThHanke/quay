@@ -15,14 +15,14 @@ Classic FTP server hosting static file archives, common in academic institutions
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | FTP (QUAY_0000013) | File Transfer Protocol |
-| Auth Scheme | No Authentication (QUAY_0000016) | Anonymous FTP |
+| Protocol | FTP (FtpProtocol) | File Transfer Protocol |
+| Auth Scheme | No Authentication (NoAuthentication) | Anonymous FTP |
 | Operations | Read, List | Download and directory listing |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete file per transfer |
-| Temporal Quality | Archived (QUAY_0000037) | Static archive, infrequent updates |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | Best Effort (QUAY_0000063) | University infrastructure |
-| Verification | No Verification (QUAY_0000070) | No built-in integrity check |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete file per transfer |
+| Temporal Quality | Archived (Archived) | Static archive, infrequent updates |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | Best Effort (BestEffort) | University infrastructure |
+| Verification | No Verification (NoVerification) | No built-in integrity check |
 | Encryption in transit | none | Plain FTP (FTPS optional) |
 
 ## References

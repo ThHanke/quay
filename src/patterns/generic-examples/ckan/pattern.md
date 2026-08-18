@@ -15,14 +15,14 @@ CKAN (Comprehensive Knowledge Archive Network) is the leading open data portal p
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | CKAN Action API |
-| Auth Scheme | No Authentication (QUAY_0000016) | Public open data |
+| Protocol | HTTP/HTTPS (HttpProtocol) | CKAN Action API |
+| Auth Scheme | No Authentication (NoAuthentication) | Public open data |
 | Operations | Read, List | Search, browse, download |
-| Delivery Mode | Paginated Delivery (QUAY_0000032) | Paginated search results |
-| Temporal Quality | Snapshot (QUAY_0000036) | Published dataset versions |
-| Coverage | Subset (QUAY_0000041) | Search-filtered results |
-| Service Quality | Best Effort (QUAY_0000063) | Government infrastructure |
-| Verification | No Verification (QUAY_0000070) | No integrity mechanism |
+| Delivery Mode | Paginated Delivery (PaginatedDelivery) | Paginated search results |
+| Temporal Quality | Snapshot (Snapshot) | Published dataset versions |
+| Coverage | Subset (SubsetCoverage) | Search-filtered results |
+| Service Quality | Best Effort (BestEffort) | Government infrastructure |
+| Verification | No Verification (NoVerification) | No integrity mechanism |
 | Encryption in transit | TLS | HTTPS |
 
 ## References

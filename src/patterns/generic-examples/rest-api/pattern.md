@@ -15,14 +15,14 @@ Paginated JSON REST API serving structured data, typical of government open data
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | RESTful HTTP API |
-| Auth Scheme | OAuth 2.0 (QUAY_0000018) | Bearer token authentication |
+| Protocol | HTTP/HTTPS (HttpProtocol) | RESTful HTTP API |
+| Auth Scheme | OAuth 2.0 (OAuth2Authentication) | Bearer token authentication |
 | Operations | Read, List | GET endpoints, read-only API |
-| Delivery Mode | Paginated Delivery (QUAY_0000032) | Bounded page size per request |
-| Temporal Quality | Real-Time (QUAY_0000035) | Live database-backed responses |
-| Coverage | Subset (QUAY_0000041) | Filtered/paginated results |
-| Service Quality | High Availability (QUAY_0000062) | SLA-backed API |
-| Verification | No Verification (QUAY_0000070) | No content integrity guarantee |
+| Delivery Mode | Paginated Delivery (PaginatedDelivery) | Bounded page size per request |
+| Temporal Quality | Real-Time (RealTime) | Live database-backed responses |
+| Coverage | Subset (SubsetCoverage) | Filtered/paginated results |
+| Service Quality | High Availability (HighAvailability) | SLA-backed API |
+| Verification | No Verification (NoVerification) | No content integrity guarantee |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
 
 ## References

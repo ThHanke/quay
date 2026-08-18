@@ -17,21 +17,21 @@ ex:directory-dataset a dcat:Dataset ;
 ex:directory-distribution a dcat:Distribution ;
     dcterms:title "Directory remote distribution" ;
     dcat:accessURL <file:///mnt/backup/annex/> ;
-    quay:QUAY_0000046 ex:directory-access ;
-    quay:QUAY_0000047 ex:directory-yield ;
+    quay:accessDescription ex:directory-access ;
+    quay:yieldDescription ex:directory-yield ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
-ex:directory-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000011 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+ex:directory-access a quay:AccessDescription ;
+    quay:protocol [ a quay:LocalFilesystemProtocol ] ;
+    quay:authenticationScheme [ a quay:NoAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:supportedOperation [ a quay:DeleteOperation ] ;
+    quay:supportedOperation [ a quay:ListOperation ] .
 
-ex:directory-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000064 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .
+ex:directory-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:BulkDelivery ] ;
+    quay:temporalQuality [ a quay:Snapshot ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:SingleHost ] ;
+    quay:verificationMethod [ a quay:HashVerification ] .

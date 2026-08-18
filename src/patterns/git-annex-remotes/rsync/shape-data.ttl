@@ -17,21 +17,21 @@ ex:rsync-dataset a dcat:Dataset ;
 ex:rsync-distribution a dcat:Distribution ;
     dcterms:title "Rsync remote distribution" ;
     dcat:accessURL <rsync://backup-host.example.org/annex/> ;
-    quay:QUAY_0000046 ex:rsync-access ;
-    quay:QUAY_0000047 ex:rsync-yield ;
-    quay:QUAY_0000057 "SSH" ;
+    quay:accessDescription ex:rsync-access ;
+    quay:yieldDescription ex:rsync-yield ;
+    quay:encryptionInTransit "SSH" ;
     spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
-ex:rsync-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000006 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000020 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] .
+ex:rsync-access a quay:AccessDescription ;
+    quay:protocol [ a quay:RsyncProtocol ] ;
+    quay:authenticationScheme [ a quay:SshKeyAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:supportedOperation [ a quay:DeleteOperation ] .
 
-ex:rsync-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000030 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000040 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000066 ] .
+ex:rsync-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:BulkDelivery ] ;
+    quay:temporalQuality [ a quay:Snapshot ] ;
+    quay:coverage [ a quay:CompleteCoverage ] ;
+    quay:serviceQuality [ a quay:BestEffort ] ;
+    quay:verificationMethod [ a quay:HashVerification ] .

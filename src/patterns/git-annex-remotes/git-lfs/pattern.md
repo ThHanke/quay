@@ -14,14 +14,14 @@ Git-annex git-lfs special remote interoperates with Git Large File Storage serve
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | Git LFS batch API |
-| Auth Scheme | OAuth 2.0 (QUAY_0000018) | Token-based via git credential |
+| Protocol | HTTP/HTTPS (HttpProtocol) | Git LFS batch API |
+| Auth Scheme | OAuth 2.0 (OAuth2Authentication) | Token-based via git credential |
 | Operations | Read, Write, Delete | Upload, download, delete objects |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete object per request |
-| Temporal Quality | Versioned (QUAY_0000038) | Git-tracked object versions |
-| Coverage | Complete (QUAY_0000040) | Full file content per object |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on hosting provider |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 OID |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete object per request |
+| Temporal Quality | Versioned (Versioned) | Git-tracked object versions |
+| Coverage | Complete (CompleteCoverage) | Full file content per object |
+| Service Quality | Best Effort (BestEffort) | Depends on hosting provider |
+| Verification | Hash Verification (HashVerification) | SHA-256 OID |
 | Encryption at rest | Provider-dependent | Server-side encryption |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
 

@@ -20,14 +20,14 @@ Hook commands configured via git-annex config:
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | Hook (QUAY_0000071) | User-defined scripts |
+| Protocol | Hook (HookProtocol) | User-defined scripts |
 | Auth Scheme | (varies) | Determined by hook implementation |
 | Operations | (varies) | Determined by which hooks are defined |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Typical for file-based hooks |
-| Temporal Quality | Snapshot (QUAY_0000036) | State at hook execution time |
-| Coverage | Complete (QUAY_0000040) | Full file per hook invocation |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on hook implementation |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 via git-annex |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Typical for file-based hooks |
+| Temporal Quality | Snapshot (Snapshot) | State at hook execution time |
+| Coverage | Complete (CompleteCoverage) | Full file per hook invocation |
+| Service Quality | Best Effort (BestEffort) | Depends on hook implementation |
+| Verification | Hash Verification (HashVerification) | SHA-256 via git-annex |
 | Encryption at rest | Optional (GPG) | Client-side if configured |
 | Encryption in transit | Hook-dependent | Determined by transport in script |
 

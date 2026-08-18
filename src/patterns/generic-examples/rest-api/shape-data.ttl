@@ -22,19 +22,19 @@ ex:rest-api-distribution a dcat:Distribution ;
     dcterms:title "Paginated JSON API distribution" ;
     dcat:accessService ex:rest-api-service ;
     dcat:mediaType "application/json" ;
-    quay:QUAY_0000046 ex:rest-api-access ;
-    quay:QUAY_0000047 ex:rest-api-yield ;
-    quay:QUAY_0000057 "TLS 1.2" .
+    quay:accessDescription ex:rest-api-access ;
+    quay:yieldDescription ex:rest-api-yield ;
+    quay:encryptionInTransit "TLS 1.2" .
 
-ex:rest-api-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000018 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+ex:rest-api-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:OAuth2Authentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:ListOperation ] .
 
-ex:rest-api-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000032 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000035 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000041 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000062 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
+ex:rest-api-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:PaginatedDelivery ] ;
+    quay:temporalQuality [ a quay:RealTime ] ;
+    quay:coverage [ a quay:SubsetCoverage ] ;
+    quay:serviceQuality [ a quay:HighAvailability ] ;
+    quay:verificationMethod [ a quay:NoVerification ] .

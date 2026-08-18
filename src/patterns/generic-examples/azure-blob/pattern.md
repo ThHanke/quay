@@ -15,14 +15,14 @@ Microsoft Azure Blob Storage for cloud object storage. Stores unstructured data 
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | Azure Blob REST API |
-| Auth Scheme | API Key (QUAY_0000017) | Shared Access Signature or account key |
+| Protocol | HTTP/HTTPS (HttpProtocol) | Azure Blob REST API |
+| Auth Scheme | API Key (ApiKeyAuthentication) | Shared Access Signature or account key |
 | Operations | Read, Write, Delete, List | Full CRUD on blobs and containers |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete blob per request |
-| Temporal Quality | Snapshot (QUAY_0000036) | Blob snapshots and versioning |
-| Coverage | Complete (QUAY_0000040) | Full blob content |
-| Service Quality | High Availability (QUAY_0000062) | Azure SLA 99.9%-99.99% |
-| Verification | Hash Verification (QUAY_0000066) | Content-MD5 header |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete blob per request |
+| Temporal Quality | Snapshot (Snapshot) | Blob snapshots and versioning |
+| Coverage | Complete (CompleteCoverage) | Full blob content |
+| Service Quality | High Availability (HighAvailability) | Azure SLA 99.9%-99.99% |
+| Verification | Hash Verification (HashVerification) | Content-MD5 header |
 | Encryption at rest | AES-256 | Azure Storage Service Encryption |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
 

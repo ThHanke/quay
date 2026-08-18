@@ -15,14 +15,14 @@ SPARQL Protocol endpoint serving RDF data from a triplestore. Clients submit SPA
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | SPARQL Protocol over HTTP |
-| Auth Scheme | No Authentication (QUAY_0000016) | Public endpoint |
+| Protocol | HTTP/HTTPS (HttpProtocol) | SPARQL Protocol over HTTP |
+| Auth Scheme | No Authentication (NoAuthentication) | Public endpoint |
 | Operations | Read | SELECT, CONSTRUCT, DESCRIBE, ASK |
-| Delivery Mode | Streaming Delivery (QUAY_0000031) | Result stream, may be chunked |
-| Temporal Quality | Real-Time (QUAY_0000035) | Live triplestore query |
-| Coverage | Subset (QUAY_0000041) | Query-defined result set |
-| Service Quality | Best Effort (QUAY_0000063) | Public endpoint, no SLA |
-| Verification | No Verification (QUAY_0000070) | No integrity mechanism |
+| Delivery Mode | Streaming Delivery (StreamingDelivery) | Result stream, may be chunked |
+| Temporal Quality | Real-Time (RealTime) | Live triplestore query |
+| Coverage | Subset (SubsetCoverage) | Query-defined result set |
+| Service Quality | Best Effort (BestEffort) | Public endpoint, no SLA |
+| Verification | No Verification (NoVerification) | No integrity mechanism |
 | Encryption in transit | TLS | HTTPS when available |
 
 ## References

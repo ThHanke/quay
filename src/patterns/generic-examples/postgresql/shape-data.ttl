@@ -21,21 +21,21 @@ ex:postgresql-service a dcat:DataService ;
 ex:postgresql-distribution a dcat:Distribution ;
     dcterms:title "PostgreSQL query distribution" ;
     dcat:accessService ex:postgresql-service ;
-    quay:QUAY_0000046 ex:postgresql-access ;
-    quay:QUAY_0000047 ex:postgresql-yield ;
-    quay:QUAY_0000057 "TLS 1.2" .
+    quay:accessDescription ex:postgresql-access ;
+    quay:yieldDescription ex:postgresql-yield ;
+    quay:encryptionInTransit "TLS 1.2" .
 
-ex:postgresql-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000019 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000024 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000025 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+ex:postgresql-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:BasicAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:supportedOperation [ a quay:DeleteOperation ] ;
+    quay:supportedOperation [ a quay:ListOperation ] .
 
-ex:postgresql-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000060 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000035 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000041 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000062 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
+ex:postgresql-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:SynchronousDelivery ] ;
+    quay:temporalQuality [ a quay:RealTime ] ;
+    quay:coverage [ a quay:SubsetCoverage ] ;
+    quay:serviceQuality [ a quay:HighAvailability ] ;
+    quay:verificationMethod [ a quay:NoVerification ] .

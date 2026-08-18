@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+# Every class, object property, and datatype property in the QUAY namespace
+# must have an rdfs:label with an English language tag.
+
+SELECT ?term ?type WHERE {
+  {
+    ?term a owl:Class .
+    BIND("Class" AS ?type)
+  } UNION {
+    ?term a owl:ObjectProperty .
+    BIND("ObjectProperty" AS ?type)
+  } UNION {
+    ?term a owl:DatatypeProperty .
+    BIND("DatatypeProperty" AS ?type)
+  }
+  FILTER(STRSTARTS(STR(?term), "https://w3id.org/quay/"))
+  FILTER NOT EXISTS {
+    ?term rdfs:label ?label .
+    FILTER(LANG(?label) = "en" || LANG(?label) = "")
+  }
+}

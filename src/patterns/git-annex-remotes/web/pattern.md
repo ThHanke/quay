@@ -15,14 +15,14 @@ No explicit configuration needed. Built-in remote type.
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | HTTP/HTTPS (QUAY_0000004) | Standard HTTP GET |
-| Auth Scheme | No Authentication (QUAY_0000016) | Public URLs |
+| Protocol | HTTP/HTTPS (HttpProtocol) | Standard HTTP GET |
+| Auth Scheme | No Authentication (NoAuthentication) | Public URLs |
 | Operations | Read | Download only |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete file download |
-| Temporal Quality | Snapshot (QUAY_0000036) | State at download time, URL may change |
-| Coverage | Complete (QUAY_0000040) | Full file per URL |
-| Service Quality | Best Effort (QUAY_0000063) | URL availability not guaranteed |
-| Verification | No Verification (QUAY_0000070) | URL content may change without notice |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete file download |
+| Temporal Quality | Snapshot (Snapshot) | State at download time, URL may change |
+| Coverage | Complete (CompleteCoverage) | Full file per URL |
+| Service Quality | Best Effort (BestEffort) | URL availability not guaranteed |
+| Verification | No Verification (NoVerification) | URL content may change without notice |
 | Encryption at rest | none | Public web content |
 | Encryption in transit | TLS | HTTPS when available |
 

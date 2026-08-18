@@ -22,19 +22,19 @@ ex:ckan-distribution a dcat:Distribution ;
     dcterms:title "CKAN API distribution" ;
     dcat:accessService ex:ckan-service ;
     dcat:mediaType "application/json" ;
-    quay:QUAY_0000046 ex:ckan-access ;
-    quay:QUAY_0000047 ex:ckan-yield ;
-    quay:QUAY_0000057 "TLS 1.2" .
+    quay:accessDescription ex:ckan-access ;
+    quay:yieldDescription ex:ckan-yield ;
+    quay:encryptionInTransit "TLS 1.2" .
 
-ex:ckan-access a quay:QUAY_0000001 ;
-    quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;
-    quay:QUAY_0000049 [ a quay:QUAY_0000016 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000023 ] ;
-    quay:QUAY_0000050 [ a quay:QUAY_0000026 ] .
+ex:ckan-access a quay:AccessDescription ;
+    quay:protocol [ a quay:HttpProtocol ] ;
+    quay:authenticationScheme [ a quay:NoAuthentication ] ;
+    quay:supportedOperation [ a quay:ReadOperation ] ;
+    quay:supportedOperation [ a quay:ListOperation ] .
 
-ex:ckan-yield a quay:QUAY_0000002 ;
-    quay:QUAY_0000051 [ a quay:QUAY_0000032 ] ;
-    quay:QUAY_0000052 [ a quay:QUAY_0000036 ] ;
-    quay:QUAY_0000053 [ a quay:QUAY_0000041 ] ;
-    quay:QUAY_0000054 [ a quay:QUAY_0000063 ] ;
-    quay:QUAY_0000055 [ a quay:QUAY_0000070 ] .
+ex:ckan-yield a quay:YieldDescription ;
+    quay:deliveryMode [ a quay:PaginatedDelivery ] ;
+    quay:temporalQuality [ a quay:Snapshot ] ;
+    quay:coverage [ a quay:SubsetCoverage ] ;
+    quay:serviceQuality [ a quay:BestEffort ] ;
+    quay:verificationMethod [ a quay:NoVerification ] .

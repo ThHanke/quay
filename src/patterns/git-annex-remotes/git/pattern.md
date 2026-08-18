@@ -16,14 +16,14 @@ No special configuration needed. Any git remote with git-annex initialized:
 
 | Dimension | QUAY Class | Notes |
 |-----------|-----------|-------|
-| Protocol | Git (QUAY_0000014) | git-annex over SSH or HTTPS |
-| Auth Scheme | SSH Key (QUAY_0000020) | SSH key pair (most common) |
+| Protocol | Git (GitProtocol) | git-annex over SSH or HTTPS |
+| Auth Scheme | SSH Key (SshKeyAuthentication) | SSH key pair (most common) |
 | Operations | Read, Write, Delete, Replicate | Full CRUD + git-annex sync |
-| Delivery Mode | Bulk Delivery (QUAY_0000030) | Complete file per transfer |
-| Temporal Quality | Versioned (QUAY_0000038) | Full git history |
-| Coverage | Complete (QUAY_0000040) | Full file content |
-| Service Quality | Best Effort (QUAY_0000063) | Depends on hosting |
-| Verification | Hash Verification (QUAY_0000066) | SHA-256 via git-annex key |
+| Delivery Mode | Bulk Delivery (BulkDelivery) | Complete file per transfer |
+| Temporal Quality | Versioned (Versioned) | Full git history |
+| Coverage | Complete (CompleteCoverage) | Full file content |
+| Service Quality | Best Effort (BestEffort) | Depends on hosting |
+| Verification | Hash Verification (HashVerification) | SHA-256 via git-annex key |
 | Encryption at rest | none | Git repository, no encryption layer |
 | Encryption in transit | SSH | SSH tunnel or HTTPS |
 
