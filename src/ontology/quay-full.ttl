@@ -442,79 +442,6 @@ prov:wasRevisionOf rdf:type owl:ObjectProperty ;
 foaf:homepage rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/quay.owl#accessDescription
-<https://w3id.org/quay.owl#accessDescription> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/quay.owl#authenticationScheme
-<https://w3id.org/quay.owl#authenticationScheme> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/quay.owl#coverage
-<https://w3id.org/quay.owl#coverage> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                     rdfs:range <https://w3id.org/quay.owl#Coverage> ;
-                                     rdfs:label "coverage" .
-
-
-###  https://w3id.org/quay.owl#deliveryMode
-<https://w3id.org/quay.owl#deliveryMode> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/quay.owl#encryptionAtRest
-<https://w3id.org/quay.owl#encryptionAtRest> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain dcat:Distribution ;
-                                             rdfs:range <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                             obo:IAO_0000115 "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend." ;
-                                             rdfs:label "encryption at rest" .
-
-
-###  https://w3id.org/quay.owl#encryptionInTransit
-<https://w3id.org/quay.owl#encryptionInTransit> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain dcat:Distribution ;
-                                                rdfs:range <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                                obo:IAO_0000115 "Relates a distribution to the encryption protocol applied to data during transfer between client and server." ;
-                                                rdfs:label "encryption in transit" .
-
-
-###  https://w3id.org/quay.owl#protocol
-<https://w3id.org/quay.owl#protocol> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/quay.owl#serviceQuality
-<https://w3id.org/quay.owl#serviceQuality> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                           rdfs:range <https://w3id.org/quay.owl#ServiceQuality> ;
-                                           rdfs:label "service quality" .
-
-
-###  https://w3id.org/quay.owl#storageJurisdiction
-<https://w3id.org/quay.owl#storageJurisdiction> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain dcat:Distribution ;
-                                                rdfs:range rdfs:Resource ;
-                                                obo:IAO_0000115 "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored." ;
-                                                rdfs:label "storage jurisdiction" .
-
-
-###  https://w3id.org/quay.owl#supportedOperation
-<https://w3id.org/quay.owl#supportedOperation> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/quay.owl#temporalQuality
-<https://w3id.org/quay.owl#temporalQuality> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/quay.owl#verificationMethod
-<https://w3id.org/quay.owl#verificationMethod> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                               rdfs:range <https://w3id.org/quay.owl#VerificationMethod> ;
-                                               rdfs:label "verification method" .
-
-
-###  https://w3id.org/quay.owl#yieldDescription
-<https://w3id.org/quay.owl#yieldDescription> rdf:type owl:ObjectProperty .
-
-
 ###  https://w3id.org/quay/accessDescription
 <https://w3id.org/quay/accessDescription> rdf:type owl:ObjectProperty ;
                                           rdfs:domain dcat:Distribution ;
@@ -547,6 +474,22 @@ foaf:homepage rdf:type owl:ObjectProperty .
                                      rdfs:label "delivery mode" .
 
 
+###  https://w3id.org/quay/encryptionAtRest
+<https://w3id.org/quay/encryptionAtRest> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain dcat:Distribution ;
+                                         rdfs:range <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                         obo:IAO_0000115 "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend." ;
+                                         rdfs:label "encryption at rest" .
+
+
+###  https://w3id.org/quay/encryptionInTransit
+<https://w3id.org/quay/encryptionInTransit> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain dcat:Distribution ;
+                                            rdfs:range <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                            obo:IAO_0000115 "Relates a distribution to the encryption protocol applied to data during transfer between client and server." ;
+                                            rdfs:label "encryption in transit" .
+
+
 ###  https://w3id.org/quay/protocol
 <https://w3id.org/quay/protocol> rdf:type owl:ObjectProperty ;
                                  rdfs:domain <https://w3id.org/quay/AccessDescription> ;
@@ -561,6 +504,14 @@ foaf:homepage rdf:type owl:ObjectProperty .
                                        rdfs:range <https://w3id.org/quay/ServiceQuality> ;
                                        obo:IAO_0000115 "Relates a yield description to the reliability and availability characterisation of the service." ;
                                        rdfs:label "service quality" .
+
+
+###  https://w3id.org/quay/storageJurisdiction
+<https://w3id.org/quay/storageJurisdiction> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain dcat:Distribution ;
+                                            rdfs:range rdfs:Resource ;
+                                            obo:IAO_0000115 "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored." ;
+                                            rdfs:label "storage jurisdiction" .
 
 
 ###  https://w3id.org/quay/supportedOperation
@@ -666,84 +617,68 @@ dcat:version rdf:type owl:DatatypeProperty ;
 odrl:rightOperand rdf:type owl:DatatypeProperty .
 
 
-###  https://w3id.org/quay.owl#costDescription
-<https://w3id.org/quay.owl#costDescription> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain <https://w3id.org/quay.owl#AccessDescription> ;
-                                            rdfs:range xsd:string ;
-                                            obo:IAO_0000115 "Human-readable description of the cost or pricing model for accessing the distribution." ;
-                                            rdfs:label "cost description" .
+###  https://w3id.org/quay/costDescription
+<https://w3id.org/quay/costDescription> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/quay/AccessDescription> ;
+                                        rdfs:range xsd:string ;
+                                        obo:IAO_0000115 "Human-readable description of the cost or pricing model for accessing the distribution." ;
+                                        rdfs:label "cost description" .
 
 
-###  https://w3id.org/quay.owl#quotaLimit
-<https://w3id.org/quay.owl#quotaLimit> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain <https://w3id.org/quay.owl#AccessDescription> ;
-                                       rdfs:range xsd:string ;
-                                       obo:IAO_0000115 "Usage quota describing the maximum allowed consumption of the service." ;
-                                       rdfs:label "quota limit" .
+###  https://w3id.org/quay/quotaLimit
+<https://w3id.org/quay/quotaLimit> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://w3id.org/quay/AccessDescription> ;
+                                   rdfs:range xsd:string ;
+                                   obo:IAO_0000115 "Usage quota describing the maximum allowed consumption of the service." ;
+                                   rdfs:label "quota limit" .
 
 
-###  https://w3id.org/quay.owl#rateLimit
-<https://w3id.org/quay.owl#rateLimit> rdf:type owl:DatatypeProperty ;
-                                      rdfs:domain <https://w3id.org/quay.owl#AccessDescription> ;
-                                      rdfs:range xsd:nonNegativeInteger ;
-                                      obo:IAO_0000115 "Maximum number of requests permitted within a time window." ;
-                                      rdfs:label "rate limit" .
+###  https://w3id.org/quay/rateLimit
+<https://w3id.org/quay/rateLimit> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <https://w3id.org/quay/AccessDescription> ;
+                                  rdfs:range xsd:nonNegativeInteger ;
+                                  obo:IAO_0000115 "Maximum number of requests permitted within a time window." ;
+                                  rdfs:label "rate limit" .
 
 
-###  https://w3id.org/quay.owl#recoveryPointObjective
-<https://w3id.org/quay.owl#recoveryPointObjective> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                                   rdfs:range xsd:duration ;
-                                                   obo:IAO_0000115 "Maximum acceptable duration of data loss measured as a time window before the disruption." ;
-                                                   rdfs:label "recovery point objective" .
+###  https://w3id.org/quay/recoveryPointObjective
+<https://w3id.org/quay/recoveryPointObjective> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://w3id.org/quay/YieldDescription> ;
+                                               rdfs:range xsd:duration ;
+                                               obo:IAO_0000115 "Maximum acceptable duration of data loss measured as a time window before the disruption." ;
+                                               rdfs:label "recovery point objective" .
 
 
-###  https://w3id.org/quay.owl#recoveryTimeObjective
-<https://w3id.org/quay.owl#recoveryTimeObjective> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                                  rdfs:range xsd:duration ;
-                                                  obo:IAO_0000115 "Maximum acceptable duration to restore service after a disruption." ;
-                                                  rdfs:label "recovery time objective" .
+###  https://w3id.org/quay/recoveryTimeObjective
+<https://w3id.org/quay/recoveryTimeObjective> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://w3id.org/quay/YieldDescription> ;
+                                              rdfs:range xsd:duration ;
+                                              obo:IAO_0000115 "Maximum acceptable duration to restore service after a disruption." ;
+                                              rdfs:label "recovery time objective" .
 
 
-###  https://w3id.org/quay.owl#replicationFactor
-<https://w3id.org/quay.owl#replicationFactor> rdf:type owl:DatatypeProperty ;
-                                              rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                              rdfs:range xsd:nonNegativeInteger ;
-                                              obo:IAO_0000115 "Number of independent copies of the data maintained across storage nodes." ;
-                                              rdfs:label "replication factor" .
+###  https://w3id.org/quay/replicationFactor
+<https://w3id.org/quay/replicationFactor> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/quay/YieldDescription> ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          obo:IAO_0000115 "Number of independent copies of the data maintained across storage nodes." ;
+                                          rdfs:label "replication factor" .
 
 
-###  https://w3id.org/quay.owl#retentionPeriod
-<https://w3id.org/quay.owl#retentionPeriod> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain dcat:Distribution ;
-                                            rdfs:range xsd:duration ;
-                                            obo:IAO_0000115 "Duration for which data is guaranteed to be retained before deletion or archival." ;
-                                            rdfs:label "retention period" .
+###  https://w3id.org/quay/retentionPeriod
+<https://w3id.org/quay/retentionPeriod> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain dcat:Distribution ;
+                                        rdfs:range xsd:duration ;
+                                        obo:IAO_0000115 "Duration for which data is guaranteed to be retained before deletion or archival." ;
+                                        rdfs:label "retention period" .
 
 
-###  https://w3id.org/quay.owl#uptimePercentage
-<https://w3id.org/quay.owl#uptimePercentage> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <https://w3id.org/quay.owl#YieldDescription> ;
-                                             rdfs:range xsd:decimal ;
-                                             obo:IAO_0000115 "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100." ;
-                                             rdfs:label "uptime percentage" .
-
-
-###  https://w3id.org/quay/encryptionAtRest
-<https://w3id.org/quay/encryptionAtRest> rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain dcat:Distribution ;
-                                         rdfs:range xsd:string ;
-                                         obo:IAO_0000115 "Encryption algorithm applied to data at rest within the storage backend." ;
-                                         rdfs:label "encryption at rest" .
-
-
-###  https://w3id.org/quay/encryptionInTransit
-<https://w3id.org/quay/encryptionInTransit> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain dcat:Distribution ;
-                                            rdfs:range xsd:string ;
-                                            obo:IAO_0000115 "Encryption protocol applied to data during transfer between client and server." ;
-                                            rdfs:label "encryption in transit" .
+###  https://w3id.org/quay/uptimePercentage
+<https://w3id.org/quay/uptimePercentage> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/quay/YieldDescription> ;
+                                         rdfs:range xsd:decimal ;
+                                         obo:IAO_0000115 "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100." ;
+                                         rdfs:label "uptime percentage" .
 
 
 #################################################################
@@ -919,370 +854,6 @@ prov:Entity rdf:type owl:Class ;
 foaf:Person rdf:type owl:Class .
 
 
-###  https://w3id.org/quay.owl#AccessDescription
-<https://w3id.org/quay.owl#AccessDescription> rdf:type owl:Class ;
-                                              rdfs:comment "Qualifies HOW a Distribution is reached." ;
-                                              rdfs:label "Access Description" .
-
-
-###  https://w3id.org/quay.owl#Aes128Encryption
-<https://w3id.org/quay.owl#Aes128Encryption> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                             obo:IAO_0000115 "Encryption using the Advanced Encryption Standard with a 128-bit key." ;
-                                             rdfs:comment "128-bit Advanced Encryption Standard." ;
-                                             rdfs:label "AES-128 Encryption" .
-
-
-###  https://w3id.org/quay.owl#Aes256Encryption
-<https://w3id.org/quay.owl#Aes256Encryption> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                             obo:IAO_0000115 "Encryption using the Advanced Encryption Standard with a 256-bit key." ;
-                                             rdfs:comment "256-bit Advanced Encryption Standard." ;
-                                             rdfs:label "AES-256 Encryption" .
-
-
-###  https://w3id.org/quay.owl#ApiKeyAuthentication
-<https://w3id.org/quay.owl#ApiKeyAuthentication> rdf:type owl:Class ;
-                                                 rdfs:label "API Key Authentication" .
-
-
-###  https://w3id.org/quay.owl#Archived
-<https://w3id.org/quay.owl#Archived> rdf:type owl:Class ;
-                                     rdfs:label "Archived" .
-
-
-###  https://w3id.org/quay.owl#AuthenticationScheme
-<https://w3id.org/quay.owl#AuthenticationScheme> rdf:type owl:Class ;
-                                                 rdfs:label "Authentication Scheme" .
-
-
-###  https://w3id.org/quay.owl#AwsCredentialAuthentication
-<https://w3id.org/quay.owl#AwsCredentialAuthentication> rdf:type owl:Class ;
-                                                        rdfs:label "AWS Credential Authentication" .
-
-
-###  https://w3id.org/quay.owl#BasicAuthentication
-<https://w3id.org/quay.owl#BasicAuthentication> rdf:type owl:Class ;
-                                                rdfs:label "Basic Authentication" .
-
-
-###  https://w3id.org/quay.owl#BestEffort
-<https://w3id.org/quay.owl#BestEffort> rdf:type owl:Class ;
-                                       rdfs:comment "Quality depends on upstream server or network conditions." ;
-                                       rdfs:label "Best Effort" .
-
-
-###  https://w3id.org/quay.owl#BitTorrentProtocol
-<https://w3id.org/quay.owl#BitTorrentProtocol> rdf:type owl:Class ;
-                                               rdfs:label "BitTorrent Protocol" .
-
-
-###  https://w3id.org/quay.owl#BulkDelivery
-<https://w3id.org/quay.owl#BulkDelivery> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/quay.owl#DeliveryMode> ;
-                                         rdfs:label "Bulk Delivery" .
-
-
-###  https://w3id.org/quay.owl#CompleteCoverage
-<https://w3id.org/quay.owl#CompleteCoverage> rdf:type owl:Class ;
-                                             rdfs:label "Complete Coverage" .
-
-
-###  https://w3id.org/quay.owl#ContentAddressing
-<https://w3id.org/quay.owl#ContentAddressing> rdf:type owl:Class ;
-                                              rdfs:comment "Content identified and verified by its hash, as in IPFS CIDs." ;
-                                              rdfs:label "Content Addressing" .
-
-
-###  https://w3id.org/quay.owl#Coverage
-<https://w3id.org/quay.owl#Coverage> rdf:type owl:Class ;
-                                     rdfs:label "Coverage" .
-
-
-###  https://w3id.org/quay.owl#DeleteOperation
-<https://w3id.org/quay.owl#DeleteOperation> rdf:type owl:Class ;
-                                            rdfs:label "Delete Operation" .
-
-
-###  https://w3id.org/quay.owl#DeliveryMode
-<https://w3id.org/quay.owl#DeliveryMode> rdf:type owl:Class ;
-                                         rdfs:label "Delivery Mode" .
-
-
-###  https://w3id.org/quay.owl#DigitalSignature
-<https://w3id.org/quay.owl#DigitalSignature> rdf:type owl:Class ;
-                                             rdfs:comment "Integrity and authenticity verified via cryptographic signature." ;
-                                             rdfs:label "Digital Signature" .
-
-
-###  https://w3id.org/quay.owl#Distributed
-<https://w3id.org/quay.owl#Distributed> rdf:type owl:Class ;
-                                        rdfs:comment "Data distributed across multiple peers or nodes." ;
-                                        rdfs:label "Distributed" .
-
-
-###  https://w3id.org/quay.owl#EncryptionAlgorithm
-<https://w3id.org/quay.owl#EncryptionAlgorithm> rdf:type owl:Class ;
-                                                obo:IAO_0000115 "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit." ;
-                                                rdfs:label "Encryption Algorithm" .
-
-
-###  https://w3id.org/quay.owl#EventDrivenDelivery
-<https://w3id.org/quay.owl#EventDrivenDelivery> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/quay.owl#DeliveryMode> ;
-                                                rdfs:label "Event-Driven Delivery" .
-
-
-###  https://w3id.org/quay.owl#FtpProtocol
-<https://w3id.org/quay.owl#FtpProtocol> rdf:type owl:Class ;
-                                        rdfs:label "FTP Protocol" .
-
-
-###  https://w3id.org/quay.owl#GitProtocol
-<https://w3id.org/quay.owl#GitProtocol> rdf:type owl:Class ;
-                                        rdfs:label "Git Protocol" .
-
-
-###  https://w3id.org/quay.owl#GpgEncryption
-<https://w3id.org/quay.owl#GpgEncryption> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                          obo:IAO_0000115 "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard." ;
-                                          rdfs:comment "GNU Privacy Guard / OpenPGP encryption." ;
-                                          rdfs:label "GPG Encryption" .
-
-
-###  https://w3id.org/quay.owl#GpgKeyAuthentication
-<https://w3id.org/quay.owl#GpgKeyAuthentication> rdf:type owl:Class ;
-                                                 rdfs:label "GPG Key Authentication" .
-
-
-###  https://w3id.org/quay.owl#HashVerification
-<https://w3id.org/quay.owl#HashVerification> rdf:type owl:Class ;
-                                             rdfs:comment "Integrity verified by comparing cryptographic hash of content." ;
-                                             rdfs:label "Hash Verification" .
-
-
-###  https://w3id.org/quay.owl#HighAvailability
-<https://w3id.org/quay.owl#HighAvailability> rdf:type owl:Class ;
-                                             rdfs:comment "Managed cloud services with SLA guarantees." ;
-                                             rdfs:label "High Availability" .
-
-
-###  https://w3id.org/quay.owl#HookProtocol
-<https://w3id.org/quay.owl#HookProtocol> rdf:type owl:Class ;
-                                         rdfs:comment "Custom protocol via user-defined hook scripts." ;
-                                         rdfs:label "Hook Protocol" .
-
-
-###  https://w3id.org/quay.owl#HttpProtocol
-<https://w3id.org/quay.owl#HttpProtocol> rdf:type owl:Class ;
-                                         rdfs:label "HTTP Protocol" .
-
-
-###  https://w3id.org/quay.owl#IncrementalCoverage
-<https://w3id.org/quay.owl#IncrementalCoverage> rdf:type owl:Class ;
-                                                rdfs:label "Incremental Coverage" .
-
-
-###  https://w3id.org/quay.owl#IpfsProtocol
-<https://w3id.org/quay.owl#IpfsProtocol> rdf:type owl:Class ;
-                                         rdfs:label "IPFS Protocol" .
-
-
-###  https://w3id.org/quay.owl#ListOperation
-<https://w3id.org/quay.owl#ListOperation> rdf:type owl:Class ;
-                                          rdfs:label "List Operation" .
-
-
-###  https://w3id.org/quay.owl#LocalFilesystemProtocol
-<https://w3id.org/quay.owl#LocalFilesystemProtocol> rdf:type owl:Class ;
-                                                    rdfs:label "Local Filesystem Protocol" .
-
-
-###  https://w3id.org/quay.owl#NoAuthentication
-<https://w3id.org/quay.owl#NoAuthentication> rdf:type owl:Class ;
-                                             rdfs:label "No Authentication" .
-
-
-###  https://w3id.org/quay.owl#NoEncryption
-<https://w3id.org/quay.owl#NoEncryption> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                         obo:IAO_0000115 "Designation indicating that no encryption is applied to the data." ;
-                                         rdfs:comment "No encryption applied." ;
-                                         rdfs:label "No Encryption" .
-
-
-###  https://w3id.org/quay.owl#NoVerification
-<https://w3id.org/quay.owl#NoVerification> rdf:type owl:Class ;
-                                           rdfs:comment "No integrity verification mechanism available." ;
-                                           rdfs:label "No Verification" .
-
-
-###  https://w3id.org/quay.owl#OAuth2Authentication
-<https://w3id.org/quay.owl#OAuth2Authentication> rdf:type owl:Class ;
-                                                 rdfs:label "OAuth2 Authentication" .
-
-
-###  https://w3id.org/quay.owl#Operation
-<https://w3id.org/quay.owl#Operation> rdf:type owl:Class ;
-                                      rdfs:subClassOf odrl:Action ;
-                                      rdfs:label "Operation" .
-
-
-###  https://w3id.org/quay.owl#PaginatedDelivery
-<https://w3id.org/quay.owl#PaginatedDelivery> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/quay.owl#DeliveryMode> ;
-                                              rdfs:label "Paginated Delivery" .
-
-
-###  https://w3id.org/quay.owl#PeerToPeerDelivery
-<https://w3id.org/quay.owl#PeerToPeerDelivery> rdf:type owl:Class ;
-                                               rdfs:label "Peer-to-Peer Delivery" .
-
-
-###  https://w3id.org/quay.owl#PieceVerification
-<https://w3id.org/quay.owl#PieceVerification> rdf:type owl:Class ;
-                                              rdfs:comment "Integrity verified per-piece using a hash tree, as in BitTorrent." ;
-                                              rdfs:label "Piece Verification" .
-
-
-###  https://w3id.org/quay.owl#Protocol
-<https://w3id.org/quay.owl#Protocol> rdf:type owl:Class ;
-                                     rdfs:label "Protocol" .
-
-
-###  https://w3id.org/quay.owl#RcloneProtocol
-<https://w3id.org/quay.owl#RcloneProtocol> rdf:type owl:Class ;
-                                           rdfs:label "Rclone Protocol" .
-
-
-###  https://w3id.org/quay.owl#ReadOperation
-<https://w3id.org/quay.owl#ReadOperation> rdf:type owl:Class ;
-                                          rdfs:label "Read Operation" .
-
-
-###  https://w3id.org/quay.owl#RealTime
-<https://w3id.org/quay.owl#RealTime> rdf:type owl:Class ;
-                                     rdfs:label "Real-Time" .
-
-
-###  https://w3id.org/quay.owl#ReplicateOperation
-<https://w3id.org/quay.owl#ReplicateOperation> rdf:type owl:Class ;
-                                               rdfs:label "Replicate Operation" .
-
-
-###  https://w3id.org/quay.owl#RsyncProtocol
-<https://w3id.org/quay.owl#RsyncProtocol> rdf:type owl:Class ;
-                                          rdfs:label "Rsync Protocol" .
-
-
-###  https://w3id.org/quay.owl#S3Protocol
-<https://w3id.org/quay.owl#S3Protocol> rdf:type owl:Class ;
-                                       rdfs:label "S3 Protocol" .
-
-
-###  https://w3id.org/quay.owl#SampleCoverage
-<https://w3id.org/quay.owl#SampleCoverage> rdf:type owl:Class ;
-                                           rdfs:label "Sample Coverage" .
-
-
-###  https://w3id.org/quay.owl#ServiceQuality
-<https://w3id.org/quay.owl#ServiceQuality> rdf:type owl:Class ;
-                                           rdfs:label "Service Quality" .
-
-
-###  https://w3id.org/quay.owl#SingleHost
-<https://w3id.org/quay.owl#SingleHost> rdf:type owl:Class ;
-                                       rdfs:comment "Data resides on a single machine with no redundancy." ;
-                                       rdfs:label "Single Host" .
-
-
-###  https://w3id.org/quay.owl#Snapshot
-<https://w3id.org/quay.owl#Snapshot> rdf:type owl:Class ;
-                                     rdfs:label "Snapshot" .
-
-
-###  https://w3id.org/quay.owl#SshEncryption
-<https://w3id.org/quay.owl#SshEncryption> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                          obo:IAO_0000115 "Encryption using the Secure Shell protocol for transport-layer data protection." ;
-                                          rdfs:comment "Secure Shell encrypted transport." ;
-                                          rdfs:label "SSH Encryption" .
-
-
-###  https://w3id.org/quay.owl#SshKeyAuthentication
-<https://w3id.org/quay.owl#SshKeyAuthentication> rdf:type owl:Class ;
-                                                 rdfs:label "SSH Key Authentication" .
-
-
-###  https://w3id.org/quay.owl#SshProtocol
-<https://w3id.org/quay.owl#SshProtocol> rdf:type owl:Class ;
-                                        rdfs:label "SSH Protocol" .
-
-
-###  https://w3id.org/quay.owl#StreamingDelivery
-<https://w3id.org/quay.owl#StreamingDelivery> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/quay.owl#DeliveryMode> ;
-                                              rdfs:label "Streaming Delivery" .
-
-
-###  https://w3id.org/quay.owl#SubsetCoverage
-<https://w3id.org/quay.owl#SubsetCoverage> rdf:type owl:Class ;
-                                           rdfs:label "Subset Coverage" .
-
-
-###  https://w3id.org/quay.owl#SynchronousDelivery
-<https://w3id.org/quay.owl#SynchronousDelivery> rdf:type owl:Class ;
-                                                rdfs:label "Synchronous Delivery" .
-
-
-###  https://w3id.org/quay.owl#TemporalQuality
-<https://w3id.org/quay.owl#TemporalQuality> rdf:type owl:Class ;
-                                            rdfs:label "Temporal Quality" .
-
-
-###  https://w3id.org/quay.owl#Tls12Encryption
-<https://w3id.org/quay.owl#Tls12Encryption> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                            obo:IAO_0000115 "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246." ;
-                                            rdfs:comment "Transport Layer Security version 1.2." ;
-                                            rdfs:label "TLS 1.2 Encryption" .
-
-
-###  https://w3id.org/quay.owl#Tls13Encryption
-<https://w3id.org/quay.owl#Tls13Encryption> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/quay.owl#EncryptionAlgorithm> ;
-                                            obo:IAO_0000115 "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446." ;
-                                            rdfs:comment "Transport Layer Security version 1.3." ;
-                                            rdfs:label "TLS 1.3 Encryption" .
-
-
-###  https://w3id.org/quay.owl#VerificationMethod
-<https://w3id.org/quay.owl#VerificationMethod> rdf:type owl:Class ;
-                                               rdfs:label "Verification Method" .
-
-
-###  https://w3id.org/quay.owl#Versioned
-<https://w3id.org/quay.owl#Versioned> rdf:type owl:Class ;
-                                      rdfs:label "Versioned" .
-
-
-###  https://w3id.org/quay.owl#WebDavProtocol
-<https://w3id.org/quay.owl#WebDavProtocol> rdf:type owl:Class ;
-                                           rdfs:label "WebDAV Protocol" .
-
-
-###  https://w3id.org/quay.owl#WriteOperation
-<https://w3id.org/quay.owl#WriteOperation> rdf:type owl:Class ;
-                                           rdfs:label "Write Operation" .
-
-
-###  https://w3id.org/quay.owl#YieldDescription
-<https://w3id.org/quay.owl#YieldDescription> rdf:type owl:Class ;
-                                             rdfs:comment "Qualifies WHAT a Distribution delivers." ;
-                                             rdfs:label "Yield Description" .
-
-
 ###  https://w3id.org/quay/AccessDescription
 <https://w3id.org/quay/AccessDescription> rdf:type owl:Class ;
                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -1307,11 +878,28 @@ foaf:Person rdf:type owl:Class .
                                           rdfs:label "Access Description" .
 
 
+###  https://w3id.org/quay/Aes128Encryption
+<https://w3id.org/quay/Aes128Encryption> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                         obo:IAO_0000115 "Encryption using the Advanced Encryption Standard with a 128-bit key." ;
+                                         rdfs:comment "128-bit Advanced Encryption Standard." ;
+                                         rdfs:label "AES-128 Encryption" .
+
+
+###  https://w3id.org/quay/Aes256Encryption
+<https://w3id.org/quay/Aes256Encryption> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                         obo:IAO_0000115 "Encryption using the Advanced Encryption Standard with a 256-bit key." ;
+                                         rdfs:comment "256-bit Advanced Encryption Standard." ;
+                                         rdfs:label "AES-256 Encryption" .
+
+
 ###  https://w3id.org/quay/ApiKeyAuthentication
 <https://w3id.org/quay/ApiKeyAuthentication> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/quay/AuthenticationScheme> ;
                                              obo:IAO_0000115 "Authentication scheme that verifies identity by presenting a pre-shared secret key with each request." ;
-                                             rdfs:label "API Key" .
+                                             rdfs:label "API Key" ,
+                                                        "API Key Authentication" .
 
 
 ###  https://w3id.org/quay/Archived
@@ -1331,7 +919,8 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/AwsCredentialAuthentication> rdf:type owl:Class ;
                                                     rdfs:subClassOf <https://w3id.org/quay/AuthenticationScheme> ;
                                                     obo:IAO_0000115 "Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair." ;
-                                                    rdfs:label "AWS Credential" .
+                                                    rdfs:label "AWS Credential" ,
+                                                               "AWS Credential Authentication" .
 
 
 ###  https://w3id.org/quay/BasicAuthentication
@@ -1353,7 +942,8 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/BitTorrentProtocol> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                            obo:IAO_0000115 "Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination." ;
-                                           rdfs:label "BitTorrent" .
+                                           rdfs:label "BitTorrent" ,
+                                                      "BitTorrent Protocol" .
 
 
 ###  https://w3id.org/quay/BulkDelivery
@@ -1367,7 +957,8 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/CompleteCoverage> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/quay/Coverage> ;
                                          obo:IAO_0000115 "Coverage in which the distribution contains the entirety of the available data of its dataset." ;
-                                         rdfs:label "Complete" .
+                                         rdfs:label "Complete" ,
+                                                    "Complete Coverage" .
 
 
 ###  https://w3id.org/quay/ContentAddressing
@@ -1388,7 +979,8 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/DeleteOperation> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/quay/Operation> ;
                                         obo:IAO_0000115 "Operation that permanently removes data from a data resource." ;
-                                        rdfs:label "Delete" .
+                                        rdfs:label "Delete" ,
+                                                   "Delete Operation" .
 
 
 ###  https://w3id.org/quay/DeliveryMode
@@ -1413,6 +1005,12 @@ foaf:Person rdf:type owl:Class .
                                     rdfs:label "Distributed" .
 
 
+###  https://w3id.org/quay/EncryptionAlgorithm
+<https://w3id.org/quay/EncryptionAlgorithm> rdf:type owl:Class ;
+                                            obo:IAO_0000115 "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit." ;
+                                            rdfs:label "Encryption Algorithm" .
+
+
 ###  https://w3id.org/quay/EventDrivenDelivery
 <https://w3id.org/quay/EventDrivenDelivery> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/quay/DeliveryMode> ;
@@ -1424,21 +1022,32 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/FtpProtocol> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                     obo:IAO_0000115 "Protocol that transfers files between client and server using the File Transfer Protocol." ;
-                                    rdfs:label "FTP" .
+                                    rdfs:label "FTP" ,
+                                               "FTP Protocol" .
 
 
 ###  https://w3id.org/quay/GitProtocol
 <https://w3id.org/quay/GitProtocol> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                     obo:IAO_0000115 "Protocol that accesses version-controlled data through the Git distributed version control system." ;
-                                    rdfs:label "Git" .
+                                    rdfs:label "Git" ,
+                                               "Git Protocol" .
+
+
+###  https://w3id.org/quay/GpgEncryption
+<https://w3id.org/quay/GpgEncryption> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                      obo:IAO_0000115 "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard." ;
+                                      rdfs:comment "GNU Privacy Guard / OpenPGP encryption." ;
+                                      rdfs:label "GPG Encryption" .
 
 
 ###  https://w3id.org/quay/GpgKeyAuthentication
 <https://w3id.org/quay/GpgKeyAuthentication> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/quay/AuthenticationScheme> ;
                                              obo:IAO_0000115 "Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair." ;
-                                             rdfs:label "GPG Key" .
+                                             rdfs:label "GPG Key" ,
+                                                        "GPG Key Authentication" .
 
 
 ###  https://w3id.org/quay/HashVerification
@@ -1462,42 +1071,48 @@ foaf:Person rdf:type owl:Class .
                                      rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                      obo:IAO_0000115 "Protocol that delegates data access operations to user-defined external scripts or commands." ;
                                      rdfs:comment "Custom protocol via user-defined hook scripts." ;
-                                     rdfs:label "Hook" .
+                                     rdfs:label "Hook" ,
+                                                "Hook Protocol" .
 
 
 ###  https://w3id.org/quay/HttpProtocol
 <https://w3id.org/quay/HttpProtocol> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                      obo:IAO_0000115 "Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security." ;
-                                     rdfs:label "HTTP/HTTPS" .
+                                     rdfs:label "HTTP Protocol" ,
+                                                "HTTP/HTTPS" .
 
 
 ###  https://w3id.org/quay/IncrementalCoverage
 <https://w3id.org/quay/IncrementalCoverage> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/quay/Coverage> ;
                                             obo:IAO_0000115 "Coverage in which the distribution contains only changes accumulated since a specified reference point." ;
-                                            rdfs:label "Incremental" .
+                                            rdfs:label "Incremental" ,
+                                                       "Incremental Coverage" .
 
 
 ###  https://w3id.org/quay/IpfsProtocol
 <https://w3id.org/quay/IpfsProtocol> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                      obo:IAO_0000115 "Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network." ;
-                                     rdfs:label "IPFS" .
+                                     rdfs:label "IPFS" ,
+                                                "IPFS Protocol" .
 
 
 ###  https://w3id.org/quay/ListOperation
 <https://w3id.org/quay/ListOperation> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/quay/Operation> ;
                                       obo:IAO_0000115 "Operation that enumerates the available entries or contents of a data resource." ;
-                                      rdfs:label "List" .
+                                      rdfs:label "List" ,
+                                                 "List Operation" .
 
 
 ###  https://w3id.org/quay/LocalFilesystemProtocol
 <https://w3id.org/quay/LocalFilesystemProtocol> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                                 obo:IAO_0000115 "Protocol that accesses data directly through the operating system local filesystem interface without network transfer." ;
-                                                rdfs:label "Local Filesystem" .
+                                                rdfs:label "Local Filesystem" ,
+                                                           "Local Filesystem Protocol" .
 
 
 ###  https://w3id.org/quay/NoAuthentication
@@ -1505,6 +1120,14 @@ foaf:Person rdf:type owl:Class .
                                          rdfs:subClassOf <https://w3id.org/quay/AuthenticationScheme> ;
                                          obo:IAO_0000115 "Authentication scheme that permits access without requiring identity verification." ;
                                          rdfs:label "No Authentication" .
+
+
+###  https://w3id.org/quay/NoEncryption
+<https://w3id.org/quay/NoEncryption> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                     obo:IAO_0000115 "Designation indicating that no encryption is applied to the data." ;
+                                     rdfs:comment "No encryption applied." ;
+                                     rdfs:label "No Encryption" .
 
 
 ###  https://w3id.org/quay/NoVerification
@@ -1519,11 +1142,13 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/OAuth2Authentication> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/quay/AuthenticationScheme> ;
                                              obo:IAO_0000115 "Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access." ;
-                                             rdfs:label "OAuth 2.0" .
+                                             rdfs:label "OAuth 2.0" ,
+                                                        "OAuth2 Authentication" .
 
 
 ###  https://w3id.org/quay/Operation
 <https://w3id.org/quay/Operation> rdf:type owl:Class ;
+                                  rdfs:subClassOf odrl:Action ;
                                   obo:IAO_0000115 "Action that can be performed on a data resource through an access point." ;
                                   rdfs:label "Operation" .
 
@@ -1560,14 +1185,16 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/RcloneProtocol> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                        obo:IAO_0000115 "Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends." ;
-                                       rdfs:label "Rclone" .
+                                       rdfs:label "Rclone" ,
+                                                  "Rclone Protocol" .
 
 
 ###  https://w3id.org/quay/ReadOperation
 <https://w3id.org/quay/ReadOperation> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/quay/Operation> ;
                                       obo:IAO_0000115 "Operation that retrieves data from a data resource without modifying it." ;
-                                      rdfs:label "Read" .
+                                      rdfs:label "Read" ,
+                                                 "Read Operation" .
 
 
 ###  https://w3id.org/quay/RealTime
@@ -1581,28 +1208,32 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/ReplicateOperation> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/quay/Operation> ;
                                            obo:IAO_0000115 "Operation that copies data from one data resource to another for redundancy or distribution." ;
-                                           rdfs:label "Replicate" .
+                                           rdfs:label "Replicate" ,
+                                                      "Replicate Operation" .
 
 
 ###  https://w3id.org/quay/RsyncProtocol
 <https://w3id.org/quay/RsyncProtocol> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                       obo:IAO_0000115 "Protocol that synchronises files between locations using the rsync delta-transfer algorithm." ;
-                                      rdfs:label "Rsync" .
+                                      rdfs:label "Rsync" ,
+                                                 "Rsync Protocol" .
 
 
 ###  https://w3id.org/quay/S3Protocol
 <https://w3id.org/quay/S3Protocol> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                    obo:IAO_0000115 "Protocol that accesses object storage using the Amazon Simple Storage Service API." ;
-                                   rdfs:label "S3" .
+                                   rdfs:label "S3" ,
+                                              "S3 Protocol" .
 
 
 ###  https://w3id.org/quay/SampleCoverage
 <https://w3id.org/quay/SampleCoverage> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/quay/Coverage> ;
                                        obo:IAO_0000115 "Coverage in which the distribution contains a statistically representative fraction of the available data." ;
-                                       rdfs:label "Sample" .
+                                       rdfs:label "Sample" ,
+                                                  "Sample Coverage" .
 
 
 ###  https://w3id.org/quay/ServiceQuality
@@ -1626,18 +1257,28 @@ foaf:Person rdf:type owl:Class .
                                  rdfs:label "Snapshot" .
 
 
+###  https://w3id.org/quay/SshEncryption
+<https://w3id.org/quay/SshEncryption> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                      obo:IAO_0000115 "Encryption using the Secure Shell protocol for transport-layer data protection." ;
+                                      rdfs:comment "Secure Shell encrypted transport." ;
+                                      rdfs:label "SSH Encryption" .
+
+
 ###  https://w3id.org/quay/SshKeyAuthentication
 <https://w3id.org/quay/SshKeyAuthentication> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/quay/AuthenticationScheme> ;
                                              obo:IAO_0000115 "Authentication scheme that verifies identity using an asymmetric SSH key pair." ;
-                                             rdfs:label "SSH Key" .
+                                             rdfs:label "SSH Key" ,
+                                                        "SSH Key Authentication" .
 
 
 ###  https://w3id.org/quay/SshProtocol
 <https://w3id.org/quay/SshProtocol> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                     obo:IAO_0000115 "Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection." ;
-                                    rdfs:label "SSH/SFTP" .
+                                    rdfs:label "SSH Protocol" ,
+                                               "SSH/SFTP" .
 
 
 ###  https://w3id.org/quay/StreamingDelivery
@@ -1651,7 +1292,8 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/SubsetCoverage> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/quay/Coverage> ;
                                        obo:IAO_0000115 "Coverage in which the distribution contains a defined, criteria-based portion of the available data." ;
-                                       rdfs:label "Subset" .
+                                       rdfs:label "Subset" ,
+                                                  "Subset Coverage" .
 
 
 ###  https://w3id.org/quay/SynchronousDelivery
@@ -1665,6 +1307,22 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/TemporalQuality> rdf:type owl:Class ;
                                         obo:IAO_0000115 "Characterisation of the freshness and currency of data available from a distribution." ;
                                         rdfs:label "Temporal Quality" .
+
+
+###  https://w3id.org/quay/Tls12Encryption
+<https://w3id.org/quay/Tls12Encryption> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                        obo:IAO_0000115 "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246." ;
+                                        rdfs:comment "Transport Layer Security version 1.2." ;
+                                        rdfs:label "TLS 1.2 Encryption" .
+
+
+###  https://w3id.org/quay/Tls13Encryption
+<https://w3id.org/quay/Tls13Encryption> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/quay/EncryptionAlgorithm> ;
+                                        obo:IAO_0000115 "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446." ;
+                                        rdfs:comment "Transport Layer Security version 1.3." ;
+                                        rdfs:label "TLS 1.3 Encryption" .
 
 
 ###  https://w3id.org/quay/VerificationMethod
@@ -1684,14 +1342,16 @@ foaf:Person rdf:type owl:Class .
 <https://w3id.org/quay/WebDavProtocol> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/quay/Protocol> ;
                                        obo:IAO_0000115 "Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management." ;
-                                       rdfs:label "WebDAV" .
+                                       rdfs:label "WebDAV" ,
+                                                  "WebDAV Protocol" .
 
 
 ###  https://w3id.org/quay/WriteOperation
 <https://w3id.org/quay/WriteOperation> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/quay/Operation> ;
                                        obo:IAO_0000115 "Operation that stores new data in or modifies existing data within a data resource." ;
-                                       rdfs:label "Write" .
+                                       rdfs:label "Write" ,
+                                                  "Write Operation" .
 
 
 ###  https://w3id.org/quay/YieldDescription
@@ -2803,29 +2463,17 @@ odrl:target rdfs:label "Target"@en .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://w3id.org/quay.owl#AccessDescription>
-                <https://w3id.org/quay.owl#AuthenticationScheme>
-                <https://w3id.org/quay.owl#Coverage>
-                <https://w3id.org/quay.owl#DeliveryMode>
-                <https://w3id.org/quay.owl#EncryptionAlgorithm>
-                <https://w3id.org/quay.owl#Operation>
-                <https://w3id.org/quay.owl#Protocol>
-                <https://w3id.org/quay.owl#ServiceQuality>
-                <https://w3id.org/quay.owl#TemporalQuality>
-                <https://w3id.org/quay.owl#VerificationMethod>
-                <https://w3id.org/quay.owl#YieldDescription>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://w3id.org/quay.owl#Aes128Encryption>
-                <https://w3id.org/quay.owl#Aes256Encryption>
-                <https://w3id.org/quay.owl#GpgEncryption>
-                <https://w3id.org/quay.owl#NoEncryption>
-                <https://w3id.org/quay.owl#SshEncryption>
-                <https://w3id.org/quay.owl#Tls12Encryption>
-                <https://w3id.org/quay.owl#Tls13Encryption>
+  owl:members ( <https://w3id.org/quay/AccessDescription>
+                <https://w3id.org/quay/AuthenticationScheme>
+                <https://w3id.org/quay/Coverage>
+                <https://w3id.org/quay/DeliveryMode>
+                <https://w3id.org/quay/EncryptionAlgorithm>
+                <https://w3id.org/quay/Operation>
+                <https://w3id.org/quay/Protocol>
+                <https://w3id.org/quay/ServiceQuality>
+                <https://w3id.org/quay/TemporalQuality>
+                <https://w3id.org/quay/VerificationMethod>
+                <https://w3id.org/quay/YieldDescription>
               )
 ] .
 
@@ -2841,6 +2489,18 @@ odrl:target rdfs:label "Target"@en .
                 <https://w3id.org/quay/TemporalQuality>
                 <https://w3id.org/quay/VerificationMethod>
                 <https://w3id.org/quay/YieldDescription>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/quay/Aes128Encryption>
+                <https://w3id.org/quay/Aes256Encryption>
+                <https://w3id.org/quay/GpgEncryption>
+                <https://w3id.org/quay/NoEncryption>
+                <https://w3id.org/quay/SshEncryption>
+                <https://w3id.org/quay/Tls12Encryption>
+                <https://w3id.org/quay/Tls13Encryption>
               )
 ] .
 

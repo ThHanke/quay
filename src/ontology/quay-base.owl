@@ -73,6 +73,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -125,6 +142,28 @@
     
 
 
+    <!-- https://w3id.org/quay/encryptionAtRest -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/quay/encryptionAtRest">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Relates a distribution to the encryption algorithm applied to data at rest within the storage backend.</obo:IAO_0000115>
+        <rdfs:label>encryption at rest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/quay/encryptionInTransit -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/quay/encryptionInTransit">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Relates a distribution to the encryption protocol applied to data during transfer between client and server.</obo:IAO_0000115>
+        <rdfs:label>encryption in transit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/quay/protocol -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/quay/protocol">
@@ -143,6 +182,17 @@
         <rdfs:range rdf:resource="https://w3id.org/quay/ServiceQuality"/>
         <obo:IAO_0000115>Relates a yield description to the reliability and availability characterisation of the service.</obo:IAO_0000115>
         <rdfs:label>service quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/quay/storageJurisdiction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/quay/storageJurisdiction">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <obo:IAO_0000115>Relates a distribution to the legal jurisdiction or geographic region where data is physically stored.</obo:IAO_0000115>
+        <rdfs:label>storage jurisdiction</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -202,24 +252,90 @@
     
 
 
-    <!-- https://w3id.org/quay/encryptionAtRest -->
+    <!-- https://w3id.org/quay/costDescription -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/encryptionAtRest">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/costDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/AccessDescription"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000115>Encryption algorithm applied to data at rest within the storage backend.</obo:IAO_0000115>
-        <rdfs:label>encryption at rest</rdfs:label>
+        <obo:IAO_0000115>Human-readable description of the cost or pricing model for accessing the distribution.</obo:IAO_0000115>
+        <rdfs:label>cost description</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/quay/encryptionInTransit -->
+    <!-- https://w3id.org/quay/quotaLimit -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/encryptionInTransit">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/quotaLimit">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/AccessDescription"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000115>Encryption protocol applied to data during transfer between client and server.</obo:IAO_0000115>
-        <rdfs:label>encryption in transit</rdfs:label>
+        <obo:IAO_0000115>Usage quota describing the maximum allowed consumption of the service.</obo:IAO_0000115>
+        <rdfs:label>quota limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/quay/rateLimit -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/rateLimit">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/AccessDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <obo:IAO_0000115>Maximum number of requests permitted within a time window.</obo:IAO_0000115>
+        <rdfs:label>rate limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/quay/recoveryPointObjective -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/recoveryPointObjective">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/YieldDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <obo:IAO_0000115>Maximum acceptable duration of data loss measured as a time window before the disruption.</obo:IAO_0000115>
+        <rdfs:label>recovery point objective</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/quay/recoveryTimeObjective -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/recoveryTimeObjective">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/YieldDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <obo:IAO_0000115>Maximum acceptable duration to restore service after a disruption.</obo:IAO_0000115>
+        <rdfs:label>recovery time objective</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/quay/replicationFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/replicationFactor">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/YieldDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <obo:IAO_0000115>Number of independent copies of the data maintained across storage nodes.</obo:IAO_0000115>
+        <rdfs:label>replication factor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/quay/retentionPeriod -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/retentionPeriod">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+        <obo:IAO_0000115>Duration for which data is guaranteed to be retained before deletion or archival.</obo:IAO_0000115>
+        <rdfs:label>retention period</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/quay/uptimePercentage -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/quay/uptimePercentage">
+        <rdfs:domain rdf:resource="https://w3id.org/quay/YieldDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <obo:IAO_0000115>Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100.</obo:IAO_0000115>
+        <rdfs:label>uptime percentage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -235,9 +351,21 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
     <!-- http://www.w3.org/ns/dcat#Distribution -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Action -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Action"/>
     
 
 
@@ -276,12 +404,35 @@
     
 
 
+    <!-- https://w3id.org/quay/Aes128Encryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/Aes128Encryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Encryption using the Advanced Encryption Standard with a 128-bit key.</obo:IAO_0000115>
+        <rdfs:comment>128-bit Advanced Encryption Standard.</rdfs:comment>
+        <rdfs:label>AES-128 Encryption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/quay/Aes256Encryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/Aes256Encryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Encryption using the Advanced Encryption Standard with a 256-bit key.</obo:IAO_0000115>
+        <rdfs:comment>256-bit Advanced Encryption Standard.</rdfs:comment>
+        <rdfs:label>AES-256 Encryption</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/quay/ApiKeyAuthentication -->
 
     <owl:Class rdf:about="https://w3id.org/quay/ApiKeyAuthentication">
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/AuthenticationScheme"/>
         <obo:IAO_0000115>Authentication scheme that verifies identity by presenting a pre-shared secret key with each request.</obo:IAO_0000115>
         <rdfs:label>API Key</rdfs:label>
+        <rdfs:label>API Key Authentication</rdfs:label>
     </owl:Class>
     
 
@@ -311,6 +462,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/AuthenticationScheme"/>
         <obo:IAO_0000115>Authentication scheme that verifies identity using an AWS access key identifier and secret access key pair.</obo:IAO_0000115>
         <rdfs:label>AWS Credential</rdfs:label>
+        <rdfs:label>AWS Credential Authentication</rdfs:label>
     </owl:Class>
     
 
@@ -342,6 +494,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that distributes data across a swarm of peers using piece-based transfer and a distributed hash table for coordination.</obo:IAO_0000115>
         <rdfs:label>BitTorrent</rdfs:label>
+        <rdfs:label>BitTorrent Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -362,6 +515,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Coverage"/>
         <obo:IAO_0000115>Coverage in which the distribution contains the entirety of the available data of its dataset.</obo:IAO_0000115>
         <rdfs:label>Complete</rdfs:label>
+        <rdfs:label>Complete Coverage</rdfs:label>
     </owl:Class>
     
 
@@ -392,6 +546,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Operation"/>
         <obo:IAO_0000115>Operation that permanently removes data from a data resource.</obo:IAO_0000115>
         <rdfs:label>Delete</rdfs:label>
+        <rdfs:label>Delete Operation</rdfs:label>
     </owl:Class>
     
 
@@ -427,6 +582,15 @@
     
 
 
+    <!-- https://w3id.org/quay/EncryptionAlgorithm -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/EncryptionAlgorithm">
+        <obo:IAO_0000115>Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit.</obo:IAO_0000115>
+        <rdfs:label>Encryption Algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/quay/EventDrivenDelivery -->
 
     <owl:Class rdf:about="https://w3id.org/quay/EventDrivenDelivery">
@@ -443,6 +607,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that transfers files between client and server using the File Transfer Protocol.</obo:IAO_0000115>
         <rdfs:label>FTP</rdfs:label>
+        <rdfs:label>FTP Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -453,6 +618,18 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that accesses version-controlled data through the Git distributed version control system.</obo:IAO_0000115>
         <rdfs:label>Git</rdfs:label>
+        <rdfs:label>Git Protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/quay/GpgEncryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/GpgEncryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard.</obo:IAO_0000115>
+        <rdfs:comment>GNU Privacy Guard / OpenPGP encryption.</rdfs:comment>
+        <rdfs:label>GPG Encryption</rdfs:label>
     </owl:Class>
     
 
@@ -463,6 +640,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/AuthenticationScheme"/>
         <obo:IAO_0000115>Authentication scheme that verifies identity and enables data signing using a GNU Privacy Guard key pair.</obo:IAO_0000115>
         <rdfs:label>GPG Key</rdfs:label>
+        <rdfs:label>GPG Key Authentication</rdfs:label>
     </owl:Class>
     
 
@@ -496,6 +674,7 @@
         <obo:IAO_0000115>Protocol that delegates data access operations to user-defined external scripts or commands.</obo:IAO_0000115>
         <rdfs:comment>Custom protocol via user-defined hook scripts.</rdfs:comment>
         <rdfs:label>Hook</rdfs:label>
+        <rdfs:label>Hook Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -505,6 +684,7 @@
     <owl:Class rdf:about="https://w3id.org/quay/HttpProtocol">
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that transfers data using the Hypertext Transfer Protocol, optionally secured with Transport Layer Security.</obo:IAO_0000115>
+        <rdfs:label>HTTP Protocol</rdfs:label>
         <rdfs:label>HTTP/HTTPS</rdfs:label>
     </owl:Class>
     
@@ -516,6 +696,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Coverage"/>
         <obo:IAO_0000115>Coverage in which the distribution contains only changes accumulated since a specified reference point.</obo:IAO_0000115>
         <rdfs:label>Incremental</rdfs:label>
+        <rdfs:label>Incremental Coverage</rdfs:label>
     </owl:Class>
     
 
@@ -526,6 +707,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that addresses and retrieves data by cryptographic content identifier on the InterPlanetary File System network.</obo:IAO_0000115>
         <rdfs:label>IPFS</rdfs:label>
+        <rdfs:label>IPFS Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -536,6 +718,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Operation"/>
         <obo:IAO_0000115>Operation that enumerates the available entries or contents of a data resource.</obo:IAO_0000115>
         <rdfs:label>List</rdfs:label>
+        <rdfs:label>List Operation</rdfs:label>
     </owl:Class>
     
 
@@ -546,6 +729,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that accesses data directly through the operating system local filesystem interface without network transfer.</obo:IAO_0000115>
         <rdfs:label>Local Filesystem</rdfs:label>
+        <rdfs:label>Local Filesystem Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -556,6 +740,17 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/AuthenticationScheme"/>
         <obo:IAO_0000115>Authentication scheme that permits access without requiring identity verification.</obo:IAO_0000115>
         <rdfs:label>No Authentication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/quay/NoEncryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/NoEncryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Designation indicating that no encryption is applied to the data.</obo:IAO_0000115>
+        <rdfs:comment>No encryption applied.</rdfs:comment>
+        <rdfs:label>No Encryption</rdfs:label>
     </owl:Class>
     
 
@@ -577,6 +772,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/AuthenticationScheme"/>
         <obo:IAO_0000115>Authentication scheme that verifies identity through the OAuth 2.0 authorization framework using token-based delegated access.</obo:IAO_0000115>
         <rdfs:label>OAuth 2.0</rdfs:label>
+        <rdfs:label>OAuth2 Authentication</rdfs:label>
     </owl:Class>
     
 
@@ -584,6 +780,7 @@
     <!-- https://w3id.org/quay/Operation -->
 
     <owl:Class rdf:about="https://w3id.org/quay/Operation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
         <obo:IAO_0000115>Action that can be performed on a data resource through an access point.</obo:IAO_0000115>
         <rdfs:label>Operation</rdfs:label>
     </owl:Class>
@@ -636,6 +833,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that delegates data access to the rclone tool, which abstracts over multiple cloud storage backends.</obo:IAO_0000115>
         <rdfs:label>Rclone</rdfs:label>
+        <rdfs:label>Rclone Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -646,6 +844,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Operation"/>
         <obo:IAO_0000115>Operation that retrieves data from a data resource without modifying it.</obo:IAO_0000115>
         <rdfs:label>Read</rdfs:label>
+        <rdfs:label>Read Operation</rdfs:label>
     </owl:Class>
     
 
@@ -666,6 +865,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Operation"/>
         <obo:IAO_0000115>Operation that copies data from one data resource to another for redundancy or distribution.</obo:IAO_0000115>
         <rdfs:label>Replicate</rdfs:label>
+        <rdfs:label>Replicate Operation</rdfs:label>
     </owl:Class>
     
 
@@ -676,6 +876,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that synchronises files between locations using the rsync delta-transfer algorithm.</obo:IAO_0000115>
         <rdfs:label>Rsync</rdfs:label>
+        <rdfs:label>Rsync Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -686,6 +887,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that accesses object storage using the Amazon Simple Storage Service API.</obo:IAO_0000115>
         <rdfs:label>S3</rdfs:label>
+        <rdfs:label>S3 Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -696,6 +898,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Coverage"/>
         <obo:IAO_0000115>Coverage in which the distribution contains a statistically representative fraction of the available data.</obo:IAO_0000115>
         <rdfs:label>Sample</rdfs:label>
+        <rdfs:label>Sample Coverage</rdfs:label>
     </owl:Class>
     
 
@@ -730,12 +933,24 @@
     
 
 
+    <!-- https://w3id.org/quay/SshEncryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/SshEncryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Encryption using the Secure Shell protocol for transport-layer data protection.</obo:IAO_0000115>
+        <rdfs:comment>Secure Shell encrypted transport.</rdfs:comment>
+        <rdfs:label>SSH Encryption</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/quay/SshKeyAuthentication -->
 
     <owl:Class rdf:about="https://w3id.org/quay/SshKeyAuthentication">
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/AuthenticationScheme"/>
         <obo:IAO_0000115>Authentication scheme that verifies identity using an asymmetric SSH key pair.</obo:IAO_0000115>
         <rdfs:label>SSH Key</rdfs:label>
+        <rdfs:label>SSH Key Authentication</rdfs:label>
     </owl:Class>
     
 
@@ -745,6 +960,7 @@
     <owl:Class rdf:about="https://w3id.org/quay/SshProtocol">
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that provides encrypted file transfer and remote command execution over a Secure Shell connection.</obo:IAO_0000115>
+        <rdfs:label>SSH Protocol</rdfs:label>
         <rdfs:label>SSH/SFTP</rdfs:label>
     </owl:Class>
     
@@ -766,6 +982,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Coverage"/>
         <obo:IAO_0000115>Coverage in which the distribution contains a defined, criteria-based portion of the available data.</obo:IAO_0000115>
         <rdfs:label>Subset</rdfs:label>
+        <rdfs:label>Subset Coverage</rdfs:label>
     </owl:Class>
     
 
@@ -785,6 +1002,28 @@
     <owl:Class rdf:about="https://w3id.org/quay/TemporalQuality">
         <obo:IAO_0000115>Characterisation of the freshness and currency of data available from a distribution.</obo:IAO_0000115>
         <rdfs:label>Temporal Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/quay/Tls12Encryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/Tls12Encryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Encryption using Transport Layer Security version 1.2 as specified in RFC 5246.</obo:IAO_0000115>
+        <rdfs:comment>Transport Layer Security version 1.2.</rdfs:comment>
+        <rdfs:label>TLS 1.2 Encryption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/quay/Tls13Encryption -->
+
+    <owl:Class rdf:about="https://w3id.org/quay/Tls13Encryption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/quay/EncryptionAlgorithm"/>
+        <obo:IAO_0000115>Encryption using Transport Layer Security version 1.3 as specified in RFC 8446.</obo:IAO_0000115>
+        <rdfs:comment>Transport Layer Security version 1.3.</rdfs:comment>
+        <rdfs:label>TLS 1.3 Encryption</rdfs:label>
     </owl:Class>
     
 
@@ -814,6 +1053,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Protocol"/>
         <obo:IAO_0000115>Protocol that extends HTTP with distributed authoring and versioning capabilities for remote file management.</obo:IAO_0000115>
         <rdfs:label>WebDAV</rdfs:label>
+        <rdfs:label>WebDAV Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -824,6 +1064,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/quay/Operation"/>
         <obo:IAO_0000115>Operation that stores new data in or modifies existing data within a data resource.</obo:IAO_0000115>
         <rdfs:label>Write</rdfs:label>
+        <rdfs:label>Write Operation</rdfs:label>
     </owl:Class>
     
 
@@ -892,12 +1133,40 @@
             <rdf:Description rdf:about="https://w3id.org/quay/AuthenticationScheme"/>
             <rdf:Description rdf:about="https://w3id.org/quay/Coverage"/>
             <rdf:Description rdf:about="https://w3id.org/quay/DeliveryMode"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/EncryptionAlgorithm"/>
             <rdf:Description rdf:about="https://w3id.org/quay/Operation"/>
             <rdf:Description rdf:about="https://w3id.org/quay/Protocol"/>
             <rdf:Description rdf:about="https://w3id.org/quay/ServiceQuality"/>
             <rdf:Description rdf:about="https://w3id.org/quay/TemporalQuality"/>
             <rdf:Description rdf:about="https://w3id.org/quay/VerificationMethod"/>
             <rdf:Description rdf:about="https://w3id.org/quay/YieldDescription"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/quay/AccessDescription"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/AuthenticationScheme"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/Coverage"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/DeliveryMode"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/Operation"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/Protocol"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/ServiceQuality"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/TemporalQuality"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/VerificationMethod"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/YieldDescription"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/quay/Aes128Encryption"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/Aes256Encryption"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/GpgEncryption"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/NoEncryption"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/SshEncryption"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/Tls12Encryption"/>
+            <rdf:Description rdf:about="https://w3id.org/quay/Tls13Encryption"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

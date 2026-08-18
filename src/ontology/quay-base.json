@@ -21,7 +21,13 @@
       "version" : "https://w3id.org/quay/releases/2026-08-18/quay-base.json"
     },
     "nodes" : [ {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "type" : "CLASS"
+    }, {
       "id" : "http://www.w3.org/ns/dcat#Distribution",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://www.w3.org/ns/odrl/2/Action",
       "type" : "CLASS"
     }, {
       "id" : "https://w3id.org/quay/AccessDescription",
@@ -34,8 +40,28 @@
         "comments" : [ "Qualifies HOW a Distribution is reached." ]
       }
     }, {
+      "id" : "https://w3id.org/quay/Aes128Encryption",
+      "lbl" : "AES-128 Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption using the Advanced Encryption Standard with a 128-bit key."
+        },
+        "comments" : [ "128-bit Advanced Encryption Standard." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Aes256Encryption",
+      "lbl" : "AES-256 Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption using the Advanced Encryption Standard with a 256-bit key."
+        },
+        "comments" : [ "256-bit Advanced Encryption Standard." ]
+      }
+    }, {
       "id" : "https://w3id.org/quay/ApiKeyAuthentication",
-      "lbl" : "API Key",
+      "lbl" : "API Key Authentication",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -62,7 +88,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/AwsCredentialAuthentication",
-      "lbl" : "AWS Credential",
+      "lbl" : "AWS Credential Authentication",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -90,7 +116,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/BitTorrentProtocol",
-      "lbl" : "BitTorrent",
+      "lbl" : "BitTorrent Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -108,7 +134,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/CompleteCoverage",
-      "lbl" : "Complete",
+      "lbl" : "Complete Coverage",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -136,7 +162,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/DeleteOperation",
-      "lbl" : "Delete",
+      "lbl" : "Delete Operation",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -173,6 +199,15 @@
         "comments" : [ "Data distributed across multiple peers or nodes." ]
       }
     }, {
+      "id" : "https://w3id.org/quay/EncryptionAlgorithm",
+      "lbl" : "Encryption Algorithm",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit."
+        }
+      }
+    }, {
       "id" : "https://w3id.org/quay/EventDrivenDelivery",
       "lbl" : "Event-Driven Delivery",
       "type" : "CLASS",
@@ -183,7 +218,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/FtpProtocol",
-      "lbl" : "FTP",
+      "lbl" : "FTP Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -192,7 +227,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/GitProtocol",
-      "lbl" : "Git",
+      "lbl" : "Git Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -200,8 +235,18 @@
         }
       }
     }, {
+      "id" : "https://w3id.org/quay/GpgEncryption",
+      "lbl" : "GPG Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard."
+        },
+        "comments" : [ "GNU Privacy Guard / OpenPGP encryption." ]
+      }
+    }, {
       "id" : "https://w3id.org/quay/GpgKeyAuthentication",
-      "lbl" : "GPG Key",
+      "lbl" : "GPG Key Authentication",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -230,7 +275,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/HookProtocol",
-      "lbl" : "Hook",
+      "lbl" : "Hook Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -249,7 +294,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/IncrementalCoverage",
-      "lbl" : "Incremental",
+      "lbl" : "Incremental Coverage",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -258,7 +303,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/IpfsProtocol",
-      "lbl" : "IPFS",
+      "lbl" : "IPFS Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -267,7 +312,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/ListOperation",
-      "lbl" : "List",
+      "lbl" : "List Operation",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -276,7 +321,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/LocalFilesystemProtocol",
-      "lbl" : "Local Filesystem",
+      "lbl" : "Local Filesystem Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -293,6 +338,16 @@
         }
       }
     }, {
+      "id" : "https://w3id.org/quay/NoEncryption",
+      "lbl" : "No Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Designation indicating that no encryption is applied to the data."
+        },
+        "comments" : [ "No encryption applied." ]
+      }
+    }, {
       "id" : "https://w3id.org/quay/NoVerification",
       "lbl" : "No Verification",
       "type" : "CLASS",
@@ -304,7 +359,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/OAuth2Authentication",
-      "lbl" : "OAuth 2.0",
+      "lbl" : "OAuth2 Authentication",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -359,7 +414,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/RcloneProtocol",
-      "lbl" : "Rclone",
+      "lbl" : "Rclone Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -368,7 +423,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/ReadOperation",
-      "lbl" : "Read",
+      "lbl" : "Read Operation",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -386,7 +441,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/ReplicateOperation",
-      "lbl" : "Replicate",
+      "lbl" : "Replicate Operation",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -395,7 +450,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/RsyncProtocol",
-      "lbl" : "Rsync",
+      "lbl" : "Rsync Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -404,7 +459,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/S3Protocol",
-      "lbl" : "S3",
+      "lbl" : "S3 Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -413,7 +468,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/SampleCoverage",
-      "lbl" : "Sample",
+      "lbl" : "Sample Coverage",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -449,8 +504,18 @@
         }
       }
     }, {
+      "id" : "https://w3id.org/quay/SshEncryption",
+      "lbl" : "SSH Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption using the Secure Shell protocol for transport-layer data protection."
+        },
+        "comments" : [ "Secure Shell encrypted transport." ]
+      }
+    }, {
       "id" : "https://w3id.org/quay/SshKeyAuthentication",
-      "lbl" : "SSH Key",
+      "lbl" : "SSH Key Authentication",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -477,7 +542,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/SubsetCoverage",
-      "lbl" : "Subset",
+      "lbl" : "Subset Coverage",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -503,6 +568,26 @@
         }
       }
     }, {
+      "id" : "https://w3id.org/quay/Tls12Encryption",
+      "lbl" : "TLS 1.2 Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246."
+        },
+        "comments" : [ "Transport Layer Security version 1.2." ]
+      }
+    }, {
+      "id" : "https://w3id.org/quay/Tls13Encryption",
+      "lbl" : "TLS 1.3 Encryption",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446."
+        },
+        "comments" : [ "Transport Layer Security version 1.3." ]
+      }
+    }, {
       "id" : "https://w3id.org/quay/VerificationMethod",
       "lbl" : "Verification Method",
       "type" : "CLASS",
@@ -522,7 +607,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/WebDavProtocol",
-      "lbl" : "WebDAV",
+      "lbl" : "WebDAV Protocol",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -531,7 +616,7 @@
       }
     }, {
       "id" : "https://w3id.org/quay/WriteOperation",
-      "lbl" : "Write",
+      "lbl" : "Write Operation",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -589,6 +674,26 @@
         }
       }
     }, {
+      "id" : "https://w3id.org/quay/encryptionAtRest",
+      "lbl" : "encryption at rest",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/encryptionInTransit",
+      "lbl" : "encryption in transit",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to the encryption protocol applied to data during transfer between client and server."
+        }
+      }
+    }, {
       "id" : "https://w3id.org/quay/protocol",
       "lbl" : "protocol",
       "type" : "PROPERTY",
@@ -606,6 +711,16 @@
       "meta" : {
         "definition" : {
           "val" : "Relates a yield description to the reliability and availability characterisation of the service."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/storageJurisdiction",
+      "lbl" : "storage jurisdiction",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored."
         }
       }
     }, {
@@ -649,23 +764,83 @@
         }
       }
     }, {
-      "id" : "https://w3id.org/quay/encryptionAtRest",
-      "lbl" : "encryption at rest",
+      "id" : "https://w3id.org/quay/costDescription",
+      "lbl" : "cost description",
       "type" : "PROPERTY",
       "propertyType" : "DATA",
       "meta" : {
         "definition" : {
-          "val" : "Encryption algorithm applied to data at rest within the storage backend."
+          "val" : "Human-readable description of the cost or pricing model for accessing the distribution."
         }
       }
     }, {
-      "id" : "https://w3id.org/quay/encryptionInTransit",
-      "lbl" : "encryption in transit",
+      "id" : "https://w3id.org/quay/quotaLimit",
+      "lbl" : "quota limit",
       "type" : "PROPERTY",
       "propertyType" : "DATA",
       "meta" : {
         "definition" : {
-          "val" : "Encryption protocol applied to data during transfer between client and server."
+          "val" : "Usage quota describing the maximum allowed consumption of the service."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/rateLimit",
+      "lbl" : "rate limit",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Maximum number of requests permitted within a time window."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/recoveryPointObjective",
+      "lbl" : "recovery point objective",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Maximum acceptable duration of data loss measured as a time window before the disruption."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/recoveryTimeObjective",
+      "lbl" : "recovery time objective",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Maximum acceptable duration to restore service after a disruption."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/replicationFactor",
+      "lbl" : "replication factor",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Number of independent copies of the data maintained across storage nodes."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/retentionPeriod",
+      "lbl" : "retention period",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Duration for which data is guaranteed to be retained before deletion or archival."
+        }
+      }
+    }, {
+      "id" : "https://w3id.org/quay/uptimePercentage",
+      "lbl" : "uptime percentage",
+      "type" : "PROPERTY",
+      "propertyType" : "DATA",
+      "meta" : {
+        "definition" : {
+          "val" : "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100."
         }
       }
     }, {
@@ -701,6 +876,14 @@
       "sub" : "https://w3id.org/quay/AccessDescription",
       "pred" : "https://w3id.org/quay/supportedOperation",
       "obj" : "https://w3id.org/quay/Operation"
+    }, {
+      "sub" : "https://w3id.org/quay/Aes128Encryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
+    }, {
+      "sub" : "https://w3id.org/quay/Aes256Encryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
     }, {
       "sub" : "https://w3id.org/quay/ApiKeyAuthentication",
       "pred" : "is_a",
@@ -762,6 +945,10 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/Protocol"
     }, {
+      "sub" : "https://w3id.org/quay/GpgEncryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
+    }, {
       "sub" : "https://w3id.org/quay/GpgKeyAuthentication",
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/AuthenticationScheme"
@@ -802,6 +989,10 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/AuthenticationScheme"
     }, {
+      "sub" : "https://w3id.org/quay/NoEncryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
+    }, {
       "sub" : "https://w3id.org/quay/NoVerification",
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/VerificationMethod"
@@ -809,6 +1000,10 @@
       "sub" : "https://w3id.org/quay/OAuth2Authentication",
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/AuthenticationScheme"
+    }, {
+      "sub" : "https://w3id.org/quay/Operation",
+      "pred" : "is_a",
+      "obj" : "http://www.w3.org/ns/odrl/2/Action"
     }, {
       "sub" : "https://w3id.org/quay/PaginatedDelivery",
       "pred" : "is_a",
@@ -858,6 +1053,10 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/TemporalQuality"
     }, {
+      "sub" : "https://w3id.org/quay/SshEncryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
+    }, {
       "sub" : "https://w3id.org/quay/SshKeyAuthentication",
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/AuthenticationScheme"
@@ -877,6 +1076,14 @@
       "sub" : "https://w3id.org/quay/SynchronousDelivery",
       "pred" : "is_a",
       "obj" : "https://w3id.org/quay/DeliveryMode"
+    }, {
+      "sub" : "https://w3id.org/quay/Tls12Encryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
+    }, {
+      "sub" : "https://w3id.org/quay/Tls13Encryption",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/quay/EncryptionAlgorithm"
     }, {
       "sub" : "https://w3id.org/quay/Versioned",
       "pred" : "is_a",
@@ -919,6 +1126,14 @@
       "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
       "rangeClassIds" : [ "https://w3id.org/quay/DeliveryMode" ]
     }, {
+      "predicateId" : "https://w3id.org/quay/encryptionAtRest",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/EncryptionAlgorithm" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/encryptionInTransit",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "https://w3id.org/quay/EncryptionAlgorithm" ]
+    }, {
       "predicateId" : "https://w3id.org/quay/protocol",
       "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
       "rangeClassIds" : [ "https://w3id.org/quay/Protocol" ]
@@ -926,6 +1141,10 @@
       "predicateId" : "https://w3id.org/quay/serviceQuality",
       "domainClassIds" : [ "https://w3id.org/quay/YieldDescription" ],
       "rangeClassIds" : [ "https://w3id.org/quay/ServiceQuality" ]
+    }, {
+      "predicateId" : "https://w3id.org/quay/storageJurisdiction",
+      "domainClassIds" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+      "rangeClassIds" : [ "http://www.w3.org/2000/01/rdf-schema#Resource" ]
     }, {
       "predicateId" : "https://w3id.org/quay/supportedOperation",
       "domainClassIds" : [ "https://w3id.org/quay/AccessDescription" ],
