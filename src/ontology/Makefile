@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                6f425991031002cf262f8c27af0e199cedcadd170565a830de967f274fca9aea
+CONFIG_HASH=                3383e4eab9d51cc3c6a9e933077f2332eade0d7ae6b5d477a4d7b4dfab30b964
 
 
 # ----------------------------------------
@@ -409,6 +409,12 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 $(ANNOTATE_CONVERT_FILE)
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+## Module for ontology: odrl (custom)
+$(IMPORTDIR)/odrl_import.owl: $(MIRRORDIR)/odrl.owl
+	@echo "ERROR: You have configured odrl as a custom module;"
+	@echo "       This rule needs to be overwritten in quay.Makefile!"
+	@false
 
 endif # IMP=true
 
