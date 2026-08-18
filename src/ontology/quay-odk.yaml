@@ -31,9 +31,7 @@ import_group:
     - id: odrl
       title: "ODRL Information Model"
       mirror_from: "https://www.w3.org/ns/odrl/2/ODRL22.ttl"
-      module_type: slme
-      base_iris:
-        - http://www.w3.org/ns/odrl/2/
+      module_type: custom
 
 components:
   products: []

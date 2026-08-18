@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/rest-api> a owl:Ontology ;
     dcterms:title "QUAY Pattern: REST API" ;
@@ -25,7 +26,8 @@ ex:rest-api-distribution a dcat:Distribution ;
     quay:accessDescription ex:rest-api-access ;
     quay:yieldDescription ex:rest-api-yield ;
     quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
-    dcterms:conformsTo <https://api.airquality.gov/v2/openapi.json> .
+    dcterms:conformsTo <https://api.airquality.gov/v2/openapi.json> ;
+    odrl:hasPolicy ex:rest-api-policy .
 
 ex:rest-api-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
@@ -41,3 +43,21 @@ ex:rest-api-yield a quay:YieldDescription ;
     quay:coverage [ a quay:SubsetCoverage ] ;
     quay:serviceQuality [ a quay:HighAvailability ] ;
     quay:verificationMethod [ a quay:NoVerification ] .
+
+ex:rest-api-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:rest-api-distribution ;
+        odrl:constraint [
+            a odrl:Constraint ;
+            odrl:leftOperand odrl:count ;
+            odrl:operator odrl:lt ;
+            odrl:rightOperand "1000"^^xsd:integer
+        ]
+    ] ;
+    odrl:prohibition [
+        a odrl:Prohibition ;
+        odrl:action [ a quay:WriteOperation ] ;
+        odrl:target ex:rest-api-distribution
+    ] .

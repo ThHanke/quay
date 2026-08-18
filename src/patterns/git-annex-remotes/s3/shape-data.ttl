@@ -5,6 +5,7 @@
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/s3> a owl:Ontology ;
     dcterms:title "QUAY Pattern: S3 Special Remote" ;
@@ -22,7 +23,8 @@ ex:s3-distribution a dcat:Distribution ;
     quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
     quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
     quay:retentionPeriod "P5Y"^^xsd:duration ;
-    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
+    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] ;
+    odrl:hasPolicy ex:s3-policy .
 
 ex:s3-access a quay:AccessDescription ;
     quay:protocol [ a quay:S3Protocol ] ;
@@ -40,3 +42,25 @@ ex:s3-yield a quay:YieldDescription ;
     quay:verificationMethod [ a quay:HashVerification ] ;
     quay:uptimePercentage "99.95"^^xsd:decimal ;
     quay:replicationFactor "3"^^xsd:nonNegativeInteger .
+
+ex:s3-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:s3-distribution
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:WriteOperation ] ;
+        odrl:target ex:s3-distribution
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:DeleteOperation ] ;
+        odrl:target ex:s3-distribution
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ListOperation ] ;
+        odrl:target ex:s3-distribution
+    ] .

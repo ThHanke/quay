@@ -5,6 +5,7 @@
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/glacier> a owl:Ontology ;
     dcterms:title "QUAY Pattern: Glacier Special Remote" ;
@@ -23,7 +24,8 @@ ex:glacier-distribution a dcat:Distribution ;
     quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
     quay:retentionPeriod "P99Y"^^xsd:duration ;
     quay:storageJurisdiction <http://publications.europa.eu/resource/authority/country/USA> ;
-    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
+    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] ;
+    odrl:hasPolicy ex:glacier-policy .
 
 ex:glacier-access a quay:AccessDescription ;
     quay:protocol [ a quay:S3Protocol ] ;
@@ -42,3 +44,26 @@ ex:glacier-yield a quay:YieldDescription ;
     quay:recoveryTimeObjective "PT12H"^^xsd:duration ;
     quay:recoveryPointObjective "PT1H"^^xsd:duration ;
     quay:replicationFactor "3"^^xsd:nonNegativeInteger .
+
+ex:glacier-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:glacier-distribution ;
+        odrl:constraint [
+            a odrl:Constraint ;
+            odrl:leftOperand odrl:spatial ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand <http://publications.europa.eu/resource/authority/country/USA>
+        ]
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:WriteOperation ] ;
+        odrl:target ex:glacier-distribution
+    ] ;
+    odrl:prohibition [
+        a odrl:Prohibition ;
+        odrl:action [ a quay:DeleteOperation ] ;
+        odrl:target ex:glacier-distribution
+    ] .

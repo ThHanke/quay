@@ -18,46 +18,26 @@ Ontology(<https://w3id.org/quay/imports/odrl_import.owl>
 <https://w3id.org/quay/releases/2026-08-18/imports/odrl_import.owl>
 Annotation(owl:versionInfo "2026-08-18")
 
-Declaration(Class(<http://schema.org/Action>))
-Declaration(Class(<http://schema.org/Organization>))
-Declaration(Class(<http://schema.org/Person>))
-Declaration(Class(skos:Collection))
-Declaration(Class(skos:Concept))
-Declaration(Class(<http://www.w3.org/2006/vcard/ns#Agent>))
-Declaration(Class(<http://www.w3.org/2006/vcard/ns#Individual>))
-Declaration(Class(<http://www.w3.org/2006/vcard/ns#Organization>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Action>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/Agreement>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/Asset>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/ConflictTerm>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Constraint>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Duty>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/LeftOperand>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/LogicalConstraint>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/Offer>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/Operator>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/Party>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/PartyScope>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Permission>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Policy>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Prohibition>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/RightOperand>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/Rule>))
 Declaration(Class(<http://www.w3.org/ns/odrl/2/Set>))
-Declaration(Class(<http://www.w3.org/ns/odrl/2/UndefinedTerm>))
-Declaration(Class(foaf:Agent))
-Declaration(Class(foaf:Organization))
-Declaration(Class(foaf:Person))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/action>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/constraint>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/duty>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/hasPolicy>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/includedIn>))
-Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/obligation>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/leftOperand>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/operator>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/permission>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/prohibition>))
-Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/relation>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/rightOperand>))
 Declaration(ObjectProperty(<http://www.w3.org/ns/odrl/2/target>))
+Declaration(DataProperty(<http://www.w3.org/ns/odrl/2/rightOperand>))
 Declaration(NamedIndividual(<http://creativecommons.org/ns#Attribution>))
 Declaration(NamedIndividual(<http://creativecommons.org/ns#CommercialUse>))
 Declaration(NamedIndividual(<http://creativecommons.org/ns#DerivativeWorks>))
@@ -68,37 +48,13 @@ Declaration(NamedIndividual(<http://creativecommons.org/ns#ShareAlike>))
 Declaration(NamedIndividual(<http://creativecommons.org/ns#Sharing>))
 Declaration(NamedIndividual(<http://creativecommons.org/ns#SourceCode>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Action>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Agreement>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/All>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/All2ndConnections>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/AllConnections>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/AllGroups>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Assertion>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Asset>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/AssetCollection>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/AssetScope>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/ConflictTerm>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Constraint>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Duty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Group>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Individual>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/LeftOperand>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/LogicalConstraint>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Offer>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Operator>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Party>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/PartyCollection>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/PartyScope>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Permission>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Policy>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Privacy>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Prohibition>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Request>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/RightOperand>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Rule>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Set>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/Ticket>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/UndefinedTerm>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/absolutePosition>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/absoluteSize>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/absoluteSpatialPosition>))
@@ -107,38 +63,20 @@ Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/acceptTracking>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/action>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/adHocShare>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/aggregate>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/and>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/andSequence>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/annotate>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/anonymize>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/append>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/appendTo>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/archive>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/assignee>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/assigneeOf>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/assigner>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/assignerOf>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/attachPolicy>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/attachSource>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/attribute>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/attributedParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/attributingParty>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/commercialize>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/compensate>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/compensatedParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/compensatingParty>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/concurrentUse>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/conflict>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/consentedParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/consentingParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/consequence>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/constraint>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/contractedParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/contractingParty>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/copy>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/core>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/count>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/dataType>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/dateTime>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/delayPeriod>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/delete>))
@@ -159,34 +97,17 @@ Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/extract>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/extractChar>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/extractPage>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/extractWord>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/failure>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/fileFormat>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/function>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/give>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/grantUse>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/gt>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/gteq>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/hasPart>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/hasPolicy>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/ignore>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/implies>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/include>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/includedIn>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/index>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/industry>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/inform>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/informedParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/informingParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/inheritAllowed>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/inheritFrom>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/inheritRelation>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/install>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/invalid>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/isA>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/isAllOf>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/isAnyOf>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/isNoneOf>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/isPartOf>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/language>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/lease>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/leftOperand>))
@@ -198,71 +119,46 @@ Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/media>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/meteredTime>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/modify>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/move>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/neq>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/nextPolicy>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/obligation>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/obtainConsent>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/operand>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/operator>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/or>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/output>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/partOf>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/pay>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/payAmount>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/payeeParty>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/percentage>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/perm>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/permission>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/play>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/policyUsage>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/present>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/preview>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/print>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/product>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/profile>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/prohibit>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/prohibition>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/proximity>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/purpose>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/read>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/recipient>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/refinement>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/relation>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/relativePosition>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/relativeSize>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/relativeSpatialPosition>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/relativeTemporalPosition>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/remedy>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/reproduce>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/resolution>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/reviewPolicy>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/rightOperand>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/rightOperandReference>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/scope>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/secondaryUse>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/sell>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/share>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/shareAlike>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/source>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/spatial>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/spatialCoordinates>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/status>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/stream>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/support>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/synchronize>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/system>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/systemDevice>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/target>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/textToSpeech>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/timeInterval>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/timedCount>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/trackedParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/trackingParty>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/transfer>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/transform>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/translate>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/uid>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/undefined>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/uninstall>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/unitOfCount>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/use>))
@@ -271,34 +167,6 @@ Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/virtualLocation>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/watermark>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/write>))
 Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/writeTo>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/xone>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#actionConcepts>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#actions>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#actionsCommon>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#assetConcepts>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#assetParty>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#assetRelations>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#assetRelationsCommon>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#conflictConcepts>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#constraintLogicalOperands>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#constraintRelationalOperators>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#constraintRightOpCommon>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#constraints>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#deprecatedTerms>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#duties>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#logicalConstraints>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#partyConcepts>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#partyRoles>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#partyRolesCommon>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#permissions>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#policyConcepts>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#policySubClasses>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#policySubClassesCommon>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#prohibitions>))
-Declaration(NamedIndividual(<http://www.w3.org/ns/odrl/2/#ruleConcepts>))
-Declaration(AnnotationProperty(dc:description))
-Declaration(AnnotationProperty(dc:license))
 
 ############################
 #   Object Properties
@@ -307,14 +175,11 @@ Declaration(AnnotationProperty(dc:license))
 # Object Property: <http://www.w3.org/ns/odrl/2/action> (Has Action)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/action> "Has Action"@en)
-ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/action> ObjectUnionOf(<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/ns/odrl/2/Rule>))
 ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/ns/odrl/2/Action>)
 
 # Object Property: <http://www.w3.org/ns/odrl/2/constraint> (Has Constraint)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/constraint> "Has Constraint"@en)
-ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/constraint> ObjectUnionOf(<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/ns/odrl/2/Rule>))
-ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/constraint> ObjectUnionOf(<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/ns/odrl/2/LogicalConstraint>))
 
 # Object Property: <http://www.w3.org/ns/odrl/2/duty> (Has Duty)
 
@@ -325,7 +190,6 @@ ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/ns/odr
 # Object Property: <http://www.w3.org/ns/odrl/2/hasPolicy> (Target Policy)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/hasPolicy> "Target Policy"@en)
-ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/ns/odrl/2/Asset>)
 ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/hasPolicy> <http://www.w3.org/ns/odrl/2/Policy>)
 
 # Object Property: <http://www.w3.org/ns/odrl/2/includedIn> (Included In)
@@ -335,11 +199,16 @@ TransitiveObjectProperty(<http://www.w3.org/ns/odrl/2/includedIn>)
 ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/Action>)
 ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/Action>)
 
-# Object Property: <http://www.w3.org/ns/odrl/2/obligation> (Obligation)
+# Object Property: <http://www.w3.org/ns/odrl/2/leftOperand> (Has Left Operand)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/obligation> "Obligation"@en)
-ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/ns/odrl/2/Policy>)
-ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/obligation> <http://www.w3.org/ns/odrl/2/Duty>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/leftOperand> "Has Left Operand"@en)
+ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/Constraint>)
+ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/leftOperand> <http://www.w3.org/ns/odrl/2/LeftOperand>)
+
+# Object Property: <http://www.w3.org/ns/odrl/2/operator> (Has Operator)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/operator> "Has Operator"@en)
+ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/ns/odrl/2/Constraint>)
 
 # Object Property: <http://www.w3.org/ns/odrl/2/permission> (Has Permission)
 
@@ -353,18 +222,15 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/prohibition> "Has Pr
 ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/ns/odrl/2/Policy>)
 ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/ns/odrl/2/Prohibition>)
 
-# Object Property: <http://www.w3.org/ns/odrl/2/relation> (Relation)
+# Object Property: <http://www.w3.org/ns/odrl/2/rightOperand> (Has Right Operand)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/relation> "Relation"@en)
-ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/relation> ObjectUnionOf(<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/ns/odrl/2/Rule>))
-ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/ns/odrl/2/Asset>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/rightOperand> "Has Right Operand"@en)
+ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/ns/odrl/2/Constraint>)
 
 # Object Property: <http://www.w3.org/ns/odrl/2/target> (Target)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/target> "Target"@en)
-SubObjectPropertyOf(<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/ns/odrl/2/relation>)
-ObjectPropertyDomain(<http://www.w3.org/ns/odrl/2/target> ObjectUnionOf(<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/ns/odrl/2/Rule>))
-ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/ns/odrl/2/Asset>)
+
 
 
 
@@ -375,22 +241,6 @@ ObjectPropertyRange(<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/ns/o
 # Class: <http://www.w3.org/ns/odrl/2/Action> (Action)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Action> "Action"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Action> <http://schema.org/Action>)
-
-# Class: <http://www.w3.org/ns/odrl/2/Agreement> (Agreement)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Agreement> "Agreement"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/ns/odrl/2/Policy>)
-DisjointClasses(<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/ns/odrl/2/Offer>)
-DisjointClasses(<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/ns/odrl/2/Set>)
-
-# Class: <http://www.w3.org/ns/odrl/2/Asset> (Asset)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Asset> "Asset"@en)
-
-# Class: <http://www.w3.org/ns/odrl/2/ConflictTerm> (Conflict Strategy Preference)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/ConflictTerm> "Conflict Strategy Preference"@en)
 
 # Class: <http://www.w3.org/ns/odrl/2/Constraint> (Constraint)
 
@@ -399,7 +249,6 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Constraint> "Constra
 # Class: <http://www.w3.org/ns/odrl/2/Duty> (Duty)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Duty> "Duty"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/ns/odrl/2/Rule>)
 DisjointClasses(<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/ns/odrl/2/Permission>)
 DisjointClasses(<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/ns/odrl/2/Prohibition>)
 
@@ -407,33 +256,9 @@ DisjointClasses(<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/ns/odrl/2/
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/LeftOperand> "Left Operand"@en)
 
-# Class: <http://www.w3.org/ns/odrl/2/LogicalConstraint> (Logical Constraint)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/LogicalConstraint> "Logical Constraint"@en)
-
-# Class: <http://www.w3.org/ns/odrl/2/Offer> (Offer)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Offer> "Offer"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/ns/odrl/2/Policy>)
-DisjointClasses(<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/ns/odrl/2/Set>)
-
-# Class: <http://www.w3.org/ns/odrl/2/Operator> (Operator)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Operator> "Operator"@en)
-
-# Class: <http://www.w3.org/ns/odrl/2/Party> (Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Party> "Party"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Party> ObjectUnionOf(<http://schema.org/Organization> <http://schema.org/Person> <http://www.w3.org/2006/vcard/ns#Agent> <http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/2006/vcard/ns#Organization> foaf:Agent foaf:Organization foaf:Person))
-
-# Class: <http://www.w3.org/ns/odrl/2/PartyScope> (Party Scope)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/PartyScope> "Party Scope"@en)
-
 # Class: <http://www.w3.org/ns/odrl/2/Permission> (Permission)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Permission> "Permission"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/ns/odrl/2/Rule>)
 DisjointClasses(<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/ns/odrl/2/Prohibition>)
 
 # Class: <http://www.w3.org/ns/odrl/2/Policy> (Policy)
@@ -443,24 +268,11 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Policy> "Policy"@en)
 # Class: <http://www.w3.org/ns/odrl/2/Prohibition> (Prohibition)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Prohibition> "Prohibition"@en)
-SubClassOf(<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/ns/odrl/2/Rule>)
-
-# Class: <http://www.w3.org/ns/odrl/2/RightOperand> (Right Operand)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/RightOperand> "Right Operand"@en)
-
-# Class: <http://www.w3.org/ns/odrl/2/Rule> (Rule)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Rule> "Rule"@en)
 
 # Class: <http://www.w3.org/ns/odrl/2/Set> (Set)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Set> "Set"@en)
 SubClassOf(<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/ns/odrl/2/Policy>)
-
-# Class: <http://www.w3.org/ns/odrl/2/UndefinedTerm> (Undefined Term)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/UndefinedTerm> "Undefined Term"@en)
 
 
 ############################
@@ -470,1323 +282,602 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/UndefinedTerm> "Unde
 # Individual: <http://creativecommons.org/ns#Attribution> (Attribution)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#Attribution> "Attribution"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#Attribution>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#Attribution>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#Attribution> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#CommercialUse> (Commercial Use)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#CommercialUse> "Commercial Use"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#CommercialUse>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#CommercialUse>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#CommercialUse> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#DerivativeWorks> (Derivative Works)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#DerivativeWorks> "Derivative Works"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#DerivativeWorks>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#DerivativeWorks>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#DerivativeWorks> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#Distribution> (Distribution)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#Distribution> "Distribution"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#Distribution>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#Distribution>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#Distribution> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#Notice> (Notice)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#Notice> "Notice"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#Notice>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#Notice>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#Notice> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#Reproduction> (Reproduction)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#Reproduction> "Reproduction"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#Reproduction>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#Reproduction>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#Reproduction> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#ShareAlike> (Share Alike)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#ShareAlike> "Share Alike"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#ShareAlike>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#ShareAlike>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#ShareAlike> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#Sharing> (Sharing)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#Sharing> "Sharing"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#Sharing>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#Sharing>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#Sharing> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://creativecommons.org/ns#SourceCode> (Source Code)
 
 AnnotationAssertion(rdfs:label <http://creativecommons.org/ns#SourceCode> "Source Code"@en)
-ClassAssertion(skos:Concept <http://creativecommons.org/ns#SourceCode>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://creativecommons.org/ns#SourceCode>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://creativecommons.org/ns#SourceCode> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Action> (Action)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Action>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Agreement> (Agreement)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Agreement>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/All> (All)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/All> "All"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/All>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/PartyScope> <http://www.w3.org/ns/odrl/2/All>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/All2ndConnections> (All Second-level Connections)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/All2ndConnections> "All Second-level Connections"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/All2ndConnections>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/PartyScope> <http://www.w3.org/ns/odrl/2/All2ndConnections>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/AllConnections> (All First-Level Connections)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/AllConnections> "All First-Level Connections"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/AllConnections>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/PartyScope> <http://www.w3.org/ns/odrl/2/AllConnections>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/AllGroups> (All Group Connections)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/AllGroups> "All Group Connections"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/AllGroups>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/PartyScope> <http://www.w3.org/ns/odrl/2/AllGroups>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Assertion> (Assertion)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Assertion> "Assertion"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Assertion>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Asset> (Asset)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Asset>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/AssetCollection> (Asset Collection)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/AssetCollection> "Asset Collection"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/AssetCollection>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/AssetScope> (Asset Scope)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/AssetScope> "Asset Scope"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/AssetScope>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/ConflictTerm> (Conflict Strategy Preference)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/ConflictTerm>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Constraint> (Constraint)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Constraint>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Duty> (Duty)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Duty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Group> (Group)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Group> "Group"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Group>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/PartyScope> <http://www.w3.org/ns/odrl/2/Group>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Individual> (Individual)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Individual> "Individual"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Individual>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/PartyScope> <http://www.w3.org/ns/odrl/2/Individual>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/LeftOperand> (Left Operand)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/LeftOperand>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/LogicalConstraint> (Logical Constraint)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/LogicalConstraint>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Offer> (Offer)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Offer>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Operator> (Operator)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Operator>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Party> (Party)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Party>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/PartyCollection> (Party Collection)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/PartyCollection> "Party Collection"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/PartyCollection>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/PartyScope> (Party Scope)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/PartyScope>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Permission> (Permission)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Permission>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Policy> (Policy)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Policy>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Privacy> (Privacy Policy)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Privacy> "Privacy Policy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Privacy>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Prohibition> (Prohibition)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Prohibition>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Request> (Request)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Request> "Request"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Request>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/RightOperand> (Right Operand)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/RightOperand>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Rule> (Rule)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Rule>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Set> (Set)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Set>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/Ticket> (Ticket)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/Ticket> "Ticket"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/Ticket>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/UndefinedTerm> (Undefined Term)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/UndefinedTerm>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/absolutePosition> (Absolute Asset Position)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/absolutePosition> "Absolute Asset Position"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/absolutePosition>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/absolutePosition>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/absoluteSize> (Absolute Asset Size)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/absoluteSize> "Absolute Asset Size"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/absoluteSize>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/absoluteSize>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> (Absolute Spatial Asset Position)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> "Absolute Spatial Asset Position"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> (Absolute Temporal Asset Position)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> "Absolute Temporal Asset Position"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/acceptTracking> (Accept Tracking)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/acceptTracking> "Accept Tracking"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/acceptTracking>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/acceptTracking>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/action> (Has Action)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/action>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/adHocShare> (Ad-hoc sharing)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/adHocShare> "Ad-hoc sharing"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/adHocShare>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/adHocShare>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/aggregate> (Aggregate)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/aggregate> "Aggregate"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/aggregate>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/aggregate>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/and> (And)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/and> "And"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/and>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/andSequence> (And Sequence)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/andSequence> "And Sequence"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/andSequence>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/annotate> (Annotate)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/annotate> "Annotate"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/annotate>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/annotate>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/anonymize> (Anonymize)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/anonymize> "Anonymize"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/anonymize>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/anonymize>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/append> (Append)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/append> "Append"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/append>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/append>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/appendTo> (Append To)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/appendTo> "Append To"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/appendTo>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/appendTo>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/archive> (Archive)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/archive> "Archive"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/archive>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/archive>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/assignee> (Assignee)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/assignee> "Assignee"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/assignee>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/assigneeOf> (Assignee Of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/assigneeOf> "Assignee Of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/assigneeOf>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/assigner> (Assigner)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/assigner> "Assigner"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/assigner>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/assignerOf> (Assigner Of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/assignerOf> "Assigner Of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/assignerOf>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/attachPolicy> (Attach policy)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/attachPolicy> "Attach policy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/attachPolicy>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/attachPolicy>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/attachSource> (Attach source)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/attachSource> "Attach source"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/attachSource>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/attachSource>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/attribute> (Attribute)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/attribute> "Attribute"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/attribute>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/attribute>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/attributedParty> (Attributed Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/attributedParty> "Attributed Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/attributedParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/attributingParty> (Attributing Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/attributingParty> "Attributing Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/attributingParty>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/commercialize> (Commercialize)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/commercialize> "Commercialize"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/commercialize>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/commercialize>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/compensate> (Compensate)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/compensate> "Compensate"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/compensate>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/compensate>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/compensatedParty> (Compensated Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/compensatedParty> "Compensated Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/compensatedParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/compensatingParty> (Compensating Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/compensatingParty> "Compensating Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/compensatingParty>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/concurrentUse> (Concurrent Use)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/concurrentUse> "Concurrent Use"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/concurrentUse>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/concurrentUse>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/conflict> (Handle Policy Conflicts)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/conflict> "Handle Policy Conflicts"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/conflict>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/consentedParty> (Consented Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/consentedParty> "Consented Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/consentedParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/consentingParty> (Consenting Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/consentingParty> "Consenting Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/consentingParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/consequence> (Consequence)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/consequence> "Consequence"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/consequence>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/constraint> (Has Constraint)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/constraint>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/contractedParty> (Contracted Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/contractedParty> "Contracted Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/contractedParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/contractingParty> (Contracting Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/contractingParty> "Contracting Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/contractingParty>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/copy> (Copy)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/copy> "Copy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/copy>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/copy>)
 SameIndividual(<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/ns/odrl/2/reproduce>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/core> (ODRL Core Profile)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/core> "ODRL Core Profile"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/core>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/count> (Count)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/count> "Count"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/count>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/count>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/dataType> (Datatype)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/dataType> "Datatype"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/dataType>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/dateTime> (Datetime)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/dateTime> "Datetime"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/dateTime>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/dateTime>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/delayPeriod> (Delay Period)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/delayPeriod> "Delay Period"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/delayPeriod>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/delayPeriod>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/delete> (Delete)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/delete> "Delete"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/delete>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/delete>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/deliveryChannel> (Delivery Channel)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/deliveryChannel> "Delivery Channel"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/deliveryChannel>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/deliveryChannel>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/derive> (Derive)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/derive> "Derive"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/derive>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/derive>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/device> (Device)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/device> "Device"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/device>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/device>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/digitize> (Digitize)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/digitize> "Digitize"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/digitize>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/digitize>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/display> (Display)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/display> "Display"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/display>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/display>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/ns/odrl/2/play>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/distribute> (Distribute)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/distribute> "Distribute"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/distribute>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/distribute>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/duty> (Has Duty)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/duty>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/elapsedTime> (Elapsed Time)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/elapsedTime> "Elapsed Time"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/elapsedTime>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/elapsedTime>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/ensureExclusivity> (Ensure Exclusivity)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/ensureExclusivity> "Ensure Exclusivity"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/ensureExclusivity>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/ensureExclusivity>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/eq> (Equal to)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/eq> "Equal to"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/eq>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/eq>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/event> (Event)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/event> "Event"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/event>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/event>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/execute> (Execute)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/execute> "Execute"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/execute>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/execute>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/export> (Export)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/export> "Export"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/export>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/export>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/extract> (Extract)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/extract> "Extract"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/extract>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/extract>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/ns/odrl/2/reproduce>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/extractChar> (Extract character)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/extractChar> "Extract character"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/extractChar>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/extractChar>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/extractPage> (Extract page)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/extractPage> "Extract page"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/extractPage>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/extractPage>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/extractWord> (Extract word)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/extractWord> "Extract word"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/extractWord>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/extractWord>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/failure> (Failure)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/failure> "Failure"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/failure>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/fileFormat> (File Format)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/fileFormat> "File Format"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/fileFormat>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/fileFormat>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/function> (Function)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/function> "Function"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/function>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/give> (Give)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/give> "Give"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/give>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/give>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/ns/odrl/2/transfer>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/grantUse> (Grant Use)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/grantUse> "Grant Use"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/grantUse>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/grantUse>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/gt> (Greater than)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/gt> "Greater than"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/gt>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/gt>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/gteq> (Greater than or equal to)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/gteq> "Greater than or equal to"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/gteq>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/gteq>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/hasPart> (Has part)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/hasPart> "Has part"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/hasPart>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/hasPart>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/hasPolicy> (Target Policy)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/hasPolicy>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/ignore> (Ignore Undefined Actions)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/ignore> "Ignore Undefined Actions"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/ignore>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/ns/odrl/2/ignore>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/implies> (Implies)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/implies> "Implies"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/implies>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/include> (Include)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/include> "Include"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/include>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/include>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/includedIn> (Included In)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/includedIn>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/index> (Index)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/index> "Index"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/index>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/index>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/industry> (Industry Context)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/industry> "Industry Context"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/industry>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/industry>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/inform> (Inform)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/inform> "Inform"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/inform>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/inform>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/informedParty> (Informed Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/informedParty> "Informed Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/informedParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/informingParty> (Informing Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/informingParty> "Informing Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/informingParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/inheritAllowed> (Inheritance Allowed)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/inheritAllowed> "Inheritance Allowed"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/inheritAllowed>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/inheritFrom> (Inherits From)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/inheritFrom> "Inherits From"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/inheritFrom>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/inheritRelation> (Inherit Relation)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/inheritRelation> "Inherit Relation"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/inheritRelation>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/install> (Install)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/install> "Install"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/install>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/install>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/invalid> (Void Policy)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/invalid> "Void Policy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/invalid>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/ns/odrl/2/invalid>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/isA> (Is a)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/isA> "Is a"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/isA>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/isA>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/isAllOf> (Is all of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/isAllOf> "Is all of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/isAllOf>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/isAllOf>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/isAnyOf> (Is any of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/isAnyOf> "Is any of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/isAnyOf>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/isAnyOf>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/isNoneOf> (Is none of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/isNoneOf> "Is none of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/isNoneOf>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/isNoneOf>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/isPartOf> (Is part of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/isPartOf> "Is part of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/isPartOf>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/isPartOf>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/language> (Language)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/language> "Language"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/language>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/language>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/lease> (Lease)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/lease> "Lease"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/lease>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/lease>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/leftOperand> (Has Left Operand)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/leftOperand> "Has Left Operand"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/leftOperand>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/lend> (Lend)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/lend> "Lend"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/lend>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/lend>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/license> (License)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/license> "License"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/license>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/license>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/lt> (Less than)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/lt> "Less than"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/lt>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/lt>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/lteq> (Less than or equal to)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/lteq> "Less than or equal to"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/lteq>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/lteq>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/media> (Media Context)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/media> "Media Context"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/media>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/media>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/meteredTime> (Metered Time)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/meteredTime> "Metered Time"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/meteredTime>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/meteredTime>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/modify> (Modify)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/modify> "Modify"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/modify>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/modify>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/move> (Move)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/move> "Move"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/move>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/move>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/neq> (Not equal to)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/neq> "Not equal to"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/neq>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/ns/odrl/2/neq>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/nextPolicy> (Next Policy)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/nextPolicy> "Next Policy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/nextPolicy>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/nextPolicy>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/obligation> (Obligation)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/obligation>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/obtainConsent> (Obtain Consent)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/obtainConsent> "Obtain Consent"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/obtainConsent>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/obtainConsent>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/operand> (Operand)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/operand> "Operand"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/operand>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/operator> (Has Operator)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/operator> "Has Operator"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/operator>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/or> (Or)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/or> "Or"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/or>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/output> (Output)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/output> "Output"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/output>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/partOf> (Part Of)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/partOf> "Part Of"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/partOf>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/pay> (Pay)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/pay> "Pay"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/pay>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/pay>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/payAmount> (Payment Amount)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/payAmount> "Payment Amount"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/payAmount>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/payAmount>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/payeeParty> (Payee Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/payeeParty> "Payee Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/payeeParty>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/percentage> (Asset Percentage)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/percentage> "Asset Percentage"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/percentage>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/percentage>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/perm> (Prefer Permissions)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/perm> "Prefer Permissions"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/perm>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/ns/odrl/2/perm>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/permission> (Has Permission)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/permission>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/play> (Play)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/play> "Play"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/play>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/play>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/policyUsage> (Policy Rule Usage)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/policyUsage> "Policy Rule Usage"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/policyUsage>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/RightOperand> <http://www.w3.org/ns/odrl/2/policyUsage>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/present> (Present)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/present> "Present"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/present>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/present>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/preview> (Preview)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/preview> "Preview"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/preview>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/preview>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/print> (Print)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/print> "Print"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/print>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/print>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/product> (Product Context)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/product> "Product Context"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/product>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/product>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/profile> (Profile)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/profile> "Profile"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/profile>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/prohibit> (Prefer Prohibitions)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/prohibit> "Prefer Prohibitions"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/prohibit>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/ns/odrl/2/prohibit>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/prohibition> (Has Prohibition)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/prohibition>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/proximity> (proximity)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/proximity> "proximity"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/proximity>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/purpose> (Purpose)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/purpose> "Purpose"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/purpose>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/purpose>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/read> (Read)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/read> "Read"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/read>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/read>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/recipient> (Recipient)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/recipient> "Recipient"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/recipient>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/recipient>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/refinement> (Refinement)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/refinement> "Refinement"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/refinement>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/relation> (Relation)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/relation>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/relativePosition> (Relative Asset Position)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/relativePosition> "Relative Asset Position"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/relativePosition>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/relativePosition>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/relativeSize> (Relative Asset Size)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/relativeSize> "Relative Asset Size"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/relativeSize>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/relativeSize>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> (Relative Spatial Asset Position)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> "Relative Spatial Asset Position"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/relativeSpatialPosition>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/relativeSpatialPosition>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> (Relative Temporal Asset Position)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> "Relative Temporal Asset Position"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/relativeTemporalPosition>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/relativeTemporalPosition>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/remedy> (Remedy)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/remedy> "Remedy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/remedy>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/reproduce> (Reproduce)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/reproduce> "Reproduce"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/reproduce>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/reproduce>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/resolution> (Rendition Resolution)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/resolution> "Rendition Resolution"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/resolution>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/resolution>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/reviewPolicy> (Review Policy)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/reviewPolicy> "Review Policy"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/reviewPolicy>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/reviewPolicy>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/rightOperand> (Has Right Operand)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/rightOperand> "Has Right Operand"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/rightOperand>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/rightOperandReference> (Has Right Operand Reference)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/rightOperandReference> "Has Right Operand Reference"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/rightOperandReference>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/scope> (Scope)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/scope> "Scope"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/scope>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/secondaryUse> (Secondary Use)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/secondaryUse> "Secondary Use"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/secondaryUse>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/secondaryUse>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/sell> (Sell)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/sell> "Sell"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/sell>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/sell>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/ns/odrl/2/transfer>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/share> (Share)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/share> "Share"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/share>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/share>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/shareAlike> (Share-alike)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/shareAlike> "Share-alike"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/shareAlike>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/shareAlike>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/source> (Source)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/source> "Source"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/source>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/spatial> (Geospatial Named Area)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/spatial> "Geospatial Named Area"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/spatial>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/spatial>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/spatialCoordinates> (Geospatial Coordinates)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/spatialCoordinates> "Geospatial Coordinates"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/spatialCoordinates>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/spatialCoordinates>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/status> (Status)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/status> "Status"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/status>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/stream> (Stream)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/stream> "Stream"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/stream>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/stream>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/stream> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/support> (Support Undefined Actions)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/support> "Support Undefined Actions"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/support>)
-ClassAssertion(<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/ns/odrl/2/support>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/synchronize> (Synchronize)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/synchronize> "Synchronize"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/synchronize>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/synchronize>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/synchronize> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/system> (System)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/system> "System"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/system>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/system>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/systemDevice> (System Device)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/systemDevice> "System Device"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/systemDevice>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/systemDevice>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/target> (Target)
-
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/target>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/textToSpeech> (Text-to-speech)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/textToSpeech> "Text-to-speech"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/textToSpeech>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/textToSpeech>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/timeInterval> (Recurring Time Interval)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/timeInterval> "Recurring Time Interval"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/timeInterval>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/timeInterval>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/timedCount> (Timed Count)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/timedCount> "Timed Count"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/timedCount>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/trackedParty> (Tracked Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/trackedParty> "Tracked Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/trackedParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/trackingParty> (Tracking Party)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/trackingParty> "Tracking Party"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/trackingParty>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/transfer> (Transfer Ownership)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/transfer> "Transfer Ownership"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/transfer>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/transfer>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/transform> (Transform)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/transform> "Transform"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/transform>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/transform>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/translate> (Translate)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/translate> "Translate"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/translate>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/translate>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/ns/odrl/2/use>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/uid> (Unique Identifier)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/uid> "Unique Identifier"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/uid>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/undefined> (Handle Undefined Term)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/undefined> "Handle Undefined Term"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/undefined>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/uninstall> (Uninstall)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/uninstall> "Uninstall"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/uninstall>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/uninstall>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/unitOfCount> (Unit Of Count)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/unitOfCount> "Unit Of Count"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/unitOfCount>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/unitOfCount>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/use> (Use)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/use> "Use"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/use>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/version> (Version)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/version> "Version"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/version>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/version>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/virtualLocation> (Virtual IT Communication Location)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/virtualLocation> "Virtual IT Communication Location"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/virtualLocation>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/virtualLocation>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/watermark> (Watermark)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/watermark> "Watermark"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/watermark>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/watermark>)
 ObjectPropertyAssertion(<http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/ns/odrl/2/use>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/write> (Write)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/write> "Write"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/write>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/write>)
 
 # Individual: <http://www.w3.org/ns/odrl/2/writeTo> (Write to)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/writeTo> "Write to"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/writeTo>)
 ClassAssertion(<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/writeTo>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/xone> (Only One)
-
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/odrl/2/xone> "Only One"@en)
-ClassAssertion(skos:Concept <http://www.w3.org/ns/odrl/2/xone>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#actionConcepts> (<http://www.w3.org/ns/odrl/2/#actionConcepts>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#actionConcepts>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#actions> (<http://www.w3.org/ns/odrl/2/#actions>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#actions>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#actionsCommon> (<http://www.w3.org/ns/odrl/2/#actionsCommon>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#actionsCommon>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#assetConcepts> (<http://www.w3.org/ns/odrl/2/#assetConcepts>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#assetConcepts>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#assetParty> (<http://www.w3.org/ns/odrl/2/#assetParty>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#assetParty>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#assetRelations> (<http://www.w3.org/ns/odrl/2/#assetRelations>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#assetRelations>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#assetRelationsCommon> (<http://www.w3.org/ns/odrl/2/#assetRelationsCommon>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#assetRelationsCommon>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#conflictConcepts> (<http://www.w3.org/ns/odrl/2/#conflictConcepts>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#conflictConcepts>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon> (<http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#constraintLogicalOperands> (<http://www.w3.org/ns/odrl/2/#constraintLogicalOperands>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#constraintLogicalOperands>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#constraintRelationalOperators> (<http://www.w3.org/ns/odrl/2/#constraintRelationalOperators>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#constraintRelationalOperators>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#constraintRightOpCommon> (<http://www.w3.org/ns/odrl/2/#constraintRightOpCommon>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#constraintRightOpCommon>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#constraints> (<http://www.w3.org/ns/odrl/2/#constraints>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#constraints>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#deprecatedTerms> (<http://www.w3.org/ns/odrl/2/#deprecatedTerms>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#deprecatedTerms>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#duties> (<http://www.w3.org/ns/odrl/2/#duties>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#duties>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#logicalConstraints> (<http://www.w3.org/ns/odrl/2/#logicalConstraints>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#logicalConstraints>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#partyConcepts> (<http://www.w3.org/ns/odrl/2/#partyConcepts>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#partyConcepts>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#partyRoles> (<http://www.w3.org/ns/odrl/2/#partyRoles>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#partyRoles>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#partyRolesCommon> (<http://www.w3.org/ns/odrl/2/#partyRolesCommon>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#partyRolesCommon>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#permissions> (<http://www.w3.org/ns/odrl/2/#permissions>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#permissions>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#policyConcepts> (<http://www.w3.org/ns/odrl/2/#policyConcepts>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#policyConcepts>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#policySubClasses> (<http://www.w3.org/ns/odrl/2/#policySubClasses>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#policySubClasses>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#policySubClassesCommon> (<http://www.w3.org/ns/odrl/2/#policySubClassesCommon>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#policySubClassesCommon>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#prohibitions> (<http://www.w3.org/ns/odrl/2/#prohibitions>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#prohibitions>)
-
-# Individual: <http://www.w3.org/ns/odrl/2/#ruleConcepts> (<http://www.w3.org/ns/odrl/2/#ruleConcepts>)
-
-ClassAssertion(skos:Collection <http://www.w3.org/ns/odrl/2/#ruleConcepts>)
 
 
 )

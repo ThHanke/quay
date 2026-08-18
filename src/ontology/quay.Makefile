@@ -33,4 +33,21 @@ validate-patterns: $(SHACL_SHAPES) $(PATTERN_DATA)
 	if [ $$FAIL -eq 1 ]; then echo "SHACL validation failed."; exit 1; fi; \
 	echo "All patterns conform."
 
+# ODRL import: custom module using SUBSET extraction from explicit IRI list.
+# Avoids BOT/SLME pulling schema.org/FOAF/vcard/CC transitive closure.
+$(IMPORTDIR)/odrl_import.owl: $(MIRRORDIR)/odrl.owl $(IMPORTDIR)/odrl_terms.txt | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/odrl_terms.txt \
+		         --force true --copy-ontology-annotations true \
+		         --individuals include \
+		         --method STAR \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/odrl_terms.txt \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri https://w3id.org \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 test: validate-patterns

@@ -8,6 +8,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(dcat:=<http://www.w3.org/ns/dcat#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(spdx:=<http://spdx.org/rdf/terms#>)
+Prefix(odrl:=<http://www.w3.org/ns/odrl/2/>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
@@ -222,6 +223,38 @@ Declaration(DataProperty(<https://w3id.org/quay/encryptionAtRest>))
 Declaration(DataProperty(<https://w3id.org/quay/encryptionInTransit>))
 Declaration(NamedIndividual(spdx:checksumAlgorithm_md5))
 Declaration(NamedIndividual(spdx:checksumAlgorithm_sha256))
+
+# ODRL (external declarations for SLME seed — only terms QUAY references)
+Declaration(Class(odrl:Policy))
+Declaration(Class(odrl:Set))
+Declaration(Class(odrl:Permission))
+Declaration(Class(odrl:Prohibition))
+Declaration(Class(odrl:Duty))
+Declaration(Class(odrl:Action))
+Declaration(Class(odrl:Constraint))
+Declaration(Class(odrl:LeftOperand))
+Declaration(ObjectProperty(odrl:hasPolicy))
+Declaration(ObjectProperty(odrl:permission))
+Declaration(ObjectProperty(odrl:prohibition))
+Declaration(ObjectProperty(odrl:duty))
+Declaration(ObjectProperty(odrl:action))
+Declaration(ObjectProperty(odrl:target))
+Declaration(ObjectProperty(odrl:constraint))
+Declaration(ObjectProperty(odrl:leftOperand))
+Declaration(ObjectProperty(odrl:operator))
+Declaration(ObjectProperty(odrl:rightOperand))
+Declaration(NamedIndividual(odrl:use))
+Declaration(NamedIndividual(odrl:distribute))
+Declaration(NamedIndividual(odrl:count))
+Declaration(NamedIndividual(odrl:dateTime))
+Declaration(NamedIndividual(odrl:spatial))
+Declaration(NamedIndividual(odrl:lt))
+Declaration(NamedIndividual(odrl:eq))
+Declaration(NamedIndividual(odrl:lteq))
+Declaration(NamedIndividual(odrl:gt))
+Declaration(NamedIndividual(odrl:gteq))
+
+# Annotation Properties
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
@@ -246,6 +279,102 @@ AnnotationAssertion(rdfs:label dcterms:license "license")
 
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
+############################
+#   Classes — Annotations
+############################
+
+# Core
+AnnotationAssertion(rdfs:label :AccessDescription "Access Description")
+AnnotationAssertion(rdfs:comment :AccessDescription "Qualifies HOW a Distribution is reached.")
+AnnotationAssertion(rdfs:label :YieldDescription "Yield Description")
+AnnotationAssertion(rdfs:comment :YieldDescription "Qualifies WHAT a Distribution delivers.")
+
+# Protocol
+AnnotationAssertion(rdfs:label :Protocol "Protocol")
+AnnotationAssertion(rdfs:label :HttpProtocol "HTTP Protocol")
+AnnotationAssertion(rdfs:label :S3Protocol "S3 Protocol")
+AnnotationAssertion(rdfs:label :RsyncProtocol "Rsync Protocol")
+AnnotationAssertion(rdfs:label :WebDavProtocol "WebDAV Protocol")
+AnnotationAssertion(rdfs:label :SshProtocol "SSH Protocol")
+AnnotationAssertion(rdfs:label :BitTorrentProtocol "BitTorrent Protocol")
+AnnotationAssertion(rdfs:label :IpfsProtocol "IPFS Protocol")
+AnnotationAssertion(rdfs:label :LocalFilesystemProtocol "Local Filesystem Protocol")
+AnnotationAssertion(rdfs:label :RcloneProtocol "Rclone Protocol")
+AnnotationAssertion(rdfs:label :FtpProtocol "FTP Protocol")
+AnnotationAssertion(rdfs:label :GitProtocol "Git Protocol")
+
+# Authentication Scheme
+AnnotationAssertion(rdfs:label :AuthenticationScheme "Authentication Scheme")
+AnnotationAssertion(rdfs:label :NoAuthentication "No Authentication")
+AnnotationAssertion(rdfs:label :ApiKeyAuthentication "API Key Authentication")
+AnnotationAssertion(rdfs:label :OAuth2Authentication "OAuth2 Authentication")
+AnnotationAssertion(rdfs:label :BasicAuthentication "Basic Authentication")
+AnnotationAssertion(rdfs:label :SshKeyAuthentication "SSH Key Authentication")
+AnnotationAssertion(rdfs:label :GpgKeyAuthentication "GPG Key Authentication")
+AnnotationAssertion(rdfs:label :AwsCredentialAuthentication "AWS Credential Authentication")
+
+# Operation
+AnnotationAssertion(rdfs:label :ReadOperation "Read Operation")
+AnnotationAssertion(rdfs:label :WriteOperation "Write Operation")
+AnnotationAssertion(rdfs:label :DeleteOperation "Delete Operation")
+AnnotationAssertion(rdfs:label :ListOperation "List Operation")
+AnnotationAssertion(rdfs:label :ReplicateOperation "Replicate Operation")
+AnnotationAssertion(rdfs:label :Operation "Operation")
+
+# Delivery Mode
+AnnotationAssertion(rdfs:label :DeliveryMode "Delivery Mode")
+AnnotationAssertion(rdfs:label :BulkDelivery "Bulk Delivery")
+AnnotationAssertion(rdfs:label :StreamingDelivery "Streaming Delivery")
+AnnotationAssertion(rdfs:label :PaginatedDelivery "Paginated Delivery")
+AnnotationAssertion(rdfs:label :EventDrivenDelivery "Event-Driven Delivery")
+
+# Temporal Quality
+AnnotationAssertion(rdfs:label :TemporalQuality "Temporal Quality")
+AnnotationAssertion(rdfs:label :RealTime "Real-Time")
+AnnotationAssertion(rdfs:label :Snapshot "Snapshot")
+AnnotationAssertion(rdfs:label :Archived "Archived")
+AnnotationAssertion(rdfs:label :Versioned "Versioned")
+
+# Coverage
+AnnotationAssertion(rdfs:label :Coverage "Coverage")
+AnnotationAssertion(rdfs:label :CompleteCoverage "Complete Coverage")
+AnnotationAssertion(rdfs:label :SubsetCoverage "Subset Coverage")
+AnnotationAssertion(rdfs:label :SampleCoverage "Sample Coverage")
+AnnotationAssertion(rdfs:label :IncrementalCoverage "Incremental Coverage")
+
+# Service Quality & Verification
+AnnotationAssertion(rdfs:label :ServiceQuality "Service Quality")
+AnnotationAssertion(rdfs:label :VerificationMethod "Verification Method")
+
+# Delivery Mode additions
+AnnotationAssertion(rdfs:label :SynchronousDelivery "Synchronous Delivery")
+AnnotationAssertion(rdfs:label :PeerToPeerDelivery "Peer-to-Peer Delivery")
+
+# Service Quality subclasses
+AnnotationAssertion(rdfs:label :HighAvailability "High Availability")
+AnnotationAssertion(rdfs:comment :HighAvailability "Managed cloud services with SLA guarantees.")
+AnnotationAssertion(rdfs:label :BestEffort "Best Effort")
+AnnotationAssertion(rdfs:comment :BestEffort "Quality depends on upstream server or network conditions.")
+AnnotationAssertion(rdfs:label :SingleHost "Single Host")
+AnnotationAssertion(rdfs:comment :SingleHost "Data resides on a single machine with no redundancy.")
+AnnotationAssertion(rdfs:label :Distributed "Distributed")
+AnnotationAssertion(rdfs:comment :Distributed "Data distributed across multiple peers or nodes.")
+
+# Verification Method subclasses
+AnnotationAssertion(rdfs:label :HashVerification "Hash Verification")
+AnnotationAssertion(rdfs:comment :HashVerification "Integrity verified by comparing cryptographic hash of content.")
+AnnotationAssertion(rdfs:label :ContentAddressing "Content Addressing")
+AnnotationAssertion(rdfs:comment :ContentAddressing "Content identified and verified by its hash, as in IPFS CIDs.")
+AnnotationAssertion(rdfs:label :PieceVerification "Piece Verification")
+AnnotationAssertion(rdfs:comment :PieceVerification "Integrity verified per-piece using a hash tree, as in BitTorrent.")
+AnnotationAssertion(rdfs:label :DigitalSignature "Digital Signature")
+AnnotationAssertion(rdfs:comment :DigitalSignature "Integrity and authenticity verified via cryptographic signature.")
+AnnotationAssertion(rdfs:label :NoVerification "No Verification")
+AnnotationAssertion(rdfs:comment :NoVerification "No integrity verification mechanism available.")
+
+# Protocol addition
+AnnotationAssertion(rdfs:label :HookProtocol "Hook Protocol")
+AnnotationAssertion(rdfs:comment :HookProtocol "Custom protocol via user-defined hook scripts.")
 
 # Encryption Algorithm
 AnnotationAssertion(rdfs:label :EncryptionAlgorithm "Encryption Algorithm")
@@ -459,6 +588,15 @@ AnnotationAssertion(obo:IAO_0000115 <https://w3id.org/quay/encryptionInTransit> 
 AnnotationAssertion(rdfs:label <https://w3id.org/quay/encryptionInTransit> "encryption in transit")
 DataPropertyDomain(<https://w3id.org/quay/encryptionInTransit> dcat:Distribution)
 DataPropertyRange(<https://w3id.org/quay/encryptionInTransit> xsd:string)
+
+# ODRL bridge: QUAY Operations are ODRL Actions
+SubClassOf(:Operation odrl:Action)
+
+# DeliveryMode hierarchy
+SubClassOf(:BulkDelivery :DeliveryMode)
+SubClassOf(:StreamingDelivery :DeliveryMode)
+SubClassOf(:PaginatedDelivery :DeliveryMode)
+SubClassOf(:EventDrivenDelivery :DeliveryMode)
 
 
 

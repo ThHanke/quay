@@ -1,6 +1,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix quay: <https://w3id.org/quay/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # =============================================
@@ -27,15 +28,15 @@ quay:DistributionShape a sh:NodeShape ;
     ] ;
     sh:property [
         sh:path quay:encryptionAtRest ;
-        sh:class quay:EncryptionAlgorithm ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
         sh:name "encryption at rest" ;
-        sh:message "encryptionAtRest must reference an EncryptionAlgorithm."
+        sh:message "encryptionAtRest must be a resource (class hierarchy validated by OWL)."
     ] ;
     sh:property [
         sh:path quay:encryptionInTransit ;
-        sh:class quay:EncryptionAlgorithm ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
         sh:name "encryption in transit" ;
-        sh:message "encryptionInTransit must reference an EncryptionAlgorithm."
+        sh:message "encryptionInTransit must be a resource (class hierarchy validated by OWL)."
     ] ;
     sh:property [
         sh:path quay:retentionPeriod ;
@@ -161,4 +162,82 @@ quay:AccessDescriptionExtendedShape a sh:NodeShape ;
         sh:maxCount 1 ;
         sh:name "cost description" ;
         sh:message "costDescription must be an xsd:string."
+    ] .
+
+# --- ODRL Policy Shape ---
+# Validates ODRL Set policies linked to distributions
+
+quay:PolicyShape a sh:NodeShape ;
+    sh:targetClass odrl:Set ;
+    sh:or (
+        [ sh:property [
+            sh:path odrl:permission ;
+            sh:minCount 1
+        ] ]
+        [ sh:property [
+            sh:path odrl:prohibition ;
+            sh:minCount 1
+        ] ]
+    ) ;
+    sh:severity sh:Warning ;
+    sh:message "Policy should have at least one permission or prohibition." .
+
+# --- ODRL Permission Shape ---
+
+quay:PermissionShape a sh:NodeShape ;
+    sh:targetClass odrl:Permission ;
+    sh:property [
+        sh:path odrl:action ;
+        sh:minCount 1 ;
+        sh:name "action" ;
+        sh:message "Permission must specify an action."
+    ] ;
+    sh:property [
+        sh:path odrl:target ;
+        sh:minCount 1 ;
+        sh:name "target" ;
+        sh:message "Permission must specify a target."
+    ] .
+
+# --- ODRL Prohibition Shape ---
+
+quay:ProhibitionShape a sh:NodeShape ;
+    sh:targetClass odrl:Prohibition ;
+    sh:property [
+        sh:path odrl:action ;
+        sh:minCount 1 ;
+        sh:name "action" ;
+        sh:message "Prohibition must specify an action."
+    ] ;
+    sh:property [
+        sh:path odrl:target ;
+        sh:minCount 1 ;
+        sh:name "target" ;
+        sh:message "Prohibition must specify a target."
+    ] .
+
+# --- ODRL Constraint Shape ---
+
+quay:ConstraintShape a sh:NodeShape ;
+    sh:targetClass odrl:Constraint ;
+    sh:property [
+        sh:path odrl:leftOperand ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "left operand" ;
+        sh:message "Constraint must have exactly one left operand."
+    ] ;
+    sh:property [
+        sh:path odrl:operator ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "operator" ;
+        sh:message "Constraint must have exactly one operator."
+    ] ;
+    sh:property [
+        sh:path odrl:rightOperand ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:name "right operand" ;
+        sh:message "Constraint must have exactly one right operand."
     ] .

@@ -28,47 +28,47 @@ quay:Protocol a owl:Class;
 
 quay:HttpProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "HTTP/HTTPS".
+    rdfs:label "HTTP Protocol".
 
 quay:S3Protocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "S3".
+    rdfs:label "S3 Protocol".
 
 quay:RsyncProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "Rsync".
+    rdfs:label "Rsync Protocol".
 
 quay:WebDavProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "WebDAV".
+    rdfs:label "WebDAV Protocol".
 
 quay:SshProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "SSH/SFTP".
+    rdfs:label "SSH Protocol".
 
 quay:BitTorrentProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "BitTorrent".
+    rdfs:label "BitTorrent Protocol".
 
 quay:IpfsProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "IPFS".
+    rdfs:label "IPFS Protocol".
 
 quay:LocalFilesystemProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "Local Filesystem".
+    rdfs:label "Local Filesystem Protocol".
 
 quay:RcloneProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "Rclone".
+    rdfs:label "Rclone Protocol".
 
 quay:FtpProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "FTP".
+    rdfs:label "FTP Protocol".
 
 quay:GitProtocol a owl:Class;
     rdfs:subClassOf quay:Protocol;
-    rdfs:label "Git".
+    rdfs:label "Git Protocol".
 
 # === Authentication Scheme Hierarchy ===
 
@@ -81,11 +81,11 @@ quay:NoAuthentication a owl:Class;
 
 quay:ApiKeyAuthentication a owl:Class;
     rdfs:subClassOf quay:AuthenticationScheme;
-    rdfs:label "API Key".
+    rdfs:label "API Key Authentication".
 
 quay:OAuth2Authentication a owl:Class;
     rdfs:subClassOf quay:AuthenticationScheme;
-    rdfs:label "OAuth 2.0".
+    rdfs:label "OAuth2 Authentication".
 
 quay:BasicAuthentication a owl:Class;
     rdfs:subClassOf quay:AuthenticationScheme;
@@ -93,15 +93,15 @@ quay:BasicAuthentication a owl:Class;
 
 quay:SshKeyAuthentication a owl:Class;
     rdfs:subClassOf quay:AuthenticationScheme;
-    rdfs:label "SSH Key".
+    rdfs:label "SSH Key Authentication".
 
 quay:GpgKeyAuthentication a owl:Class;
     rdfs:subClassOf quay:AuthenticationScheme;
-    rdfs:label "GPG Key".
+    rdfs:label "GPG Key Authentication".
 
 quay:AwsCredentialAuthentication a owl:Class;
     rdfs:subClassOf quay:AuthenticationScheme;
-    rdfs:label "AWS Credential".
+    rdfs:label "AWS Credential Authentication".
 
 # === Operation Hierarchy ===
 
@@ -110,23 +110,23 @@ quay:Operation a owl:Class;
 
 quay:ReadOperation a owl:Class;
     rdfs:subClassOf quay:Operation;
-    rdfs:label "Read".
+    rdfs:label "Read Operation".
 
 quay:WriteOperation a owl:Class;
     rdfs:subClassOf quay:Operation;
-    rdfs:label "Write".
+    rdfs:label "Write Operation".
 
 quay:DeleteOperation a owl:Class;
     rdfs:subClassOf quay:Operation;
-    rdfs:label "Delete".
+    rdfs:label "Delete Operation".
 
 quay:ListOperation a owl:Class;
     rdfs:subClassOf quay:Operation;
-    rdfs:label "List".
+    rdfs:label "List Operation".
 
 quay:ReplicateOperation a owl:Class;
     rdfs:subClassOf quay:Operation;
-    rdfs:label "Replicate".
+    rdfs:label "Replicate Operation".
 
 # === Yield: Delivery Mode ===
 
@@ -177,19 +177,19 @@ quay:Coverage a owl:Class;
 
 quay:CompleteCoverage a owl:Class;
     rdfs:subClassOf quay:Coverage;
-    rdfs:label "Complete".
+    rdfs:label "Complete Coverage".
 
 quay:SubsetCoverage a owl:Class;
     rdfs:subClassOf quay:Coverage;
-    rdfs:label "Subset".
+    rdfs:label "Subset Coverage".
 
 quay:SampleCoverage a owl:Class;
     rdfs:subClassOf quay:Coverage;
-    rdfs:label "Sample".
+    rdfs:label "Sample Coverage".
 
 quay:IncrementalCoverage a owl:Class;
     rdfs:subClassOf quay:Coverage;
-    rdfs:label "Incremental".
+    rdfs:label "Incremental Coverage".
 
 # === Yield: Service Quality & Verification ===
 
