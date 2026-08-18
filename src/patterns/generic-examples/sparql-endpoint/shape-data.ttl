@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/sparql-endpoint> a owl:Ontology ;
     dcterms:title "QUAY Pattern: SPARQL Endpoint" ;
@@ -25,7 +26,8 @@ ex:sparql-distribution a dcat:Distribution ;
     quay:accessDescription ex:sparql-access ;
     quay:yieldDescription ex:sparql-yield ;
     quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
-    dcterms:conformsTo <http://www.w3.org/TR/sparql11-protocol/> .
+    dcterms:conformsTo <http://www.w3.org/TR/sparql11-protocol/> ;
+    odrl:hasPolicy ex:sparql-policy .
 
 ex:sparql-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
@@ -38,3 +40,10 @@ ex:sparql-yield a quay:YieldDescription ;
     quay:coverage [ a quay:SubsetCoverage ] ;
     quay:serviceQuality [ a quay:BestEffort ] ;
     quay:verificationMethod [ a quay:NoVerification ] .
+
+ex:sparql-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:sparql-distribution
+    ] .

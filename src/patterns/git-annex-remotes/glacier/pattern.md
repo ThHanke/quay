@@ -29,6 +29,21 @@ Modern approach uses S3 remote with storage class:
 | Verification | Hash Verification (HashVerification) | SHA-256 |
 | Encryption at rest | AES-256 (SSE) | Server-side encryption |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
+| Retention | 99 years | Long-term archival |
+| Jurisdiction | USA | AWS region constraint |
+| Uptime | 99.99% | AWS Glacier SLA |
+| RTO | 12 hours | Glacier restore latency |
+| RPO | 1 hour | Replication lag |
+| Replication | 3x | Cross-AZ |
+| ODRL Policy | Read geo-constrained, Write permitted, Delete prohibited | Archival protection |
+
+## Features Demonstrated
+
+- ODRL geographic constraint (`odrl:spatial` + `odrl:eq`)
+- ODRL prohibition (delete blocked for archival integrity)
+- Full service quality metrics (uptime, RTO, RPO, replication)
+- Storage jurisdiction, retention period
+- SPDX checksum
 
 ## References
 

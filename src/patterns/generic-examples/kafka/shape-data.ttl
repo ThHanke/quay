@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/kafka> a owl:Ontology ;
     dcterms:title "QUAY Pattern: Kafka Stream" ;
@@ -24,17 +25,40 @@ ex:kafka-distribution a dcat:Distribution ;
     dcat:mediaType "application/avro" ;
     quay:accessDescription ex:kafka-access ;
     quay:yieldDescription ex:kafka-yield ;
-    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
+    quay:retentionPeriod "P7D"^^xsd:duration ;
+    odrl:hasPolicy ex:kafka-policy .
 
 ex:kafka-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
     quay:authenticationScheme [ a quay:ApiKeyAuthentication ] ;
     quay:supportedOperation [ a quay:ReadOperation ] ;
-    quay:supportedOperation [ a quay:WriteOperation ] .
+    quay:supportedOperation [ a quay:WriteOperation ] ;
+    quay:rateLimit "10000"^^xsd:nonNegativeInteger .
 
 ex:kafka-yield a quay:YieldDescription ;
     quay:deliveryMode [ a quay:EventDrivenDelivery ] ;
     quay:temporalQuality [ a quay:RealTime ] ;
     quay:coverage [ a quay:IncrementalCoverage ] ;
     quay:serviceQuality [ a quay:HighAvailability ] ;
-    quay:verificationMethod [ a quay:NoVerification ] .
+    quay:verificationMethod [ a quay:NoVerification ] ;
+    quay:uptimePercentage "99.99"^^xsd:decimal ;
+    quay:replicationFactor "3"^^xsd:nonNegativeInteger .
+
+ex:kafka-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:kafka-distribution ;
+        odrl:constraint [
+            a odrl:Constraint ;
+            odrl:leftOperand odrl:count ;
+            odrl:operator odrl:lteq ;
+            odrl:rightOperand "10000"^^xsd:integer
+        ]
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:WriteOperation ] ;
+        odrl:target ex:kafka-distribution
+    ] .

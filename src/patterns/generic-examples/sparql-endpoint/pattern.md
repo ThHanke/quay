@@ -24,6 +24,14 @@ SPARQL Protocol endpoint serving RDF data from a triplestore. Clients submit SPA
 | Service Quality | Best Effort (BestEffort) | Public endpoint, no SLA |
 | Verification | No Verification (NoVerification) | No integrity mechanism |
 | Encryption in transit | TLS | HTTPS when available |
+| Schema | SPARQL 1.1 Protocol | `dcterms:conformsTo` |
+| ODRL Policy | Read permitted | Public query access |
+
+## Features Demonstrated
+
+- ODRL simple read-only permission
+- Schema link via `dcterms:conformsTo`
+- Minimal ODRL policy (single permission, no constraints)
 
 ## References
 

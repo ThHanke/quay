@@ -24,6 +24,14 @@ CKAN (Comprehensive Knowledge Archive Network) is the leading open data portal p
 | Service Quality | Best Effort (BestEffort) | Government infrastructure |
 | Verification | No Verification (NoVerification) | No integrity mechanism |
 | Encryption in transit | TLS | HTTPS |
+| Schema | CKAN API spec | `dcterms:conformsTo` |
+| ODRL Policy | Read permitted, Write prohibited | Public read-only portal |
+
+## Features Demonstrated
+
+- ODRL prohibition (write blocked — public portal)
+- ODRL open-access read permission
+- Schema link via `dcterms:conformsTo`
 
 ## References
 

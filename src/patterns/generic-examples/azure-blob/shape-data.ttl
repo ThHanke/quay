@@ -5,6 +5,7 @@
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/azure-blob> a owl:Ontology ;
     dcterms:title "QUAY Pattern: Azure Blob Storage" ;
@@ -21,7 +22,10 @@ ex:azure-distribution a dcat:Distribution ;
     quay:yieldDescription ex:azure-yield ;
     quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
     quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
-    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_md5 ] .
+    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_md5 ] ;
+    quay:retentionPeriod "P7Y"^^xsd:duration ;
+    quay:storageJurisdiction <http://publications.europa.eu/resource/authority/country/DEU> ;
+    odrl:hasPolicy ex:azure-policy .
 
 ex:azure-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
@@ -36,4 +40,24 @@ ex:azure-yield a quay:YieldDescription ;
     quay:temporalQuality [ a quay:Snapshot ] ;
     quay:coverage [ a quay:CompleteCoverage ] ;
     quay:serviceQuality [ a quay:HighAvailability ] ;
-    quay:verificationMethod [ a quay:HashVerification ] .
+    quay:verificationMethod [ a quay:HashVerification ] ;
+    quay:uptimePercentage "99.99"^^xsd:decimal ;
+    quay:replicationFactor "3"^^xsd:nonNegativeInteger .
+
+ex:azure-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:azure-distribution
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:WriteOperation ] ;
+        odrl:target ex:azure-distribution ;
+        odrl:constraint [
+            a odrl:Constraint ;
+            odrl:leftOperand odrl:spatial ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand <http://publications.europa.eu/resource/authority/country/DEU>
+        ]
+    ] .

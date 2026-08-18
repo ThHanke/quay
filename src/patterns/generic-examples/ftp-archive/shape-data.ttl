@@ -17,7 +17,8 @@ ex:ftp-distribution a dcat:Distribution ;
     dcterms:title "FTP archive distribution" ;
     dcat:downloadURL <ftp://ftp.genomics.example.edu/pub/sequences/> ;
     quay:accessDescription ex:ftp-access ;
-    quay:yieldDescription ex:ftp-yield .
+    quay:yieldDescription ex:ftp-yield ;
+    quay:encryptionInTransit [ a quay:NoEncryption ] .
 
 ex:ftp-access a quay:AccessDescription ;
     quay:protocol [ a quay:FtpProtocol ] ;

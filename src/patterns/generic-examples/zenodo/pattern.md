@@ -24,6 +24,13 @@ Zenodo is a general-purpose open research data repository operated by CERN. Rese
 | Service Quality | High Availability (HighAvailability) | CERN infrastructure |
 | Verification | Hash Verification (HashVerification) | MD5/SHA-256 checksums provided |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
+| ODRL Policy | Read permitted, Delete prohibited | Immutable archive policy |
+
+## Features Demonstrated
+
+- ODRL prohibition (delete blocked — immutable deposits)
+- ODRL open-access read permission
+- SPDX checksum verification
 
 ## References
 

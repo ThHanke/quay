@@ -26,6 +26,18 @@ Apache Kafka topic providing event-driven data streaming. Producers publish even
 | Verification | No Verification (NoVerification) | Application-level if needed |
 | Encryption at rest | Optional | Disk encryption on brokers |
 | Encryption in transit | TLS | SASL_SSL listener |
+| Rate Limit | 10000 msg/s | Producer throttling |
+| Retention | 7 days | Topic retention policy |
+| Uptime | 99.99% | Multi-broker cluster |
+| Replication | 3x | Partition replication factor |
+| ODRL Policy | Read rate-limited, Write permitted | Producer/consumer access rules |
+
+## Features Demonstrated
+
+- ODRL rate-limit constraint (`odrl:count` + `odrl:lteq`)
+- Rate limit on AccessDescription
+- Topic retention period
+- Service quality metrics (uptime, replication)
 
 ## References
 

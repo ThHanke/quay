@@ -23,7 +23,13 @@ Classic FTP server hosting static file archives, common in academic institutions
 | Coverage | Complete (CompleteCoverage) | Full file content |
 | Service Quality | Best Effort (BestEffort) | University infrastructure |
 | Verification | No Verification (NoVerification) | No built-in integrity check |
-| Encryption in transit | none | Plain FTP (FTPS optional) |
+| Encryption in transit | None (NoEncryption) | Plain FTP, no TLS |
+
+## Features Demonstrated
+
+- Explicit `NoEncryption` marking (contrast with TLS-protected examples)
+- Minimal pattern — no ODRL, no SQ metrics, no retention
+- Shows that QUAY properties are optional and progressively adoptable
 
 ## References
 

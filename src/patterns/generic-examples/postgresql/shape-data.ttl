@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/postgresql> a owl:Ontology ;
     dcterms:title "QUAY Pattern: PostgreSQL Database" ;
@@ -23,7 +24,10 @@ ex:postgresql-distribution a dcat:Distribution ;
     dcat:accessService ex:postgresql-service ;
     quay:accessDescription ex:postgresql-access ;
     quay:yieldDescription ex:postgresql-yield ;
-    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
+    quay:encryptionInTransit [ a quay:Tls13Encryption ] ;
+    quay:encryptionAtRest [ a quay:Aes256Encryption ] ;
+    quay:retentionPeriod "P10Y"^^xsd:duration ;
+    odrl:hasPolicy ex:postgresql-policy .
 
 ex:postgresql-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
@@ -38,4 +42,20 @@ ex:postgresql-yield a quay:YieldDescription ;
     quay:temporalQuality [ a quay:RealTime ] ;
     quay:coverage [ a quay:SubsetCoverage ] ;
     quay:serviceQuality [ a quay:HighAvailability ] ;
-    quay:verificationMethod [ a quay:NoVerification ] .
+    quay:verificationMethod [ a quay:NoVerification ] ;
+    quay:uptimePercentage "99.95"^^xsd:decimal ;
+    quay:recoveryTimeObjective "PT1H"^^xsd:duration ;
+    quay:recoveryPointObjective "PT5M"^^xsd:duration ;
+    quay:replicationFactor "2"^^xsd:nonNegativeInteger .
+
+ex:postgresql-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:postgresql-distribution
+    ] ;
+    odrl:prohibition [
+        a odrl:Prohibition ;
+        odrl:action [ a quay:DeleteOperation ] ;
+        odrl:target ex:postgresql-distribution
+    ] .

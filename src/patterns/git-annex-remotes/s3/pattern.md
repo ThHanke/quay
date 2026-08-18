@@ -28,6 +28,17 @@ Git-annex S3 special remote stores file contents in any S3-compatible object sto
 | Verification | Hash Verification (HashVerification) | SHA-256 via git-annex |
 | Encryption at rest | AES-256 (SSE) | Server-side or client-side |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
+| Retention | 5 years | Data lifecycle policy |
+| Uptime | 99.95% | AWS S3 SLA |
+| Replication | 3x | Cross-AZ replication |
+| ODRL Policy | Full CRUD permitted | All operations allowed |
+
+## Features Demonstrated
+
+- ODRL permission for all four operation types (Read, Write, Delete, List)
+- Retention period
+- Service quality metrics (uptime, replication)
+- SPDX checksum
 
 ## References
 

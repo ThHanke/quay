@@ -24,6 +24,16 @@ Paginated JSON REST API serving structured data, typical of government open data
 | Service Quality | High Availability (HighAvailability) | SLA-backed API |
 | Verification | No Verification (NoVerification) | No content integrity guarantee |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
+| Rate Limit | 1000 req/hr | Per-key throttling |
+| Cost | Free tier | No charge for read access |
+| ODRL Policy | Read permitted (rate-limited), Write prohibited | Machine-readable access rules |
+
+## Features Demonstrated
+
+- ODRL rate-limit constraint (`odrl:count` + `odrl:lt`)
+- ODRL prohibition (no write access)
+- WS3 rate limit and cost description on AccessDescription
+- Schema link via `dcterms:conformsTo`
 
 ## References
 

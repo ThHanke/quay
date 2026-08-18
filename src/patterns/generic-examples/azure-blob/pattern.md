@@ -25,6 +25,18 @@ Microsoft Azure Blob Storage for cloud object storage. Stores unstructured data 
 | Verification | Hash Verification (HashVerification) | Content-MD5 header |
 | Encryption at rest | AES-256 | Azure Storage Service Encryption |
 | Encryption in transit | TLS 1.2+ | HTTPS enforced |
+| Retention | 7 years | Compliance retention period |
+| Jurisdiction | Germany (DEU) | EU data residency |
+| Uptime | 99.99% | Azure SLA |
+| Replication | 3x | Geo-redundant storage |
+| ODRL Policy | Read permitted, Write geo-constrained to DEU | Data sovereignty enforcement |
+
+## Features Demonstrated
+
+- ODRL geographic constraint (`odrl:spatial` + `odrl:eq`)
+- Storage jurisdiction via EU authority URI
+- Retention period (`xsd:duration`)
+- Service quality metrics (uptime, replication)
 
 ## References
 

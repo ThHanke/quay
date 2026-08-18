@@ -191,7 +191,7 @@ SubObjectPropertyOf(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dc
 ObjectPropertyDomain(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Catalog>)
 ObjectPropertyRange(<http://www.w3.org/ns/dcat#dataset> <http://www.w3.org/ns/dcat#Dataset>)
 
-# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribución)
+# Object Property: <http://www.w3.org/ns/dcat#distribution> (distribution)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribuce"@cs)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#distribution> "distribución"@es)
@@ -283,7 +283,7 @@ ObjectPropertyRange(<http://www.w3.org/ns/dcat#mediaType> dc:MediaType)
 
 InverseObjectProperties(<http://www.w3.org/ns/dcat#nextVersion> <http://www.w3.org/ns/dcat#previousVersion>)
 
-# Object Property: <http://www.w3.org/ns/dcat#packageFormat> (formato de empaquetado)
+# Object Property: <http://www.w3.org/ns/dcat#packageFormat> (packaging format)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formato de empaquetado"@es)
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dcat#packageFormat> "formato di impacchettamento"@it)

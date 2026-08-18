@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 <https://w3id.org/quay/examples/oai-pmh> a owl:Ontology ;
     dcterms:title "QUAY Pattern: OAI-PMH Harvesting" ;
@@ -24,7 +25,9 @@ ex:oai-distribution a dcat:Distribution ;
     dcat:mediaType "application/xml" ;
     quay:accessDescription ex:oai-access ;
     quay:yieldDescription ex:oai-yield ;
-    quay:encryptionInTransit [ a quay:Tls12Encryption ] .
+    quay:encryptionInTransit [ a quay:Tls12Encryption ] ;
+    dcterms:conformsTo <http://www.openarchives.org/OAI/openarchivesprotocol.html> ;
+    odrl:hasPolicy ex:oai-policy .
 
 ex:oai-access a quay:AccessDescription ;
     quay:protocol [ a quay:HttpProtocol ] ;
@@ -38,3 +41,15 @@ ex:oai-yield a quay:YieldDescription ;
     quay:coverage [ a quay:IncrementalCoverage ] ;
     quay:serviceQuality [ a quay:BestEffort ] ;
     quay:verificationMethod [ a quay:NoVerification ] .
+
+ex:oai-policy a odrl:Set ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ReadOperation ] ;
+        odrl:target ex:oai-distribution
+    ] ;
+    odrl:permission [
+        a odrl:Permission ;
+        odrl:action [ a quay:ListOperation ] ;
+        odrl:target ex:oai-distribution
+    ] .
