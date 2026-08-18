@@ -2,7 +2,7 @@
 
 ## Description
 
-Zenodo is a general-purpose open research data repository operated by CERN. Researchers deposit datasets, software, and publications with persistent DOI identifiers. Each deposit is versioned and immutable once published. Access via REST API with optional API key authentication for uploads.
+Open research data repository operated by CERN. Researchers deposit datasets, software, and publications with persistent DOI identifiers. Each deposit is versioned and immutable once published. Access via REST API with optional API key authentication for uploads.
 
 ## Typical Access Pattern
 

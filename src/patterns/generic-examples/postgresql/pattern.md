@@ -2,7 +2,7 @@
 
 ## Description
 
-Direct database connection to a PostgreSQL server for structured data access. Clients connect via JDBC/ODBC or native protocol, authenticate with username/password, and perform SQL queries. Common in enterprise data platforms, analytics pipelines, and application backends.
+Direct database connection for structured data. Clients connect via JDBC/ODBC or native protocol, authenticate with username/password, and perform SQL queries. Common in enterprise data platforms, analytics pipelines, and application backends.
 
 ## Typical Access Pattern
 

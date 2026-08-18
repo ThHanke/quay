@@ -2,7 +2,7 @@
 
 ## Description
 
-Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) endpoint for systematic metadata collection from digital repositories. Clients harvest records incrementally using date-based selective harvesting. Used by libraries, digital archives, and aggregators like Europeana and BASE.
+Metadata harvesting from digital repositories. Clients harvest records incrementally using date-based selective harvesting. Used by libraries, digital archives, and aggregators like Europeana and BASE.
 
 ## Typical Access Pattern
 

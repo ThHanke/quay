@@ -2,7 +2,7 @@
 
 ## Description
 
-CKAN (Comprehensive Knowledge Archive Network) is the leading open data portal platform used by governments and organisations worldwide. Provides a REST API for searching, browsing, and downloading datasets. Powers data.gov, data.gov.uk, and hundreds of other portals.
+Leading open data portal platform. Provides a REST API for searching, browsing, and downloading datasets. Powers data.gov, data.gov.uk, and hundreds of other portals.
 
 ## Typical Access Pattern
 

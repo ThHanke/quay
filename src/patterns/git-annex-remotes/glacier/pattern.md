@@ -2,7 +2,7 @@
 
 ## Description
 
-Git-annex glacier special remote stores file contents in Amazon S3 Glacier or Glacier Deep Archive storage classes. Optimised for long-term archival with low storage cost but high retrieval latency (minutes to hours). Uses the S3 API with Glacier storage class selection.
+Git-annex glacier special remote stores files in Amazon S3 Glacier or Deep Archive. Optimised for long-term archival with low storage cost but high retrieval latency (minutes to hours). Uses the S3 API with Glacier storage class selection.
 
 ## Typical Configuration
 

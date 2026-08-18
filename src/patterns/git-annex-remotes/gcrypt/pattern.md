@@ -2,7 +2,7 @@
 
 ## Description
 
-Git-annex gcrypt remote uses git-remote-gcrypt to store an entire git repository (including annexed content) in GPG-encrypted form. The remote appears as a regular git remote but all data is encrypted before push and decrypted on fetch. Suitable for storing repositories on untrusted hosts.
+Git-annex gcrypt remote provides GPG-encrypted git repository on untrusted hosts. The remote appears as a regular git remote but all data is encrypted before push and decrypted on fetch. Suitable for storing repositories on untrusted hosts.
 
 ## Typical Configuration
 

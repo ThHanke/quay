@@ -2,7 +2,7 @@
 
 ## Description
 
-Git-annex BitTorrent special remote retrieves files from BitTorrent swarms using magnet links or .torrent files. Read-only — content is downloaded from distributed peers. Torrent metadata is registered via `git annex addurl`.
+Git-annex BitTorrent special remote retrieves files from BitTorrent swarms. Read-only — content is downloaded from distributed peers. Torrent metadata is registered via `git annex addurl`.
 
 ## Typical Configuration
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Classic FTP server hosting static file archives, common in academic institutions, mirror networks, and legacy data repositories. Clients connect via FTP or FTPS to browse directories and download files. Typically anonymous read-only access with optional authenticated upload.
+Classic FTP server for static file archives. Clients connect via FTP or FTPS to browse directories and download files. Typically anonymous read-only access with optional authenticated upload.
 
 ## Typical Access Pattern
 

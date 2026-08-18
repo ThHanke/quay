@@ -2,7 +2,7 @@
 
 ## Description
 
-Git-annex rclone special remote delegates storage operations to the rclone tool, which supports over 40 cloud storage backends (Google Drive, Dropbox, OneDrive, Backblaze B2, etc.). Acts as a meta-protocol that abstracts backend-specific APIs.
+Git-annex rclone special remote delegates to rclone, supporting 40+ cloud backends.). Acts as a meta-protocol that abstracts backend-specific APIs.
 
 ## Typical Configuration
 

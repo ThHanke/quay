@@ -2,7 +2,7 @@
 
 ## Description
 
-Microsoft Azure Blob Storage for cloud object storage. Stores unstructured data as blobs in containers with tiered access (Hot, Cool, Archive). Accessed via REST API or Azure SDKs. Common for enterprise data lakes, backup, and static content hosting.
+Microsoft Azure cloud object storage. Stores unstructured data as blobs in containers with tiered access (Hot, Cool, Archive). Accessed via REST API or Azure SDKs. Common for enterprise data lakes, backup, and static content hosting.
 
 ## Typical Access Pattern
 

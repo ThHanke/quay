@@ -2,7 +2,7 @@
 
 ## Description
 
-Git-annex S3 special remote stores file contents in any S3-compatible object storage service (Amazon S3, MinIO, Wasabi, etc.). Files are stored as objects keyed by their git-annex key, typically in a single configurable bucket.
+Git-annex S3 special remote stores files in S3-compatible object storage (AWS, MinIO, Wasabi).). Files are stored as objects keyed by their git-annex key, typically in a single configurable bucket.
 
 ## Typical Configuration
 

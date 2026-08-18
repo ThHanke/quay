@@ -2,7 +2,7 @@
 
 ## Description
 
-SPARQL Protocol endpoint serving RDF data from a triplestore. Clients submit SPARQL queries via HTTP and receive results as streaming XML, JSON, or CSV. Publicly accessible endpoints typically require no authentication. Common in linked data, knowledge graphs, and semantic web applications.
+RDF data from a triplestore endpoint. Clients submit SPARQL queries via HTTP and receive results as streaming XML, JSON, or CSV. Publicly accessible endpoints typically require no authentication. Common in linked data, knowledge graphs, and semantic web applications.
 
 ## Typical Access Pattern
 

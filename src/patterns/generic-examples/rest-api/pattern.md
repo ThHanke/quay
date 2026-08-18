@@ -2,7 +2,7 @@
 
 ## Description
 
-Paginated JSON REST API serving structured data, typical of government open data portals, scientific data repositories, and SaaS platforms. Clients retrieve data via HTTP GET with pagination parameters, authenticated via OAuth 2.0 bearer tokens.
+Paginated JSON REST API for structured data. Clients retrieve data via HTTP GET with pagination parameters, authenticated via OAuth 2.0 bearer tokens.
 
 ## Typical Access Pattern
 
