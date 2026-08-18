@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
 
 <https://w3id.org/quay/examples/azure-blob> a owl:Ontology ;
     dcterms:title "QUAY Pattern: Azure Blob Storage" ;
@@ -20,7 +21,7 @@ ex:azure-distribution a dcat:Distribution ;
     quay:QUAY_0000047 ex:azure-yield ;
     quay:QUAY_0000056 "AES-256" ;
     quay:QUAY_0000057 "TLS 1.2" ;
-    quay:QUAY_0000059 "MD5" .
+    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_md5 ] .
 
 ex:azure-access a quay:QUAY_0000001 ;
     quay:QUAY_0000048 [ a quay:QUAY_0000004 ] ;

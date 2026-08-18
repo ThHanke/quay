@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
 
 <https://w3id.org/quay/examples/git> a owl:Ontology ;
     dcterms:title "QUAY Pattern: Git Core Remote" ;
@@ -19,7 +20,7 @@ ex:git-distribution a dcat:Distribution ;
     quay:QUAY_0000046 ex:git-access ;
     quay:QUAY_0000047 ex:git-yield ;
     quay:QUAY_0000057 "SSH" ;
-    quay:QUAY_0000059 "SHA-256" .
+    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:git-access a quay:QUAY_0000001 ;
     quay:QUAY_0000048 [ a quay:QUAY_0000014 ] ;

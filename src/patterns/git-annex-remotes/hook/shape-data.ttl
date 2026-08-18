@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/quay/examples/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
 
 <https://w3id.org/quay/examples/hook> a owl:Ontology ;
     dcterms:title "QUAY Pattern: Hook Special Remote" ;
@@ -17,7 +18,7 @@ ex:hook-distribution a dcat:Distribution ;
     dcterms:title "Hook remote distribution" ;
     quay:QUAY_0000046 ex:hook-access ;
     quay:QUAY_0000047 ex:hook-yield ;
-    quay:QUAY_0000059 "SHA-256" .
+    spdx:checksum [ a spdx:Checksum ; spdx:algorithm spdx:checksumAlgorithm_sha256 ] .
 
 ex:hook-access a quay:QUAY_0000001 ;
     quay:QUAY_0000048 [ a quay:QUAY_0000071 ] ;

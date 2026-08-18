@@ -15,8 +15,8 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/quay/imports/odrl_import.owl>
-<https://w3id.org/quay/releases/2026-08-17/imports/odrl_import.owl>
-Annotation(owl:versionInfo "2026-08-17")
+<https://w3id.org/quay/releases/2026-08-18/imports/odrl_import.owl>
+Annotation(owl:versionInfo "2026-08-18")
 
 Declaration(Class(<http://schema.org/Action>))
 Declaration(Class(<http://schema.org/Organization>))

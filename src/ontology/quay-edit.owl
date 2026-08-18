@@ -7,6 +7,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcat:=<http://www.w3.org/ns/dcat#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(spdx:=<http://spdx.org/rdf/terms#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
@@ -117,8 +118,13 @@ Declaration(ObjectProperty(:QUAY_0000055))
 # Datatype Properties
 Declaration(DataProperty(:QUAY_0000056))
 Declaration(DataProperty(:QUAY_0000057))
-Declaration(DataProperty(:QUAY_0000058))
-Declaration(DataProperty(:QUAY_0000059))
+# SPDX Checksum (external declarations for DCAT 3 interoperability)
+Declaration(Class(spdx:Checksum))
+Declaration(ObjectProperty(spdx:checksum))
+Declaration(ObjectProperty(spdx:algorithm))
+Declaration(DataProperty(spdx:checksumValue))
+Declaration(NamedIndividual(spdx:checksumAlgorithm_sha256))
+Declaration(NamedIndividual(spdx:checksumAlgorithm_md5))
 
 # Annotation Properties
 Declaration(AnnotationProperty(obo:IAO_0000115))
@@ -326,8 +332,6 @@ AnnotationAssertion(obo:IAO_0000115 :QUAY_0000055 "Relates a yield description t
 # Datatype Properties
 AnnotationAssertion(obo:IAO_0000115 :QUAY_0000056 "Encryption algorithm applied to data at rest within the storage backend.")
 AnnotationAssertion(obo:IAO_0000115 :QUAY_0000057 "Encryption protocol applied to data during transfer between client and server.")
-AnnotationAssertion(obo:IAO_0000115 :QUAY_0000058 "Hash value used to verify the integrity of the distribution content.")
-AnnotationAssertion(obo:IAO_0000115 :QUAY_0000059 "Name of the algorithm used to compute the checksum of the distribution content.")
 
 ############################
 #   Object Properties — Annotations, Domain, Range
@@ -385,13 +389,6 @@ AnnotationAssertion(rdfs:label :QUAY_0000057 "encryption in transit")
 DataPropertyDomain(:QUAY_0000057 dcat:Distribution)
 DataPropertyRange(:QUAY_0000057 xsd:string)
 
-AnnotationAssertion(rdfs:label :QUAY_0000058 "checksum")
-DataPropertyDomain(:QUAY_0000058 dcat:Distribution)
-DataPropertyRange(:QUAY_0000058 xsd:string)
-
-AnnotationAssertion(rdfs:label :QUAY_0000059 "checksum algorithm")
-DataPropertyDomain(:QUAY_0000059 dcat:Distribution)
-DataPropertyRange(:QUAY_0000059 xsd:string)
 
 ############################
 #   Subclass Axioms
