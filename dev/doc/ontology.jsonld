@@ -1,19 +1,18 @@
 [ {
-  "@id" : "_:genid103",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/quay/CompleteCoverage"
-    }, {
-      "@id" : "https://w3id.org/quay/IncrementalCoverage"
-    }, {
-      "@id" : "https://w3id.org/quay/SampleCoverage"
-    }, {
-      "@id" : "https://w3id.org/quay/SubsetCoverage"
-    } ]
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/quay/DeliveryMode"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/deliveryMode"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid108",
+  "@id" : "_:genid104",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -29,7 +28,20 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/quay/Coverage"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/coverage"
+  } ]
+}, {
+  "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -46,48 +58,122 @@
   } ]
 }, {
   "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-    }, {
-      "@id" : "http://www.w3.org/ns/odrl/2/Rule"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/quay/TemporalQuality"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/temporalQuality"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
   "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-    }, {
-      "@id" : "http://www.w3.org/ns/odrl/2/Rule"
-    } ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
   "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://schema.org/Organization"
-    }, {
-      "@id" : "http://schema.org/Person"
-    }, {
-      "@id" : "http://www.w3.org/2006/vcard/ns#Agent"
-    }, {
-      "@id" : "http://www.w3.org/2006/vcard/ns#Individual"
-    }, {
-      "@id" : "http://www.w3.org/2006/vcard/ns#Organization"
-    }, {
-      "@id" : "http://xmlns.com/foaf/0.1/Agent"
-    }, {
-      "@id" : "http://xmlns.com/foaf/0.1/Organization"
-    }, {
-      "@id" : "http://xmlns.com/foaf/0.1/Person"
-    } ]
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "http://makxdekkers.com/"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/org#Organization"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.w3.org/"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://w3id.org/people/ralbertoni/"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://agbeltran.github.io"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "http://www.asahi-net.or.jp/~ax2s-kmtn/"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://jakub.klímek.com/"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "http://www.deri.ie/"
   } ]
 }, {
   "@id" : "_:genid27",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "http://ec.europa.eu/dgs/informatics/"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "http://stfc.ac.uk"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.csiro.au"
+  } ]
+}, {
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/quay/authenticationScheme"
@@ -96,7 +182,35 @@
     "@id" : "https://w3id.org/quay/AuthenticationScheme"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/quay.owl#AccessDescription"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#AuthenticationScheme"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#Coverage"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#DeliveryMode"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#Operation"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#Protocol"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#ServiceQuality"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#TemporalQuality"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#VerificationMethod"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#YieldDescription"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/quay/protocol"
@@ -105,7 +219,27 @@
     "@id" : "https://w3id.org/quay/Protocol"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/quay.owl#Aes128Encryption"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#Aes256Encryption"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#GpgEncryption"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#NoEncryption"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#SshEncryption"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#Tls12Encryption"
+    }, {
+      "@id" : "https://w3id.org/quay.owl#Tls13Encryption"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/quay/supportedOperation"
@@ -114,199 +248,7 @@
     "@id" : "https://w3id.org/quay/Operation"
   } ]
 }, {
-  "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-    }, {
-      "@id" : "http://www.w3.org/ns/odrl/2/Rule"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid30",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/quay/Protocol"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/protocol"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/coverage"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/quay/Coverage"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/deliveryMode"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/quay/DeliveryMode"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/temporalQuality"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/quay/TemporalQuality"
-  } ]
-}, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/quay/DeliveryMode"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/deliveryMode"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/quay/Coverage"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/coverage"
-  } ]
-}, {
-  "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/quay/TemporalQuality"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/quay/temporalQuality"
-  } ]
-}, {
-  "@id" : "_:genid37",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid40",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid41",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid42",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid43",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "_:genid44",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://makxdekkers.com/"
-  } ]
-}, {
-  "@id" : "_:genid45",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/org#Organization"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://www.w3.org/"
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://w3id.org/people/ralbertoni/"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://agbeltran.github.io"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://www.asahi-net.or.jp/~ax2s-kmtn/"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://jakub.klímek.com/"
-  } ]
-}, {
   "@id" : "_:genid50",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://ec.europa.eu/dgs/informatics/"
-  } ]
-}, {
-  "@id" : "_:genid51",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://stfc.ac.uk"
-  } ]
-}, {
-  "@id" : "_:genid52",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://www.csiro.au"
-  } ]
-}, {
-  "@id" : "_:genid53",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "http://www.deri.ie/"
-  } ]
-}, {
-  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -333,16 +275,19 @@
   } ]
 }, {
   "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-    }, {
-      "@id" : "http://www.w3.org/ns/odrl/2/Rule"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/quay/Protocol"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/protocol"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -362,7 +307,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -376,7 +321,16 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/coverage"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/quay/Coverage"
+  } ]
+}, {
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -390,7 +344,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -420,17 +374,25 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/odrl/2/Constraint"
-    }, {
-      "@id" : "http://www.w3.org/ns/odrl/2/LogicalConstraint"
-    } ]
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/deliveryMode"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/quay/DeliveryMode"
   } ]
 }, {
-  "@id" : "_:genid96",
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/quay/temporalQuality"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/quay/TemporalQuality"
+  } ]
+}, {
+  "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -448,11 +410,23 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid99",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/quay/CompleteCoverage"
+    }, {
+      "@id" : "https://w3id.org/quay/IncrementalCoverage"
+    }, {
+      "@id" : "https://w3id.org/quay/SampleCoverage"
+    }, {
+      "@id" : "https://w3id.org/quay/SubsetCoverage"
+    } ]
+  } ]
+}, {
   "@id" : "http://creativecommons.org/ns#Attribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -466,8 +440,6 @@
   "@id" : "http://creativecommons.org/ns#CommercialUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -481,8 +453,6 @@
   "@id" : "http://creativecommons.org/ns#DerivativeWorks",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -496,8 +466,6 @@
   "@id" : "http://creativecommons.org/ns#Distribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -511,8 +479,6 @@
   "@id" : "http://creativecommons.org/ns#Notice",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -526,8 +492,6 @@
   "@id" : "http://creativecommons.org/ns#Reproduction",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -541,8 +505,6 @@
   "@id" : "http://creativecommons.org/ns#ShareAlike",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -556,8 +518,6 @@
   "@id" : "http://creativecommons.org/ns#Sharing",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -571,8 +531,6 @@
   "@id" : "http://creativecommons.org/ns#SourceCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -758,15 +716,6 @@
     "@id" : "http://www.w3.org/ns/dcat#hasVersion"
   } ]
 }, {
-  "@id" : "http://schema.org/Action",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://schema.org/Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://schema.org/Person",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://spdx.org/rdf/terms#Checksum",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -803,22 +752,7 @@
   "@id" : "http://www.w3.org/2001/XMLSchema#duration",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#Collection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.w3.org/2006/vcard/ns#Agent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.w3.org/2006/vcard/ns#Individual",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://www.w3.org/2006/vcard/ns#Kind",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.w3.org/2006/vcard/ns#Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/ns/dcat",
@@ -1696,290 +1630,15 @@
   "@id" : "http://www.w3.org/ns/dcat3",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#actionConcepts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#actions",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#actionsCommon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#assetConcepts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#assetParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#assetRelations",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#assetRelationsCommon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#conflictConcepts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#constraintLogicalOperands",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#constraintRelationalOperators",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#constraintRightOpCommon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#constraints",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#deprecatedTerms",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#duties",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#logicalConstraints",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#partyConcepts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#partyRoles",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#partyRolesCommon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#permissions",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#policyConcepts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#policySubClasses",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#policySubClassesCommon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#prohibitions",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/#ruleConcepts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/Action",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Action"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://schema.org/Action"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Agreement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Agreement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Offer"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Set"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/All",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/PartyScope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "All"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/All2ndConnections",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/PartyScope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "All Second-level Connections"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/AllConnections",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/PartyScope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "All First-Level Connections"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/AllGroups",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/PartyScope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "All Group Connections"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Assertion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Assertion"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Asset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Asset"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Asset Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/AssetScope",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Asset Scope"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/ConflictTerm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Conflict Strategy Preference"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/Constraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Constraint"
@@ -1987,15 +1646,9 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/Duty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Duty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Rule"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Permission"
@@ -2003,120 +1656,18 @@
     "@id" : "http://www.w3.org/ns/odrl/2/Prohibition"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Group",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/PartyScope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Group"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Individual",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/PartyScope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Individual"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Left Operand"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/LogicalConstraint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Logical Constraint"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Offer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Offer"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Set"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Operator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Operator"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Party",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Party"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid18"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/PartyCollection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Party Collection"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/PartyScope",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Party Scope"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/Permission",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Permission"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Rule"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Prohibition"
@@ -2124,72 +1675,20 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/Policy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Policy"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Privacy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Privacy Policy"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/Prohibition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Prohibition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Rule"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Request",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Request"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/RightOperand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Right Operand"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Rule",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Rule"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/Set",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Set"
@@ -2198,31 +1697,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/Policy"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/Ticket",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Ticket"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/UndefinedTerm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Undefined Term"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/absolutePosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2233,8 +1710,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/absoluteSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2245,8 +1720,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/absoluteSpatialPosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2257,8 +1730,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/absoluteTemporalPosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2269,8 +1740,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/acceptTracking",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2283,12 +1752,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/action",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid3"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has Action"
@@ -2300,8 +1763,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/adHocShare",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2312,8 +1773,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/aggregate",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2324,31 +1783,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/and",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "And"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/andSequence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "And Sequence"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/annotate",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2362,8 +1799,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/anonymize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2377,8 +1812,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/append",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2389,8 +1822,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/appendTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2401,8 +1832,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/archive",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2413,51 +1842,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/assignee",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Assignee"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/assigneeOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Assignee Of"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/assigner",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Assigner"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/assignerOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Assigner Of"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/attachPolicy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2468,8 +1855,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/attachSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2480,8 +1865,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/attribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2492,31 +1875,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/attributedParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Attributed Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/attributingParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Attributing Party"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/commercialize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2527,8 +1888,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/compensate",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2539,31 +1898,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/compensatedParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Compensated Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/compensatingParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Compensating Party"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/concurrentUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2574,87 +1911,16 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/conflict",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Handle Policy Conflicts"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/consentedParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Consented Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/consentingParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Consenting Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/consequence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Consequence"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/constraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid6"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has Constraint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid9"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/contractedParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Contracted Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/contractingParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Contracting Party"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/copy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2665,21 +1931,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/reproduce"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/core",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "ODRL Core Profile"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/count",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2687,21 +1941,9 @@
     "@value" : "Count"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/dataType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Datatype"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/dateTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2712,8 +1954,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/delayPeriod",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2724,8 +1964,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/delete",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2739,8 +1977,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/deliveryChannel",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2751,8 +1987,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/derive",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2766,8 +2000,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/device",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2778,8 +2010,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/digitize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2793,8 +2023,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/display",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2808,8 +2036,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/distribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2822,9 +2048,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/duty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Permission"
   } ],
@@ -2839,8 +2062,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/elapsedTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2851,8 +2072,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/ensureExclusivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2865,11 +2084,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/eq",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Equal to"
@@ -2878,8 +2092,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/event",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2890,8 +2102,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/execute",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2905,8 +2115,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/export",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2917,8 +2125,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/extract",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2932,8 +2138,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/extractChar",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2944,8 +2148,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/extractPage",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2956,8 +2158,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/extractWord",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2965,21 +2165,9 @@
     "@value" : "Extract word"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/failure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Failure"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/fileFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2987,21 +2175,9 @@
     "@value" : "File Format"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/function",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Function"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/give",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3015,8 +2191,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/grantUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3029,11 +2203,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/gt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Greater than"
@@ -3041,36 +2210,13 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/gteq",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Greater than or equal to"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/hasPart",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Has part"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/hasPolicy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Target Policy"
@@ -3079,33 +2225,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/Policy"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/ignore",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/UndefinedTerm"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Ignore Undefined Actions"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/implies",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Implies"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/include",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3117,10 +2239,7 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/includedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
@@ -3135,8 +2254,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/index",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3150,8 +2267,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/industry",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3162,8 +2277,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/inform",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3174,61 +2287,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/informedParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Informed Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/informingParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Informing Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/inheritAllowed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Inheritance Allowed"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/inheritFrom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Inherits From"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/inheritRelation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Inherit Relation"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/install",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3239,83 +2300,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/invalid",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/ConflictTerm"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Void Policy"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/isA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Is a"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/isAllOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Is all of"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/isAnyOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Is any of"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/isNoneOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Is none of"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/isPartOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Is part of"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/language",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3326,8 +2313,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/lease",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3336,20 +2321,21 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/leftOperand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Constraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has Left Operand"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/lend",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3360,8 +2346,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3371,11 +2355,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/lt",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Less than"
@@ -3383,11 +2362,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/lteq",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Less than or equal to"
@@ -3396,8 +2370,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/media",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3408,8 +2380,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/meteredTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3420,8 +2390,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/modify",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3435,8 +2403,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/move",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3447,23 +2413,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/neq",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/Operator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Not equal to"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/nextPolicy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3474,27 +2426,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/obligation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Policy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Obligation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Duty"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/obtainConsent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3505,61 +2439,19 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/operand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Operand"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/operator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Constraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has Operator"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/or",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Or"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/output",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Output"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/partOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Part Of"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/pay",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3570,8 +2462,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/payAmount",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3579,21 +2469,9 @@
     "@value" : "Payment Amount"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/payeeParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Payee Party"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/percentage",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3601,23 +2479,8 @@
     "@value" : "Asset Percentage"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/perm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/ConflictTerm"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Prefer Permissions"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/permission",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Policy"
   } ],
@@ -3632,8 +2495,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/play",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3644,23 +2505,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/policyUsage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/RightOperand"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Policy Rule Usage"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/present",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3674,8 +2521,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/preview",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3686,8 +2531,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/print",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3701,8 +2544,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/product",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3710,33 +2551,8 @@
     "@value" : "Product Context"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/profile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Profile"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/prohibit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/ConflictTerm"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Prefer Prohibitions"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/prohibition",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Policy"
   } ],
@@ -3748,21 +2564,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/Prohibition"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/proximity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "proximity"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/purpose",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3773,8 +2577,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/read",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3788,8 +2590,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/recipient",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3797,37 +2597,9 @@
     "@value" : "Recipient"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/refinement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Refinement"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/relation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid12"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Relation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/relativePosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3838,8 +2610,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/relativeSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3850,8 +2620,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/relativeSpatialPosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3862,8 +2630,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/relativeTemporalPosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3871,21 +2637,9 @@
     "@value" : "Relative Temporal Asset Position"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/remedy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Remedy"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/reproduce",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3899,8 +2653,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/resolution",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3911,8 +2663,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/reviewPolicy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3924,40 +2674,18 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/rightOperand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Constraint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has Right Operand"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/rightOperandReference",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Has Right Operand Reference"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/scope",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Scope"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/secondaryUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3968,8 +2696,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/sell",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3983,8 +2709,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/share",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3995,8 +2719,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/shareAlike",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4004,21 +2726,9 @@
     "@value" : "Share-alike"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/source",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Source"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/spatial",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4029,8 +2739,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/spatialCoordinates",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4038,21 +2746,9 @@
     "@value" : "Geospatial Coordinates"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/status",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Status"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/stream",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4063,23 +2759,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/support",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
-    "@id" : "http://www.w3.org/ns/odrl/2/UndefinedTerm"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Support Undefined Actions"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/synchronize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4093,8 +2775,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/system",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4105,8 +2785,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/systemDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4116,28 +2794,14 @@
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/target",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid15"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Target"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/relation"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/odrl/2/textToSpeech",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4151,8 +2815,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/timeInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4160,41 +2822,9 @@
     "@value" : "Recurring Time Interval"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/timedCount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Timed Count"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/trackedParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Tracked Party"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/trackingParty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Tracking Party"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/transfer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4205,8 +2835,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/transform",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4220,8 +2848,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/translate",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4232,31 +2858,9 @@
     "@id" : "http://www.w3.org/ns/odrl/2/use"
   } ]
 }, {
-  "@id" : "http://www.w3.org/ns/odrl/2/uid",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Unique Identifier"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/undefined",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Handle Undefined Term"
-  } ]
-}, {
   "@id" : "http://www.w3.org/ns/odrl/2/uninstall",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4270,8 +2874,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/unitOfCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4282,8 +2884,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/use",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4294,8 +2894,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/version",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4306,8 +2904,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/virtualLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/LeftOperand"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4318,8 +2914,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/watermark",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4333,8 +2927,6 @@
   "@id" : "http://www.w3.org/ns/odrl/2/write",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4345,23 +2937,11 @@
   "@id" : "http://www.w3.org/ns/odrl/2/writeTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  }, {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Write to"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/odrl/2/xone",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Only One"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/org#Organization",
@@ -4472,12 +3052,6 @@
   "@id" : "http://www.w3.org/ns/prov-o-20130312",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "http://xmlns.com/foaf/0.1/Agent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://xmlns.com/foaf/0.1/Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://xmlns.com/foaf/0.1/Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -4493,6 +3067,735 @@
   "@id" : "https://w3id.org/people/ralbertoni/",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
+  "@id" : "https://w3id.org/quay.owl#AccessDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Qualifies HOW a Distribution is reached."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Access Description"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Aes128Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using the Advanced Encryption Standard with a 128-bit key."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "128-bit Advanced Encryption Standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AES-128 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Aes256Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using the Advanced Encryption Standard with a 256-bit key."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "256-bit Advanced Encryption Standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AES-256 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#ApiKeyAuthentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "API Key Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Archived",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Archived"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#AuthenticationScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Authentication Scheme"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#AwsCredentialAuthentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AWS Credential Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#BasicAuthentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Basic Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#BestEffort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Quality depends on upstream server or network conditions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Best Effort"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#BitTorrentProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BitTorrent Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#BulkDelivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bulk Delivery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#CompleteCoverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Complete Coverage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#ContentAddressing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Content identified and verified by its hash, as in IPFS CIDs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Content Addressing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Coverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Coverage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#DeleteOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Delete Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#DeliveryMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Delivery Mode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#DigitalSignature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Integrity and authenticity verified via cryptographic signature."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Digital Signature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Distributed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data distributed across multiple peers or nodes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distributed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Cryptographic algorithm or protocol used to protect data confidentiality, either at rest or in transit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Encryption Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#EventDrivenDelivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Event-Driven Delivery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#FtpProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FTP Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#GitProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Git Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#GpgEncryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using GNU Privacy Guard, an implementation of the OpenPGP standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "GNU Privacy Guard / OpenPGP encryption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPG Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#GpgKeyAuthentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPG Key Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#HashVerification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Integrity verified by comparing cryptographic hash of content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hash Verification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#HighAvailability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Managed cloud services with SLA guarantees."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "High Availability"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#HookProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Custom protocol via user-defined hook scripts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hook Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#HttpProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HTTP Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#IncrementalCoverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Incremental Coverage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#IpfsProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IPFS Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#ListOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "List Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#LocalFilesystemProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Local Filesystem Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#NoAuthentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "No Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#NoEncryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Designation indicating that no encryption is applied to the data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No encryption applied."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "No Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#NoVerification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No integrity verification mechanism available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "No Verification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#OAuth2Authentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OAuth2 Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Operation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Action"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#PaginatedDelivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Paginated Delivery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#PeerToPeerDelivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Peer-to-Peer Delivery"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#PieceVerification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Integrity verified per-piece using a hash tree, as in BitTorrent."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Piece Verification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Protocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#RcloneProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rclone Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#ReadOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Read Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#RealTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Real-Time"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#ReplicateOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Replicate Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#RsyncProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rsync Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#S3Protocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S3 Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SampleCoverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sample Coverage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#ServiceQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Service Quality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SingleHost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data resides on a single machine with no redundancy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Single Host"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Snapshot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Snapshot"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SshEncryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using the Secure Shell protocol for transport-layer data protection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Secure Shell encrypted transport."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SSH Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SshKeyAuthentication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SSH Key Authentication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SshProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SSH Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#StreamingDelivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Streaming Delivery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#DeliveryMode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SubsetCoverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Subset Coverage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#SynchronousDelivery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Synchronous Delivery"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#TemporalQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temporal Quality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Tls12Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using Transport Layer Security version 1.2 as specified in RFC 5246."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transport Layer Security version 1.2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TLS 1.2 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Tls13Encryption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Encryption using Transport Layer Security version 1.3 as specified in RFC 8446."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transport Layer Security version 1.3."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TLS 1.3 Encryption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#VerificationMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Verification Method"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#Versioned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Versioned"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#WebDavProtocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WebDAV Protocol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#WriteOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Write Operation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#YieldDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Qualifies WHAT a Distribution delivers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Yield Description"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#accessDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#authenticationScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#costDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Human-readable description of the cost or pricing model for accessing the distribution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#AccessDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cost description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#coverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "coverage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/quay.owl#Coverage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#deliveryMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#encryptionAtRest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Relates a distribution to the encryption algorithm applied to data at rest within the storage backend."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "encryption at rest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#encryptionInTransit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Relates a distribution to the encryption protocol applied to data during transfer between client and server."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "encryption in transit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/quay.owl#EncryptionAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#protocol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#quotaLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Usage quota describing the maximum allowed consumption of the service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#AccessDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "quota limit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#rateLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Maximum number of requests permitted within a time window."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#AccessDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rate limit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#recoveryPointObjective",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Maximum acceptable duration of data loss measured as a time window before the disruption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recovery point objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#recoveryTimeObjective",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Maximum acceptable duration to restore service after a disruption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recovery time objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#replicationFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Number of independent copies of the data maintained across storage nodes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "replication factor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#retentionPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Duration for which data is guaranteed to be retained before deletion or archival."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "retention period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#serviceQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "service quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/quay.owl#ServiceQuality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#storageJurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Relates a distribution to the legal jurisdiction or geographic region where data is physically stored."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "storage jurisdiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#supportedOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#temporalQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#uptimePercentage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "Percentage of time the service is operational and accessible, expressed as a decimal value between 0 and 100."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "uptime percentage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#verificationMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/quay.owl#YieldDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "verification method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/quay.owl#VerificationMethod"
+  } ]
+}, {
+  "@id" : "https://w3id.org/quay.owl#yieldDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "https://w3id.org/quay/AccessDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -4505,13 +3808,13 @@
     "@value" : "Access Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid3"
   }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid4"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid5"
   }, {
-    "@id" : "_:genid30"
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/ApiKeyAuthentication",
@@ -5192,17 +4495,17 @@
     "@value" : "Yield Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid7"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid8"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid9"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid10"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid11"
   }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "https://w3id.org/quay/accessDescription",
